@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Arctic Pro HVAC — AC Repair & Installation | Grand Prairie, TX</title>
+  <meta name="description" content="Arctic Pro HVAC provides AC repair, installation, heating and air quality services in Grand Prairie TX. 24/7 emergency service. Licensed & insured. (817) 555-0241."/>
+  <meta name="keywords" content="HVAC Grand Prairie TX, AC repair Arlington Texas, air conditioning installation Dallas, heating repair near me Grand Prairie, emergency AC service DFW"/>
+  <meta name="geo.region" content="US-TX"/>
+  <meta name="geo.placename" content="Grand Prairie, Texas"/>
+  <meta name="geo.position" content="32.7459;-97.0181"/>
+  <link rel="canonical" href="https://www.ewnexus.com/demos/DEMO_HVAC.html"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HVACBusiness","name":"Arctic Pro HVAC","telephone":"(817) 555-0241","address":{"@type":"PostalAddress","streetAddress":"3105 S Great Southwest Pkwy","addressLocality":"Grand Prairie","addressRegion":"TX","addressCountry":"US"},"openingHours":"Mo-Su 00:00-24:00","priceRange":"$$","areaServed":["Grand Prairie","Arlington","Irving","Dallas","Fort Worth","Mansfield"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:#060e18;color:#e8f4ff;overflow-x:hidden;}
+    :root{--blue:#1a7fd4;--ice:#4dd4f0;--dark:#060e18;--mid:#0d1e30;--text:#e8f4ff;}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--blue)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(6,14,24,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,127,212,.2);}
+    .nav-logo{display:flex;align-items:center;gap:.625rem;text-decoration:none;}
+    .logo-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--blue),var(--ice));border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+    .logo-text{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:.04em;color:var(--text);}
+    .nav-links{display:flex;gap:2rem;align-items:center;}
+    .nav-link{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(232,244,255,.45);text-decoration:none;transition:color .2s;}
+    .nav-link:hover{color:var(--ice);}
+    .btn-emergency{background:linear-gradient(135deg,var(--blue),#0f5fa3);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.55rem 1.25rem;text-decoration:none;border-radius:4px;display:flex;align-items:center;gap:.4rem;}
+
+    /* HERO */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:8rem 2rem 5rem;}
+    .hero-bg{position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 50% 60% at 30% 40%,rgba(26,127,212,.12) 0%,transparent 55%),
+        radial-gradient(ellipse 40% 50% at 80% 70%,rgba(77,212,240,.06) 0%,transparent 50%),
+        linear-gradient(180deg,#060e18 0%,#080f1a 100%);
+    }
+    /* Cold air waves */
+    .air-wave{position:absolute;border-radius:50%;border:1px solid rgba(77,212,240,.06);pointer-events:none;animation:expand 4s ease-out infinite;}
+    @keyframes expand{0%{transform:scale(0.8);opacity:.5}100%{transform:scale(2.5);opacity:0}}
+    /* Snowflakes */
+    .flake{position:absolute;color:rgba(77,212,240,.15);font-size:1rem;animation:fall linear infinite;}
+    @keyframes fall{0%{transform:translateY(-20px) rotate(0)}100%{transform:translateY(110vh) rotate(360deg)}}
+    /* Temp gauge visual */
+    .temp-display{position:absolute;right:8%;top:50%;transform:translateY(-50%);text-align:center;}
+    .temp-circle{width:180px;height:180px;border-radius:50%;border:3px solid rgba(26,127,212,.25);background:rgba(13,30,48,.8);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;box-shadow:0 0 40px rgba(77,212,240,.1),inset 0 0 30px rgba(26,127,212,.05);}
+    .temp-num{font-family:'Rajdhani',sans-serif;font-size:3.5rem;font-weight:700;color:var(--ice);line-height:1;}
+    .temp-unit{font-size:.75rem;font-weight:600;color:rgba(232,244,255,.4);letter-spacing:.1em;margin-top:.2rem;}
+    .temp-label{font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-top:.5rem;}
+    .hero-content{position:relative;z-index:1;max-width:620px;}
+    .eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--ice);margin-bottom:.875rem;display:flex;align-items:center;gap:.625rem;}
+    .live-dot{width:7px;height:7px;background:#ff4444;border-radius:50%;animation:pulse 1.5s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+    h1{font-family:'Rajdhani',sans-serif;font-size:clamp(3.5rem,9vw,7rem);font-weight:700;line-height:.9;letter-spacing:.01em;margin-bottom:1.25rem;}
+    h1 .ice{color:var(--ice);}
+    .hero-desc{font-size:.95rem;color:rgba(232,244,255,.55);line-height:1.75;max-width:480px;margin-bottom:2rem;font-weight:300;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.625rem;background:linear-gradient(135deg,var(--blue),#0f5fa3);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:.95rem 2.25rem;text-decoration:none;border-radius:4px;transition:transform .15s,filter .15s;}
+    .btn-primary:hover{transform:translateY(-2px);filter:brightness(1.1);}
+    .btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;border:1px solid rgba(77,212,240,.25);color:var(--ice);font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:.9rem 2rem;text-decoration:none;border-radius:4px;transition:border-color .2s,background .2s;}
+    .btn-outline:hover{border-color:var(--ice);background:rgba(77,212,240,.05);}
+    .hero-stats{display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap;}
+    .stat{padding-left:.875rem;border-left:2px solid var(--blue);}
+    .stat-num{font-family:'Rajdhani',sans-serif;font-size:1.75rem;font-weight:700;color:var(--ice);line-height:1;}
+    .stat-label{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,244,255,.35);margin-top:.1rem;}
+
+    /* SERVICES */
+    section{padding:5rem 2rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    h2{font-family:'Rajdhani',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:700;letter-spacing:.02em;}
+    h2 .accent{color:var(--ice);}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:rgba(26,127,212,.08);margin-top:2.5rem;}
+    .svc{background:#060e18;padding:2rem 1.5rem;transition:background .2s;position:relative;overflow:hidden;}
+    .svc:hover{background:#0a1525;}
+    .svc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--ice));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+    .svc:hover::after{transform:scaleX(1);}
+    .svc-icon{font-size:2rem;margin-bottom:1rem;}
+    .svc-name{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.2rem;letter-spacing:.03em;margin-bottom:.5rem;}
+    .svc-desc{font-size:.8rem;color:rgba(232,244,255,.4);line-height:1.6;}
+    .svc-price{display:inline-block;margin-top:.875rem;font-size:.65rem;font-weight:700;letter-spacing:.1em;color:var(--ice);border:1px solid rgba(77,212,240,.2);padding:.2rem .625rem;border-radius:3px;}
+
+    /* WHY */
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2.5rem;}
+    .why-card{background:#0d1e30;border:1px solid rgba(26,127,212,.12);padding:1.75rem;border-radius:4px;}
+    .why-icon{font-size:1.75rem;margin-bottom:.875rem;}
+    .why-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.375rem;}
+    .why-desc{font-size:.8rem;color:rgba(232,244,255,.4);line-height:1.6;}
+
+    /* QUOTE FORM */
+    .quote-section{background:#0a1525;}
+    .quote-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start;}
+    form{display:flex;flex-direction:column;gap:.875rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;}
+    input,select,textarea{width:100%;background:#060e18;border:1px solid rgba(26,127,212,.2);color:var(--text);font-family:'Inter',sans-serif;font-size:.85rem;padding:.8rem 1rem;outline:none;border-radius:4px;transition:border-color .2s;}
+    input:focus,select:focus,textarea:focus{border-color:rgba(77,212,240,.5);}
+    input::placeholder,textarea::placeholder{color:rgba(232,244,255,.2);}
+    select option{background:#060e18;}
+    .form-submit{background:linear-gradient(135deg,var(--blue),#0f5fa3);color:#fff;border:none;font-family:'Inter',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem;cursor:pointer;border-radius:4px;transition:filter .2s;}
+    .form-submit:hover{filter:brightness(1.1);}
+    .guarantee-box{background:#060e18;border:1px solid rgba(77,212,240,.12);border-radius:4px;padding:1.75rem;margin-top:1.5rem;}
+    .guarantee-item{display:flex;align-items:center;gap:.75rem;padding:.625rem 0;border-bottom:1px solid rgba(26,127,212,.07);font-size:.82rem;color:rgba(232,244,255,.6);}
+    .guarantee-item:last-child{border-bottom:none;}
+    .check{color:var(--ice);font-size:1rem;}
+
+    /* COVERAGE */
+    .coverage-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.625rem;margin-top:1.5rem;}
+    .city-tag{background:rgba(26,127,212,.06);border:1px solid rgba(26,127,212,.14);padding:.35rem .75rem;font-size:.75rem;font-weight:500;color:rgba(232,244,255,.55);border-radius:3px;text-align:center;}
+
+    /* CTA */
+    .cta{background:linear-gradient(135deg,#0a1f35,#071525);border-top:1px solid rgba(26,127,212,.15);text-align:center;}
+    .phone-big{font-family:'Rajdhani',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;color:var(--ice);display:block;text-decoration:none;letter-spacing:.03em;margin:1rem 0;}
+    .phone-big:hover{text-shadow:0 0 30px rgba(77,212,240,.4);}
+
+    footer{background:#040b12;border-top:1px solid rgba(26,127,212,.1);padding:2.5rem;text-align:center;}
+    .footer-logo{font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;color:var(--ice);margin-bottom:.375rem;}
+    .footer-info{font-size:.72rem;color:rgba(232,244,255,.25);line-height:1.8;}
+    .ewnexus-badge{display:inline-block;margin-top:1rem;padding:.3rem .8rem;background:rgba(90,240,179,.05);border:1px solid rgba(90,240,179,.12);font-size:.62rem;letter-spacing:.14em;color:rgba(90,240,179,.4);text-decoration:none;}
+    .demo-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#5af0b3;padding:.625rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .demo-banner p{font-weight:700;font-size:.78rem;color:#003825;}
+    .demo-banner a{background:#003825;color:#5af0b3;padding:.4rem 1rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
+    @media(max-width:768px){.nav-links{display:none;}.temp-display{display:none;}.quote-grid,.form-row{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="demo-banner">
+  <p>❄️ This is a demo site built by EWNexus — your HVAC business could look just like this.</p>
+  <a href="/contact.html">Get Your Site — $500 →</a>
+</div>
+<nav>
+  <a href="#" class="nav-logo"><div class="logo-icon">❄️</div><span class="logo-text">ARCTIC PRO HVAC</span></a>
+  <div class="nav-links">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#quote" class="nav-link">Get Quote</a>
+    <a href="#coverage" class="nav-link">Service Area</a>
+    <a href="tel:8175550241" class="btn-emergency">📞 24/7 Emergency</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="air-wave" style="width:400px;height:400px;top:20%;left:25%;animation-delay:0s;"></div>
+  <div class="air-wave" style="width:300px;height:300px;top:30%;left:30%;animation-delay:1.5s;"></div>
+  <div class="flake" style="left:15%;animation-duration:8s;animation-delay:0s;">❄</div>
+  <div class="flake" style="left:35%;animation-duration:11s;animation-delay:2s;font-size:.7rem;">❄</div>
+  <div class="flake" style="left:55%;animation-duration:9s;animation-delay:4s;">❄</div>
+  <div class="flake" style="left:75%;animation-duration:13s;animation-delay:1s;font-size:.6rem;">❄</div>
+  <div class="temp-display">
+    <div class="temp-circle">
+      <div class="temp-num">72°</div>
+      <div class="temp-unit">PERFECT COMFORT</div>
+    </div>
+    <div class="temp-label" style="margin-top:.875rem;">Your home, controlled</div>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow"><span class="live-dot"></span>24/7 Emergency Service Available</div>
+    <h1>COOL DOWN.<br/>HEAT UP.<br/><span class="ice">WE FIX IT.</span></h1>
+    <p class="hero-desc">AC broken in a Texas summer? We arrive in under 2 hours. Grand Prairie's most trusted HVAC team — licensed, insured, no hidden fees.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="tel:8175550241" class="btn-primary">📞 Call Now — (817) 555-0241</a>
+      <a href="#quote" class="btn-outline">Free Quote →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">&lt;2hr</div><div class="stat-label">Response Time</div></div>
+      <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Always Available</div></div>
+      <div class="stat"><div class="stat-num">15yr</div><div class="stat-label">In Business</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:#060e18;border-top:1px solid rgba(26,127,212,.08);">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom:.75rem;">What We Do</div>
+    <h2>FULL HVAC <span class="accent">SERVICES.</span></h2>
+    <div class="services-grid">
+      <div class="svc"><div class="svc-icon">❄️</div><div class="svc-name">AC REPAIR</div><div class="svc-desc">Same-day AC repair for all makes and models. We diagnose fast and fix it right the first time.</div><span class="svc-price">Diagnostic from $79</span></div>
+      <div class="svc"><div class="svc-icon">🏠</div><div class="svc-name">AC INSTALLATION</div><div class="svc-desc">New AC unit installation with proper sizing for your home. All major brands available.</div><span class="svc-price">Free Estimate</span></div>
+      <div class="svc"><div class="svc-icon">🔥</div><div class="svc-name">HEATING REPAIR</div><div class="svc-desc">Furnace and heat pump repair. Don't freeze — we're available 24/7 including holidays.</div><span class="svc-price">Diagnostic from $79</span></div>
+      <div class="svc"><div class="svc-icon">🌿</div><div class="svc-name">AIR QUALITY</div><div class="svc-desc">Air purifiers, UV systems, and whole-home filtration to keep your family breathing clean.</div><span class="svc-price">Free Consultation</span></div>
+      <div class="svc"><div class="svc-icon">🔧</div><div class="svc-name">MAINTENANCE</div><div class="svc-desc">Seasonal tune-ups extend your system's life and prevent emergency breakdowns.</div><span class="svc-price">From $99/visit</span></div>
+      <div class="svc"><div class="svc-icon">🌡️</div><div class="svc-name">SMART THERMOSTATS</div><div class="svc-desc">Nest, Ecobee, and more — we install and configure smart thermostats that save money.</div><span class="svc-price">From $149 installed</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="background:#0a1525;border-top:1px solid rgba(26,127,212,.07);">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom:.75rem;">Why Choose Us</div>
+    <h2>NO SURPRISES. <span class="accent">JUST RESULTS.</span></h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">⚡</div><div class="why-title">Fast Response</div><div class="why-desc">We guarantee under 2 hours for emergency calls in Grand Prairie, Arlington, and Irving.</div></div>
+      <div class="why-card"><div class="why-icon">💰</div><div class="why-title">Upfront Pricing</div><div class="why-desc">You approve the price before we start. No surprise fees at the end of the job.</div></div>
+      <div class="why-card"><div class="why-icon">🏅</div><div class="why-title">Licensed & Insured</div><div class="why-desc">TACLB licensed technicians, fully insured. Your home and system are protected.</div></div>
+      <div class="why-card"><div class="why-icon">📅</div><div class="why-title">Maintenance Plans</div><div class="why-desc">Annual plans keep your system running efficiently and extend its lifespan by years.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="quote-section">
+  <div class="container">
+    <div class="quote-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:.75rem;">Get Your Free Estimate</div>
+        <h2>WE'LL CALL YOU <span class="accent">WITHIN 1 HOUR.</span></h2>
+        <p style="color:rgba(232,244,255,.45);font-size:.88rem;line-height:1.7;margin-top:.875rem;max-width:380px;">Fill out the form and one of our technicians will call you back within the hour — or call us directly at (817) 555-0241.</p>
+        <div class="guarantee-box">
+          <div class="guarantee-item"><span class="check">✓</span>No diagnostic fee if you book the repair</div>
+          <div class="guarantee-item"><span class="check">✓</span>Price quoted before any work begins</div>
+          <div class="guarantee-item"><span class="check">✓</span>1-year parts & labor warranty</div>
+          <div class="guarantee-item"><span class="check">✓</span>Satisfaction guaranteed or we come back free</div>
+        </div>
+      </div>
+      <form onsubmit="return false;">
+        <div class="form-row"><input type="text" placeholder="Full Name" required/><input type="tel" placeholder="Phone Number" required/></div>
+        <input type="text" placeholder="Service Address" required/>
+        <select required><option value="">What do you need?</option><option>AC not cooling</option><option>AC not turning on</option><option>Heating not working</option><option>Strange noises</option><option>High energy bills</option><option>New AC installation</option><option>Maintenance / tune-up</option><option>Smart thermostat install</option></select>
+        <div class="form-row">
+          <select><option value="">System type...</option><option>Central AC</option><option>Heat pump</option><option>Mini-split</option><option>Window unit</option><option>Not sure</option></select>
+          <select><option value="">How urgent?</option><option>Emergency — ASAP</option><option>Today</option><option>This week</option><option>Scheduling ahead</option></select>
+        </div>
+        <textarea rows="3" placeholder="Anything else we should know? (system age, symptoms, etc.)"></textarea>
+        <button type="submit" class="form-submit">Get My Free Quote →</button>
+        <p style="font-size:.72rem;color:rgba(232,244,255,.25);margin-top:.5rem;">Or call directly: <strong style="color:var(--ice);">(817) 555-0241</strong> — we answer 24/7</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="coverage" style="background:#060e18;border-top:1px solid rgba(26,127,212,.07);">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom:.75rem;">Service Area</div>
+    <h2>WE COVER ALL OF <span class="accent">DFW.</span></h2>
+    <p style="color:rgba(232,244,255,.4);font-size:.88rem;line-height:1.7;margin-top:.5rem;max-width:480px;">From Grand Prairie to Fort Worth, we send licensed technicians across the entire metroplex — usually within 2 hours.</p>
+    <div class="coverage-grid">
+      <div class="city-tag">Grand Prairie</div><div class="city-tag">Arlington</div><div class="city-tag">Irving</div>
+      <div class="city-tag">Dallas</div><div class="city-tag">Fort Worth</div><div class="city-tag">Mansfield</div>
+      <div class="city-tag">Duncanville</div><div class="city-tag">Cedar Hill</div><div class="city-tag">Midlothian</div>
+      <div class="city-tag">DeSoto</div><div class="city-tag">Lancaster</div><div class="city-tag">Burleson</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container" style="padding:5rem 0;">
+    <div class="eyebrow" style="justify-content:center;display:flex;margin-bottom:.75rem;">24/7 Emergency Line</div>
+    <h2 style="text-align:center;">AC BROKE IN THE MIDDLE<br/>OF A TEXAS <span class="accent">SUMMER?</span></h2>
+    <a href="tel:8175550241" class="phone-big">(817) 555-0241</a>
+    <p style="color:rgba(232,244,255,.4);font-size:.88rem;text-align:center;margin-bottom:2rem;">We answer 24/7 — including weekends and holidays</p>
+    <div style="text-align:center;"><a href="#quote" class="btn-primary" style="display:inline-flex;">Get Free Estimate →</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">❄ ARCTIC PRO HVAC</div>
+  <div class="footer-info">3105 S Great Southwest Pkwy, Grand Prairie, TX · (817) 555-0241<br/>Licensed TACLB · Fully Insured · Serving DFW Since 2009</div>
+  <a href="/contact.html" class="ewnexus-badge">Website by EWNexus · $500 · 3-day launch → ewnexus.com</a>
+</footer>
+<script>window.addEventListener('scroll',function(){document.querySelector('nav').style.boxShadow=window.scrollY>20?'0 4px 30px rgba(0,0,0,.3)':'none';});</script>
+</body>
+</html>

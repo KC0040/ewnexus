@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EWNexus Site Config",
+  "description": "客戶網站設定檔。填好這個 JSON，Claude 直接生成完整網站。",
+  "type": "object",
+  "required": ["business", "theme", "content"],
+  "properties": {
+
+    "business": {
+      "type": "object",
+      "description": "基本業務資訊",
+      "required": ["name", "slug", "industry", "phone", "email", "address", "city", "state", "zip"],
+      "properties": {
+        "name":        { "type": "string", "example": "Grand Prairie Tire & Wheel" },
+        "slug":        { "type": "string", "example": "DEMO_TireShop", "description": "用於檔案命名，無空格" },
+        "industry":    { "type": "string", "enum": ["tire_shop","restaurant","salon","plumber","hvac","auto_repair","bakery","gym","lawn_care","accounting","retail","other"] },
+        "schema_type": { "type": "string", "example": "AutoPartsStore", "description": "Schema.org @type" },
+        "tagline":     { "type": "string", "example": "Grand Prairie's #1 Tire & Wheel Shop" },
+        "phone":       { "type": "string", "example": "(972) 555-0144" },
+        "email":       { "type": "string", "example": "info@gptirewheel.com" },
+        "address":     { "type": "string", "example": "2841 W Pioneer Pkwy" },
+        "city":        { "type": "string", "example": "Grand Prairie" },
+        "state":       { "type": "string", "example": "TX" },
+        "zip":         { "type": "string", "example": "75051" },
+        "hours": {
+          "type": "object",
+          "properties": {
+            "weekday": { "type": "string", "example": "Mon–Fri 8am–6pm" },
+            "saturday":{ "type": "string", "example": "Sat 9am–4pm" },
+            "sunday":  { "type": "string", "example": "Closed" }
+          }
+        },
+        "geo": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number", "default": 32.7459 },
+            "lng": { "type": "number", "default": -97.0181 }
+          }
+        },
+        "area_served": {
+          "type": "array",
+          "default": ["Grand Prairie","Arlington","Irving","Dallas","Fort Worth","Mansfield"],
+          "items": { "type": "string" }
+        },
+        "telegram_chat_id": { "type": "string", "description": "老闆的 Telegram chat ID，用來接收詢價通知" }
+      }
+    },
+
+    "theme": {
+      "type": "object",
+      "description": "設計系統 — Claude 根據此生成 CSS variables",
+      "properties": {
+        "mode":    { "type": "string", "enum": ["dark","light"], "default": "dark" },
+        "bg":      { "type": "string", "example": "#0f0f0f", "description": "頁面背景色" },
+        "surface": { "type": "string", "example": "#1a1a1a", "description": "卡片背景色" },
+        "accent":  { "type": "string", "example": "#f97316", "description": "主題強調色（CTA、icon、邊框）" },
+        "text":    { "type": "string", "example": "#f5f5f5", "description": "主要文字色" },
+        "text_muted": { "type": "string", "example": "#a0a0a0" },
+        "border":  { "type": "string", "example": "rgba(255,255,255,0.08)" },
+        "border_radius": { "type": "string", "example": "12px" },
+        "font_heading": { "type": "string", "example": "Space Grotesk" },
+        "font_body":    { "type": "string", "example": "Inter" },
+        "font_mono":    { "type": "string", "example": "DM Mono" }
+      }
+    },
+
+    "seo": {
+      "type": "object",
+      "description": "SEO & GEO 設定",
+      "properties": {
+        "title":       { "type": "string", "example": "Grand Prairie Tire & Wheel | New & Used Tires TX" },
+        "description": { "type": "string", "maxLength": 160, "example": "Grand Prairie's trusted tire shop. New & used tires, custom wheels, TPMS service. Walk-ins welcome. Call (972) 555-0144." },
+        "keywords":    { "type": "array", "items": { "type": "string" }, "example": ["tire shop Grand Prairie TX","custom wheels Arlington Texas","used tires DFW","TPMS service Grand Prairie"] },
+        "canonical":   { "type": "string", "example": "https://www.gptirewheel.com/" },
+        "og_image":    { "type": "string", "example": "https://www.gptirewheel.com/og-image.jpg" }
+      }
+    },
+
+    "content": {
+      "type": "object",
+      "description": "頁面內容 — 直接驅動 HTML 生成",
+      "properties": {
+
+        "hero": {
+          "type": "object",
+          "properties": {
+            "headline":    { "type": "string", "example": "Grand Prairie's Trusted Tire & Wheel Experts" },
+            "subheadline": { "type": "string", "example": "New tires, used tires, custom wheels, and TPMS service. Walk-ins welcome." },
+            "cta_primary": { "type": "string", "example": "Get a Free Quote" },
+            "cta_secondary":{ "type": "string", "example": "View Inventory" },
+            "trust_badges":{ "type": "array", "items": { "type": "string" }, "example": ["⭐ 4.8 Google Rating","🔧 15+ Years Experience","🚗 Walk-ins Welcome","📍 Grand Prairie, TX"] }
+          }
+        },
+
+        "services": {
+          "type": "array",
+          "description": "服務項目列表",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name":  { "type": "string", "example": "New Tire Installation" },
+              "desc":  { "type": "string", "example": "All major brands in stock. Same-day mounting and balancing." },
+              "price": { "type": "string", "example": "Starting at $89/tire" },
+              "icon":  { "type": "string", "example": "tire_repair", "description": "Material Symbol icon name" }
+            }
+          }
+        },
+
+        "inventory": {
+          "type": "object",
+          "description": "庫存展示設定（輪胎行/零售用）",
+          "properties": {
+            "enabled": { "type": "boolean", "default": false },
+            "source":  { "type": "string", "enum": ["json","google_sheets","csv"], "default": "json" },
+            "sheets_url": { "type": "string", "description": "Google Sheets 公開 CSV 連結" },
+            "columns": {
+              "type": "array",
+              "description": "庫存欄位定義",
+              "example": ["brand","model","size","type","price","qty","condition"]
+            },
+            "filters": {
+              "type": "array",
+              "description": "讓客戶可以篩選的欄位",
+              "example": ["brand","size","type"]
+            }
+          }
+        },
+
+        "reviews": {
+          "type": "object",
+          "properties": {
+            "source": { "type": "string", "enum": ["json","google_places","static"], "default": "static" },
+            "google_place_id": { "type": "string" },
+            "cache_file": { "type": "string", "default": "reviews.json" },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "author": { "type": "string" },
+                  "rating": { "type": "integer", "minimum": 1, "maximum": 5 },
+                  "text":   { "type": "string" },
+                  "date":   { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+
+        "faq": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "q": { "type": "string" },
+              "a": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "integrations": {
+      "type": "object",
+      "properties": {
+        "ai_chatbot": {
+          "type": "object",
+          "properties": {
+            "enabled":   { "type": "boolean", "default": false },
+            "bot_name":  { "type": "string", "example": "Mike", "description": "客戶可自訂 AI 客服名稱" },
+            "managed_by_ewnexus": { "type": "boolean", "default": true, "description": "永遠 true — EWNexus 統一管理 API" }
+          }
+        },
+        "telegram": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean", "default": true },
+            "chat_id": { "type": "string" }
+          }
+        },
+        "google_sheets_inventory": {
+          "type": "object",
+          "properties": {
+            "enabled":    { "type": "boolean", "default": false },
+            "public_csv": { "type": "string", "description": "格式：https://docs.google.com/spreadsheets/.../export?format=csv" }
+          }
+        }
+      }
+    },
+
+    "ewnexus_meta": {
+      "type": "object",
+      "description": "EWNexus 內部追蹤用",
+      "properties": {
+        "client_id":   { "type": "string", "example": "cli_2025_001" },
+        "created":     { "type": "string", "format": "date", "example": "2025-05-05" },
+        "plan":        { "type": "string", "enum": ["launch","maintain_annual","maintain_ondemand"] },
+        "ai_enabled":  { "type": "boolean" },
+        "demo_mode":   { "type": "boolean", "description": "true = 顯示 EWNexus demo banner" }
+      }
+    }
+  }
+}

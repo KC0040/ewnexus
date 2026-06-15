@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO -->
+  <title>Grand Prairie Tire &amp; Wheel | New &amp; Used Tires | Custom Wheels DFW</title>
+  <meta name="description" content="Grand Prairie's trusted tire shop since 2009. New &amp; used tires, custom wheels, TPMS, alignment. Walk-ins welcome. Serving Arlington, Irving, Dallas. Call (972) 555-0144."/>
+  <meta name="keywords" content="tire shop Grand Prairie TX, custom wheels Grand Prairie Texas, used tires Grand Prairie, TPMS service Grand Prairie TX, new tires Arlington TX, wheel alignment DFW, tire shop near me Grand Prairie, cheap tires Grand Prairie Texas, tire rotation Irving TX, custom rims Fort Worth"/>
+
+  <!-- GEO -->
+  <meta name="geo.region" content="US-TX"/>
+  <meta name="geo.placename" content="Grand Prairie, Texas"/>
+  <meta name="geo.position" content="32.7459;-97.0181"/>
+  <meta name="ICBM" content="32.7459, -97.0181"/>
+
+  <!-- OG -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Grand Prairie Tire &amp; Wheel — Tires &amp; Custom Wheels | Grand Prairie, TX"/>
+  <meta property="og:description" content="Grand Prairie's trusted tire shop since 2009. New &amp; used tires, custom wheels, TPMS, alignment. Walk-ins welcome."/>
+  <meta property="og:url" content="https://www.ewnexus.com/demos/DEMO_TireShop.html"/>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.ewnexus.com/demos/DEMO_TireShop.html"/>
+
+  <!-- Base CSS + Fonts -->
+  <link rel="stylesheet" href="../assets/base.css"/>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["AutoPartsStore", "LocalBusiness"],
+        "name": "Grand Prairie Tire & Wheel",
+        "telephone": "(972) 555-0144",
+        "email": "info@gptirewheel.com",
+        "url": "https://www.ewnexus.com/demos/DEMO_TireShop.html",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2841 W Pioneer Pkwy",
+          "addressLocality": "Grand Prairie",
+          "addressRegion": "TX",
+          "postalCode": "75051",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 32.7459,
+          "longitude": -97.0181
+        },
+        "areaServed": ["Grand Prairie","Arlington","Irving","Dallas","Fort Worth","Mansfield","Duncanville"],
+        "priceRange": "$$",
+        "openingHours": ["Mo-Fr 08:00-18:00","Sa 09:00-16:00"],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "203"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need an appointment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No appointment needed for tire installation, rotation, or TPMS service. We take walk-ins Monday–Saturday. Wheel alignments may require a short wait during busy hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What tire brands do you carry?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We stock Michelin, Goodyear, BF Goodrich, Cooper, Nexen, Falken, Hankook, and more. We can order any brand not in stock — usually arrives next business day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a tire installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most single tire installations take 15–30 minutes. A full set of 4 tires with mounting and balancing is typically done in 45–60 minutes."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── Tire Shop Theme Override ── */
+    :root {
+      --accent:      #f97316;
+      --accent-dark: #c2410c;
+      --bg:          #0d0d0d;
+      --surface:     #1a1a1a;
+      --surface-2:   #242424;
+      --text:        #f5f5f5;
+      --text-muted:  #a0a0a0;
+      --border:      rgba(249,115,22,0.15);
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 40px; /* below demo banner */
+      z-index: 900;
+      background: rgba(13,13,13,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: var(--sp-6); align-items: center; }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent);
+      color: #000 !important;
+      padding: 9px 20px;
+      border-radius: var(--radius);
+      font-weight: 700 !important;
+      font-size: 14px !important;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+    @media(max-width:680px){
+      .nav-links { display: none; }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      padding: var(--sp-20) var(--container-pad);
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .hero-bg-grid {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(249,115,22,0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+    .hero-blob-1 {
+      width: 500px; height: 500px;
+      background: var(--accent);
+      top: -100px; right: -150px;
+    }
+    .hero-blob-2 {
+      width: 350px; height: 350px;
+      background: #f59e0b;
+      bottom: -80px; left: -80px;
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: var(--sp-16);
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: var(--sp-4);
+    }
+    .hero h1 { margin-bottom: var(--sp-5); }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: var(--sp-8);
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: var(--sp-3); flex-wrap: wrap; margin-bottom: var(--sp-8); }
+    .trust-badges { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+    .trust-badge {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ── Quote Card (hero right) ── */
+    .quote-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-8);
+    }
+    .quote-card h3 {
+      font-size: 18px;
+      margin-bottom: var(--sp-5);
+    }
+    .quote-card .form-group { margin-bottom: var(--sp-4); }
+    @media(max-width:900px){
+      .hero-content { grid-template-columns: 1fr; }
+      .quote-card { max-width: 480px; }
+    }
+
+    /* ── Trust bar ── */
+    .trust-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: var(--sp-6) var(--container-pad);
+    }
+    .trust-bar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: var(--sp-5);
+    }
+    .trust-stat { text-align: center; }
+    .trust-stat .num {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .trust-stat .lbl {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ── Brands ── */
+    .brands-row {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+      align-items: center;
+      justify-content: center;
+      padding: var(--sp-8) var(--container-pad);
+    }
+    .brand-chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      padding: 8px 20px;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Services ── */
+    .services-section {
+      padding: var(--sp-20) var(--container-pad);
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .section-header { text-align: center; margin-bottom: var(--sp-12); }
+    .section-header p { max-width: 560px; margin: var(--sp-3) auto 0; }
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-8);
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(249,115,22,0.4);
+      box-shadow: 0 16px 48px rgba(249,115,22,0.08);
+    }
+    .service-icon {
+      width: 48px; height: 48px;
+      background: rgba(249,115,22,0.1);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--sp-4);
+    }
+    .service-icon .material-symbols-outlined { color: var(--accent); font-size: 24px; }
+    .service-card h3 { font-size: 17px; margin-bottom: var(--sp-2); }
+    .service-card p { font-size: 14px; margin-bottom: var(--sp-4); }
+    .service-price {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ── Inventory ── */
+    .inventory-section {
+      padding: var(--sp-20) var(--container-pad);
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .inventory-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .inv-filters {
+      display: flex;
+      gap: var(--sp-3);
+      flex-wrap: wrap;
+      margin: var(--sp-8) 0 var(--sp-6);
+    }
+    .inv-filter-group { display: flex; flex-direction: column; gap: 5px; }
+    .inv-filter-group label {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .inv-select {
+      background: var(--surface-2);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 8px 12px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      cursor: pointer;
+      min-width: 130px;
+    }
+    .inv-select:focus { border-color: var(--accent); }
+    .inv-reset {
+      background: transparent;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 8px 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--text-muted);
+      cursor: pointer;
+      align-self: flex-end;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .inv-reset:hover { border-color: var(--accent); color: var(--accent); }
+    .inv-count {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: var(--sp-4);
+    }
+    .inv-count span { color: var(--accent); font-weight: 600; }
+    #inv-table-wrap { overflow-x: auto; }
+    .inv-table tbody tr { transition: background 0.15s; }
+
+    /* ── Reviews ── */
+    .reviews-section {
+      padding: var(--sp-20) var(--container-pad);
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .rating-summary {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-5);
+      margin-bottom: var(--sp-10);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-8);
+    }
+    .rating-big {
+      font-family: var(--font-heading);
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .rating-stars { color: #f59e0b; font-size: 24px; margin-bottom: 4px; }
+    .rating-count { font-size: 14px; color: var(--text-muted); }
+
+    /* ── FAQ ── */
+    .faq-section {
+      padding: var(--sp-20) var(--container-pad);
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+
+    /* ── CTA Band ── */
+    .cta-band {
+      padding: var(--sp-20) var(--container-pad);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+    .cta-band h2 { margin-bottom: var(--sp-4); }
+    .cta-band p { margin-bottom: var(--sp-8); }
+
+    /* ── Info Bar ── */
+    .info-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: var(--sp-10) var(--container-pad);
+    }
+    .info-bar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-8);
+    }
+    .info-block h4 {
+      font-size: 14px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: var(--sp-3);
+    }
+    .info-block p, .info-block address {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-style: normal;
+      line-height: 1.8;
+    }
+    .info-block a { color: var(--text); font-weight: 600; }
+    .info-block a:hover { color: var(--accent); }
+    @media(max-width:680px){
+      .info-bar-inner { grid-template-columns: 1fr; }
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #080808;
+      border-top: 1px solid var(--border);
+      padding: var(--sp-8) var(--container-pad);
+    }
+    .footer-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-4);
+    }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+    .footer-ew { font-size: 12px; color: var(--text-muted); }
+    .footer-ew a { color: #34d399; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<!-- ── EWNexus Demo Banner ── -->
+<div class="ew-demo-banner">
+  <span class="material-symbols-outlined" style="font-size:16px">info</span>
+  This is a <strong>demo site</strong> built by EWNexus &nbsp;·&nbsp;
+  <a href="https://www.ewnexus.com/contact.html">Get your own website for $500 →</a>
+</div>
+
+<!-- ── Nav ── -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <span class="material-symbols-outlined" style="color:var(--accent);font-size:22px">tire_repair</span>
+      Grand Prairie <span>&nbsp;Tire &amp; Wheel</span>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="tel:9725550144" class="nav-cta">
+        <span class="material-symbols-outlined" style="font-size:15px">call</span>
+        (972) 555-0144
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg-grid"></div>
+  <div class="glow-blob hero-blob-1"></div>
+  <div class="glow-blob hero-blob-2"></div>
+  <div class="hero-content">
+    <div>
+      <p class="hero-eyebrow">Grand Prairie, TX · Since 2009</p>
+      <h1>Grand Prairie's Trusted <em>Tire &amp; Wheel</em> Experts</h1>
+      <p class="hero-sub">New tires, used tires, custom wheels, and TPMS service. Walk-ins welcome — no appointment needed for most services.</p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-primary">
+          <span class="material-symbols-outlined" style="font-size:18px">request_quote</span>
+          Get a Free Quote
+        </a>
+        <a href="#inventory" class="btn btn-outline">Browse Inventory</a>
+      </div>
+      <div class="trust-badges">
+        <span class="trust-badge">⭐ 4.8 Google Rating</span>
+        <span class="trust-badge">🔧 15+ Years in Grand Prairie</span>
+        <span class="trust-badge">🚗 Walk-ins Welcome</span>
+        <span class="trust-badge">✅ Licensed &amp; Insured</span>
+        <span class="trust-badge">📦 Same-Day Service</span>
+      </div>
+    </div>
+
+    <!-- Quote Form -->
+    <div class="quote-card" id="quote">
+      <h3>Get a Free Quote</h3>
+      <form id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="cf-name">Your Name</label>
+          <input id="cf-name" class="form-input" type="text" placeholder="John Smith" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-phone">Phone Number</label>
+          <input id="cf-phone" class="form-input" type="tel" placeholder="(972) 555-0000" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-service">Service Needed</label>
+          <select id="cf-service" class="form-input inv-select" style="width:100%">
+            <option value="">Select a service…</option>
+            <option>New Tire Installation</option>
+            <option>Used Tires</option>
+            <option>Custom Wheels / Rims</option>
+            <option>TPMS Service</option>
+            <option>Wheel Alignment</option>
+            <option>Tire Rotation &amp; Balance</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-msg">Vehicle &amp; Tire Size (optional)</label>
+          <input id="cf-msg" class="form-input" type="text" placeholder="2019 F-150, 265/70R17"/>
+        </div>
+        <button type="submit" class="form-submit" id="submit-btn">
+          Send Quote Request
+        </button>
+        <div id="form-success" style="display:none;text-align:center;padding:var(--sp-5) 0;color:#34d399;font-weight:600;">
+          ✅ Got it! We'll call you within 30 minutes.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── Trust Stats ── -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-stat">
+      <div class="num">4.8★</div>
+      <div class="lbl">Google Rating (203 reviews)</div>
+    </div>
+    <div class="trust-stat">
+      <div class="num">15+</div>
+      <div class="lbl">Years in Grand Prairie</div>
+    </div>
+    <div class="trust-stat">
+      <div class="num">$25</div>
+      <div class="lbl">Used tires from</div>
+    </div>
+    <div class="trust-stat">
+      <div class="num">60 min</div>
+      <div class="lbl">Full set installed</div>
+    </div>
+    <div class="trust-stat">
+      <div class="num">7</div>
+      <div class="lbl">DFW cities served</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Brands ── -->
+<div class="brands-row">
+  <span style="font-size:12px;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-right:8px;">Brands in stock:</span>
+  <span class="brand-chip">Michelin</span>
+  <span class="brand-chip">Goodyear</span>
+  <span class="brand-chip">BF Goodrich</span>
+  <span class="brand-chip">Cooper</span>
+  <span class="brand-chip">Nexen</span>
+  <span class="brand-chip">Falken</span>
+  <span class="brand-chip">Hankook</span>
+  <span class="brand-chip">+ More</span>
+</div>
+
+<!-- ── Services ── -->
+<section id="services" aria-label="Services" style="background:var(--bg);">
+  <div class="services-section">
+    <div class="section-header">
+      <p class="eyebrow">What We Do</p>
+      <h2>Full-Service Tire &amp; Wheel Shop</h2>
+      <p>Located in Grand Prairie, Texas, Grand Prairie Tire &amp; Wheel serves drivers across the DFW metroplex with expert tire and wheel services since 2009.</p>
+    </div>
+    <div class="grid-3">
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">tire_repair</span>
+        </div>
+        <h3>New Tire Sales &amp; Installation</h3>
+        <p>All major brands in stock — Michelin, Goodyear, BF Goodrich, Cooper, Nexen, and more. Same-day mounting and balancing.</p>
+        <div class="service-price">Starting at $69/tire installed</div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">recycling</span>
+        </div>
+        <h3>Used Tires</h3>
+        <p>Quality used tires inspected and guaranteed. Great option for budget-conscious drivers. All sizes available.</p>
+        <div class="service-price">Starting at $25/tire</div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">settings</span>
+        </div>
+        <h3>Custom Wheels &amp; Rims</h3>
+        <p>Hundreds of styles in stock. We'll help you find the perfect fit for your vehicle. Financing available.</p>
+        <div class="service-price">From $99/wheel</div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">speed</span>
+        </div>
+        <h3>TPMS Service</h3>
+        <p>Tire Pressure Monitoring System sensor replacement, programming, and reset. Fast in-and-out service.</p>
+        <div class="service-price">Starting at $49</div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">straighten</span>
+        </div>
+        <h3>Wheel Alignment</h3>
+        <p>4-wheel computerized alignment. Extends tire life and improves fuel economy. Most vehicles done in under 1 hour.</p>
+        <div class="service-price">$79 standard | $99 4-wheel</div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span class="material-symbols-outlined">autorenew</span>
+        </div>
+        <h3>Tire Rotation &amp; Balance</h3>
+        <p>Extend your tire life and get a smoother ride. Recommended every 5,000–7,500 miles.</p>
+        <div class="service-price">$49 rotation + balance</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Inventory ── -->
+<section id="inventory" aria-label="Tire Inventory" class="inventory-section">
+  <div class="inventory-inner">
+    <div class="section-header">
+      <p class="eyebrow">In Stock Now</p>
+      <h2>Tire Inventory</h2>
+      <p>Browse available tires. Filter by brand, size, type, or condition. Call to confirm availability.</p>
+    </div>
+
+    <div class="inv-filters">
+      <div class="inv-filter-group">
+        <label for="f-brand">Brand</label>
+        <select id="f-brand" class="inv-select" onchange="filterInventory()">
+          <option value="">All Brands</option>
+          <option>Michelin</option>
+          <option>Goodyear</option>
+          <option>BF Goodrich</option>
+          <option>Cooper</option>
+          <option>Nexen</option>
+          <option>Used</option>
+        </select>
+      </div>
+      <div class="inv-filter-group">
+        <label for="f-size">Size</label>
+        <select id="f-size" class="inv-select" onchange="filterInventory()">
+          <option value="">All Sizes</option>
+          <option>195/65R15</option>
+          <option>205/55R16</option>
+          <option>215/60R16</option>
+          <option>225/45R17</option>
+          <option>235/75R15</option>
+          <option>265/70R17</option>
+        </select>
+      </div>
+      <div class="inv-filter-group">
+        <label for="f-type">Type</label>
+        <select id="f-type" class="inv-select" onchange="filterInventory()">
+          <option value="">All Types</option>
+          <option>All-Season</option>
+          <option>All-Terrain</option>
+          <option>Performance</option>
+        </select>
+      </div>
+      <div class="inv-filter-group">
+        <label for="f-cond">Condition</label>
+        <select id="f-cond" class="inv-select" onchange="filterInventory()">
+          <option value="">New &amp; Used</option>
+          <option>New</option>
+          <option>Used</option>
+        </select>
+      </div>
+      <button class="inv-reset" onclick="resetFilters()">Reset</button>
+    </div>
+
+    <p class="inv-count">Showing <span id="inv-shown">8</span> of <span id="inv-total">8</span> items</p>
+
+    <div id="inv-table-wrap">
+      <table class="inv-table" id="inv-table">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Size</th>
+            <th>Type</th>
+            <th>Condition</th>
+            <th>Price</th>
+            <th>Qty</th>
+          </tr>
+        </thead>
+        <tbody id="inv-body">
+          <!-- populated by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:13px;color:var(--text-muted);margin-top:var(--sp-4);">
+      * Don't see your size? Call <a href="tel:9725550144" style="color:var(--accent);font-weight:600;">(972) 555-0144</a> — we can order any tire, usually next business day.
+    </p>
+  </div>
+</section>
+
+<!-- ── Reviews ── -->
+<section id="reviews" aria-label="Customer Reviews">
+  <div class="reviews-section">
+    <div class="section-header">
+      <p class="eyebrow">What Customers Say</p>
+      <h2>Real Reviews from DFW Drivers</h2>
+    </div>
+
+    <div class="rating-summary">
+      <div class="rating-big">4.8</div>
+      <div>
+        <div class="rating-stars">★★★★★</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:2px;">Excellent</div>
+        <div class="rating-count">Based on 203 Google reviews</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:var(--sp-3);flex-wrap:wrap;">
+        <span class="trust-badge" style="background:rgba(249,115,22,0.05);">5★ &nbsp; 87%</span>
+        <span class="trust-badge" style="background:rgba(249,115,22,0.05);">4★ &nbsp; 10%</span>
+        <span class="trust-badge" style="background:rgba(249,115,22,0.05);">3★ &nbsp; 3%</span>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best tire shop in Grand Prairie, hands down. Got 4 new tires mounted and balanced in under an hour. Price was way better than Discount Tire. I'm a customer for life."</p>
+        <div class="review-author">Marcus T. <span style="font-weight:400;color:var(--text-muted);">· March 2025</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"They had my tire size in stock and got me in and out in 30 minutes. The guys were super honest about what I needed vs. what I didn't. No upselling, just good service."</p>
+        <div class="review-author">Rosa M. <span style="font-weight:400;color:var(--text-muted);">· April 2025</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Custom wheels look amazing on my truck. They helped me pick the right offset and size. Very knowledgeable staff. Already recommended to 3 friends."</p>
+        <div class="review-author">David K. <span style="font-weight:400;color:var(--text-muted);">· February 2025</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"Good prices on used tires. They were honest that one I wanted wasn't in great shape and suggested a better one. Appreciated the integrity."</p>
+        <div class="review-author">Sarah L. <span style="font-weight:400;color:var(--text-muted);">· January 2025</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq" aria-label="FAQ" class="faq-section">
+  <div class="faq-inner">
+    <div class="section-header" style="text-align:left;margin-bottom:var(--sp-8);">
+      <p class="eyebrow">Common Questions</p>
+      <h2>FAQs</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+        Do I need an appointment?
+        <span class="material-symbols-outlined faq-icon">add</span>
+      </button>
+      <div class="faq-ans">No appointment needed for tire installation, rotation, or TPMS service. We take walk-ins Monday–Saturday. Wheel alignments may require a short wait during busy hours.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+        What tire brands do you carry?
+        <span class="material-symbols-outlined faq-icon">add</span>
+      </button>
+      <div class="faq-ans">We stock Michelin, Goodyear, BF Goodrich, Cooper, Nexen, Falken, Hankook, and more. We can order any brand not in stock — usually arrives next business day.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+        Do you buy used tires?
+        <span class="material-symbols-outlined faq-icon">add</span>
+      </button>
+      <div class="faq-ans">Yes, we buy used tires and wheels in good condition. Bring them in and we'll make you an offer.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+        Do you finance wheels?
+        <span class="material-symbols-outlined faq-icon">add</span>
+      </button>
+      <div class="faq-ans">Yes, we offer financing on custom wheel packages. Ask us about 6-month same-as-cash options.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+        How long does a tire installation take?
+        <span class="material-symbols-outlined faq-icon">add</span>
+      </button>
+      <div class="faq-ans">Most single tire installations take 15–30 minutes. A full set of 4 tires with mounting and balancing is typically done in 45–60 minutes.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+        Do you service commercial vehicles?
+        <span class="material-symbols-outlined faq-icon">add</span>
+      </button>
+      <div class="faq-ans">Yes, we service light trucks, vans, and commercial vehicles. Call ahead for commercial appointments.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Band ── -->
+<section class="cta-band" aria-label="Call to action">
+  <div class="glow-blob" style="width:600px;height:400px;background:var(--accent);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+  <div class="cta-band-inner">
+    <p class="eyebrow">Ready to Roll?</p>
+    <h2>Walk In Today — No Appointment Needed</h2>
+    <p>Serving Grand Prairie, Arlington, Irving, Dallas, Fort Worth, Mansfield, and Duncanville.</p>
+    <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
+      <a href="tel:9725550144" class="btn btn-primary">
+        <span class="material-symbols-outlined" style="font-size:18px">call</span>
+        Call (972) 555-0144
+      </a>
+      <a href="#quote" class="btn btn-outline">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Info Bar ── -->
+<div class="info-bar">
+  <div class="info-bar-inner">
+    <div class="info-block">
+      <h4>Location</h4>
+      <address>
+        2841 W Pioneer Pkwy<br/>
+        Grand Prairie, TX 75051<br/>
+        <a href="tel:9725550144">(972) 555-0144</a><br/>
+        <a href="mailto:info@gptirewheel.com">info@gptirewheel.com</a>
+      </address>
+    </div>
+    <div class="info-block">
+      <h4>Hours</h4>
+      <p>
+        Mon–Fri: 8:00 AM – 6:00 PM<br/>
+        Saturday: 9:00 AM – 4:00 PM<br/>
+        Sunday: Closed
+      </p>
+    </div>
+    <div class="info-block">
+      <h4>Service Area</h4>
+      <p>Grand Prairie · Arlington · Irving<br/>Dallas · Fort Worth · Mansfield<br/>Duncanville · Cedar Hill</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">© 2025 Grand Prairie Tire &amp; Wheel · 2841 W Pioneer Pkwy, Grand Prairie TX 75051</p>
+    <p class="footer-ew">Website by <a href="https://www.ewnexus.com">EWNexus</a> · $500 · 3-day launch</p>
+  </div>
+</footer>
+
+<script>
+  /* ── Inventory Data ── */
+  const INVENTORY = [
+    { brand:"Michelin",   model:"Defender T+H",        size:"205/55R16", type:"All-Season",  price:"$129", qty:8,  condition:"New"  },
+    { brand:"Goodyear",   model:"Assurance MaxLife",   size:"215/60R16", type:"All-Season",  price:"$119", qty:4,  condition:"New"  },
+    { brand:"BF Goodrich",model:"All-Terrain T/A KO2", size:"265/70R17", type:"All-Terrain", price:"$189", qty:6,  condition:"New"  },
+    { brand:"Cooper",     model:"Discoverer AT3",       size:"235/75R15", type:"All-Terrain", price:"$139", qty:3,  condition:"New"  },
+    { brand:"Nexen",      model:"N'Priz AH8",           size:"195/65R15", type:"All-Season",  price:"$79",  qty:12, condition:"New"  },
+    { brand:"Used",       model:"Various Brands",       size:"195/65R15", type:"All-Season",  price:"$35",  qty:5,  condition:"Used" },
+    { brand:"Used",       model:"Various Brands",       size:"205/55R16", type:"All-Season",  price:"$45",  qty:4,  condition:"Used" },
+    { brand:"Used",       model:"Various Brands",       size:"225/45R17", type:"Performance", price:"$55",  qty:2,  condition:"Used" }
+  ];
+
+  function renderInventory(items) {
+    const tbody = document.getElementById('inv-body');
+    if (items.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;color:var(--text-muted);padding:32px;">No tires match your filters. <a href="tel:9725550144" style="color:var(--accent);">Call us</a> — we can order any size.</td></tr>`;
+    } else {
+      tbody.innerHTML = items.map(t => `
+        <tr>
+          <td style="font-weight:600">${t.brand}</td>
+          <td>${t.model}</td>
+          <td style="font-family:var(--font-mono);font-size:13px">${t.size}</td>
+          <td>${t.type}</td>
+          <td><span class="inv-badge ${t.condition === 'New' ? 'new' : 'used'}">${t.condition}</span></td>
+          <td style="color:var(--accent);font-weight:700;font-family:var(--font-mono)">${t.price}</td>
+          <td style="color:var(--text-muted)">${t.qty}</td>
+        </tr>
+      `).join('');
+    }
+    document.getElementById('inv-shown').textContent = items.length;
+    document.getElementById('inv-total').textContent = INVENTORY.length;
+  }
+
+  function filterInventory() {
+    const brand = document.getElementById('f-brand').value;
+    const size  = document.getElementById('f-size').value;
+    const type  = document.getElementById('f-type').value;
+    const cond  = document.getElementById('f-cond').value;
+    const result = INVENTORY.filter(t =>
+      (!brand || t.brand === brand) &&
+      (!size  || t.size  === size)  &&
+      (!type  || t.type  === type)  &&
+      (!cond  || t.condition === cond)
+    );
+    renderInventory(result);
+  }
+
+  function resetFilters() {
+    ['f-brand','f-size','f-type','f-cond'].forEach(id => document.getElementById(id).value = '');
+    renderInventory(INVENTORY);
+  }
+
+  /* ── FAQ ── */
+  function toggleFaq(btn) {
+    const ans = btn.nextElementSibling;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    // close all
+    document.querySelectorAll('.faq-btn').forEach(b => {
+      b.setAttribute('aria-expanded','false');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if (!expanded) {
+      btn.setAttribute('aria-expanded','true');
+      ans.classList.add('open');
+    }
+  }
+
+  /* ── Contact Form ── */
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name:    document.getElementById('cf-name').value,
+          phone:   document.getElementById('cf-phone').value,
+          service: document.getElementById('cf-service').value,
+          message: document.getElementById('cf-msg').value,
+          source:  'DEMO_TireShop'
+        })
+      });
+    } catch (_) { /* demo — no server required */ }
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  /* ── Init ── */
+  renderInventory(INVENTORY);
+</script>
+</body>
+</html>

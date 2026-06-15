@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Service Agreement — EWNexus</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="stylesheet" href="assets/base.css"/>
+  <style>
+    body { background: var(--bg); }
+
+    .contract-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--sp-12) var(--container-pad) var(--sp-20);
+    }
+
+    /* Header */
+    .contract-header {
+      text-align: center;
+      padding: var(--sp-12) 0 var(--sp-10);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: var(--sp-10);
+    }
+    .contract-logo {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-3);
+    }
+    .contract-title {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: var(--sp-2);
+    }
+    .contract-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Section */
+    .contract-section {
+      margin-bottom: var(--sp-8);
+    }
+    .contract-section h3 {
+      font-size: 13px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: var(--sp-4);
+      padding-bottom: var(--sp-2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Summary box */
+    .summary-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-8);
+      margin-bottom: var(--sp-8);
+    }
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: var(--sp-3) 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+    .summary-row:last-child { border-bottom: none; }
+    .summary-row .label { color: var(--text-muted); }
+    .summary-row .value { font-weight: 700; color: var(--text); font-family: var(--font-mono); }
+    .summary-row .value.accent { color: var(--accent); }
+
+    /* Terms text */
+    .terms-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .terms-text li {
+      margin-bottom: var(--sp-2);
+      padding-left: var(--sp-2);
+    }
+    .terms-text li::marker { color: var(--accent); }
+
+    /* Client form */
+    .client-form {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-8);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-4);
+      margin-bottom: var(--sp-4);
+    }
+    @media(max-width:600px){ .form-row { grid-template-columns: 1fr; } }
+    .form-group { margin-bottom: 0; }
+    .form-group-full { margin-bottom: var(--sp-4); }
+
+    /* Agree checkbox */
+    .agree-box {
+      background: rgba(52,211,153,0.05);
+      border: 1.5px solid rgba(52,211,153,0.2);
+      border-radius: var(--radius);
+      padding: var(--sp-5);
+      display: flex;
+      gap: var(--sp-4);
+      align-items: flex-start;
+      margin: var(--sp-6) 0;
+      cursor: pointer;
+    }
+    .agree-box input[type="checkbox"] {
+      width: 20px; height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+    .agree-box label {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+      cursor: pointer;
+    }
+
+    /* Signature */
+    .sig-row {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: var(--sp-4);
+      margin-top: var(--sp-4);
+    }
+    @media(max-width:600px){ .sig-row { grid-template-columns: 1fr; } }
+    .sig-preview {
+      font-family: 'Georgia', serif;
+      font-size: 24px;
+      font-style: italic;
+      color: var(--accent);
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 var(--sp-4);
+      background: var(--surface-2);
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+      min-width: 200px;
+    }
+
+    /* Submit */
+    #contract-submit {
+      width: 100%;
+      margin-top: var(--sp-6);
+      padding: 16px;
+      font-size: 16px;
+    }
+    #contract-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* Success */
+    .success-panel {
+      display: none;
+      text-align: center;
+      padding: var(--sp-16) var(--sp-8);
+    }
+    .success-panel .check {
+      font-size: 64px;
+      margin-bottom: var(--sp-6);
+    }
+    .success-panel h2 { margin-bottom: var(--sp-4); }
+    .success-panel p { max-width: 480px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+<div class="contract-wrap">
+
+  <!-- Header -->
+  <div class="contract-header">
+    <div class="contract-logo">EWNexus</div>
+    <div class="contract-title">Website Service Agreement</div>
+    <div class="contract-subtitle">Please read and sign below to begin your website project</div>
+  </div>
+
+  <div id="contract-body">
+
+    <!-- Pricing Summary -->
+    <div class="contract-section">
+      <h3>Service Summary</h3>
+      <div class="summary-box">
+        <div class="summary-row">
+          <span class="label">Website Build (one-time)</span>
+          <span class="value accent">$500</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Included: pages</span>
+          <span class="value">Up to 5 pages</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Included: hosting (Year 1)</span>
+          <span class="value">✅ Included</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Included: business email setup</span>
+          <span class="value">✅ Included</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Included: SEO / GEO optimization</span>
+          <span class="value">✅ Included</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Included: contact form</span>
+          <span class="value">✅ Included</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Included: revisions</span>
+          <span class="value">3 rounds</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Launch timeline</span>
+          <span class="value">3 business days</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Annual maintenance (Year 2+)</span>
+          <span class="value">$150/year</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">AI chatbot add-on (optional)</span>
+          <span class="value">+$10/month</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">5-year total estimate</span>
+          <span class="value accent">$1,100 (~$18.33/mo)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms -->
+    <div class="contract-section">
+      <h3>Terms & Conditions</h3>
+      <div class="terms-text">
+        <ol>
+          <li><strong>Payment.</strong> The $500 setup fee is due upon signing this agreement. Payment accepted via Zelle, Venmo, cash, or credit card. Work begins after payment is received.</li>
+          <li><strong>Timeline.</strong> EWNexus will deliver a working website within 3 business days of receiving this signed agreement, full payment, and all required client content (logo, photos, services list, contact info).</li>
+          <li><strong>Revisions.</strong> Three (3) rounds of revisions are included. Each revision round must be requested within 30 days of delivery. Additional revisions are $150 each.</li>
+          <li><strong>Domain.</strong> Client owns their domain. EWNexus will assist with registration at cost ($10–$20/year). Domain credentials are always given to the client.</li>
+          <li><strong>Hosting.</strong> Year 1 hosting is included. Hosting is provisioned on client's own account (client owns the account and data). Year 2+ renewal is $150/year, which includes 2 content updates and hosting renewal.</li>
+          <li><strong>AI Chatbot.</strong> If selected, the AI chatbot add-on is $10/month, billed monthly. EWNexus manages all AI API keys centrally — clients do not need their own AI accounts. EWNexus may terminate this add-on with 30 days notice.</li>
+          <li><strong>Content.</strong> Client is responsible for providing accurate business information, and owns all content. EWNexus may use the completed website as a portfolio example unless client requests otherwise.</li>
+          <li><strong>Intellectual Property.</strong> Upon full payment, client owns the completed website files. The underlying base framework and templates remain EWNexus property.</li>
+          <li><strong>Cancellation.</strong> If client cancels after payment but before delivery, a $150 cancellation fee is retained to cover work already completed. The remainder is refunded.</li>
+          <li><strong>Limitation of Liability.</strong> EWNexus is not liable for downtime caused by third-party hosting providers, domain registrars, or internet infrastructure beyond our control.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Client Info Form -->
+    <div class="contract-section">
+      <h3>Client Information</h3>
+      <div class="client-form">
+        <form id="contract-form" onsubmit="submitContract(event)">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Business Name *</label>
+              <input id="c-biz" class="form-input" type="text" placeholder="Grand Prairie Tire & Wheel" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Industry *</label>
+              <select id="c-industry" class="form-input" required>
+                <option value="">Select industry…</option>
+                <option>Tire Shop / Auto Parts</option>
+                <option>Auto Repair</option>
+                <option>Restaurant / Food</option>
+                <option>Salon / Beauty</option>
+                <option>HVAC / Plumbing</option>
+                <option>Lawn Care / Landscaping</option>
+                <option>Bakery / Café</option>
+                <option>Retail</option>
+                <option>Gym / Fitness</option>
+                <option>Accounting / Legal</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name *</label>
+              <input id="c-name" class="form-input" type="text" placeholder="John Smith" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Title</label>
+              <input id="c-title" class="form-input" type="text" placeholder="Owner / Manager"/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Phone *</label>
+              <input id="c-phone" class="form-input" type="tel" placeholder="(972) 555-0000" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input id="c-email" class="form-input" type="email" placeholder="you@yourbusiness.com" required/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Business Address</label>
+              <input id="c-address" class="form-input" type="text" placeholder="123 Main St, Grand Prairie TX"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Website Domain (if you have one)</label>
+              <input id="c-domain" class="form-input" type="text" placeholder="yourbusiness.com"/>
+            </div>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label">AI Chatbot Add-on</label>
+            <select id="c-ai" class="form-input">
+              <option value="no">No AI chatbot</option>
+              <option value="yes">Yes — add AI chatbot ($10/month)</option>
+            </select>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label">Additional Notes</label>
+            <textarea id="c-notes" class="form-input" rows="3" placeholder="Any specific requirements, preferred colors, or things to know…" style="resize:vertical;"></textarea>
+          </div>
+
+          <!-- Agreement -->
+          <div class="agree-box" onclick="document.getElementById('c-agree').click()">
+            <input type="checkbox" id="c-agree" required onclick="event.stopPropagation()"/>
+            <label for="c-agree">
+              I have read and agree to the <strong>EWNexus Website Service Agreement</strong> above.
+              I understand the $500 setup fee is due upon signing, and that annual maintenance
+              ($150/year) begins in Year 2. I authorize EWNexus to build my website as described.
+            </label>
+          </div>
+
+          <!-- Signature -->
+          <div>
+            <label class="form-label">Type Your Full Name as Signature *</label>
+            <div class="sig-row">
+              <input id="c-sig" class="form-input" type="text" placeholder="Your Full Name"
+                oninput="document.getElementById('sig-preview').textContent = this.value || ''" required/>
+              <div class="sig-preview" id="sig-preview"></div>
+            </div>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">
+              Typing your name above constitutes your legal electronic signature per the E-SIGN Act.
+            </p>
+          </div>
+
+          <button type="submit" class="form-submit" id="contract-submit">
+            ✍️ Sign & Submit Agreement
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div><!-- /contract-body -->
+
+  <!-- Success -->
+  <div class="success-panel" id="contract-success">
+    <div class="check">✅</div>
+    <h2>Agreement Signed!</h2>
+    <p style="color:var(--text-muted);">Thank you. We've received your signed agreement. EWNexus will contact you within a few hours to arrange payment and collect your content. Your website will be live within 3 business days.</p>
+    <br/>
+    <p style="font-size:13px;color:var(--text-muted);">Questions? Contact us at <a href="mailto:hello@ewnexus.com" style="color:var(--accent)">hello@ewnexus.com</a></p>
+  </div>
+
+</div><!-- /contract-wrap -->
+
+<script>
+async function submitContract(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contract-submit');
+  btn.textContent = 'Submitting…';
+  btn.disabled = true;
+
+  const data = {
+    type:         'contract',
+    business:     document.getElementById('c-biz').value,
+    industry:     document.getElementById('c-industry').value,
+    name:         document.getElementById('c-name').value,
+    title:        document.getElementById('c-title').value,
+    phone:        document.getElementById('c-phone').value,
+    email:        document.getElementById('c-email').value,
+    address:      document.getElementById('c-address').value,
+    domain:       document.getElementById('c-domain').value,
+    ai_addon:     document.getElementById('c-ai').value,
+    notes:        document.getElementById('c-notes').value,
+    signature:    document.getElementById('c-sig').value,
+    signed_at:    new Date().toISOString()
+  };
+
+  try {
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  } catch (_) {}
+
+  document.getElementById('contract-body').style.display = 'none';
+  document.getElementById('contract-success').style.display = 'block';
+}
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a2e4c919e8aac1f4526f040/1jr2dm6l1';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
+

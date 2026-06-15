@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Precision Auto Works — Car Repair & Oil Change | Grand Prairie, TX</title>
+  <meta name="description" content="Precision Auto Works offers honest car repair, oil changes, brakes, and diagnostics in Grand Prairie TX. ASE certified. No hidden fees. (817) 555-0412."/>
+  <meta name="keywords" content="auto repair Grand Prairie TX, oil change Arlington Texas, brake service near me, car mechanic Grand Prairie, transmission repair DFW"/>
+  <meta name="geo.region" content="US-TX"/>
+  <meta name="geo.placename" content="Grand Prairie, Texas"/>
+  <meta name="geo.position" content="32.7459;-97.0181"/>
+  <link rel="canonical" href="https://www.ewnexus.com/demos/DEMO_AutoRepair.html"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRepair","name":"Precision Auto Works","telephone":"(817) 555-0412","address":{"@type":"PostalAddress","streetAddress":"2700 W Pioneer Pkwy","addressLocality":"Grand Prairie","addressRegion":"TX","addressCountry":"US"},"openingHours":["Mo-Fr 07:30-18:00","Sa 08:00-16:00"],"priceRange":"$$"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Source Sans 3',sans-serif;background:#111418;color:#f0f2f5;overflow-x:hidden;}
+    :root{--red:#d42b2b;--orange:#e05c1a;--dark:#111418;--mid:#1c2028;--steel:#8090a8;--text:#f0f2f5;}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--red)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(17,20,24,.95);backdrop-filter:blur(12px);border-bottom:2px solid rgba(212,43,43,.3);}
+    .nav-logo{display:flex;align-items:center;gap:.625rem;text-decoration:none;}
+    .logo-mark{width:32px;height:32px;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:1rem;}
+    .logo-text{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text);}
+    .nav-links{display:flex;gap:2rem;align-items:center;}
+    .nav-link{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,242,245,.4);text-decoration:none;transition:color .2s;}
+    .nav-link:hover{color:var(--text);}
+    .btn-call{background:var(--red);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1.25rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;}
+
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:8rem 2rem 5rem;}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 75% 50%,rgba(212,43,43,.1),transparent 55%),radial-gradient(ellipse 40% 50% at 15% 70%,rgba(224,92,26,.07),transparent 50%),linear-gradient(180deg,#111418,#161b22);}
+    /* Grid texture */
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(240,242,245,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(240,242,245,.02) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;}
+    /* Gear animation */
+    .gear{position:absolute;font-size:6rem;opacity:.04;animation:spin linear infinite;}
+    @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    /* Right visual - diagnostic screen */
+    .diag-screen{position:absolute;right:6%;top:50%;transform:translateY(-50%);background:#0d1117;border:1px solid rgba(212,43,43,.2);padding:1.25rem;width:min(280px,35%);}
+    .diag-header{display:flex;align-items:center;gap:.5rem;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid rgba(240,242,245,.06);}
+    .diag-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 2s ease-in-out infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .diag-title{font-family:'Oswald',sans-serif;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,242,245,.5);}
+    .diag-row{display:flex;justify-content:space-between;padding:.35rem 0;border-bottom:1px solid rgba(240,242,245,.03);font-size:.72rem;}
+    .diag-label{color:rgba(240,242,245,.4);}
+    .diag-ok{color:#22c55e;font-weight:700;}
+    .diag-warn{color:#f59e0b;font-weight:700;}
+    .diag-code{font-family:'Courier New',monospace;font-size:.7rem;color:var(--red);margin-top:.625rem;padding:.375rem;background:rgba(212,43,43,.06);border-left:2px solid var(--red);}
+
+    .hero-content{position:relative;z-index:1;max-width:600px;}
+    .eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--red);margin-bottom:.875rem;}
+    h1{font-family:'Oswald',sans-serif;font-size:clamp(3.5rem,9vw,7rem);font-weight:700;line-height:.9;letter-spacing:.02em;margin-bottom:1.25rem;}
+    h1 .highlight{color:var(--red);}
+    .hero-desc{font-size:.95rem;color:rgba(240,242,245,.5);line-height:1.75;max-width:480px;margin-bottom:2rem;font-weight:300;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.625rem;background:var(--red);color:#fff;font-family:'Oswald',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;padding:.9rem 2.25rem;text-decoration:none;transition:opacity .2s,transform .1s;}
+    .btn-primary:hover{opacity:.88;transform:translateY(-1px);}
+    .btn-outline{display:inline-flex;align-items:center;background:transparent;border:1px solid rgba(240,242,245,.15);color:rgba(240,242,245,.7);font-family:'Oswald',sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;padding:.88rem 2rem;text-decoration:none;transition:border-color .2s,color .2s;}
+    .btn-outline:hover{border-color:rgba(240,242,245,.4);color:var(--text);}
+    .ase-badge{display:inline-flex;align-items:center;gap:.5rem;margin-top:2rem;background:rgba(240,242,245,.04);border:1px solid rgba(240,242,245,.1);padding:.5rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(240,242,245,.5);}
+    .ase-badge span{color:#f59e0b;}
+
+    section{padding:5rem 2rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    h2{font-family:'Oswald',sans-serif;font-size:clamp(2rem,4.5vw,3.75rem);font-weight:700;letter-spacing:.03em;}
+    h2 .accent{color:var(--red);}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(240,242,245,.04);margin-top:2.5rem;}
+    .svc{background:#111418;padding:2rem 1.5rem;transition:background .2s;cursor:default;}
+    .svc:hover{background:#161b22;}
+    .svc-icon{font-size:2rem;margin-bottom:.875rem;}
+    .svc-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.1rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;}
+    .svc-desc{font-size:.8rem;color:rgba(240,242,245,.4);line-height:1.6;}
+    .svc-from{font-size:.65rem;font-weight:700;color:var(--red);letter-spacing:.08em;text-transform:uppercase;margin-top:.75rem;}
+
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2rem;}
+    .price-card{background:#1c2028;border:1px solid rgba(240,242,245,.06);padding:1.5rem;text-align:center;}
+    .price-service{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.625rem;color:rgba(240,242,245,.8);}
+    .price-num{font-family:'Oswald',sans-serif;font-size:2.25rem;font-weight:700;color:var(--text);}
+    .price-note{font-size:.7rem;color:rgba(240,242,245,.35);margin-top:.25rem;line-height:1.5;}
+
+    form{display:flex;flex-direction:column;gap:.875rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;}
+    input,select,textarea{width:100%;background:#1c2028;border:1px solid rgba(240,242,245,.1);color:var(--text);font-family:'Source Sans 3',sans-serif;font-size:.85rem;padding:.8rem 1rem;outline:none;transition:border-color .2s;}
+    input:focus,select:focus,textarea:focus{border-color:rgba(212,43,43,.4);}
+    input::placeholder,textarea::placeholder{color:rgba(240,242,245,.2);}
+    select option{background:#1c2028;}
+    .form-submit{background:var(--red);color:#fff;border:none;font-family:'Oswald',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem;cursor:pointer;transition:opacity .2s;}
+    .form-submit:hover{opacity:.88;}
+    .appt-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+    .cert-list{display:flex;flex-direction:column;gap:.625rem;margin-top:1.5rem;}
+    .cert-item{display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:rgba(240,242,245,.55);}
+    .cert-check{width:20px;height:20px;background:rgba(212,43,43,.1);border:1px solid rgba(212,43,43,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.7rem;color:var(--red);}
+
+    footer{background:#0a0d10;border-top:2px solid rgba(212,43,43,.2);padding:2.5rem;text-align:center;}
+    .footer-logo{font-family:'Oswald',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:.375rem;}
+    .footer-info{font-size:.72rem;color:rgba(240,242,245,.25);line-height:1.8;}
+    .ewnexus-badge{display:inline-block;margin-top:1rem;padding:.3rem .8rem;background:rgba(90,240,179,.05);border:1px solid rgba(90,240,179,.12);font-size:.62rem;letter-spacing:.14em;color:rgba(90,240,179,.4);text-decoration:none;}
+    .demo-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#5af0b3;padding:.625rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .demo-banner p{font-weight:700;font-size:.78rem;color:#003825;}
+    .demo-banner a{background:#003825;color:#5af0b3;padding:.4rem 1rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
+    @media(max-width:768px){.nav-links{display:none;}.diag-screen{display:none;}.appt-grid,.form-row{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="demo-banner">
+  <p>🔧 This is a demo site built by EWNexus — your auto shop could look just like this.</p>
+  <a href="/contact.html">Get Your Site — $500 →</a>
+</div>
+<nav>
+  <a href="#" class="nav-logo"><div class="logo-mark">🔧</div><span class="logo-text">Precision Auto Works</span></a>
+  <div class="nav-links">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#pricing" class="nav-link">Pricing</a>
+    <a href="#appointment" class="nav-link">Appointment</a>
+    <a href="tel:8175550412" class="btn-call">📞 (817) 555-0412</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="gear" style="right:-2%;top:20%;animation-duration:25s;">⚙️</div>
+  <div class="gear" style="right:15%;bottom:-5%;animation-duration:18s;animation-direction:reverse;font-size:4rem;">⚙️</div>
+  <div class="diag-screen">
+    <div class="diag-header"><div class="diag-dot"></div><span class="diag-title">Vehicle Diagnostic</span></div>
+    <div class="diag-row"><span class="diag-label">Engine</span><span class="diag-ok">OK</span></div>
+    <div class="diag-row"><span class="diag-label">Transmission</span><span class="diag-ok">OK</span></div>
+    <div class="diag-row"><span class="diag-label">Brakes</span><span class="diag-warn">CHECK</span></div>
+    <div class="diag-row"><span class="diag-label">Battery</span><span class="diag-ok">OK</span></div>
+    <div class="diag-row"><span class="diag-label">A/C System</span><span class="diag-ok">OK</span></div>
+    <div class="diag-row"><span class="diag-label">Oil Life</span><span class="diag-warn">12%</span></div>
+    <div class="diag-code">P0420 — Catalyst System<br/>Efficiency Below Threshold</div>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">ASE Certified · Grand Prairie, TX</div>
+    <h1>HONEST REPAIRS.<br/><span class="highlight">FAIR PRICES.</span></h1>
+    <p class="hero-desc">No upsells. No mystery charges. Just ASE-certified mechanics who tell you exactly what's wrong and what it costs — before touching your car.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#appointment" class="btn-primary">Book Appointment →</a>
+      <a href="tel:8175550412" class="btn-outline">📞 Call Now</a>
+    </div>
+    <div class="ase-badge"><span>✓</span> ASE Certified · <span>✓</span> Licensed & Insured · <span>✓</span> 2-Year Warranty</div>
+  </div>
+</section>
+
+<section id="services" style="background:#111418;border-top:1px solid rgba(240,242,245,.05);">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom:.75rem;">Full Service Shop</div>
+    <h2>WE FIX <span class="accent">EVERYTHING.</span></h2>
+    <div class="services-grid">
+      <div class="svc"><div class="svc-icon">🛢️</div><div class="svc-name">Oil Change</div><div class="svc-desc">Full synthetic, high-mileage, or conventional. In and out in 30 minutes.</div><div class="svc-from">From $45</div></div>
+      <div class="svc"><div class="svc-icon">🛑</div><div class="svc-name">Brake Service</div><div class="svc-desc">Pads, rotors, calipers, and brake fluid flush. We test drive every vehicle.</div><div class="svc-from">From $120/axle</div></div>
+      <div class="svc"><div class="svc-icon">🔍</div><div class="svc-name">Diagnostics</div><div class="svc-desc">Check engine light? We scan, diagnose, and explain before any repair.</div><div class="svc-from">From $65</div></div>
+      <div class="svc"><div class="svc-icon">🔋</div><div class="svc-name">Battery & Electrical</div><div class="svc-desc">Battery testing, alternator repair, starter, and wiring issues.</div><div class="svc-from">From $89</div></div>
+      <div class="svc"><div class="svc-icon">⚙️</div><div class="svc-name">Engine Repair</div><div class="svc-desc">Timing belts, head gaskets, spark plugs — all engine work done in-house.</div><div class="svc-from">Quote required</div></div>
+      <div class="svc"><div class="svc-icon">❄️</div><div class="svc-name">AC & Heating</div><div class="svc-desc">AC recharge, compressor replacement, heater core, and cabin filter.</div><div class="svc-from">From $89</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="background:#0e1115;border-top:1px solid rgba(240,242,245,.04);">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom:.75rem;">Transparent Pricing</div>
+    <h2>NO SURPRISES. <span class="accent">EVER.</span></h2>
+    <p style="color:rgba(240,242,245,.4);font-size:.88rem;line-height:1.7;margin-top:.5rem;max-width:500px;">These are our standard rates. We quote exact price before any work begins. If we find something extra, we call you first — always.</p>
+    <div class="pricing-grid">
+      <div class="price-card"><div class="price-service">Oil Change</div><div class="price-num">$45+</div><div class="price-note">Synthetic available · Filter included</div></div>
+      <div class="price-card"><div class="price-service">Brake Pads</div><div class="price-num">$120+</div><div class="price-note">Per axle · Parts & labor</div></div>
+      <div class="price-card"><div class="price-service">Diagnostic</div><div class="price-num">$65</div><div class="price-note">Waived if you book the repair</div></div>
+      <div class="price-card"><div class="price-service">Tire Rotation</div><div class="price-num">$20</div><div class="price-note">Free with oil change</div></div>
+      <div class="price-card"><div class="price-service">AC Recharge</div><div class="price-num">$89</div><div class="price-note">R-134a · Leak check included</div></div>
+      <div class="price-card"><div class="price-service">Battery Replace</div><div class="price-num">$150+</div><div class="price-note">Parts + install · 2-yr warranty</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="appointment" style="background:#161b22;border-top:1px solid rgba(240,242,245,.04);">
+  <div class="container">
+    <div class="appt-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:.75rem;">Book Your Visit</div>
+        <h2>DROP IT OFF.<br/><span class="accent">WE'LL CALL YOU.</span></h2>
+        <p style="color:rgba(240,242,245,.4);font-size:.88rem;line-height:1.7;margin-top:.875rem;max-width:380px;">Most repairs done same day. We call with price before starting — no surprises, ever.</p>
+        <div class="cert-list">
+          <div class="cert-item"><div class="cert-check">✓</div>ASE Certified Technicians</div>
+          <div class="cert-item"><div class="cert-check">✓</div>2-Year / 24,000-Mile Warranty</div>
+          <div class="cert-item"><div class="cert-check">✓</div>Courtesy Shuttle Available</div>
+          <div class="cert-item"><div class="cert-check">✓</div>All Makes & Models</div>
+        </div>
+        <div style="margin-top:1.75rem;font-size:.8rem;color:rgba(240,242,245,.35);line-height:1.8;">
+          <strong style="color:rgba(240,242,245,.6);">Hours:</strong><br/>Mon–Fri: 7:30am–6pm<br/>Saturday: 8am–4pm<br/>Sunday: Closed
+        </div>
+      </div>
+      <form onsubmit="return false;">
+        <div class="form-row"><input type="text" placeholder="Your Name" required/><input type="tel" placeholder="Phone" required/></div>
+        <div class="form-row">
+          <input type="text" placeholder="Year / Make / Model" required/>
+          <input type="text" placeholder="Mileage"/>
+        </div>
+        <select required><option value="">What service do you need?</option><option>Oil Change</option><option>Brake Inspection / Service</option><option>Check Engine Light</option><option>AC / Heating Issue</option><option>Battery / Electrical</option><option>Tires / Rotation</option><option>Engine Noise</option><option>Transmission</option><option>Other (describe below)</option></select>
+        <div class="form-row"><input type="date" required/><select><option value="">Preferred time...</option><option>Morning (7:30–11am)</option><option>Afternoon (11am–3pm)</option><option>Drop off night before</option></select></div>
+        <textarea rows="3" placeholder="Describe the issue — any sounds, lights, symptoms..."></textarea>
+        <button type="submit" class="form-submit">Book My Appointment →</button>
+        <p style="font-size:.72rem;color:rgba(240,242,245,.2);margin-top:.5rem;">We'll confirm by text within 1 hour · (817) 555-0412</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">⚙ PRECISION AUTO WORKS</div>
+  <div class="footer-info">2700 W Pioneer Pkwy, Grand Prairie, TX 75051 · (817) 555-0412<br/>Mon–Fri 7:30am–6pm · Sat 8am–4pm · ASE Certified · Licensed & Insured</div>
+  <a href="/contact.html" class="ewnexus-badge">Website by EWNexus · $500 · 3-day launch → ewnexus.com</a>
+</footer>
+<script>window.addEventListener('scroll',function(){document.querySelector('nav').style.boxShadow=window.scrollY>20?'0 4px 24px rgba(0,0,0,.5)':'none';});document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});</script>
+</body>
+</html>

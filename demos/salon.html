@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Lumière Beauty Studio — Nail & Lash Salon | Grand Prairie, TX</title>
+  <meta name="description" content="Lumière Beauty Studio offers luxury nail care, lash extensions, waxing & facials in Grand Prairie TX. Book online. Walk-ins welcome. (817) 555-0317."/>
+  <meta name="keywords" content="nail salon Grand Prairie TX, lash extensions Arlington Texas, beauty salon near me Grand Prairie, gel nails Dallas TX, waxing Grand Prairie"/>
+  <meta name="geo.region" content="US-TX"/>
+  <meta name="geo.placename" content="Grand Prairie, Texas"/>
+  <meta name="geo.position" content="32.7459;-97.0181"/>
+  <link rel="canonical" href="https://www.ewnexus.com/demos/salon.html"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Lumière Beauty Studio","telephone":"(817) 555-0317","address":{"@type":"PostalAddress","streetAddress":"1840 W Pioneer Pkwy #12","addressLocality":"Grand Prairie","addressRegion":"TX","addressCountry":"US"},"openingHours":["Tu-Sa 09:00-19:00","Su 10:00-17:00"],"priceRange":"$$"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Jost',sans-serif;background:#faf7f4;color:#2d1f1a;overflow-x:hidden;}
+    :root{--rose:#c96e7a;--gold:#b8902a;--blush:#f7ece9;--cream:#faf7f4;--dark:#2d1f1a;--mid:#6b4a42;}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--rose)}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2.5rem;background:rgba(250,247,244,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,110,122,.12);}
+    .nav-logo{font-family:'Great Vibes',cursive;font-size:2rem;color:var(--rose);text-decoration:none;}
+    .nav-links{display:flex;gap:2.5rem;align-items:center;}
+    .nav-link{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(45,31,26,.45);text-decoration:none;transition:color .2s;}
+    .nav-link:hover{color:var(--rose);}
+    .btn-book{background:var(--rose);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1.4rem;text-decoration:none;border-radius:2rem;}
+
+    /* HERO */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:8rem 2.5rem 5rem;}
+    .hero-bg{position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 60% 70% at 80% 30%,rgba(247,236,233,.9) 0%,rgba(250,247,244,0) 60%),
+        radial-gradient(ellipse 40% 50% at 15% 80%,rgba(201,110,122,.06) 0%,transparent 55%),
+        linear-gradient(145deg,#faf7f4 0%,#f7ece9 50%,#fdf0ee 100%);
+    }
+    /* Decorative circles */
+    .deco-circle{position:absolute;border-radius:50%;pointer-events:none;}
+    .deco-1{width:500px;height:500px;right:-100px;top:-100px;background:radial-gradient(circle,rgba(201,110,122,.08) 0%,transparent 70%);}
+    .deco-2{width:300px;height:300px;left:5%;bottom:10%;background:radial-gradient(circle,rgba(184,144,42,.06) 0%,transparent 70%);}
+    /* Floating petals */
+    .petal{position:absolute;font-size:1.2rem;opacity:.18;animation:drift linear infinite;}
+    @keyframes drift{0%{transform:translateY(0) rotate(0) scale(1)}50%{transform:translateY(-20px) rotate(25deg) scale(1.1)}100%{transform:translateY(0) rotate(0) scale(1)}}
+    /* Right side visual */
+    .hero-visual{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:min(380px,40%);display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    .vis-card{background:white;border-radius:12px;padding:1.5rem;box-shadow:0 8px 40px rgba(45,31,26,.08),0 2px 8px rgba(201,110,122,.06);position:relative;overflow:hidden;}
+    .vis-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rose),var(--gold));}
+    .vis-card-icon{font-size:2rem;margin-bottom:.5rem;}
+    .vis-card-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1rem;color:var(--dark);}
+    .vis-card-price{font-size:.75rem;color:var(--rose);font-weight:600;margin-top:.25rem;}
+    .vis-card.tall{grid-row:span 2;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,rgba(201,110,122,.08),rgba(184,144,42,.05));}
+
+    .hero-content{position:relative;z-index:1;max-width:560px;}
+    .hero-script{font-family:'Great Vibes',cursive;font-size:clamp(2rem,4vw,2.75rem);color:var(--rose);margin-bottom:.25rem;}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:700;line-height:.92;margin-bottom:1.25rem;color:var(--dark);}
+    h1 em{font-style:italic;color:var(--rose);}
+    .hero-desc{font-size:.95rem;color:rgba(45,31,26,.55);line-height:1.8;max-width:420px;margin-bottom:2rem;font-weight:300;}
+    .btn-primary-r{display:inline-block;background:var(--rose);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 2.5rem;text-decoration:none;border-radius:3rem;transition:transform .15s,opacity .15s;}
+    .btn-primary-r:hover{transform:translateY(-2px);opacity:.9;}
+    .btn-outline-r{display:inline-block;background:transparent;border:1.5px solid rgba(201,110,122,.3);color:var(--rose);font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;padding:.88rem 2rem;text-decoration:none;border-radius:3rem;transition:border-color .2s,background .2s;}
+    .btn-outline-r:hover{border-color:var(--rose);background:rgba(201,110,122,.05);}
+    .hero-badges{display:flex;gap:1.5rem;margin-top:2.25rem;flex-wrap:wrap;}
+    .badge-item{font-size:.75rem;color:rgba(45,31,26,.45);font-weight:500;}
+    .badge-item strong{display:block;color:var(--dark);font-size:.82rem;font-weight:700;}
+
+    /* SERVICES */
+    section{padding:5rem 2.5rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    .eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);margin-bottom:.5rem;}
+    h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:700;color:var(--dark);}
+    h2 em{font-style:italic;color:var(--rose);}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem;}
+    .svc-card{background:white;border:1px solid rgba(201,110,122,.1);padding:2rem;border-radius:8px;transition:transform .2s,box-shadow .2s;}
+    .svc-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(201,110,122,.1);}
+    .svc-icon{font-size:2rem;margin-bottom:1rem;}
+    .svc-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.2rem;margin-bottom:.5rem;}
+    .svc-list{list-style:none;display:flex;flex-direction:column;gap:.375rem;margin-top:.75rem;}
+    .svc-list li{display:flex;justify-content:space-between;font-size:.8rem;color:rgba(45,31,26,.55);padding:.25rem 0;border-bottom:1px solid rgba(201,110,122,.06);}
+    .svc-list li:last-child{border-bottom:none;}
+    .svc-list .price{color:var(--rose);font-weight:700;}
+
+    /* GALLERY PLACEHOLDER */
+    .gallery{background:var(--blush);}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem;}
+    .gallery-item{aspect-ratio:1;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,rgba(201,110,122,.15),rgba(184,144,42,.1));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;font-size:2.5rem;position:relative;cursor:pointer;transition:transform .2s;}
+    .gallery-item:hover{transform:scale(1.02);}
+    .gallery-label{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);}
+    .gallery-item.large{grid-column:span 2;grid-row:span 2;font-size:4rem;}
+
+    /* BOOKING */
+    .booking{background:white;}
+    .booking-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;}
+    .staff-cards{display:flex;flex-direction:column;gap:.875rem;margin-top:1.5rem;}
+    .staff-card{display:flex;align-items:center;gap:1rem;padding:1rem;background:var(--blush);border-radius:8px;}
+    .staff-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--gold));display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;}
+    .staff-name{font-weight:700;font-size:.88rem;}
+    .staff-title{font-size:.73rem;color:rgba(45,31,26,.45);margin-top:.1rem;}
+    form{display:flex;flex-direction:column;gap:.875rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;}
+    input,select,textarea{width:100%;background:#faf7f4;border:1.5px solid rgba(201,110,122,.15);color:var(--dark);font-family:'Jost',sans-serif;font-size:.85rem;padding:.8rem 1rem;outline:none;border-radius:6px;transition:border-color .2s;}
+    input:focus,select:focus,textarea:focus{border-color:rgba(201,110,122,.5);}
+    input::placeholder,textarea::placeholder{color:rgba(45,31,26,.3);}
+    select option{background:#faf7f4;}
+    .form-submit{background:var(--rose);color:#fff;border:none;font-family:'Jost',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:1rem;cursor:pointer;border-radius:3rem;transition:opacity .2s;}
+    .form-submit:hover{opacity:.88;}
+    .hours-item{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid rgba(201,110,122,.08);font-size:.82rem;}
+    .hours-day{color:rgba(45,31,26,.55);font-weight:500;}
+    .hours-time{color:var(--rose);font-weight:700;}
+
+    /* TESTIMONIALS */
+    .testimonials{background:var(--blush);}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+    .testi-card{background:white;padding:2rem;border-radius:8px;box-shadow:0 4px 20px rgba(201,110,122,.06);}
+    .stars{color:var(--gold);font-size:1rem;margin-bottom:.875rem;letter-spacing:.1em;}
+    .testi-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--dark);line-height:1.65;margin-bottom:1rem;}
+    .testi-author{font-size:.75rem;font-weight:700;color:var(--rose);letter-spacing:.06em;text-transform:uppercase;}
+
+    /* CTA */
+    .cta{background:linear-gradient(135deg,#3d1a20,#5a2030);text-align:center;}
+    .cta h2{color:#fff;}
+    .cta h2 em{color:rgba(247,236,233,.7);}
+
+    footer{background:var(--dark);border-top:1px solid rgba(201,110,122,.12);padding:2.5rem;text-align:center;}
+    .footer-logo{font-family:'Great Vibes',cursive;font-size:2.5rem;color:var(--rose);margin-bottom:.5rem;}
+    .footer-info{font-size:.73rem;color:rgba(250,247,244,.3);letter-spacing:.08em;line-height:1.8;}
+    .ewnexus-badge{display:inline-block;margin-top:1.25rem;padding:.3rem .8rem;background:rgba(90,240,179,.05);border:1px solid rgba(90,240,179,.12);font-size:.62rem;letter-spacing:.14em;color:rgba(90,240,179,.4);text-decoration:none;}
+    .ewnexus-badge:hover{color:#5af0b3;}
+    .demo-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#5af0b3;padding:.625rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .demo-banner p{font-weight:700;font-size:.78rem;color:#003825;}
+    .demo-banner a{background:#003825;color:#5af0b3;padding:.4rem 1rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;}
+
+    @media(max-width:768px){
+      .nav-links{display:none;}
+      .hero-visual{display:none;}
+      .booking-grid,.testi-grid,.form-row{grid-template-columns:1fr;}
+      .gallery-grid{grid-template-columns:repeat(2,1fr);}
+      .gallery-item.large{grid-column:span 1;grid-row:span 1;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="demo-banner">
+  <p>💅 This is a demo site built by EWNexus — your salon could look just like this.</p>
+  <a href="/contact.html">Get Your Site — $500 →</a>
+</div>
+
+<nav>
+  <a href="#" class="nav-logo">Lumière</a>
+  <div class="nav-links">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
+    <a href="#book" class="nav-link">Team</a>
+    <a href="#book" class="btn-book">Book Now</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="deco-circle deco-1"></div>
+  <div class="deco-circle deco-2"></div>
+  <div class="petal" style="top:20%;left:60%;animation-duration:6s;">🌸</div>
+  <div class="petal" style="top:60%;left:50%;animation-duration:8s;animation-delay:-3s;">🌺</div>
+  <div class="petal" style="top:35%;left:40%;animation-duration:7s;animation-delay:-1s;font-size:.8rem;">✿</div>
+
+  <div class="hero-visual">
+    <div class="vis-card tall">
+      <div class="vis-card-icon">💅</div>
+      <div class="vis-card-name">Gel Manicure</div>
+      <div class="vis-card-price">From $38</div>
+    </div>
+    <div class="vis-card">
+      <div class="vis-card-icon">👁️</div>
+      <div class="vis-card-name">Lash Set</div>
+      <div class="vis-card-price">From $85</div>
+    </div>
+    <div class="vis-card">
+      <div class="vis-card-icon">🌿</div>
+      <div class="vis-card-name">Facial</div>
+      <div class="vis-card-price">From $65</div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-script">Beauty Studio</div>
+    <h1>WHERE YOU<br/><em>GLOW</em><br/>FIRST.</h1>
+    <p class="hero-desc">Grand Prairie's premier nail & lash studio. Luxury treatments in a calm, beautiful space — because you deserve to feel your best.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#book" class="btn-primary-r">Book Appointment →</a>
+      <a href="#services" class="btn-outline-r">See Services</a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge-item"><strong>(817) 555-0317</strong>Call or Text</div>
+      <div class="badge-item"><strong>Tue–Sun</strong>9am – 7pm</div>
+      <div class="badge-item"><strong>Walk-ins</strong>Welcome</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background:#faf7f4;">
+  <div class="container">
+    <div class="eyebrow">What We Offer</div>
+    <h2>Our <em>Services</em></h2>
+    <p style="color:rgba(45,31,26,.5);font-size:.88rem;line-height:1.7;max-width:480px;margin-top:.5rem;">Every service is performed by licensed professionals who genuinely care about your results.</p>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">💅</div>
+        <div class="svc-name">Nail Services</div>
+        <ul class="svc-list">
+          <li><span>Classic Manicure</span><span class="price">$28</span></li>
+          <li><span>Gel Manicure</span><span class="price">$38</span></li>
+          <li><span>Dip Powder</span><span class="price">$45</span></li>
+          <li><span>Acrylic Full Set</span><span class="price">$55</span></li>
+          <li><span>Pedicure (Classic)</span><span class="price">$40</span></li>
+          <li><span>Gel Pedicure</span><span class="price">$55</span></li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">👁️</div>
+        <div class="svc-name">Lash Extensions</div>
+        <ul class="svc-list">
+          <li><span>Classic Full Set</span><span class="price">$85</span></li>
+          <li><span>Hybrid Full Set</span><span class="price">$105</span></li>
+          <li><span>Volume Full Set</span><span class="price">$125</span></li>
+          <li><span>Mega Volume Set</span><span class="price">$150</span></li>
+          <li><span>2-Week Fill</span><span class="price">$55</span></li>
+          <li><span>Lash Lift & Tint</span><span class="price">$75</span></li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🌿</div>
+        <div class="svc-name">Skin & Waxing</div>
+        <ul class="svc-list">
+          <li><span>Classic Facial (60min)</span><span class="price">$65</span></li>
+          <li><span>Hydra Glow Facial</span><span class="price">$90</span></li>
+          <li><span>Eyebrow Wax & Tint</span><span class="price">$35</span></li>
+          <li><span>Upper Lip Wax</span><span class="price">$15</span></li>
+          <li><span>Full Face Wax</span><span class="price">$45</span></li>
+          <li><span>Underarm Wax</span><span class="price">$28</span></li>
+        </ul>
+      </div>
+      <div class="svc-card" style="background:linear-gradient(135deg,rgba(201,110,122,.06),rgba(184,144,42,.04));border-color:rgba(201,110,122,.2);">
+        <div class="svc-icon">✨</div>
+        <div class="svc-name">Glow Packages</div>
+        <ul class="svc-list">
+          <li><span>The Bride Package</span><span class="price">$220</span></li>
+          <li><span>Girls Day (3+ guests)</span><span class="price">$90/ea</span></li>
+          <li><span>Mani + Pedi Combo</span><span class="price">$75</span></li>
+          <li><span>Lash + Brow Combo</span><span class="price">$105</span></li>
+          <li><span>Full Pamper Day</span><span class="price">$185</span></li>
+          <li><span>Monthly Glow Club</span><span class="price">$120/mo</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <div class="container">
+    <div class="eyebrow">Our Work</div>
+    <h2>The <em>Results</em> Speak</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item large"><span>💅</span><span class="gallery-label">Gel Art</span></div>
+      <div class="gallery-item"><span>✨</span><span class="gallery-label">Lashes</span></div>
+      <div class="gallery-item"><span>🌸</span><span class="gallery-label">Nail Design</span></div>
+      <div class="gallery-item"><span>🌿</span><span class="gallery-label">Skincare</span></div>
+      <div class="gallery-item"><span>💎</span><span class="gallery-label">Dip Powder</span></div>
+    </div>
+    <p style="text-align:center;margin-top:1.5rem;font-size:.78rem;color:rgba(45,31,26,.35);">Follow us on Instagram @lumierebeautytx for daily inspiration</p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="book" class="booking">
+  <div class="container">
+    <div class="booking-grid">
+      <div>
+        <div class="eyebrow">Meet the Team</div>
+        <h2>Book With <em>Us</em></h2>
+        <p style="color:rgba(45,31,26,.5);font-size:.88rem;line-height:1.7;margin-top:.5rem;max-width:360px;">All nail techs are licensed & insured. Each appointment is personal.</p>
+        <div class="staff-cards">
+          <div class="staff-card"><div class="staff-avatar">👩</div><div><div class="staff-name">Lily Chen</div><div class="staff-title">Nail Artist · Lash Specialist · 8 yrs</div></div></div>
+          <div class="staff-card"><div class="staff-avatar">👩‍🦱</div><div><div class="staff-name">Maria Santos</div><div class="staff-title">Gel & Acrylic Expert · 6 yrs</div></div></div>
+          <div class="staff-card"><div class="staff-avatar">👩‍🦰</div><div><div class="staff-name">Ashley Park</div><div class="staff-title">Lash & Brow Specialist · 5 yrs</div></div></div>
+        </div>
+        <div style="margin-top:2rem;"><div style="font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:.75rem;">Hours</div>
+          <div class="hours-item"><span class="hours-day">Monday</span><span class="hours-time">Closed</span></div>
+          <div class="hours-item"><span class="hours-day">Tue – Sat</span><span class="hours-time">9am – 7pm</span></div>
+          <div class="hours-item"><span class="hours-day">Sunday</span><span class="hours-time">10am – 5pm</span></div>
+        </div>
+      </div>
+      <form onsubmit="return false;">
+        <div class="eyebrow" style="margin-bottom:.75rem;">Book an Appointment</div>
+        <div class="form-row"><input type="text" placeholder="Your Name" required/><input type="tel" placeholder="Phone or Text" required/></div>
+        <select required>
+          <option value="">Select service...</option>
+          <option>Gel Manicure ($38)</option>
+          <option>Classic Lash Set ($85)</option>
+          <option>Hybrid Lash Set ($105)</option>
+          <option>Classic Facial ($65)</option>
+          <option>Mani + Pedi Combo ($75)</option>
+          <option>Full Pamper Day ($185)</option>
+          <option>Other (tell us below)</option>
+        </select>
+        <select>
+          <option value="">Preferred stylist...</option>
+          <option>Lily Chen</option>
+          <option>Maria Santos</option>
+          <option>Ashley Park</option>
+          <option>No preference</option>
+        </select>
+        <div class="form-row"><input type="date" required/><input type="time" required/></div>
+        <textarea rows="3" placeholder="Anything we should know? Allergies, style preferences, first visit?"></textarea>
+        <button type="submit" class="form-submit">Request Appointment →</button>
+        <p style="font-size:.72rem;color:rgba(45,31,26,.3);margin-top:.5rem;text-align:center;">We'll confirm via text within 1 hour · (817) 555-0317</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="eyebrow">Client Love</div>
+    <h2>What They <em>Say</em></h2>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="stars">★★★★★</div><div class="testi-text">"Lily did my lashes and I cried (happy tears). Best set I've ever had — natural, full, and they lasted 5 weeks."</div><div class="testi-author">— Jennifer M., Arlington</div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><div class="testi-text">"I brought my whole bridal party here for the Bride Package. Everyone left looking and feeling amazing. Worth every penny."</div><div class="testi-author">— Stephanie R., Grand Prairie</div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><div class="testi-text">"Finally a salon that takes time. Maria did my acrylics perfectly — no lifting, exactly the shape I asked for. I'm a regular now."</div><div class="testi-author">— Keisha T., Dallas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" style="padding:5rem 2.5rem;text-align:center;">
+  <div class="container">
+    <div class="eyebrow" style="color:rgba(247,236,233,.5);">Ready to glow?</div>
+    <h2 style="color:#fff;margin-bottom:.75rem;">TREAT YOURSELF. <em>You've Earned It.</em></h2>
+    <p style="color:rgba(255,255,255,.6);font-size:.9rem;max-width:420px;margin:0 auto 2rem;line-height:1.7;">Walk-ins welcome · Appointments preferred · Same-day often available</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="#book" class="btn-primary-r" style="padding:1rem 2.5rem;">Book Appointment →</a>
+      <a href="tel:8175550317" style="display:inline-block;background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#fff;font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;padding:.95rem 2rem;text-decoration:none;border-radius:3rem;">(817) 555-0317</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Lumière</div>
+  <div class="footer-info">1840 W Pioneer Pkwy #12, Grand Prairie, TX 75051 · (817) 555-0317<br/>Tue–Sat 9am–7pm · Sun 10am–5pm · Closed Monday</div>
+  <a href="/contact.html" class="ewnexus-badge">Website by EWNexus · $500 · 3-day launch → ewnexus.com</a>
+</footer>
+
+<script>
+window.addEventListener('scroll',function(){
+  var n=document.querySelector('nav');
+  n.style.boxShadow=window.scrollY>30?'0 2px 24px rgba(45,31,26,.08)':'none';
+});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});
+});
+</script>
+</body>
+</html>

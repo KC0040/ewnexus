@@ -1,0 +1,3 @@
+# 所有客戶資料不能上傳 Git
+*.json
+!_TEMPLATE.json

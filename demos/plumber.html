@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lone Star Plumbing & Electric — Licensed Contractor | Austin, TX</title>
+  <meta name="description" content="Licensed and insured plumbing and electrical contractor in Austin, TX. 24/7 emergency service. Free estimates. Call (512) 555-0199."/>
+  <meta name="geo.region" content="US-TX"/>
+  <meta name="geo.placename" content="Grand Prairie, Texas"/>
+  <meta name="geo.position" content="32.7459;-97.0181"/>
+  <meta name="ICBM" content="32.7459, -97.0181"/>
+  <meta name="keywords" content="plumber Grand Prairie TX, emergency plumbing Grand Prairie Texas, electrician DFW, plumbing repair Arlington Irving"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Plumber","name":"Lone Star Plumbing & Electric","address":{"@type":"PostalAddress","addressLocality":"Austin","addressRegion":"TX","addressCountry":"US"},"telephone":"+15125550199","geo":{"@type":"GeoCoordinates","latitude":32.7459,"longitude":-97.0181},"areaServed":["Grand Prairie","Austin","Round Rock","Cedar Park","Georgetown"],"openingHours":"Mo-Su 00:00-24:00"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --blue:#1d4ed8; --blue-light:#3b82f6; --blue-dark:#1e3a8a; --accent:#fbbf24; --bg:#f8faff; --text:#1e293b; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; }
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; vertical-align:middle; }
+
+    /* Demo banner */
+    .demo-banner { background:linear-gradient(135deg,#34d399,#059669); color:#001a0e; text-align:center; padding:10px 16px; font-size:13px; font-weight:600; position:sticky; top:0; z-index:1000; display:flex; align-items:center; justify-content:center; gap:12px; }
+    .demo-banner a { color:#001a0e; font-weight:800; text-decoration:underline; }
+
+    /* Emergency bar */
+    .emergency-bar { background:var(--blue-dark); color:white; padding:12px 24px; display:flex; justify-content:center; align-items:center; gap:24px; flex-wrap:wrap; font-size:14px; font-weight:600; position:sticky; top:40px; z-index:99; }
+    .emergency-phone { background:var(--accent); color:#1c1403; padding:8px 20px; border-radius:8px; font-weight:800; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
+
+    /* Nav */
+    nav { background:white; border-bottom:2px solid #e2e8f0; padding:0 24px; height:64px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:88px; z-index:98; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
+    .nav-logo { display:flex; align-items:center; gap:10px; }
+    .nav-logo-icon { width:40px; height:40px; background:var(--blue); border-radius:10px; display:flex; align-items:center; justify-content:center; }
+    .nav-brand { font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:900; color:var(--blue-dark); line-height:1.2; }
+    .nav-links { display:flex; gap:28px; align-items:center; }
+    .nav-links a { color:#475569; text-decoration:none; font-size:14px; font-weight:600; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--blue); }
+    .nav-cta { background:var(--blue); color:white; padding:9px 20px; border-radius:8px; font-weight:700; font-size:14px; text-decoration:none; }
+
+    /* Hero */
+    .hero { background:linear-gradient(135deg,var(--blue-dark) 0%,#1d4ed8 60%,#1e40af 100%); color:white; padding:80px 24px; }
+    .hero-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 420px; gap:60px; align-items:center; }
+    .hero-eyebrow { color:var(--accent); font-size:12px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+    .hero-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,4.5vw,52px); font-weight:900; line-height:1.1; margin-bottom:20px; letter-spacing:-0.02em; }
+    .hero-title span { color:var(--accent); }
+    .hero-sub { font-size:17px; color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:32px; }
+    .hero-badges { display:flex; gap:12px; flex-wrap:wrap; }
+    .badge { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px; font-size:13px; font-weight:600; display:flex; align-items:center; gap:6px; }
+
+    /* Quote card */
+    .quote-card { background:white; border-radius:20px; padding:32px; box-shadow:0 20px 60px rgba(0,0,0,0.2); }
+    .quote-card h3 { font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:800; color:var(--text); margin-bottom:6px; }
+    .quote-card p { font-size:14px; color:#64748b; margin-bottom:24px; }
+    .form-group { margin-bottom:16px; }
+    .form-label { font-size:13px; font-weight:600; color:var(--text); margin-bottom:5px; display:block; }
+    .form-input { width:100%; border:1.5px solid #e2e8f0; border-radius:8px; padding:10px 13px; font-size:14px; font-family:'Inter',sans-serif; outline:none; transition:border-color 0.2s; }
+    .form-input:focus { border-color:var(--blue-light); }
+    .form-select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231d4ed8' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 13px center; }
+    .form-submit { background:var(--blue); color:white; padding:14px; border-radius:10px; font-weight:700; font-size:15px; font-family:'Space Grotesk',sans-serif; border:none; cursor:pointer; width:100%; transition:background 0.2s; }
+    .form-submit:hover { background:var(--blue-dark); }
+
+    /* Trust section */
+    .trust-section { background:white; padding:48px 24px; border-bottom:2px solid #e2e8f0; }
+    .trust-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+    .trust-item { text-align:center; }
+    .trust-icon { width:56px; height:56px; background:#eff6ff; border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; }
+    .trust-num { font-family:'Space Grotesk',sans-serif; font-size:28px; font-weight:900; color:var(--blue); line-height:1; margin-bottom:4px; }
+    .trust-label { font-size:13px; color:#64748b; font-weight:600; }
+
+    /* Services */
+    .services-section { padding:80px 24px; }
+    .section-inner { max-width:1100px; margin:0 auto; }
+    .section-label { color:var(--blue); font-size:12px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:10px; }
+    .section-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,3.5vw,40px); font-weight:900; color:var(--text); letter-spacing:-0.02em; margin-bottom:12px; }
+    .section-sub { color:#475569; font-size:17px; line-height:1.7; margin-bottom:48px; }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
+    .service-card { background:white; border:2px solid #e2e8f0; border-radius:16px; padding:24px; transition:all 0.2s; }
+    .service-card:hover { border-color:var(--blue-light); box-shadow:0 8px 32px rgba(29,78,216,0.1); transform:translateY(-2px); }
+    .service-icon { width:48px; height:48px; background:#eff6ff; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+    .service-title { font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:800; color:var(--text); margin-bottom:8px; }
+    .service-desc { font-size:14px; color:#64748b; line-height:1.6; margin-bottom:14px; }
+    .service-price { font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; color:var(--blue); }
+
+    /* Reviews */
+    .reviews-section { background:#f1f5f9; padding:80px 24px; }
+    .review-card { background:white; border-radius:14px; padding:22px; border:1.5px solid #e2e8f0; }
+    .stars { color:#f59e0b; font-size:17px; margin-bottom:10px; }
+    .review-text { font-size:14px; color:#475569; line-height:1.7; margin-bottom:12px; }
+    .reviewer { font-weight:700; font-size:13px; color:var(--text); }
+
+    /* Service area */
+    .area-section { padding:80px 24px; background:var(--blue-dark); color:white; }
+    .area-chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:32px; }
+    .area-chip { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:8px 18px; border-radius:100px; font-size:14px; font-weight:600; }
+
+    /* Footer */
+    footer { background:#0f172a; color:rgba(255,255,255,0.6); padding:40px 24px; }
+    .footer-inner { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:32px; }
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;} .trust-grid{grid-template-columns:repeat(2,1fr);} .nav-links{display:none;}}
+  </style>
+</head>
+<body>
+
+<!-- Demo Banner -->
+<div class="demo-banner">
+  ✦ Demo website built by EWNexus — Your business could look exactly like this for
+  <a href="../contact.html">$500 all-in →</a>
+</div>
+
+<!-- Emergency Bar -->
+<div class="emergency-bar">
+  <span>🚨 24/7 Emergency Service Available</span>
+  <a href="tel:+15125550199" class="emergency-phone">📞 (512) 555-0199</a>
+  <span>· Licensed · Insured · Same-Day Available</span>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon"><span class="material-symbols-outlined" style="color:white;font-size:22px;">plumbing</span></div>
+    <div class="nav-brand">Lone Star<br/>Plumbing & Electric</div>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#quote">Free Quote</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#area">Service Area</a>
+  </div>
+  <a href="#quote" class="nav-cta">Get Free Quote</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">⭐ 4.8 · 312 Google Reviews</div>
+      <h1 class="hero-title">Austin's Trusted<br/>Plumbing & <span>Electrical</span><br/>Contractor.</h1>
+      <p class="hero-sub">Licensed, insured, and locally owned since 2008. From water heaters to panel upgrades — we fix it right the first time. Same-day service available.</p>
+      <div class="hero-badges">
+        <div class="badge"><span class="material-symbols-outlined" style="font-size:16px;">verified</span>TX License #M-45892</div>
+        <div class="badge"><span class="material-symbols-outlined" style="font-size:16px;">shield</span>$2M Insured</div>
+        <div class="badge"><span class="material-symbols-outlined" style="font-size:16px;">schedule</span>24/7 Emergency</div>
+        <div class="badge"><span class="material-symbols-outlined" style="font-size:16px;">thumb_up</span>Free Estimates</div>
+      </div>
+    </div>
+    <!-- Quote card -->
+    <div class="quote-card" id="quote">
+      <h3>Get a Free Quote</h3>
+      <p>Usually respond within 1 hour · Same-day scheduling available</p>
+      <div class="form-group">
+        <label class="form-label">Your Name *</label>
+        <input class="form-input" type="text" placeholder="John Smith"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone *</label>
+        <input class="form-input" type="tel" placeholder="(512) 555-0000"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Service Needed</label>
+        <select class="form-input form-select">
+          <option>— Select a service —</option>
+          <option>Plumbing Repair</option>
+          <option>Water Heater</option>
+          <option>Drain Cleaning</option>
+          <option>Electrical Repair</option>
+          <option>Panel Upgrade</option>
+          <option>Emergency Service</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Describe the Issue</label>
+        <textarea class="form-input" rows="3" placeholder="Tell us what's going on..."></textarea>
+      </div>
+      <button class="form-submit" onclick="alert('Thanks! We\'ll call you within 1 hour. For emergencies call (512) 555-0199.')">
+        Send My Request →
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Trust Stats -->
+<div class="trust-section">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">calendar_today</span></div>
+      <div class="trust-num">15+</div>
+      <div class="trust-label">Years in Austin</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">handyman</span></div>
+      <div class="trust-num">4,200+</div>
+      <div class="trust-label">Jobs Completed</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">star</span></div>
+      <div class="trust-num">4.8★</div>
+      <div class="trust-label">Google Rating</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">schedule</span></div>
+      <div class="trust-num">24/7</div>
+      <div class="trust-label">Emergency Line</div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<div class="services-section" id="services">
+  <div class="section-inner">
+    <p class="section-label">// What We Fix</p>
+    <h2 class="section-title">Plumbing & Electrical Services</h2>
+    <p class="section-sub">Licensed for both trades — one call handles it all. No subcontractors, no surprises.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">water_damage</span></div>
+        <div class="service-title">Water Heater Repair & Install</div>
+        <div class="service-desc">Tank and tankless water heaters. Same-day replacement available for most models.</div>
+        <div class="service-price">Starting at $150 · Free estimate</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">plumbing</span></div>
+        <div class="service-title">Drain Cleaning & Hydrojetting</div>
+        <div class="service-desc">Slow drains, clogs, backups. We clear it with camera inspection to find the root cause.</div>
+        <div class="service-price">Starting at $99 · Free estimate</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">electrical_services</span></div>
+        <div class="service-title">Electrical Panel Upgrade</div>
+        <div class="service-desc">Upgrade from 100A to 200A, breaker replacement, GFCI outlets, whole-home rewire.</div>
+        <div class="service-price">Free estimate · Financing available</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">leak_add</span></div>
+        <div class="service-title">Leak Detection & Pipe Repair</div>
+        <div class="service-desc">Slab leaks, wall leaks, burst pipes. Non-invasive leak detection technology.</div>
+        <div class="service-price">Starting at $199 · Emergency 24/7</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">bathtub</span></div>
+        <div class="service-title">Fixture Install & Replacement</div>
+        <div class="service-desc">Faucets, toilets, sinks, showers, garbage disposals. Supply your own or we source it.</div>
+        <div class="service-price">Starting at $85 labor · Free estimate</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span class="material-symbols-outlined" style="color:#1d4ed8;">emergency</span></div>
+        <div class="service-title">24/7 Emergency Service</div>
+        <div class="service-desc">Burst pipe? Gas smell? Flooding? We pick up at 2am. Real people, real response.</div>
+        <div class="service-price">Call (512) 555-0199 · We answer 24/7</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Reviews -->
+<div class="reviews-section" id="reviews">
+  <div class="section-inner">
+    <p class="section-label">// Google Reviews</p>
+    <h2 class="section-title">Austin Trusts Lone Star</h2>
+    <div style="display:flex;align-items:center;gap:16px;margin:12px 0 36px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:900;color:var(--blue);">4.8</div>
+      <div><div style="color:#f59e0b;font-size:24px;">★★★★★</div><div style="font-size:14px;color:#64748b;margin-top:2px;">312 Google reviews</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Called at 11pm for a burst pipe. They were at my house by midnight and had it fixed by 2am. Unbelievable service. Will never call anyone else."</p>
+        <div class="reviewer">— David K., Austin TX</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Best plumber in Austin. Fixed what two other companies couldn't diagnose. Honest pricing, no upsell nonsense. Booked them for our rental properties too."</p>
+        <div class="reviewer">— Sandra L., Round Rock TX</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Came out same day for a water heater replacement. In and out in 3 hours, cleaned up everything, license posted on the invoice. Very professional."</p>
+        <div class="reviewer">— Marcus T., Cedar Park TX</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Service Area -->
+<div class="area-section" id="area">
+  <div class="section-inner">
+    <p class="section-label" style="color:var(--accent);">// Where We Work</p>
+    <h2 class="section-title" style="color:white;">Serving Greater Austin & Surrounding Cities</h2>
+    <p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:0;">We cover a 50-mile radius from Austin. Don't see your city? Call us — we likely cover it.</p>
+    <div class="area-chips">
+      <div class="area-chip">Austin</div><div class="area-chip">Round Rock</div><div class="area-chip">Cedar Park</div>
+      <div class="area-chip">Georgetown</div><div class="area-chip">Pflugerville</div><div class="area-chip">Kyle</div>
+      <div class="area-chip">Buda</div><div class="area-chip">San Marcos</div><div class="area-chip">Leander</div>
+      <div class="area-chip">Hutto</div><div class="area-chip">Manor</div><div class="area-chip">Del Valle</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:900;color:white;margin-bottom:12px;">Lone Star Plumbing & Electric</div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;">
+        <div>📞 <a href="tel:+15125550199" style="color:#60a5fa;font-weight:700;">(512) 555-0199</a> · 24/7 Emergency</div>
+        <div>✉️ service@lonestarplumbing.com</div>
+        <div>📍 Austin, TX — Serving 50-mile radius</div>
+        <div>TX Master Plumber Lic. #M-45892 | TX Electrical Lic. #E-33741</div>
+      </div>
+    </div>
+    <div style="font-size:13px;text-align:right;">
+      <div style="margin-bottom:6px;color:rgba(255,255,255,0.4);">Website by</div>
+      <a href="../index.html" style="color:#34d399;font-weight:800;font-size:15px;text-decoration:none;">EWNexus</a>
+      <div style="color:rgba(255,255,255,0.4);margin-top:4px;">$500 · 3-day launch</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

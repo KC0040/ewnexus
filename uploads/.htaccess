@@ -1,0 +1,7 @@
+# 允許圖片直接存取（email 連結需要），但禁止目錄列表
+Options -Indexes
+
+# 禁止執行 PHP（安全：防止上傳的檔案被當成 PHP 執行）
+<FilesMatch "\.php$">
+  Deny from all
+</FilesMatch>

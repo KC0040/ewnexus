@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Casa Fuego — Authentic Tex-Mex & Grill | Grand Prairie, TX</title>
+  <meta name="description" content="Casa Fuego serves authentic Tex-Mex in Grand Prairie TX. Hand-crafted tacos, sizzling fajitas, fresh margaritas. Dine-in, takeout & catering. (817) 555-0284."/>
+  <meta name="keywords" content="tex-mex restaurant Grand Prairie TX, Mexican food Arlington Texas, tacos Grand Prairie, best Mexican restaurant Dallas TX"/>
+  <meta name="geo.region" content="US-TX"/>
+  <meta name="geo.placename" content="Grand Prairie, Texas"/>
+  <meta name="geo.position" content="32.7459;-97.0181"/>
+  <link rel="canonical" href="https://www.ewnexus.com/demos/restaurant.html"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Casa Fuego","telephone":"(817) 555-0284","servesCuisine":"Tex-Mex","address":{"@type":"PostalAddress","streetAddress":"2210 S Carrier Pkwy","addressLocality":"Grand Prairie","addressRegion":"TX","addressCountry":"US"},"openingHours":["Mo-Th 11:00-22:00","Fr-Sa 11:00-23:00","Su 11:00-21:00"],"priceRange":"$$"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Lato:wght@300;400;700;900&family=Sacramento&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Lato',sans-serif;background:#0f0b08;color:#f4ede4;overflow-x:hidden;}
+    :root{--red:#c94b2b;--amber:#e8a020;--cream:#f4ede4;}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--amber)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(15,11,8,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,160,32,.15);}
+    .nav-logo{font-family:'Sacramento',cursive;font-size:2rem;color:var(--amber);text-decoration:none;}
+    .nav-links{display:flex;gap:2rem;align-items:center;}
+    .nav-link{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,237,228,.5);text-decoration:none;transition:color .2s;}
+    .nav-link:hover{color:var(--amber);}
+    .btn-reserve{background:var(--red);color:#fff;font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1.25rem;text-decoration:none;}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:8rem 2.5rem 5rem;}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 75% 40%,rgba(201,75,43,.18) 0%,transparent 55%),radial-gradient(ellipse 40% 50% at 20% 70%,rgba(232,160,32,.12) 0%,transparent 50%),radial-gradient(circle 300px at 60% 55%,rgba(180,60,20,.22) 0%,transparent 70%),linear-gradient(160deg,#0f0b08 0%,#1a0c06 40%,#120804 100%);}
+    .food-glow{position:absolute;right:8%;top:50%;transform:translateY(-50%);width:min(420px,45%);height:min(420px,45%);border-radius:50%;background:radial-gradient(circle,rgba(201,75,43,.25) 0%,rgba(232,160,32,.1) 40%,transparent 70%);display:flex;align-items:center;justify-content:center;}
+    .food-emoji{font-size:min(8rem,12vw);filter:drop-shadow(0 0 40px rgba(201,75,43,.6));animation:float 4s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+    .pepper{position:absolute;font-size:1.5rem;opacity:.15;animation:spin 12s linear infinite;}
+    @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    .hero-content{position:relative;z-index:1;max-width:600px;}
+    .hero-script{font-family:'Sacramento',cursive;font-size:clamp(2rem,4vw,3rem);color:var(--amber);margin-bottom:.5rem;}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:900;line-height:.92;margin-bottom:1.25rem;}
+    h1 .fire{color:var(--red);}
+    .hero-desc{font-size:1rem;color:rgba(244,237,228,.6);line-height:1.75;max-width:440px;margin-bottom:2rem;font-weight:300;}
+    .btn-primary{display:inline-block;background:var(--red);color:#fff;font-weight:900;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:.95rem 2.25rem;text-decoration:none;transition:transform .15s,opacity .15s;}
+    .btn-primary:hover{transform:translateY(-2px);opacity:.9;}
+    .btn-sec{display:inline-block;background:transparent;border:1px solid rgba(232,160,32,.4);color:var(--amber);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:.9rem 2rem;text-decoration:none;}
+    .hero-info{display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap;}
+    .info-item{font-size:.78rem;color:rgba(244,237,228,.4);font-weight:700;letter-spacing:.06em;}
+    .info-item strong{display:block;color:var(--amber);font-size:.9rem;margin-bottom:.15rem;}
+    .menu-strip{background:var(--red);padding:.7rem 2rem;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;}
+    .menu-strip span{font-weight:900;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.9;}
+    .menu-strip .sep{color:rgba(255,255,255,.3);}
+    section{padding:5rem 2.5rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    .section-script{font-family:'Sacramento',cursive;font-size:2.25rem;color:var(--amber);margin-bottom:.25rem;}
+    h2{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2rem,4vw,3.25rem);margin-bottom:.5rem;}
+    .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;}
+    .menu-category{background:#1a1008;border:1px solid rgba(232,160,32,.1);padding:2rem;}
+    .cat-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--amber);margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid rgba(232,160,32,.15);}
+    .menu-item{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:.625rem 0;border-bottom:1px solid rgba(255,255,255,.04);}
+    .menu-item:last-child{border-bottom:none;}
+    .item-name{font-weight:700;font-size:.88rem;}
+    .item-desc{font-size:.73rem;color:rgba(244,237,228,.4);margin-top:.2rem;line-height:1.5;}
+    .item-price{font-weight:900;font-size:.95rem;color:var(--amber);white-space:nowrap;}
+    .specials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+    .special-card{background:#0f0b08;border:1px solid rgba(232,160,32,.12);padding:1.75rem;text-align:center;position:relative;overflow:hidden;}
+    .special-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--amber));}
+    .special-icon{font-size:2.5rem;margin-bottom:.875rem;}
+    .special-name{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;margin-bottom:.5rem;}
+    .special-desc{font-size:.78rem;color:rgba(244,237,228,.4);line-height:1.6;}
+    .special-tag{display:inline-block;margin-top:.875rem;background:rgba(201,75,43,.12);border:1px solid rgba(201,75,43,.25);padding:.25rem .7rem;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);}
+    .res-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+    form{display:flex;flex-direction:column;gap:1rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    input,select,textarea{width:100%;background:#1a1008;border:1px solid rgba(232,160,32,.15);color:var(--cream);font-family:'Lato',sans-serif;font-size:.85rem;padding:.8rem 1rem;outline:none;transition:border-color .2s;}
+    input:focus,select:focus,textarea:focus{border-color:rgba(232,160,32,.45);}
+    input::placeholder,textarea::placeholder{color:rgba(244,237,228,.25);}
+    select option{background:#1a1008;}
+    .form-submit{background:var(--red);color:#fff;border:none;font-family:'Lato',sans-serif;font-weight:900;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem;cursor:pointer;}
+    .hours-row{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid rgba(232,160,32,.07);}
+    .hours-day{font-weight:700;font-size:.82rem;color:rgba(244,237,228,.6);}
+    .hours-time{font-size:.82rem;color:var(--amber);font-weight:700;}
+    .cta-sec{background:linear-gradient(135deg,var(--red),#8b2010);text-align:center;}
+    footer{background:#080604;border-top:1px solid rgba(232,160,32,.1);padding:2.5rem;text-align:center;}
+    .footer-logo{font-family:'Sacramento',cursive;font-size:2.5rem;color:var(--amber);margin-bottom:.5rem;}
+    .footer-info{font-size:.75rem;color:rgba(244,237,228,.3);letter-spacing:.08em;line-height:1.8;}
+    .ewnexus-badge{display:inline-block;margin-top:1.25rem;padding:.3rem .8rem;background:rgba(90,240,179,.05);border:1px solid rgba(90,240,179,.12);font-size:.62rem;letter-spacing:.14em;color:rgba(90,240,179,.4);text-decoration:none;}
+    .demo-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#5af0b3;padding:.625rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .demo-banner p{font-weight:700;font-size:.78rem;color:#003825;}
+    .demo-banner a{background:#003825;color:#5af0b3;padding:.4rem 1rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
+    @media(max-width:768px){.nav-links{display:none;}.menu-grid,.res-grid,.specials-grid,.form-row{grid-template-columns:1fr;}.food-glow{display:none;}}
+  </style>
+</head>
+<body>
+<div class="demo-banner">
+  <p>🍽️ This is a demo site built by EWNexus — your restaurant could look just like this.</p>
+  <a href="/contact.html">Get Your Site — $500 →</a>
+</div>
+<nav>
+  <a href="#" class="nav-logo">Casa Fuego</a>
+  <div class="nav-links">
+    <a href="#menu" class="nav-link">Menu</a>
+    <a href="#specials" class="nav-link">Specials</a>
+    <a href="#reserve" class="nav-link">Reservations</a>
+    <a href="#reserve" class="btn-reserve">Reserve a Table</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="pepper" style="top:15%;left:72%;animation-duration:18s;">🌶️</div>
+  <div class="pepper" style="top:65%;left:85%;animation-duration:14s;animation-direction:reverse;">🌶️</div>
+  <div class="food-glow"><span class="food-emoji">🌮</span></div>
+  <div class="hero-content">
+    <div class="hero-script">Authentic Tex-Mex Since 1997</div>
+    <h1>FIRED<br/>UP <span class="fire">FLAVOR.</span></h1>
+    <p class="hero-desc">Hand-pressed tortillas, slow-braised meats, and the coldest margaritas in Grand Prairie. Real Tex-Mex — not a chain, not a franchise.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#reserve" class="btn-primary">Reserve a Table →</a>
+      <a href="#menu" class="btn-sec">View Menu</a>
+    </div>
+    <div class="hero-info">
+      <div class="info-item"><strong>(817) 555-0284</strong>Call for Pickup</div>
+      <div class="info-item"><strong>Open Daily</strong>11am – 10pm</div>
+      <div class="info-item"><strong>2210 S Carrier</strong>Grand Prairie, TX</div>
+    </div>
+  </div>
+</section>
+<div class="menu-strip">
+  <span>Tacos</span><span class="sep">·</span><span>Fajitas</span><span class="sep">·</span>
+  <span>Enchiladas</span><span class="sep">·</span><span>Tamales</span><span class="sep">·</span>
+  <span>Margaritas</span><span class="sep">·</span><span>Catering</span>
+</div>
+<section id="menu" style="background:#0f0b08;">
+  <div class="container">
+    <div class="section-script">What We Serve</div>
+    <h2>Our Menu</h2>
+    <p style="color:rgba(244,237,228,.45);font-size:.88rem;max-width:480px;line-height:1.7;margin-top:.5rem;">Everything made fresh daily. No frozen shortcuts. Just real food cooked with care.</p>
+    <div class="menu-grid">
+      <div class="menu-category">
+        <div class="cat-title">🌮 Tacos (3 per order)</div>
+        <div class="menu-item"><div><div class="item-name">Carne Asada</div><div class="item-desc">Grilled skirt steak, onion, cilantro, salsa verde</div></div><div class="item-price">$14</div></div>
+        <div class="menu-item"><div><div class="item-name">Al Pastor</div><div class="item-desc">Marinated pork, pineapple, achiote, corn tortilla</div></div><div class="item-price">$13</div></div>
+        <div class="menu-item"><div><div class="item-name">Birria</div><div class="item-desc">Braised beef, consommé for dipping, Oaxaca cheese</div></div><div class="item-price">$16</div></div>
+        <div class="menu-item"><div><div class="item-name">Barbacoa</div><div class="item-desc">Slow-cooked beef cheek, lime, onion, cilantro</div></div><div class="item-price">$14</div></div>
+      </div>
+      <div class="menu-category">
+        <div class="cat-title">🔥 Fajitas (per person)</div>
+        <div class="menu-item"><div><div class="item-name">Chicken Fajitas</div><div class="item-desc">Grilled chicken, peppers, onions, flour tortillas</div></div><div class="item-price">$18</div></div>
+        <div class="menu-item"><div><div class="item-name">Beef Fajitas</div><div class="item-desc">Skirt steak, sizzling platter, pico, guac, sour cream</div></div><div class="item-price">$22</div></div>
+        <div class="menu-item"><div><div class="item-name">Mixed Fajitas</div><div class="item-desc">Chicken + shrimp combo, all the fixings</div></div><div class="item-price">$24</div></div>
+        <div class="menu-item"><div><div class="item-name">Veggie Fajitas</div><div class="item-desc">Seasonal vegetables, black beans, cotija cheese</div></div><div class="item-price">$15</div></div>
+      </div>
+      <div class="menu-category">
+        <div class="cat-title">🫔 Plates & Combos</div>
+        <div class="menu-item"><div><div class="item-name">Enchilada Plate (3)</div><div class="item-desc">Choice of filling, red or green sauce, rice & beans</div></div><div class="item-price">$15</div></div>
+        <div class="menu-item"><div><div class="item-name">Tamale Plate (2)</div><div class="item-desc">Pork or cheese & jalapeño, homemade masa</div></div><div class="item-price">$13</div></div>
+        <div class="menu-item"><div><div class="item-name">Combo #1</div><div class="item-desc">1 enchilada + 1 taco + rice & beans</div></div><div class="item-price">$14</div></div>
+        <div class="menu-item"><div><div class="item-name">Combo #2</div><div class="item-desc">Chile relleno + tamale + rice & beans</div></div><div class="item-price">$16</div></div>
+      </div>
+      <div class="menu-category">
+        <div class="cat-title">🍹 Drinks & Dessert</div>
+        <div class="menu-item"><div><div class="item-name">Classic Margarita</div><div class="item-desc">Fresh lime, triple sec, silver tequila, salted rim</div></div><div class="item-price">$10</div></div>
+        <div class="menu-item"><div><div class="item-name">Mango Margarita</div><div class="item-desc">Fresh mango purée, tajín rim, frozen or rocks</div></div><div class="item-price">$12</div></div>
+        <div class="menu-item"><div><div class="item-name">Agua Fresca</div><div class="item-desc">Jamaica, horchata, or tamarindo — house-made daily</div></div><div class="item-price">$4</div></div>
+        <div class="menu-item"><div><div class="item-name">Mexican Churros</div><div class="item-desc">Cinnamon-sugar, chocolate dipping sauce</div></div><div class="item-price">$6</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="specials" style="background:#1a0c06;border-top:1px solid rgba(201,75,43,.12);">
+  <div class="container">
+    <div class="section-script">Weekly</div>
+    <h2>Chef's Specials</h2>
+    <div class="specials-grid">
+      <div class="special-card"><div class="special-icon">🌮</div><div class="special-name">Taco Tuesday</div><div class="special-desc">All street tacos $3 each, all day. Plus $6 house margaritas.</div><span class="special-tag">Every Tuesday</span></div>
+      <div class="special-card"><div class="special-icon">🍹</div><div class="special-name">Happy Hour</div><div class="special-desc">$2 off all margaritas & $4 domestic beers. Mon–Fri 3pm–6pm.</div><span class="special-tag">Mon–Fri 3–6pm</span></div>
+      <div class="special-card"><div class="special-icon">👨‍👩‍👧‍👦</div><div class="special-name">Family Sunday</div><div class="special-desc">Kids eat free (under 10) with adult entrée. Live mariachi every other Sunday.</div><span class="special-tag">Every Sunday</span></div>
+    </div>
+  </div>
+</section>
+<section id="reserve" style="background:#0f0b08;">
+  <div class="container">
+    <div class="res-grid">
+      <div>
+        <div class="section-script">Come Visit</div>
+        <h2>Make a Reservation</h2>
+        <p style="color:rgba(244,237,228,.5);font-size:.88rem;line-height:1.7;margin-top:1rem;max-width:380px;">Walk-ins always welcome. For parties of 6+, please call ahead.</p>
+        <div style="margin-top:2rem;"><div style="font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem;">Hours</div>
+          <div class="hours-row"><span class="hours-day">Mon – Thu</span><span class="hours-time">11am – 10pm</span></div>
+          <div class="hours-row"><span class="hours-day">Fri – Sat</span><span class="hours-time">11am – 11pm</span></div>
+          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">11am – 9pm</span></div>
+        </div>
+        <div style="margin-top:1.5rem;font-size:.82rem;color:rgba(244,237,228,.4);line-height:1.7;">
+          <address style="font-style:normal;">2210 S Carrier Pkwy<br/>Grand Prairie, TX 75051</address>
+        </div>
+      </div>
+      <form onsubmit="return false;">
+        <div class="form-row"><input type="text" placeholder="Your Name" required/><input type="tel" placeholder="Phone Number" required/></div>
+        <div class="form-row"><input type="date" required/><input type="time" required/></div>
+        <div class="form-row">
+          <select><option value="">Party size...</option><option>1–2 guests</option><option>3–4 guests</option><option>5–6 guests</option><option>7+ (call us)</option></select>
+          <select><option value="">Occasion...</option><option>Date Night</option><option>Birthday</option><option>Business Lunch</option><option>Family Dinner</option></select>
+        </div>
+        <textarea rows="3" placeholder="Special requests or dietary needs?"></textarea>
+        <button type="submit" class="form-submit">Request Reservation →</button>
+        <p style="font-size:.72rem;color:rgba(244,237,228,.3);margin-top:.5rem;">We'll call to confirm within 1 hour. Or call: (817) 555-0284</p>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="cta-sec" style="padding:5rem 2.5rem;text-align:center;">
+  <div class="container">
+    <div class="section-script" style="color:rgba(255,255,255,.7);">Don't cook tonight</div>
+    <h2 style="color:#fff;">ORDER PICKUP OR DINE IN</h2>
+    <p style="color:rgba(255,255,255,.7);font-size:.95rem;margin:1rem auto 2rem;max-width:440px;">Skip the drive-thru. Real food ready in 20 minutes.</p>
+    <a href="tel:8175550284" style="display:inline-block;background:var(--amber);color:#000;font-weight:900;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem 2.5rem;text-decoration:none;">(817) 555-0284 → Call to Order</a>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo">Casa Fuego</div>
+  <div class="footer-info">2210 S Carrier Pkwy, Grand Prairie, TX 75051 · (817) 555-0284<br/>Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 11am–9pm</div>
+  <a href="/contact.html" class="ewnexus-badge">Website by EWNexus · $500 · 3-day launch → ewnexus.com</a>
+</footer>
+<script>
+window.addEventListener('scroll',function(){document.querySelector('nav').style.boxShadow=window.scrollY>30?'0 4px 24px rgba(0,0,0,.4)':'none';});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+</script>
+</body>
+</html>

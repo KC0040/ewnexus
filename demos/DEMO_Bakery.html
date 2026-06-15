@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Golden Hour Bakery — Artisan Bread & Pastries | Grand Prairie, TX</title>
+  <meta name="description" content="Golden Hour Bakery crafts artisan sourdough, croissants, and custom cakes in Grand Prairie TX. Fresh daily. Order online for pickup. (817) 555-0358."/>
+  <meta name="keywords" content="bakery Grand Prairie TX, artisan bread Arlington Texas, custom cakes Dallas, croissants near me Grand Prairie, sourdough bread DFW"/>
+  <meta name="geo.region" content="US-TX"/>
+  <meta name="geo.placename" content="Grand Prairie, Texas"/>
+  <meta name="geo.position" content="32.7459;-97.0181"/>
+  <link rel="canonical" href="https://www.ewnexus.com/demos/DEMO_Bakery.html"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Golden Hour Bakery","telephone":"(817) 555-0358","address":{"@type":"PostalAddress","streetAddress":"512 W Main St","addressLocality":"Grand Prairie","addressRegion":"TX","addressCountry":"US"},"openingHours":["Tu-Sa 07:00-18:00","Su 08:00-14:00"],"priceRange":"$$"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Nunito',sans-serif;background:#fdf8f0;color:#2c1a0e;overflow-x:hidden;}
+    :root{--gold:#c8860a;--warm:#e8a030;--cream:#fdf8f0;--brown:#2c1a0e;--mid:#5c3d1e;}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--gold)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(253,248,240,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(200,134,10,.12);}
+    .nav-logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--gold);text-decoration:none;font-style:italic;}
+    .nav-links{display:flex;gap:2.5rem;align-items:center;}
+    .nav-link{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(44,26,14,.5);text-decoration:none;transition:color .2s;}
+    .nav-link:hover{color:var(--gold);}
+    .btn-order{background:var(--gold);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1.4rem;text-decoration:none;border-radius:2rem;}
+
+    /* HERO */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:8rem 2.5rem 5rem;}
+    .hero-bg{position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 55% 60% at 75% 40%,rgba(232,160,48,.18) 0%,transparent 55%),
+        radial-gradient(ellipse 40% 50% at 10% 70%,rgba(200,134,10,.1) 0%,transparent 50%),
+        linear-gradient(160deg,#fdf8f0 0%,#faf0e0 50%,#f5e8d0 100%);
+    }
+    /* Wheat stalk decorations */
+    .wheat{position:absolute;font-size:2rem;opacity:.1;animation:sway 5s ease-in-out infinite;}
+    @keyframes sway{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+    /* Steam effect */
+    .steam{position:absolute;width:3px;border-radius:3px;background:linear-gradient(to top,rgba(200,134,10,.3),transparent);animation:rise 2.5s ease-in-out infinite;}
+    @keyframes rise{0%{opacity:0;transform:translateY(0) scaleX(1)}50%{opacity:.6}100%{opacity:0;transform:translateY(-60px) scaleX(1.5)}}
+    /* Right visual */
+    .bread-display{position:absolute;right:6%;top:50%;transform:translateY(-50%);text-align:center;}
+    .bread-emoji{font-size:min(7rem,11vw);filter:drop-shadow(0 8px 24px rgba(200,134,10,.3));animation:float 5s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .steam-group{display:flex;gap:.5rem;justify-content:center;margin-top:.5rem;height:50px;}
+
+    .hero-content{position:relative;z-index:1;max-width:580px;}
+    .eyebrow{font-size:.65rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:900;line-height:.9;margin-bottom:1.25rem;color:var(--brown);}
+    h1 em{font-style:italic;color:var(--gold);}
+    .hero-desc{font-size:.95rem;color:rgba(44,26,14,.55);line-height:1.8;max-width:440px;margin-bottom:2rem;font-weight:400;}
+    .btn-primary{display:inline-block;background:var(--gold);color:#fff;font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:.95rem 2.5rem;text-decoration:none;border-radius:2rem;transition:transform .15s,opacity .15s;}
+    .btn-primary:hover{transform:translateY(-2px);opacity:.9;}
+    .btn-sec{display:inline-block;background:transparent;border:2px solid rgba(200,134,10,.3);color:var(--gold);font-weight:700;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;padding:.88rem 2rem;text-decoration:none;border-radius:2rem;transition:border-color .2s,background .2s;}
+    .btn-sec:hover{border-color:var(--gold);background:rgba(200,134,10,.06);}
+    .hero-tags{display:flex;gap:.625rem;margin-top:2rem;flex-wrap:wrap;}
+    .tag{background:rgba(200,134,10,.08);border:1px solid rgba(200,134,10,.2);padding:.3rem .875rem;font-size:.7rem;font-weight:700;letter-spacing:.06em;border-radius:2rem;color:var(--mid);}
+
+    /* MENU */
+    section{padding:5rem 2.5rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    h2{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:900;color:var(--brown);}
+    h2 em{font-style:italic;color:var(--gold);}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;margin-top:2.5rem;}
+    .product-card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(44,26,14,.06),0 1px 4px rgba(200,134,10,.04);transition:transform .2s,box-shadow .2s;}
+    .product-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(44,26,14,.1);}
+    .product-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;}
+    .product-badge{position:absolute;top:.75rem;left:.75rem;background:var(--gold);color:#fff;font-size:.58rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .6rem;border-radius:2rem;}
+    .product-info{padding:1.25rem;}
+    .product-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;color:var(--brown);margin-bottom:.25rem;}
+    .product-desc{font-size:.78rem;color:rgba(44,26,14,.45);line-height:1.55;margin-bottom:.875rem;}
+    .product-footer{display:flex;align-items:center;justify-content:space-between;}
+    .product-price{font-weight:800;font-size:1rem;color:var(--gold);}
+    .add-btn{background:rgba(200,134,10,.1);border:none;color:var(--gold);font-weight:800;font-size:.75rem;padding:.3rem .875rem;border-radius:2rem;cursor:pointer;transition:background .2s;}
+    .add-btn:hover{background:rgba(200,134,10,.2);}
+
+    /* SPECIALS */
+    .specials{background:linear-gradient(135deg,#2c1a0e,#3d2510);}
+    .specials h2{color:#fdf8f0;}
+    .specials h2 em{color:var(--warm);}
+    .specials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+    .special-card{background:rgba(253,248,240,.05);border:1px solid rgba(232,160,48,.15);padding:2rem;border-radius:8px;text-align:center;}
+    .special-icon{font-size:3rem;margin-bottom:1rem;}
+    .special-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.2rem;color:#fdf8f0;margin-bottom:.5rem;}
+    .special-desc{font-size:.8rem;color:rgba(253,248,240,.45);line-height:1.6;}
+    .special-day{display:inline-block;margin-top:.875rem;background:rgba(232,160,48,.12);border:1px solid rgba(232,160,48,.25);padding:.25rem .75rem;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);border-radius:2rem;}
+
+    /* ORDER FORM */
+    form{display:flex;flex-direction:column;gap:.875rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;}
+    input,select,textarea{width:100%;background:#fdf8f0;border:1.5px solid rgba(200,134,10,.15);color:var(--brown);font-family:'Nunito',sans-serif;font-size:.85rem;padding:.8rem 1rem;outline:none;border-radius:8px;transition:border-color .2s;}
+    input:focus,select:focus,textarea:focus{border-color:rgba(200,134,10,.45);}
+    input::placeholder,textarea::placeholder{color:rgba(44,26,14,.3);}
+    select option{background:#fdf8f0;}
+    .form-submit{background:var(--gold);color:#fff;border:none;font-family:'Nunito',sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem;cursor:pointer;border-radius:2rem;transition:opacity .2s;}
+    .form-submit:hover{opacity:.88;}
+    .order-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+    .hours-row{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid rgba(200,134,10,.1);}
+    .hours-day{font-weight:600;font-size:.82rem;color:rgba(44,26,14,.55);}
+    .hours-time{font-size:.82rem;color:var(--gold);font-weight:700;}
+
+    footer{background:var(--brown);padding:2.5rem;text-align:center;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;color:var(--warm);font-style:italic;margin-bottom:.375rem;}
+    .footer-info{font-size:.72rem;color:rgba(253,248,240,.3);line-height:1.8;}
+    .ewnexus-badge{display:inline-block;margin-top:1.25rem;padding:.3rem .8rem;background:rgba(90,240,179,.05);border:1px solid rgba(90,240,179,.12);font-size:.62rem;letter-spacing:.14em;color:rgba(90,240,179,.4);text-decoration:none;}
+    .demo-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#5af0b3;padding:.625rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .demo-banner p{font-weight:700;font-size:.78rem;color:#003825;}
+    .demo-banner a{background:#003825;color:#5af0b3;padding:.4rem 1rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;}
+    @media(max-width:768px){.nav-links{display:none;}.bread-display{display:none;}.specials-grid,.order-grid,.form-row{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="demo-banner">
+  <p>🥐 This is a demo site built by EWNexus — your bakery could look just like this.</p>
+  <a href="/contact.html">Get Your Site — $500 →</a>
+</div>
+<nav>
+  <a href="#" class="nav-logo">Golden Hour</a>
+  <div class="nav-links">
+    <a href="#menu" class="nav-link">Menu</a>
+    <a href="#specials" class="nav-link">Specials</a>
+    <a href="#order" class="nav-link">Order Pickup</a>
+    <a href="#order" class="btn-order">Order Online</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wheat" style="top:20%;left:82%;animation-duration:6s;">🌾</div>
+  <div class="wheat" style="top:65%;left:88%;animation-duration:8s;animation-delay:2s;font-size:1.5rem;">🌾</div>
+  <div class="bread-display">
+    <span class="bread-emoji">🍞</span>
+    <div class="steam-group">
+      <div class="steam" style="height:30px;animation-delay:0s;"></div>
+      <div class="steam" style="height:40px;animation-delay:.6s;"></div>
+      <div class="steam" style="height:25px;animation-delay:1.2s;"></div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">Baked Fresh Every Morning · Grand Prairie, TX</div>
+    <h1>BAKED WITH<br/><em>LOVE.</em><br/>EVERY DAY.</h1>
+    <p class="hero-desc">Artisan sourdough, flaky croissants, and custom cakes — made from scratch by hand, using real ingredients. No preservatives, no shortcuts.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#order" class="btn-primary">Order for Pickup →</a>
+      <a href="#menu" class="btn-sec">See the Menu</a>
+    </div>
+    <div class="hero-tags">
+      <span class="tag">🍞 Sourdough</span>
+      <span class="tag">🥐 Croissants</span>
+      <span class="tag">🎂 Custom Cakes</span>
+      <span class="tag">☕ Coffee Bar</span>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:#fdf8f0;">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom:.5rem;">Fresh Daily</div>
+    <h2>Our <em>Specialties</em></h2>
+    <p style="color:rgba(44,26,14,.45);font-size:.88rem;line-height:1.7;margin-top:.5rem;max-width:480px;">Everything is baked the morning you pick it up. We start at 4am so you get the freshest loaf in DFW.</p>
+    <div class="products-grid">
+      <div class="product-card"><div class="product-img" style="background:linear-gradient(135deg,#f5e8c0,#f0d898);">🍞<div class="product-badge">Bestseller</div></div><div class="product-info"><div class="product-name">Country Sourdough</div><div class="product-desc">Classic tangy loaf, 72-hour cold ferment, crispy crust.</div><div class="product-footer"><span class="product-price">$10</span><button class="add-btn">Add +</button></div></div></div>
+      <div class="product-card"><div class="product-img" style="background:linear-gradient(135deg,#f8e8d0,#f0d0a0);">🥐<div class="product-badge">Daily Fave</div></div><div class="product-info"><div class="product-name">Butter Croissant</div><div class="product-desc">227 layers of French butter, baked golden every morning.</div><div class="product-footer"><span class="product-price">$4</span><button class="add-btn">Add +</button></div></div></div>
+      <div class="product-card"><div class="product-img" style="background:linear-gradient(135deg,#e8d0c0,#d4a890);">🥖<div class="product-badge">New</div></div><div class="product-info"><div class="product-name">Rosemary Focaccia</div><div class="product-desc">Fluffy olive oil focaccia with fresh rosemary and sea salt.</div><div class="product-footer"><span class="product-price">$8</span><button class="add-btn">Add +</button></div></div></div>
+      <div class="product-card"><div class="product-img" style="background:linear-gradient(135deg,#f0d0c0,#e8b098);">🎂</div><div class="product-info"><div class="product-name">Custom Cakes</div><div class="product-desc">Birthday, wedding, or just because. Order 48hrs ahead.</div><div class="product-footer"><span class="product-price">From $55</span><button class="add-btn">Order</button></div></div></div>
+      <div class="product-card"><div class="product-img" style="background:linear-gradient(135deg,#e8c8a8,#d4a870);">🍩</div><div class="product-info"><div class="product-name">Cinnamon Rolls</div><div class="product-desc">Oven-hot cinnamon rolls with cream cheese glaze. Sat & Sun only.</div><div class="product-footer"><span class="product-price">$5 each</span><button class="add-btn">Add +</button></div></div></div>
+      <div class="product-card"><div class="product-img" style="background:linear-gradient(135deg,#f0e0c0,#e8c898);">🍪</div><div class="product-info"><div class="product-name">Cookie Box (12)</div><div class="product-desc">Rotating flavors — chocolate chip, snickerdoodle, lemon zest.</div><div class="product-footer"><span class="product-price">$22</span><button class="add-btn">Add +</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="specials" class="specials">
+  <div class="container">
+    <div class="eyebrow" style="color:rgba(232,160,48,.7);margin-bottom:.5rem;">Weekly</div>
+    <h2><em>Specials</em> You'll Look Forward To</h2>
+    <div class="specials-grid">
+      <div class="special-card"><div class="special-icon">☕</div><div class="special-name">Morning Ritual</div><div class="special-desc">Croissant + drip coffee for $6. Tue–Fri only before 9am.</div><span class="special-day">Tue–Fri · Before 9am</span></div>
+      <div class="special-card"><div class="special-icon">🎂</div><div class="special-name">Weekend Treat</div><div class="special-desc">Cinnamon rolls + fresh OJ — Saturday and Sunday mornings while they last.</div><span class="special-day">Sat–Sun Only</span></div>
+      <div class="special-card"><div class="special-icon">🍞</div><div class="special-name">Loaf of the Week</div><div class="special-desc">A new seasonal bread every week — jalapeño cheddar, seeded rye, olive herb, and more.</div><span class="special-day">Changes Every Tuesday</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="order" style="background:#fdf8f0;">
+  <div class="container">
+    <div class="order-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:.5rem;">Pick Up Order</div>
+        <h2>Order <em>Ahead</em></h2>
+        <p style="color:rgba(44,26,14,.5);font-size:.88rem;line-height:1.7;margin-top:.875rem;max-width:380px;">Place your order by 7pm the night before and it'll be ready warm at pickup time. No waiting in line.</p>
+        <div style="margin-top:2rem;"><div style="font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">Hours</div>
+          <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">Closed</span></div>
+          <div class="hours-row"><span class="hours-day">Tue – Sat</span><span class="hours-time">7am – 6pm</span></div>
+          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">8am – 2pm</span></div>
+        </div>
+        <div style="margin-top:1.5rem;padding:1.25rem;background:rgba(200,134,10,.06);border:1px solid rgba(200,134,10,.15);border-radius:8px;">
+          <div style="font-weight:700;font-size:.82rem;color:var(--brown);margin-bottom:.25rem;">512 W Main St</div>
+          <div style="font-size:.78rem;color:rgba(44,26,14,.5);">Grand Prairie, TX 75050 · (817) 555-0358</div>
+        </div>
+      </div>
+      <form onsubmit="return false;">
+        <div class="form-row"><input type="text" placeholder="Your Name" required/><input type="tel" placeholder="Phone" required/></div>
+        <input type="date" required/>
+        <input type="time" placeholder="Pickup time (7am–6pm)"/>
+        <select><option value="">What would you like?</option><option>Country Sourdough ($10)</option><option>Butter Croissants x4 ($14)</option><option>Rosemary Focaccia ($8)</option><option>Custom Cake (call for pricing)</option><option>Cookie Box 12pc ($22)</option><option>Mixed order (describe below)</option></select>
+        <textarea rows="3" placeholder="Tell us what you'd like — quantities, any special requests, cake details..."></textarea>
+        <button type="submit" class="form-submit">Place Pickup Order →</button>
+        <p style="font-size:.72rem;color:rgba(44,26,14,.35);margin-top:.5rem;text-align:center;">We'll text to confirm your order · (817) 555-0358</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Golden Hour Bakery</div>
+  <div class="footer-info">512 W Main St, Grand Prairie, TX 75050 · (817) 555-0358<br/>Tue–Sat 7am–6pm · Sun 8am–2pm · Closed Monday</div>
+  <a href="/contact.html" class="ewnexus-badge">Website by EWNexus · $500 · 3-day launch → ewnexus.com</a>
+</footer>
+<script>window.addEventListener('scroll',function(){document.querySelector('nav').style.boxShadow=window.scrollY>30?'0 2px 20px rgba(44,26,14,.1)':'none';});document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});</script>
+</body>
+</html>

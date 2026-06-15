@@ -1,0 +1,53 @@
+{
+  "_note": "複製此檔案，改名為 {slug}.json，填入客戶資料",
+  "_never_commit": "此資料夾不能上傳到 Git（已加入 .gitignore）",
+
+  "client": {
+    "id": "",
+    "slug": "DEMO_TireShop",
+    "business_name": "Grand Prairie Tire & Wheel",
+    "contact_name": "",
+    "contact_phone": "",
+    "contact_email": "",
+    "signed_contract": false,
+    "contract_date": "",
+    "plan": "launch",
+    "ai_enabled": false,
+    "created": "2026-05-06",
+    "notes": ""
+  },
+
+  "hosting": {
+    "provider": "VPS / EasyPanel",
+    "vps_ip": "",
+    "domain": "",
+    "easypanel_app_name": "",
+    "ftp_host": "",
+    "ftp_user": "",
+    "ftp_pass": "",
+    "ftp_path": "/public_html",
+    "ssh_user": "",
+    "ssh_key_path": "",
+    "panel_url": "",
+    "panel_user": "",
+    "panel_pass": ""
+  },
+
+  "site": {
+    "config_file": "templates/DEMO_TireShop.json",
+    "html_file": "demos/DEMO_TireShop.html",
+    "live_url": "",
+    "preview_url": "",
+    "last_deployed": ""
+  },
+
+  "billing": {
+    "setup_paid": false,
+    "setup_amount": 500,
+    "maintenance_plan": "annual",
+    "maintenance_amount": 150,
+    "ai_addon": false,
+    "ai_monthly": 10,
+    "next_renewal": ""
+  }
+}

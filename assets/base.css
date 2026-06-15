@@ -1,0 +1,315 @@
+/*
+ * EWNexus Base CSS — 全域 CSS 變數系統
+ * 使用方式：每個 demo 頁面開頭 <link rel="stylesheet" href="../assets/base.css">
+ * 行業主題色在 site-config.json 的 theme.accent 定義，
+ * 在各頁面的 <style> 覆蓋 :root 裡的 --accent 即可。
+ */
+
+/* ── 字體載入 ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
+
+/* ── EWNexus 品牌色（主站用） ─────────────────────────────── */
+:root {
+  /* Brand */
+  --ew-primary:     #5af0b3;
+  --ew-primary-dim: #34d399;
+  --ew-on-primary:  #001a0e;
+  --ew-bg:          #0e1512;
+  --ew-surface:     #0f1a16;
+  --ew-surface-2:   #1a211e;
+  --ew-border:      rgba(42,58,50,0.5);
+  --ew-text:        #dde4df;
+  --ew-text-muted:  #bbcac0;
+  --ew-gradient:    linear-gradient(135deg, #34d399 0%, #25a475 100%);
+
+  /* Demo (行業客製，在各頁面覆蓋) */
+  --accent:         #34d399;
+  --accent-dark:    #059669;
+  --bg:             #0d0d0d;
+  --surface:        #1a1a1a;
+  --surface-2:      #242424;
+  --text:           #f5f5f5;
+  --text-muted:     #a0a0a0;
+  --border:         rgba(255,255,255,0.08);
+  --radius:         12px;
+  --radius-lg:      20px;
+  --radius-full:    9999px;
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  /* Spacing scale (4px base) */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* Container */
+  --container: 1100px;
+  --container-pad: 24px;
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--accent); text-decoration: none; }
+
+/* ── Material Icons ──────────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* ── Typography ──────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+h1 { font-size: clamp(2.2rem, 5vw, 56px); font-weight: 900; letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.8rem, 4vw, 40px); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 24px); }
+p  { color: var(--text-muted); line-height: 1.7; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+
+/* ── Layout ──────────────────────────────────────────────── */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+section { padding: var(--sp-20) var(--container-pad); }
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+}
+.btn-ghost:hover { color: var(--accent); }
+
+/* ── Cards ───────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--accent), 0.3);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+/* ── EWNexus Demo Banner ─────────────────────────────────── */
+.ew-demo-banner {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: #001a0e;
+  text-align: center;
+  padding: 10px 16px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.ew-demo-banner a {
+  color: #001a0e;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* ── Dot-grid background (EWNexus brand) ─────────────────── */
+.dot-grid {
+  background-image: radial-gradient(rgba(42,58,50,0.4) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Glow blobs ──────────────────────────────────────────── */
+.glow-blob {
+  filter: blur(120px);
+  opacity: 0.12;
+  position: absolute;
+  border-radius: 9999px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Form elements ───────────────────────────────────────── */
+.form-input {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 11px 14px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-input:focus { border-color: var(--accent); }
+.form-input::placeholder { color: var(--text-muted); }
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.form-submit {
+  width: 100%;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.form-submit:hover { opacity: 0.88; }
+
+/* ── Grid utils ──────────────────────────────────────────── */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); }
+@media (max-width: 900px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ── Inventory table ─────────────────────────────────────── */
+.inv-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.inv-table th {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1.5px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+.inv-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); color: var(--text); }
+.inv-table tr:last-child td { border-bottom: none; }
+.inv-table tr:hover td { background: var(--surface-2); }
+.inv-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+}
+.inv-badge.new  { background: rgba(52,211,153,0.1); color: #34d399; border: 1px solid rgba(52,211,153,0.2); }
+.inv-badge.used { background: rgba(249,115,22,0.1); color: #f97316; border: 1px solid rgba(249,115,22,0.2); }
+
+/* ── Review cards ────────────────────────────────────────── */
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-6);
+}
+.review-stars { color: #f59e0b; font-size: 16px; margin-bottom: 8px; }
+.review-text  { font-size: 14px; line-height: 1.7; margin-bottom: 10px; font-style: italic; }
+.review-author { font-weight: 700; font-size: 13px; color: var(--text); }
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-btn {
+  width: 100%; text-align: left;
+  padding: 18px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  background: none; border: none; cursor: pointer;
+  font-family: var(--font-heading); font-size: 16px; font-weight: 700;
+  color: var(--text); gap: 16px;
+}
+.faq-icon { transition: transform 0.2s; flex-shrink: 0; color: var(--accent); }
+.faq-btn[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-ans { display: none; padding-bottom: 16px; color: var(--text-muted); font-size: 15px; line-height: 1.7; }
+.faq-ans.open { display: block; }
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+/* ── EWNexus Footer tag ──────────────────────────────────── */
+.ew-footer-tag {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: right;
+}
+.ew-footer-tag a { color: #34d399; font-weight: 700; }

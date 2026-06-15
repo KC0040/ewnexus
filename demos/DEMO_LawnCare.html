@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Verdant Lawn & Landscape — Lawn Care Services | Grand Prairie, TX</title>
+  <meta name="description" content="Verdant Lawn provides weekly mowing, landscaping, irrigation, and cleanup in Grand Prairie TX. Free estimates. Reliable & insured. (817) 555-0477."/>
+  <meta name="keywords" content="lawn care Grand Prairie TX, landscaping Arlington Texas, grass cutting near me, lawn mowing service Dallas, yard cleanup DFW"/>
+  <meta name="geo.region" content="US-TX"/>
+  <meta name="geo.placename" content="Grand Prairie, Texas"/>
+  <meta name="geo.position" content="32.7459;-97.0181"/>
+  <link rel="canonical" href="https://www.ewnexus.com/demos/DEMO_LawnCare.html"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Verdant Lawn & Landscape","telephone":"(817) 555-0477","address":{"@type":"PostalAddress","streetAddress":"Grand Prairie","addressLocality":"Grand Prairie","addressRegion":"TX","addressCountry":"US"},"openingHours":["Mo-Sa 07:00-18:00"],"priceRange":"$$"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:#f4f9f0;color:#1a2e14;overflow-x:hidden;}
+    :root{--green:#2d7a1f;--lime:#5ab030;--dark:#1a2e14;--light:#f4f9f0;--mid:#3a4a35;}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--green)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(244,249,240,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(45,122,31,.12);}
+    .nav-logo{display:flex;align-items:center;gap:.625rem;text-decoration:none;}
+    .logo-leaf{font-size:1.4rem;}
+    .logo-name{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--green);}
+    .nav-links{display:flex;gap:2.5rem;align-items:center;}
+    .nav-link{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(26,46,20,.45);text-decoration:none;transition:color .2s;}
+    .nav-link:hover{color:var(--green);}
+    .btn-quote{background:var(--green);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1.4rem;text-decoration:none;border-radius:3rem;}
+
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:8rem 2.5rem 5rem;}
+    .hero-bg{position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 55% 60% at 80% 35%,rgba(90,176,48,.12) 0%,transparent 55%),
+        radial-gradient(ellipse 40% 50% at 10% 75%,rgba(45,122,31,.08) 0%,transparent 50%),
+        linear-gradient(160deg,#f4f9f0 0%,#edf5e8 50%,#e8f2e2 100%);
+    }
+    /* Ground waves */
+    .wave{position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,rgba(45,122,31,.06),transparent);border-top:1px solid rgba(45,122,31,.06);}
+    /* Floating leaves */
+    .leaf{position:absolute;font-size:1.5rem;opacity:.12;animation:leaffall linear infinite;}
+    @keyframes leaffall{0%{transform:translateY(-10px) rotate(0) translateX(0)}25%{transform:translateY(25vh) rotate(90deg) translateX(20px)}50%{transform:translateY(50vh) rotate(180deg) translateX(-10px)}100%{transform:translateY(110vh) rotate(360deg) translateX(15px)}}
+    /* Right visual */
+    .lawn-visual{position:absolute;right:6%;top:50%;transform:translateY(-50%);text-align:center;width:min(320px,38%);}
+    .stats-stack{display:flex;flex-direction:column;gap:.75rem;}
+    .stat-pill{background:white;border:1px solid rgba(45,122,31,.12);border-radius:12px;padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;box-shadow:0 4px 20px rgba(26,46,20,.06);}
+    .stat-icon{font-size:1.75rem;}
+    .stat-info{}
+    .stat-num{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--green);line-height:1;}
+    .stat-label{font-size:.68rem;font-weight:600;color:rgba(26,46,20,.4);text-transform:uppercase;letter-spacing:.08em;}
+
+    .hero-content{position:relative;z-index:1;max-width:580px;}
+    .eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--lime);margin-bottom:.75rem;}
+    h1{font-family:'DM Serif Display',serif;font-size:clamp(3rem,8vw,6.5rem);line-height:.9;margin-bottom:1.25rem;color:var(--dark);}
+    h1 em{font-style:italic;color:var(--green);}
+    .hero-desc{font-size:.95rem;color:rgba(26,46,20,.55);line-height:1.8;max-width:440px;margin-bottom:2rem;font-weight:400;}
+    .btn-primary{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:.95rem 2.5rem;text-decoration:none;border-radius:3rem;transition:transform .15s,opacity .15s;}
+    .btn-primary:hover{transform:translateY(-2px);opacity:.9;}
+    .btn-sec{display:inline-block;background:transparent;border:1.5px solid rgba(45,122,31,.3);color:var(--green);font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:.88rem 2rem;text-decoration:none;border-radius:3rem;}
+
+    section{padding:5rem 2.5rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,3.5rem);color:var(--dark);}
+    h2 em{font-style:italic;color:var(--green);}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;margin-top:2.5rem;}
+    .svc-card{background:white;border:1px solid rgba(45,122,31,.08);border-radius:12px;padding:2rem;transition:transform .2s,box-shadow .2s;}
+    .svc-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,46,20,.08);}
+    .svc-icon{font-size:2.25rem;margin-bottom:1rem;}
+    .svc-name{font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:.5rem;}
+    .svc-desc{font-size:.8rem;color:rgba(26,46,20,.5);line-height:1.65;}
+    .svc-price{display:inline-block;margin-top:.875rem;background:rgba(45,122,31,.07);border:1px solid rgba(45,122,31,.15);padding:.25rem .75rem;font-size:.7rem;font-weight:700;letter-spacing:.06em;border-radius:2rem;color:var(--green);}
+
+    /* Plans */
+    .plans{background:var(--dark);}
+    .plans h2{color:#f4f9f0;}
+    .plans h2 em{color:#7ed95a;}
+    .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+    .plan-card{background:rgba(244,249,240,.04);border:1px solid rgba(90,176,48,.15);padding:2rem;border-radius:8px;position:relative;overflow:hidden;}
+    .plan-card.popular{border-color:rgba(90,176,48,.5);background:rgba(90,176,48,.06);}
+    .popular-badge{position:absolute;top:1rem;right:1rem;background:var(--lime);color:#fff;font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .6rem;border-radius:2rem;}
+    .plan-name{font-family:'DM Serif Display',serif;font-size:1.3rem;color:#f4f9f0;margin-bottom:.5rem;}
+    .plan-price{font-family:'DM Serif Display',serif;font-size:2.75rem;color:#7ed95a;line-height:1;margin-bottom:.25rem;}
+    .plan-period{font-size:.72rem;color:rgba(244,249,240,.35);font-weight:500;letter-spacing:.06em;margin-bottom:1.25rem;}
+    .plan-features{display:flex;flex-direction:column;gap:.5rem;}
+    .plan-feat{display:flex;align-items:center;gap:.625rem;font-size:.82rem;color:rgba(244,249,240,.6);}
+    .plan-feat .check{color:#7ed95a;font-weight:700;}
+    .plan-btn{display:block;text-align:center;margin-top:1.5rem;background:rgba(90,176,48,.12);border:1px solid rgba(90,176,48,.25);color:#7ed95a;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.75rem;text-decoration:none;border-radius:3rem;transition:background .2s;}
+    .plan-btn:hover{background:rgba(90,176,48,.2);}
+    .plan-card.popular .plan-btn{background:var(--lime);color:#fff;border-color:var(--lime);}
+
+    /* Quote form */
+    form{display:flex;flex-direction:column;gap:.875rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;}
+    input,select,textarea{width:100%;background:#f4f9f0;border:1.5px solid rgba(45,122,31,.15);color:var(--dark);font-family:'DM Sans',sans-serif;font-size:.85rem;padding:.8rem 1rem;outline:none;border-radius:8px;transition:border-color .2s;}
+    input:focus,select:focus,textarea:focus{border-color:rgba(45,122,31,.45);}
+    input::placeholder,textarea::placeholder{color:rgba(26,46,20,.3);}
+    select option{background:#f4f9f0;}
+    .form-submit{background:var(--green);color:#fff;border:none;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:1rem;cursor:pointer;border-radius:3rem;}
+    .quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+    .service-area-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem;}
+    .area-tag{background:rgba(45,122,31,.07);border:1px solid rgba(45,122,31,.15);padding:.3rem .75rem;font-size:.73rem;font-weight:500;color:rgba(26,46,20,.55);border-radius:2rem;}
+
+    footer{background:var(--dark);padding:2.5rem;text-align:center;}
+    .footer-logo{font-family:'DM Serif Display',serif;font-size:1.75rem;color:#7ed95a;margin-bottom:.375rem;}
+    .footer-info{font-size:.72rem;color:rgba(244,249,240,.25);line-height:1.8;}
+    .ewnexus-badge{display:inline-block;margin-top:1.25rem;padding:.3rem .8rem;background:rgba(90,240,179,.05);border:1px solid rgba(90,240,179,.12);font-size:.62rem;letter-spacing:.14em;color:rgba(90,240,179,.4);text-decoration:none;}
+    .demo-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#5af0b3;padding:.625rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .demo-banner p{font-weight:700;font-size:.78rem;color:#003825;}
+    .demo-banner a{background:#003825;color:#5af0b3;padding:.4rem 1rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;}
+    @media(max-width:768px){.nav-links{display:none;}.lawn-visual{display:none;}.plans-grid,.quote-grid,.form-row{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="demo-banner">
+  <p>🌿 This is a demo site built by EWNexus — your lawn care business could look just like this.</p>
+  <a href="/contact.html">Get Your Site — $500 →</a>
+</div>
+<nav>
+  <a href="#" class="nav-logo"><span class="logo-leaf">🌿</span><span class="logo-name">Verdant</span></a>
+  <div class="nav-links">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#plans" class="nav-link">Plans</a>
+    <a href="#quote" class="nav-link">Free Quote</a>
+    <a href="#quote" class="btn-quote">Get Free Quote</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wave"></div>
+  <div class="leaf" style="left:8%;animation-duration:12s;animation-delay:0s;">🍃</div>
+  <div class="leaf" style="left:28%;animation-duration:15s;animation-delay:3s;font-size:1rem;">🌿</div>
+  <div class="leaf" style="left:68%;animation-duration:11s;animation-delay:6s;">🍃</div>
+  <div class="lawn-visual">
+    <div class="stats-stack">
+      <div class="stat-pill"><div class="stat-icon">✂️</div><div class="stat-info"><div class="stat-num">200+</div><div class="stat-label">Weekly Clients</div></div></div>
+      <div class="stat-pill"><div class="stat-icon">⭐</div><div class="stat-info"><div class="stat-num">4.9</div><div class="stat-label">Google Rating</div></div></div>
+      <div class="stat-pill"><div class="stat-icon">📅</div><div class="stat-info"><div class="stat-num">Same Week</div><div class="stat-label">First Visit</div></div></div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">Grand Prairie's Reliable Lawn Crew</div>
+    <h1>YOUR YARD.<br/><em>Always</em><br/>PERFECT.</h1>
+    <p class="hero-desc">Weekly mowing, edging, cleanup, and landscaping — done right, every time. Show up, get it done, leave it looking better than we found it.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#quote" class="btn-primary">Get Free Estimate →</a>
+      <a href="tel:8175550477" class="btn-sec">📞 (817) 555-0477</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:#f4f9f0;">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom:.5rem;">Everything Your Yard Needs</div>
+    <h2>Our <em>Services</em></h2>
+    <div class="services-grid">
+      <div class="svc-card"><div class="svc-icon">✂️</div><div class="svc-name">Weekly Mowing</div><div class="svc-desc">Mow, edge, blow. Same crew, same day, every week. Consistent results you can count on.</div><span class="svc-price">From $45/visit</span></div>
+      <div class="svc-card"><div class="svc-icon">🌳</div><div class="svc-name">Landscape Design</div><div class="svc-desc">Transform your yard with new beds, plants, mulch, and stone — designed for Texas heat.</div><span class="svc-price">Free Consultation</span></div>
+      <div class="svc-card"><div class="svc-icon">💧</div><div class="svc-name">Irrigation</div><div class="svc-desc">Sprinkler installation, repairs, and seasonal startup/winterization. Save water, save money.</div><span class="svc-price">From $150</span></div>
+      <div class="svc-card"><div class="svc-icon">🍂</div><div class="svc-name">Leaf & Cleanup</div><div class="svc-desc">Fall and spring cleanups, bed prep, debris removal. Leave it spotless in one visit.</div><span class="svc-price">From $75</span></div>
+      <div class="svc-card"><div class="svc-icon">🌺</div><div class="svc-name">Flower Beds</div><div class="svc-desc">Seasonal planting, weeding, mulching, and bed edging to keep beds looking sharp year-round.</div><span class="svc-price">From $60/visit</span></div>
+      <div class="svc-card"><div class="svc-icon">🌱</div><div class="svc-name">Sod & Seeding</div><div class="svc-desc">New sod installation or overseeding for bare patches. St. Augustine, Bermuda, Zoysia.</div><span class="svc-price">Quote required</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="plans" class="plans">
+  <div class="container">
+    <div class="eyebrow" style="color:rgba(90,176,48,.6);margin-bottom:.5rem;">Simple Monthly Plans</div>
+    <h2>Pick Your <em>Plan</em></h2>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Basic</div>
+        <div class="plan-price">$45</div>
+        <div class="plan-period">per visit · biweekly</div>
+        <div class="plan-features">
+          <div class="plan-feat"><span class="check">✓</span>Mow front & back</div>
+          <div class="plan-feat"><span class="check">✓</span>Edge walkways</div>
+          <div class="plan-feat"><span class="check">✓</span>Blow clippings</div>
+          <div class="plan-feat" style="opacity:.35;">✗ Bed maintenance</div>
+          <div class="plan-feat" style="opacity:.35;">✗ Fertilization</div>
+        </div>
+        <a href="#quote" class="plan-btn">Get Started</a>
+      </div>
+      <div class="plan-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-name">Standard</div>
+        <div class="plan-price">$65</div>
+        <div class="plan-period">per visit · weekly</div>
+        <div class="plan-features">
+          <div class="plan-feat"><span class="check">✓</span>Everything in Basic</div>
+          <div class="plan-feat"><span class="check">✓</span>Weekly service</div>
+          <div class="plan-feat"><span class="check">✓</span>Bed weeding monthly</div>
+          <div class="plan-feat"><span class="check">✓</span>Seasonal cleanups (2)</div>
+          <div class="plan-feat" style="opacity:.35;">✗ Fertilization program</div>
+        </div>
+        <a href="#quote" class="plan-btn">Get Started</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price">$120</div>
+        <div class="plan-period">per visit · weekly</div>
+        <div class="plan-features">
+          <div class="plan-feat"><span class="check">✓</span>Everything in Standard</div>
+          <div class="plan-feat"><span class="check">✓</span>Full bed maintenance</div>
+          <div class="plan-feat"><span class="check">✓</span>Fertilization (6×/yr)</div>
+          <div class="plan-feat"><span class="check">✓</span>4 seasonal cleanups</div>
+          <div class="plan-feat"><span class="check">✓</span>Priority scheduling</div>
+        </div>
+        <a href="#quote" class="plan-btn">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quote" style="background:#edf5e8;">
+  <div class="container">
+    <div class="quote-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:.5rem;">100% Free Estimate</div>
+        <h2>We'll Quote<br/><em>Within 24hrs.</em></h2>
+        <p style="color:rgba(26,46,20,.5);font-size:.88rem;line-height:1.7;margin-top:.875rem;max-width:380px;">Send us your address and we'll get you an accurate quote — no need to be home. We drive by, measure up, and text you a price.</p>
+        <div style="margin-top:2rem;"><div style="font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem;">Service Area</div>
+          <div class="service-area-tags">
+            <span class="area-tag">Grand Prairie</span><span class="area-tag">Arlington</span><span class="area-tag">Irving</span>
+            <span class="area-tag">Dallas</span><span class="area-tag">Fort Worth</span><span class="area-tag">Mansfield</span>
+            <span class="area-tag">Duncanville</span><span class="area-tag">Cedar Hill</span>
+          </div>
+        </div>
+        <div style="margin-top:1.75rem;font-size:.82rem;color:rgba(26,46,20,.45);line-height:1.8;">
+          <strong style="color:rgba(26,46,20,.7);">Hours:</strong> Mon–Sat 7am–6pm<br/>
+          📞 (817) 555-0477
+        </div>
+      </div>
+      <form onsubmit="return false;">
+        <div class="form-row"><input type="text" placeholder="Your Name" required/><input type="tel" placeholder="Phone" required/></div>
+        <input type="text" placeholder="Service Address" required/>
+        <div class="form-row">
+          <select><option value="">Service needed...</option><option>Weekly Mowing</option><option>Biweekly Mowing</option><option>One-time Cleanup</option><option>Landscaping Project</option><option>Irrigation</option><option>Sod Installation</option><option>Flower Bed Work</option></select>
+          <select><option value="">Yard size...</option><option>Small (under 3,000 sq ft)</option><option>Medium (3,000–6,000)</option><option>Large (6,000–10,000)</option><option>Very Large (10,000+)</option><option>Not sure</option></select>
+        </div>
+        <textarea rows="3" placeholder="Any details? Slopes, fences, special instructions, current condition?"></textarea>
+        <button type="submit" class="form-submit">Get My Free Quote →</button>
+        <p style="font-size:.72rem;color:rgba(26,46,20,.35);margin-top:.5rem;text-align:center;">We'll text your quote within 24 hours · No commitment required</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">🌿 Verdant Lawn & Landscape</div>
+  <div class="footer-info">Grand Prairie, TX · Serving DFW · (817) 555-0477 · Mon–Sat 7am–6pm</div>
+  <a href="/contact.html" class="ewnexus-badge">Website by EWNexus · $500 · 3-day launch → ewnexus.com</a>
+</footer>
+<script>window.addEventListener('scroll',function(){document.querySelector('nav').style.boxShadow=window.scrollY>30?'0 2px 20px rgba(26,46,20,.08)':'none';});document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});</script>
+</body>
+</html>

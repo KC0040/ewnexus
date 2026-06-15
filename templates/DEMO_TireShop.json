@@ -1,0 +1,175 @@
+{
+  "business": {
+    "name": "Grand Prairie Tire & Wheel",
+    "slug": "DEMO_TireShop",
+    "industry": "tire_shop",
+    "schema_type": "AutoPartsStore",
+    "tagline": "Grand Prairie's #1 Tire & Wheel Shop Since 2009",
+    "phone": "(972) 555-0144",
+    "email": "info@gptirewheel.com",
+    "address": "2841 W Pioneer Pkwy",
+    "city": "Grand Prairie",
+    "state": "TX",
+    "zip": "75051",
+    "hours": {
+      "weekday": "Mon–Fri 8:00 AM – 6:00 PM",
+      "saturday": "Sat 9:00 AM – 4:00 PM",
+      "sunday": "Closed"
+    },
+    "geo": { "lat": 32.7459, "lng": -97.0181 },
+    "area_served": ["Grand Prairie","Arlington","Irving","Dallas","Fort Worth","Mansfield","Duncanville"],
+    "telegram_chat_id": ""
+  },
+
+  "theme": {
+    "mode": "dark",
+    "bg": "#0d0d0d",
+    "surface": "#1a1a1a",
+    "surface2": "#242424",
+    "accent": "#f97316",
+    "accent_dark": "#c2410c",
+    "text": "#f5f5f5",
+    "text_muted": "#a0a0a0",
+    "border": "rgba(249,115,22,0.15)",
+    "border_radius": "12px",
+    "font_heading": "Space Grotesk",
+    "font_body": "Inter",
+    "font_mono": "DM Mono"
+  },
+
+  "seo": {
+    "title": "Grand Prairie Tire & Wheel | New & Used Tires | Custom Wheels DFW",
+    "description": "Grand Prairie's trusted tire shop since 2009. New & used tires, custom wheels, TPMS, alignment. Walk-ins welcome. Serving Arlington, Irving, Dallas. Call (972) 555-0144.",
+    "keywords": [
+      "tire shop Grand Prairie TX",
+      "custom wheels Grand Prairie Texas",
+      "used tires Grand Prairie",
+      "TPMS service Grand Prairie TX",
+      "new tires Arlington TX",
+      "wheel alignment DFW",
+      "tire shop near me Grand Prairie",
+      "cheap tires Grand Prairie Texas",
+      "tire rotation Irving TX",
+      "custom rims Fort Worth"
+    ],
+    "canonical": "https://www.ewnexus.com/demos/DEMO_TireShop.html",
+    "og_image": ""
+  },
+
+  "content": {
+    "hero": {
+      "headline": "Grand Prairie's Trusted Tire & Wheel Experts",
+      "subheadline": "New tires, used tires, custom wheels, and TPMS service. Walk-ins welcome — no appointment needed for most services.",
+      "cta_primary": "Get a Free Quote",
+      "cta_secondary": "Browse Inventory",
+      "trust_badges": [
+        "⭐ 4.8 Google Rating",
+        "🔧 15+ Years in Grand Prairie",
+        "🚗 Walk-ins Welcome",
+        "✅ Licensed & Insured",
+        "📦 Same-Day Service"
+      ]
+    },
+
+    "services": [
+      {
+        "name": "New Tire Sales & Installation",
+        "desc": "All major brands in stock — Michelin, Goodyear, BF Goodrich, Cooper, Nexen, and more. Same-day mounting and balancing.",
+        "price": "Starting at $69/tire installed",
+        "icon": "tire_repair"
+      },
+      {
+        "name": "Used Tires",
+        "desc": "Quality used tires inspected and guaranteed. Great option for budget-conscious drivers. All sizes available.",
+        "price": "Starting at $25/tire",
+        "icon": "recycling"
+      },
+      {
+        "name": "Custom Wheels & Rims",
+        "desc": "Hundreds of styles in stock. We'll help you find the perfect fit for your vehicle. Financing available.",
+        "price": "From $99/wheel",
+        "icon": "settings"
+      },
+      {
+        "name": "TPMS Service",
+        "desc": "Tire Pressure Monitoring System sensor replacement, programming, and reset. Fast in-and-out service.",
+        "price": "Starting at $49",
+        "icon": "speed"
+      },
+      {
+        "name": "Wheel Alignment",
+        "desc": "4-wheel computerized alignment. Extends tire life and improves fuel economy. Most vehicles done in under 1 hour.",
+        "price": "$79 standard | $99 4-wheel",
+        "icon": "straighten"
+      },
+      {
+        "name": "Tire Rotation & Balance",
+        "desc": "Extend your tire life and get a smoother ride. Recommended every 5,000–7,500 miles.",
+        "price": "$49 rotation + balance",
+        "icon": "autorenew"
+      }
+    ],
+
+    "inventory": {
+      "enabled": true,
+      "source": "json",
+      "columns": ["brand","model","size","type","price","qty","condition"],
+      "filters": ["brand","size","type","condition"],
+      "sample_items": [
+        { "brand": "Michelin", "model": "Defender T+H", "size": "205/55R16", "type": "All-Season", "price": "$129", "qty": 8, "condition": "New" },
+        { "brand": "Goodyear", "model": "Assurance MaxLife", "size": "215/60R16", "type": "All-Season", "price": "$119", "qty": 4, "condition": "New" },
+        { "brand": "BF Goodrich", "model": "All-Terrain T/A KO2", "size": "265/70R17", "type": "All-Terrain", "price": "$189", "qty": 6, "condition": "New" },
+        { "brand": "Cooper", "model": "Discoverer AT3", "size": "235/75R15", "type": "All-Terrain", "price": "$139", "qty": 3, "condition": "New" },
+        { "brand": "Nexen", "model": "N'Priz AH8", "size": "195/65R15", "type": "All-Season", "price": "$79", "qty": 12, "condition": "New" },
+        { "brand": "Used", "model": "Various Brands", "size": "195/65R15", "type": "All-Season", "price": "$35", "qty": 5, "condition": "Used" },
+        { "brand": "Used", "model": "Various Brands", "size": "205/55R16", "type": "All-Season", "price": "$45", "qty": 4, "condition": "Used" },
+        { "brand": "Used", "model": "Various Brands", "size": "225/45R17", "type": "Performance", "price": "$55", "qty": 2, "condition": "Used" }
+      ]
+    },
+
+    "reviews": {
+      "source": "static",
+      "avg_rating": 4.8,
+      "total_count": 203,
+      "items": [
+        { "author": "Marcus T.", "rating": 5, "text": "Best tire shop in Grand Prairie, hands down. Got 4 new tires mounted and balanced in under an hour. Price was way better than Discount Tire. I'm a customer for life.", "date": "March 2025" },
+        { "author": "Rosa M.", "rating": 5, "text": "They had my tire size in stock and got me in and out in 30 minutes. The guys were super honest about what I needed vs. what I didn't. No upselling, just good service.", "date": "April 2025" },
+        { "author": "David K.", "rating": 5, "text": "Custom wheels look amazing on my truck. They helped me pick the right offset and size. Very knowledgeable staff. Already recommended to 3 friends.", "date": "February 2025" },
+        { "author": "Sarah L.", "rating": 4, "text": "Good prices on used tires. They were honest that one I wanted wasn't in great shape and suggested a better one. Appreciated the integrity.", "date": "January 2025" }
+      ]
+    },
+
+    "faq": [
+      { "q": "Do I need an appointment?", "a": "No appointment needed for tire installation, rotation, or TPMS service. We take walk-ins Monday–Saturday. Wheel alignments may require a short wait during busy hours." },
+      { "q": "What tire brands do you carry?", "a": "We stock Michelin, Goodyear, BF Goodrich, Cooper, Nexen, Falken, Hankook, and more. We can order any brand not in stock — usually arrives next business day." },
+      { "q": "Do you buy used tires?", "a": "Yes, we buy used tires and wheels in good condition. Bring them in and we'll make you an offer." },
+      { "q": "Do you finance wheels?", "a": "Yes, we offer financing on custom wheel packages. Ask us about 6-month same-as-cash options." },
+      { "q": "How long does a tire installation take?", "a": "Most single tire installations take 15–30 minutes. A full set of 4 tires with mounting and balancing is typically done in 45–60 minutes." },
+      { "q": "Do you service commercial vehicles?", "a": "Yes, we service light trucks, vans, and commercial vehicles. Call ahead for commercial appointments." }
+    ]
+  },
+
+  "integrations": {
+    "ai_chatbot": {
+      "enabled": false,
+      "bot_name": "Mike",
+      "managed_by_ewnexus": true
+    },
+    "telegram": {
+      "enabled": true,
+      "chat_id": ""
+    },
+    "google_sheets_inventory": {
+      "enabled": false,
+      "public_csv": ""
+    }
+  },
+
+  "ewnexus_meta": {
+    "client_id": "demo_tire_001",
+    "created": "2025-05-05",
+    "plan": "launch",
+    "ai_enabled": false,
+    "demo_mode": true
+  }
+}
