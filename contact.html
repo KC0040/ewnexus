@@ -67,12 +67,12 @@
   <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
     <a href="/" style="text-decoration:none;display:flex;align-items:center;"><img src="/assets/nex-logo.png" alt="NEX TPMS" style="height:44px;width:auto;object-fit:contain;filter:drop-shadow(0 0 8px rgba(90,240,179,.25));"/></a>
     <nav style="display:flex;gap:2.5rem;align-items:center;" class="hidden-m">
-      <a href="/how-it-works.html" class="nav-link">How It Works</a>
-      <a href="/pricing.html" class="nav-link">Pricing</a>
-      <a href="/cases.html" class="nav-link">Examples</a>
+      <a href="/how-it-works.html" class="nav-link" data-i18n="nav.how">How It Works</a>
+      <a href="/pricing.html" class="nav-link" data-i18n="nav.pricing">Pricing</a>
+      <a href="/cases.html" class="nav-link" data-i18n="nav.examples">Examples</a>
     </nav>
     <div style="display:flex;align-items:center;gap:1rem;">
-      <a href="/contact.html" class="nav-link active hidden-m" style="color:#5af0b3;">Get Started</a>
+      <a href="/contact.html" class="nav-link active hidden-m" style="color:#5af0b3;" data-i18n="nav.start">Get Started</a>
       <button id="hamburger" style="background:none;border:none;color:#5af0b3;cursor:pointer;display:none;"><span class="material-symbols-outlined">menu</span></button>
     </div>
   </div>
@@ -83,11 +83,11 @@
 
     <!-- Left -->
     <div style="padding-top:2rem;">
-      <div class="eyebrow" style="margin-bottom:1.25rem;">New Project Intake</div>
-      <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:900;font-size:clamp(2.5rem,5.5vw,4.5rem);line-height:.88;letter-spacing:-.05em;margin-bottom:2rem;">
+      <div class="eyebrow" style="margin-bottom:1.25rem;" data-i18n="contact.eyebrow">New Project Intake</div>
+      <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:900;font-size:clamp(2.5rem,5.5vw,4.5rem);line-height:.88;letter-spacing:-.05em;margin-bottom:2rem;" data-i18n="contact.h1">
         LET'S BUILD<br/>YOUR<br/><span style="color:#5af0b3;">BUSINESS.</span>
       </h1>
-      <p style="color:rgba(232,253,244,.6);line-height:1.75;font-size:.95rem;margin-bottom:2.5rem;">Tell us about your business and what you need. The more detail you share, the faster we can have a demo ready — sometimes same day.</p>
+      <p style="color:rgba(232,253,244,.6);line-height:1.75;font-size:.95rem;margin-bottom:2.5rem;" data-i18n="contact.sub">Tell us about your business and what you need. The more detail you share, the faster we can have a demo ready — sometimes same day.</p>
 
       <!-- What happens next -->
       <div style="display:flex;flex-direction:column;gap:.875rem;margin-bottom:2.5rem;">
@@ -258,7 +258,7 @@
           <div id="form-error" style="display:none;padding:.75rem 1rem;background:rgba(255,80,80,.1);border:1px solid rgba(255,80,80,.3);border-radius:.125rem;margin-bottom:1rem;font-size:.8rem;color:#ff8080;"></div>
 
           <button type="submit" class="btn-primary" id="submit-btn">
-            <span id="submit-text">Send Project Brief →</span>
+            <span id="submit-text" data-i18n="contact.btn">Send Project Brief →</span>
             <span id="submit-spinner" style="display:none;">Sending…</span>
           </button>
 
@@ -385,6 +385,7 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+<script src="/assets/i18n.js" defer></script>
 </body>
 </html>
 

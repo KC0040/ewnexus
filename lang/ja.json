@@ -33,5 +33,42 @@
   "section.faq.h2": "よくある質問",
 
   "footer.tagline": "中小企業向けプロウェブサイト。$500。3日間。",
-  "footer.rights": "All rights reserved."
+  "footer.rights": "All rights reserved.",
+
+  "hiw.eyebrow": "// 仕組み",
+  "hiw.h1": "お問い合わせから成約まで —<br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary\">自動で。</span>",
+  "hiw.sub": "あなたのウェブサイトが代わりに働きます。AIが問い合わせを処理。本物のリードがTelegramに届きます。あなたは成約するだけ。",
+  "hiw.h2.journey": "// お客様の流れ",
+  "hiw.timeline.eyebrow": "// 制作スケジュール",
+  "hiw.h2.timeline": "3日間で公開。その方法は。",
+  "hiw.data.eyebrow": "// データの流れとセキュリティ",
+  "hiw.h2.data": "顧客データはどこへ？",
+  "hiw.cta.eyebrow": "// 始める準備ができましたか？",
+  "hiw.cta.h2": "あなたの次のお客様が今まさに検索しています。",
+  "hiw.cta.sub": "$500。3日間。電話にリードが届きます。",
+  "hiw.cta.btn1": "ビジネスをオンラインで始める",
+  "hiw.cta.btn2": "料金を見る",
+
+  "pricing.eyebrow": "// 明確な料金",
+  "pricing.h1": "サプライズなし。絶対に。",
+  "pricing.sub": "公開のための固定料金。シンプルなメンテナンスオプション。オプションのAIアドオン。支払う金額は常に把握できます。",
+  "pricing.cta.eyebrow": "// 準備できましたか？",
+  "pricing.cta.h2": "$500。3日間。完成。",
+  "pricing.cta.sub": "お問い合わせフォームを記入してください。週末までにウェブサイトを公開します。",
+  "pricing.cta.btn": "ビジネスをオンラインで始める",
+
+  "cases.eyebrow": "// 業種別デモギャラリー",
+  "cases.h1": "コミットする前に<br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary\">見てください。</span>",
+  "cases.sub": "各デモは完全に機能するウェブサイトです — $500でお客様に提供するのと同じクオリティ。業種を選んで、見て回って、何を変えたいか教えてください。",
+  "cases.h2.industry": "あなたの業種が見当たりませんか？ <span class=\"text-primary\">無料でカスタムデモを作ります。</span>",
+  "cases.cta.eyebrow": "// 準備できましたか？",
+  "cases.cta.h2": "あなたのビジネスはこんな風になれます",
+  "cases.cta.sub": "$500完全込み。3日間で公開。技術スキル不要 — ドメインから公開まですべて対応。",
+  "cases.cta.btn1": "ビジネスをオンラインで始める — $500",
+  "cases.cta.btn2": "メールで質問する",
+
+  "contact.eyebrow": "新しいプロジェクト",
+  "contact.h1": "あなたの<br/>ビジネスを<br/><span style=\"color:#5af0b3;\">作りましょう。</span>",
+  "contact.sub": "あなたのビジネスと必要なことを教えてください。詳細を共有するほど早くデモを用意できます — 同日中に完成することも。",
+  "contact.btn": "プロジェクト概要を送る →"
 }

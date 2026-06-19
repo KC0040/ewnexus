@@ -33,5 +33,42 @@
   "section.faq.h2": "Preguntas Frecuentes",
 
   "footer.tagline": "Sitios web profesionales para pequeñas empresas. $500. 3 días.",
-  "footer.rights": "Todos los derechos reservados."
+  "footer.rights": "Todos los derechos reservados.",
+
+  "hiw.eyebrow": "// Cómo Funciona",
+  "hiw.h1": "De Contacto a Venta Cerrada —<br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary\">Automáticamente.</span>",
+  "hiw.sub": "Tu sitio trabaja mientras tú trabajas. La IA maneja las consultas. Los leads reales llegan a tu Telegram. Tú cierras el trato.",
+  "hiw.h2.journey": "// El Recorrido del Cliente",
+  "hiw.timeline.eyebrow": "// Línea de Tiempo de Construcción",
+  "hiw.h2.timeline": "En Vivo en 3 Días. Así es Como.",
+  "hiw.data.eyebrow": "// Flujo de Datos y Seguridad",
+  "hiw.h2.data": "¿A Dónde Van los Datos del Cliente?",
+  "hiw.cta.eyebrow": "// ¿Listo para Comenzar?",
+  "hiw.cta.h2": "Tu Próximo Cliente Está Buscando Ahora Mismo.",
+  "hiw.cta.sub": "$500. 3 días. Tu teléfono recibe el lead.",
+  "hiw.cta.btn1": "Lanzar Mi Negocio en Línea",
+  "hiw.cta.btn2": "Ver Precios",
+
+  "pricing.eyebrow": "// Precios Transparentes",
+  "pricing.h1": "Sin Sorpresas. Nunca.",
+  "pricing.sub": "Una tarifa fija para lanzar. Opciones de mantenimiento simples. Complemento de IA opcional. Siempre sabes lo que pagas.",
+  "pricing.cta.eyebrow": "// ¿Listo?",
+  "pricing.cta.h2": "$500. 3 Días. Hecho.",
+  "pricing.cta.sub": "Llena el formulario de contacto y tendremos tu sitio en vivo antes del fin de semana.",
+  "pricing.cta.btn": "Lanzar Mi Negocio en Línea",
+
+  "cases.eyebrow": "// Exhibición de Demos por Industria",
+  "cases.h1": "Véalo Antes de<br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary\">Comprometerte.</span>",
+  "cases.sub": "Cada demo es un sitio web completamente funcional — la misma calidad que entregamos a los clientes por $500. Elige tu industria, navega y dinos qué quieres diferente.",
+  "cases.h2.industry": "¿No ves tu industria? <span class=\"text-primary\">Te construiremos un demo personalizado — gratis.</span>",
+  "cases.cta.eyebrow": "// ¿Listo?",
+  "cases.cta.h2": "Tu Negocio Podría Verse Así",
+  "cases.cta.sub": "$500 todo incluido. Lanzado en 3 días. Sin habilidades técnicas — manejamos todo desde el dominio hasta el lanzamiento.",
+  "cases.cta.btn1": "Lanzar Mi Negocio en Línea — $500",
+  "cases.cta.btn2": "Enviar una Pregunta por Email",
+
+  "contact.eyebrow": "Nuevo Proyecto",
+  "contact.h1": "CONSTRUYAMOS<br/>TU<br/><span style=\"color:#5af0b3;\">NEGOCIO.</span>",
+  "contact.sub": "Cuéntanos sobre tu negocio y lo que necesitas. Cuanto más detalle compartas, más rápido podemos tener un demo listo — a veces el mismo día.",
+  "contact.btn": "Enviar Resumen del Proyecto →"
 }

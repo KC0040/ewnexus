@@ -51,22 +51,22 @@
 <header id="navbar" class="fixed top-0 w-full h-[62px] bg-[#050a07]/85 backdrop-blur-md border-b border-[#2a3a32]/50 z-50 flex justify-between items-center px-6 md:px-12" style="transition:background 0.3s;">
   <a href="index.html" class="flex items-center no-underline"><img src="/assets/nex-logo.png" alt="NEX TPMS" style="height:44px;width:auto;object-fit:contain;filter:drop-shadow(0 0 8px rgba(90,240,179,.25));"/></a>
   <nav class="hidden md:flex items-center gap-6">
-    <a href="how-it-works.html" class="text-on-surface-variant text-sm font-medium hover:text-secondary transition-colors">How It Works</a>
-    <a href="pricing.html"      class="text-primary text-sm font-semibold">Pricing</a>
-    <a href="cases.html"        class="text-on-surface-variant text-sm font-medium hover:text-secondary transition-colors">Our Work</a>
+    <a href="how-it-works.html" class="text-on-surface-variant text-sm font-medium hover:text-secondary transition-colors" data-i18n="nav.how">How It Works</a>
+    <a href="pricing.html"      class="text-primary text-sm font-semibold" data-i18n="nav.pricing">Pricing</a>
+    <a href="cases.html"        class="text-on-surface-variant text-sm font-medium hover:text-secondary transition-colors" data-i18n="nav.examples">Our Work</a>
     <a href="about.html"        class="text-on-surface-variant text-sm font-medium hover:text-secondary transition-colors">About</a>
-    <a href="contact.html"      class="text-on-surface-variant text-sm font-medium hover:text-secondary transition-colors">Contact</a>
+    <a href="contact.html"      class="text-on-surface-variant text-sm font-medium hover:text-secondary transition-colors" data-i18n="nav.start">Contact</a>
   </nav>
-  <a href="contact.html" class="growth-gradient text-[#001a0e] px-5 py-2 rounded-lg font-display text-sm font-bold hover:opacity-90 transition-opacity">Get Started — $500</a>
+  <a href="contact.html" class="growth-gradient text-[#001a0e] px-5 py-2 rounded-lg font-display text-sm font-bold hover:opacity-90 transition-opacity" data-i18n="nav.start.cta">Get Started — $500</a>
 </header>
 
 <!-- HERO -->
 <section class="relative pt-[120px] pb-20 px-6 md:px-12 text-center overflow-hidden">
   <div class="glow-blob top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary"></div>
   <div class="relative z-10">
-    <p class="font-mono text-xs text-primary uppercase tracking-[0.2em] mb-4">// Transparent Pricing</p>
-    <h1 class="font-display font-black text-on-background mb-4" style="font-size:clamp(2.2rem,5vw,56px);letter-spacing:-0.03em;">No Surprises. Ever.</h1>
-    <p class="text-on-surface-variant text-lg max-w-xl mx-auto">One flat fee to launch. Simple maintenance options. Optional AI add-on. You always know what you're paying.</p>
+    <p class="font-mono text-xs text-primary uppercase tracking-[0.2em] mb-4" data-i18n="pricing.eyebrow">// Transparent Pricing</p>
+    <h1 class="font-display font-black text-on-background mb-4" style="font-size:clamp(2.2rem,5vw,56px);letter-spacing:-0.03em;" data-i18n="pricing.h1">No Surprises. Ever.</h1>
+    <p class="text-on-surface-variant text-lg max-w-xl mx-auto" data-i18n="pricing.sub">One flat fee to launch. Simple maintenance options. Optional AI add-on. You always know what you're paying.</p>
   </div>
 </section>
 
@@ -400,11 +400,11 @@
 <section class="py-20 px-6 md:px-12 relative overflow-hidden bg-surface-container-lowest">
   <div class="glow-blob bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-primary"></div>
   <div style="max-width:700px;" class="mx-auto text-center relative z-10">
-    <p class="font-mono text-xs text-primary uppercase tracking-[0.2em] mb-4">// Ready?</p>
-    <h2 class="font-display font-black text-on-background mb-4" style="font-size:clamp(1.8rem,4vw,42px);letter-spacing:-0.03em;">$500. 3 Days. Done.</h2>
-    <p class="text-on-surface-variant text-lg mb-8">Fill out the contact form and we'll have your site live by end of week.</p>
+    <p class="font-mono text-xs text-primary uppercase tracking-[0.2em] mb-4" data-i18n="pricing.cta.eyebrow">// Ready?</p>
+    <h2 class="font-display font-black text-on-background mb-4" style="font-size:clamp(1.8rem,4vw,42px);letter-spacing:-0.03em;" data-i18n="pricing.cta.h2">$500. 3 Days. Done.</h2>
+    <p class="text-on-surface-variant text-lg mb-8" data-i18n="pricing.cta.sub">Fill out the contact form and we'll have your site live by end of week.</p>
     <a href="contact.html" class="growth-gradient text-[#001a0e] px-12 py-5 rounded-xl font-display text-lg font-bold hover:scale-[1.02] transition-transform shadow-lg inline-flex items-center gap-2">
-      <span class="material-symbols-outlined" style="font-size:20px;">rocket_launch</span>Launch My Business Online
+      <span class="material-symbols-outlined" style="font-size:20px;">rocket_launch</span><span data-i18n="pricing.cta.btn">Launch My Business Online</span>
     </a>
   </div>
 </section>
@@ -451,6 +451,7 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+<script src="/assets/i18n.js" defer></script>
 </body>
 </html>
 

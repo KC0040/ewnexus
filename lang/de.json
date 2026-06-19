@@ -33,5 +33,42 @@
   "section.faq.h2": "Häufig Gestellte Fragen",
 
   "footer.tagline": "Professionelle Websites für Kleinunternehmen. $500. 3 Tage.",
-  "footer.rights": "Alle Rechte vorbehalten."
+  "footer.rights": "Alle Rechte vorbehalten.",
+
+  "hiw.eyebrow": "// So Funktioniert Es",
+  "hiw.h1": "Von Kontakt zu Abschluss —<br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary\">Automatisch.</span>",
+  "hiw.sub": "Ihre Website arbeitet, während Sie arbeiten. KI bearbeitet Anfragen. Echte Leads kommen auf Ihr Telegram. Sie schließen den Deal ab.",
+  "hiw.h2.journey": "// Die Kundenreise",
+  "hiw.timeline.eyebrow": "// Aufbau-Zeitplan",
+  "hiw.h2.timeline": "Live in 3 Tagen. So geht's.",
+  "hiw.data.eyebrow": "// Datenfluss & Sicherheit",
+  "hiw.h2.data": "Wohin gehen Kundendaten?",
+  "hiw.cta.eyebrow": "// Bereit loszulegen?",
+  "hiw.cta.h2": "Ihr nächster Kunde sucht gerade jetzt.",
+  "hiw.cta.sub": "$500. 3 Tage. Ihr Telefon bekommt den Lead.",
+  "hiw.cta.btn1": "Mein Unternehmen online starten",
+  "hiw.cta.btn2": "Preise ansehen",
+
+  "pricing.eyebrow": "// Transparente Preise",
+  "pricing.h1": "Keine Überraschungen. Niemals.",
+  "pricing.sub": "Ein Festpreis für den Launch. Einfache Wartungsoptionen. Optionales KI-Add-on. Sie wissen immer, was Sie zahlen.",
+  "pricing.cta.eyebrow": "// Bereit?",
+  "pricing.cta.h2": "$500. 3 Tage. Fertig.",
+  "pricing.cta.sub": "Füllen Sie das Kontaktformular aus und wir haben Ihre Website bis zum Wochenende live.",
+  "pricing.cta.btn": "Mein Unternehmen online starten",
+
+  "cases.eyebrow": "// Demo-Galerie nach Branche",
+  "cases.h1": "Sehen Sie es, bevor<br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary\">Sie sich verpflichten.</span>",
+  "cases.sub": "Jede Demo ist eine voll funktionsfähige Website — dieselbe Qualität, die wir Kunden für $500 liefern. Wählen Sie Ihre Branche, klicken Sie sich durch und sagen Sie uns, was Sie anders möchten.",
+  "cases.h2.industry": "Ihre Branche nicht dabei? <span class=\"text-primary\">Wir erstellen Ihnen kostenlos eine individuelle Demo.</span>",
+  "cases.cta.eyebrow": "// Bereit?",
+  "cases.cta.h2": "So könnte Ihr Unternehmen aussehen",
+  "cases.cta.sub": "$500 alles inklusive. Live in 3 Tagen. Keine technischen Kenntnisse — wir übernehmen alles von der Domain bis zum Launch.",
+  "cases.cta.btn1": "Mein Unternehmen online starten — $500",
+  "cases.cta.btn2": "Frage per E-Mail senden",
+
+  "contact.eyebrow": "Neues Projekt",
+  "contact.h1": "BAUEN WIR<br/>IHR<br/><span style=\"color:#5af0b3;\">UNTERNEHMEN.</span>",
+  "contact.sub": "Erzählen Sie uns von Ihrem Unternehmen und was Sie brauchen. Je mehr Details Sie teilen, desto schneller können wir eine Demo fertigstellen — manchmal noch am selben Tag.",
+  "contact.btn": "Projekt-Brief senden →"
 }

@@ -33,5 +33,42 @@
   "section.faq.h2": "Questions Fréquemment Posées",
 
   "footer.tagline": "Sites web professionnels pour petites entreprises. $500. 3 jours.",
-  "footer.rights": "Tous droits réservés."
+  "footer.rights": "Tous droits réservés.",
+
+  "hiw.eyebrow": "// Comment Ça Marche",
+  "hiw.h1": "Du Contact à la Vente —<br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary\">Automatiquement.</span>",
+  "hiw.sub": "Votre site travaille pendant que vous travaillez. L'IA gère les demandes. Les vrais leads arrivent sur votre Telegram. Vous concluez l'affaire.",
+  "hiw.h2.journey": "// Le Parcours Client",
+  "hiw.timeline.eyebrow": "// Calendrier de Construction",
+  "hiw.h2.timeline": "En Ligne en 3 Jours. Voici Comment.",
+  "hiw.data.eyebrow": "// Flux de Données & Sécurité",
+  "hiw.h2.data": "Où Vont les Données Client ?",
+  "hiw.cta.eyebrow": "// Prêt à Commencer ?",
+  "hiw.cta.h2": "Votre prochain client cherche en ce moment même.",
+  "hiw.cta.sub": "$500. 3 jours. Votre téléphone reçoit le lead.",
+  "hiw.cta.btn1": "Lancer mon entreprise en ligne",
+  "hiw.cta.btn2": "Voir les tarifs",
+
+  "pricing.eyebrow": "// Tarifs Transparents",
+  "pricing.h1": "Aucune Surprise. Jamais.",
+  "pricing.sub": "Un tarif fixe pour lancer. Des options de maintenance simples. Module IA optionnel. Vous savez toujours ce que vous payez.",
+  "pricing.cta.eyebrow": "// Prêt ?",
+  "pricing.cta.h2": "$500. 3 Jours. C'est fait.",
+  "pricing.cta.sub": "Remplissez le formulaire de contact et nous aurons votre site en ligne avant le week-end.",
+  "pricing.cta.btn": "Lancer mon entreprise en ligne",
+
+  "cases.eyebrow": "// Galerie de Démos par Secteur",
+  "cases.h1": "Voyez-le avant de<br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary\">vous engager.</span>",
+  "cases.sub": "Chaque démo est un site web entièrement fonctionnel — la même qualité que nous livrons aux clients pour $500. Choisissez votre secteur, naviguez et dites-nous ce que vous souhaitez différemment.",
+  "cases.h2.industry": "Votre secteur n'est pas là ? <span class=\"text-primary\">Nous vous créerons une démo personnalisée — gratuitement.</span>",
+  "cases.cta.eyebrow": "// Prêt ?",
+  "cases.cta.h2": "Votre entreprise pourrait ressembler à ça",
+  "cases.cta.sub": "$500 tout compris. En ligne en 3 jours. Aucune compétence technique — nous gérons tout du domaine au lancement.",
+  "cases.cta.btn1": "Lancer mon entreprise en ligne — $500",
+  "cases.cta.btn2": "Envoyer une question par email",
+
+  "contact.eyebrow": "Nouveau Projet",
+  "contact.h1": "CONSTRUISONS<br/>VOTRE<br/><span style=\"color:#5af0b3;\">ENTREPRISE.</span>",
+  "contact.sub": "Parlez-nous de votre entreprise et de ce dont vous avez besoin. Plus vous partagez de détails, plus vite nous pouvons avoir une démo prête — parfois le jour même.",
+  "contact.btn": "Envoyer le Brief du Projet →"
 }
