@@ -1,0 +1,37 @@
+{
+  "nav.how": "So Funktioniert Es",
+  "nav.pricing": "Preise",
+  "nav.examples": "Beispiele",
+  "nav.start": "Starten",
+  "nav.start.cta": "Jetzt Starten — $500",
+
+  "hero.eyebrow": "Texas-basiert · Alle 50 Bundesstaaten · Seit 2019",
+  "hero.h1": "IHR UNTERNEHMEN<br/>VERDIENT EINE<br/><span style=\"color:#5af0b3;\">ECHTE WEBSITE.</span>",
+  "hero.sub": "Professionelle Website + Hosting + SEO. <strong style=\"color:#e8fdf4;\">$500 alles inklusive</strong> im ersten Jahr. Launch in <strong style=\"color:#e8fdf4;\">3 Tagen</strong>. Demo ansehen, bevor Sie einen Cent zahlen.",
+  "hero.cta1": "Jetzt Starten — $500 →",
+  "hero.cta2": "Beispiele Ansehen",
+  "hero.stat1": "All-in Jahr 1",
+  "hero.stat2": "Tage Launch",
+  "hero.stat3": "Bis zur Genehmigung",
+  "hero.stat4": "Bediente Bundesstaaten",
+
+  "section.works.label": "So Funktioniert Es",
+  "section.works.h2": "Von Gespräch zur Website in 3 Tagen",
+  "section.works.sub": "Kein Designer. Keine endlosen Meetings. Keine Überraschungen.",
+
+  "section.price.label": "Transparente Preise",
+  "section.price.h2": "Ein Preis.<br/>Alles Inklusive.",
+  "section.price.badge": "$500 Alles inklusive",
+  "section.price.year1": "Jahr 1: $500",
+  "section.price.year2": "Jahr 2+: nur $150/Jahr",
+  "section.price.cta": "Jetzt Starten — $500 →",
+
+  "section.examples.label": "Echte Beispiele",
+  "section.examples.h2": "Von Uns Erstellte Websites",
+
+  "section.faq.label": "Häufige Fragen",
+  "section.faq.h2": "Häufig Gestellte Fragen",
+
+  "footer.tagline": "Professionelle Websites für Kleinunternehmen. $500. 3 Tage.",
+  "footer.rights": "Alle Rechte vorbehalten."
+}

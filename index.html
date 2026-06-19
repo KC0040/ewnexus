@@ -112,10 +112,10 @@
 <div id="mobile-menu">
   <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#5af0b3;cursor:pointer;"><span class="material-symbols-outlined" style="font-size:2rem;">close</span></button>
   <a href="/">Home</a>
-  <a href="/how-it-works.html">How It Works</a>
-  <a href="/pricing.html">Pricing</a>
-  <a href="/cases.html">Examples</a>
-  <a href="/contact.html" style="color:#5af0b3;opacity:1;">Get Started — $500</a>
+  <a href="/how-it-works.html" data-i18n="nav.how">How It Works</a>
+  <a href="/pricing.html" data-i18n="nav.pricing">Pricing</a>
+  <a href="/cases.html" data-i18n="nav.examples">Examples</a>
+  <a href="/contact.html" style="color:#5af0b3;opacity:1;" data-i18n="nav.start.cta">Get Started — $500</a>
 </div>
 
 <!-- NAV -->
@@ -125,12 +125,12 @@
       <img src="/assets/nex-logo.png" alt="NEX TPMS" style="height:44px;width:auto;object-fit:contain;filter:drop-shadow(0 0 8px rgba(90,240,179,.25));"/>
     </a>
     <nav style="display:flex;gap:2.5rem;align-items:center;" class="hidden-m">
-      <a href="/how-it-works.html" class="nav-link">How It Works</a>
-      <a href="/pricing.html" class="nav-link">Pricing</a>
-      <a href="/cases.html" class="nav-link">Examples</a>
+      <a href="/how-it-works.html" class="nav-link" data-i18n="nav.how">How It Works</a>
+      <a href="/pricing.html" class="nav-link" data-i18n="nav.pricing">Pricing</a>
+      <a href="/cases.html" class="nav-link" data-i18n="nav.examples">Examples</a>
     </nav>
     <div style="display:flex;align-items:center;gap:.875rem;">
-      <a href="/contact.html" class="btn-nav hidden-m">Get Started</a>
+      <a href="/contact.html" class="btn-nav hidden-m" data-i18n="nav.start">Get Started</a>
       <button id="hamburger" style="background:none;border:none;color:#5af0b3;cursor:pointer;display:none;"><span class="material-symbols-outlined">menu</span></button>
     </div>
   </div>
@@ -147,17 +147,17 @@
     <div style="max-width:820px;">
       <div class="eyebrow fade-up" style="margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem;">
         <span style="display:inline-block;width:24px;height:1px;background:#5af0b3;"></span>
-        Texas-Based · Serving All 50 States · Since 2019
+        <span data-i18n="hero.eyebrow">Texas-Based · Serving All 50 States · Since 2019</span>
       </div>
-      <h1 class="display fade-up hero-h" style="font-size:clamp(4rem,9vw,8rem);margin-bottom:1.75rem;">
+      <h1 class="display fade-up hero-h" style="font-size:clamp(4rem,9vw,8rem);margin-bottom:1.75rem;" data-i18n="hero.h1">
         YOUR BUSINESS<br/>DESERVES A<br/><span style="color:#5af0b3;">REAL WEBSITE.</span>
       </h1>
-      <p class="fade-up" style="color:rgba(232,253,244,.6);font-size:1.05rem;line-height:1.75;max-width:520px;margin-bottom:2.5rem;">
+      <p class="fade-up" style="color:rgba(232,253,244,.6);font-size:1.05rem;line-height:1.75;max-width:520px;margin-bottom:2.5rem;" data-i18n="hero.sub">
         Professional website + hosting + SEO. <strong style="color:#e8fdf4;">$500 all-in</strong> for the first year. Launch in <strong style="color:#e8fdf4;">3 days</strong>. See a demo before you pay a single dollar.
       </p>
       <div class="fade-up" style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-        <a href="/contact.html" class="btn-primary">Get Started — $500 →</a>
-        <a href="/cases.html" class="btn-ghost">See Examples</a>
+        <a href="/contact.html" class="btn-primary" data-i18n="hero.cta1">Get Started — $500 →</a>
+        <a href="/cases.html" class="btn-ghost" data-i18n="hero.cta2">See Examples</a>
       </div>
 
       <!-- Social proof strip -->
@@ -744,6 +744,7 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+<script src="/assets/i18n.js" defer></script>
 </body>
 </html>
 

@@ -1,0 +1,37 @@
+{
+  "nav.how": "仕組み",
+  "nav.pricing": "料金",
+  "nav.examples": "事例",
+  "nav.start": "始める",
+  "nav.start.cta": "始める — $500",
+
+  "hero.eyebrow": "テキサス拠点 · 全50州対応 · 2019年創業",
+  "hero.h1": "あなたのビジネスは<br/>本格的なウェブサイトを<br/><span style=\"color:#5af0b3;\">持つべきです。</span>",
+  "hero.sub": "プロのウェブサイト + ホスティング + SEO。初年度<strong style=\"color:#e8fdf4;\">$500完全込み</strong>。<strong style=\"color:#e8fdf4;\">3日間</strong>で公開。1ドルも払う前にデモを確認できます。",
+  "hero.cta1": "始める — $500 →",
+  "hero.cta2": "事例を見る",
+  "hero.stat1": "初年度込み込み",
+  "hero.stat2": "日で公開",
+  "hero.stat3": "承認まで無料",
+  "hero.stat4": "対応州数",
+
+  "section.works.label": "仕組み",
+  "section.works.h2": "会話からウェブサイトまで3日間",
+  "section.works.sub": "デザイナー不要。延々と会議なし。サプライズなし。",
+
+  "section.price.label": "明確な料金体系",
+  "section.price.h2": "料金は一つ。<br/>すべて込み。",
+  "section.price.badge": "$500 すべて込み",
+  "section.price.year1": "初年度：$500",
+  "section.price.year2": "2年目以降：$150/年のみ",
+  "section.price.cta": "始める — $500 →",
+
+  "section.examples.label": "実際の事例",
+  "section.examples.h2": "制作したウェブサイト",
+
+  "section.faq.label": "よくある質問",
+  "section.faq.h2": "よくある質問",
+
+  "footer.tagline": "中小企業向けプロウェブサイト。$500。3日間。",
+  "footer.rights": "All rights reserved."
+}

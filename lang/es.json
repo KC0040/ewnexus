@@ -1,0 +1,37 @@
+{
+  "nav.how": "Cómo Funciona",
+  "nav.pricing": "Precios",
+  "nav.examples": "Ejemplos",
+  "nav.start": "Comenzar",
+  "nav.start.cta": "Comenzar — $500",
+
+  "hero.eyebrow": "Con sede en Texas · Servicio en los 50 Estados · Desde 2019",
+  "hero.h1": "TU NEGOCIO<br/>MERECE UN<br/><span style=\"color:#5af0b3;\">SITIO WEB REAL.</span>",
+  "hero.sub": "Sitio web profesional + alojamiento + SEO. <strong style=\"color:#e8fdf4;\">$500 todo incluido</strong> el primer año. Lanzamiento en <strong style=\"color:#e8fdf4;\">3 días</strong>. Ve un demo antes de pagar un solo dólar.",
+  "hero.cta1": "Comenzar — $500 →",
+  "hero.cta2": "Ver Ejemplos",
+  "hero.stat1": "Todo incluido Año 1",
+  "hero.stat2": "Días de Lanzamiento",
+  "hero.stat3": "Hasta que apruebes",
+  "hero.stat4": "Estados atendidos",
+
+  "section.works.label": "Cómo Funciona",
+  "section.works.h2": "De Conversación a Sitio Web en 3 Días",
+  "section.works.sub": "Sin diseñadores. Sin reuniones interminables. Sin sorpresas.",
+
+  "section.price.label": "Precios Transparentes",
+  "section.price.h2": "Un Solo Precio.<br/>Todo Incluido.",
+  "section.price.badge": "$500 Todo incluido",
+  "section.price.year1": "Año 1: $500",
+  "section.price.year2": "Año 2+: solo $150/año",
+  "section.price.cta": "Comenzar — $500 →",
+
+  "section.examples.label": "Ejemplos Reales",
+  "section.examples.h2": "Sitios Web que Construimos",
+
+  "section.faq.label": "Preguntas Frecuentes",
+  "section.faq.h2": "Preguntas Frecuentes",
+
+  "footer.tagline": "Sitios web profesionales para pequeñas empresas. $500. 3 días.",
+  "footer.rights": "Todos los derechos reservados."
+}

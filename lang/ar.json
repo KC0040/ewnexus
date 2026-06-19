@@ -1,0 +1,37 @@
+{
+  "nav.how": "كيف يعمل",
+  "nav.pricing": "الأسعار",
+  "nav.examples": "أمثلة",
+  "nav.start": "ابدأ الآن",
+  "nav.start.cta": "ابدأ الآن — $500",
+
+  "hero.eyebrow": "مقرنا تكساس · نخدم جميع الولايات الـ 50 · منذ 2019",
+  "hero.h1": "عملك يستحق<br/>موقعاً إلكترونياً<br/><span style=\"color:#5af0b3;\">حقيقياً.</span>",
+  "hero.sub": "موقع احترافي + استضافة + SEO. <strong style=\"color:#e8fdf4;\">$500 شامل</strong> للسنة الأولى. الإطلاق في <strong style=\"color:#e8fdf4;\">3 أيام</strong>. شاهد العرض التجريبي قبل دفع أي شيء.",
+  "hero.cta1": "ابدأ الآن — $500 ←",
+  "hero.cta2": "مشاهدة الأمثلة",
+  "hero.stat1": "شامل السنة الأولى",
+  "hero.stat2": "أيام للإطلاق",
+  "hero.stat3": "حتى موافقتك",
+  "hero.stat4": "ولاية نخدمها",
+
+  "section.works.label": "كيف يعمل",
+  "section.works.h2": "من المحادثة إلى الموقع في 3 أيام",
+  "section.works.sub": "بدون مصممين. بدون اجتماعات لا تنتهي. بدون مفاجآت.",
+
+  "section.price.label": "أسعار شفافة",
+  "section.price.h2": "سعر واحد.<br/>كل شيء مشمول.",
+  "section.price.badge": "$500 شامل",
+  "section.price.year1": "السنة الأولى: $500",
+  "section.price.year2": "السنة الثانية فصاعداً: $150 فقط/سنة",
+  "section.price.cta": "ابدأ الآن — $500 ←",
+
+  "section.examples.label": "أمثلة حقيقية",
+  "section.examples.h2": "مواقع قمنا ببنائها",
+
+  "section.faq.label": "أسئلة شائعة",
+  "section.faq.h2": "الأسئلة الشائعة",
+
+  "footer.tagline": "مواقع احترافية للشركات الصغيرة. $500. 3 أيام.",
+  "footer.rights": "جميع الحقوق محفوظة."
+}
