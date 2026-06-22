@@ -162,7 +162,7 @@ ewnexus/
 4. 主要服務 3-5 項（含價格範圍）
 5. 營業時間？
 6. 有 logo 嗎？偏好顏色？
-7. 需要 AI 客服嗎？（+$10/月）
+7. 需要 AI 客服嗎？（+$20/月）
 8. Telegram 帳號（用來接收詢問通知）
 ```
 
@@ -182,7 +182,7 @@ ewnexus/
 Telegram 訊息格式：
 ✅ [業務名稱] 網站已完成
 📁 檔案：demos/DEMO_{slug}.html
-💰 請向客戶收款：$500
+💰 請向客戶收款：$600
 🔗 預覽：http://localhost:8769/demos/DEMO_{slug}.html
 ```
 
@@ -206,12 +206,12 @@ Telegram 訊息格式：
 
 ## 品質檢查清單（生成後必須確認）
 
-- [ ] 定價數字正確（$500/$150/$10）
+- [ ] 定價數字正確（$600/$150/$20/$35/$100）
 - [ ] GEO meta tags 存在（geo.region, geo.placename, geo.position）
 - [ ] Schema.org JSON-LD 有 LocalBusiness + 正確 @type
 - [ ] 聯絡表單連到 /api/contact
 - [ ] Demo banner 存在（綠色，連到 contact.html）
-- [ ] Footer 有 "Website by EWNexus · $500 · 3-day launch"
+- [ ] Footer 有 "Website by EWNexus · $600 · 3-day launch"
 - [ ] 手機版測試（有 viewport meta）
 - [ ] 所有電話號碼是 tel: 連結
 - [ ] 無 $12/年 舊定價字樣
