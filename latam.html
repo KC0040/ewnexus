@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Por qué tu negocio necesita una página web? | EWNexus</title>
+  <meta name="description" content="Descubre cómo una página web profesional puede transformar tu negocio local. Más clientes, más ventas, disponible 24/7."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: "#2563EB",
+            "brand-dark": "#1D4ED8",
+          },
+          fontFamily: { sans: ["Inter", "sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", sans-serif; }
+    .gradient-hero { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%); }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+    .wa-btn {
+      background: #25D366; color: white; display: inline-flex; align-items: center;
+      gap: 10px; padding: 16px 32px; border-radius: 9999px; font-weight: 700;
+      font-size: 1.05rem; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-btn:hover { transform: scale(1.05); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+    .vs-table th { background:#f1f5f9; padding:10px 16px; text-align:center; font-size:0.85rem; font-weight:600; color:#64748b; }
+    .vs-table td { padding:10px 16px; text-align:center; border-bottom:1px solid #f1f5f9; font-size:0.9rem; }
+    .check { color:#10B981; font-weight:700; }
+    .cross { color:#EF4444; font-weight:700; }
+    @keyframes bounce-slow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
+    details summary { list-style:none; cursor:pointer; }
+    details summary::-webkit-details-marker { display:none; }
+    details summary::after { content:" ▼"; color:#9ca3af; font-size:0.75rem; }
+    details[open] summary::after { content:" ▲"; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAV -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="font-black text-xl text-brand">EWNexus</a>
+    <a href="https://www.ewnexus.com/cases.html" target="_blank" class="text-sm text-gray-500 hover:text-brand transition-colors hidden sm:block">Ver Ejemplos</a>
+    <a href="https://wa.me/19366047700?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20crear%20una%20p%C3%A1gina%20web%20para%20mi%20negocio"
+       target="_blank" class="bg-brand text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-dark transition-colors">
+      Quiero mi web →
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="gradient-hero text-white py-20 px-4 text-center">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-5xl bounce-slow mb-4">💻</div>
+    <h1 class="text-4xl md:text-5xl font-black leading-tight mb-4">
+      Tu negocio existe.<br/>
+      <span class="text-yellow-300">¿Pero existe en Google?</span>
+    </h1>
+    <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+      Cada día, miles de personas buscan servicios como el tuyo en internet.<br/>
+      Sin página web, <strong class="text-white">le encuentran a tu competencia — no a ti.</strong>
+    </p>
+    <div class="bg-white/10 backdrop-blur rounded-2xl p-6 inline-block mb-8">
+      <p class="text-4xl font-black text-yellow-300 mb-1">85%</p>
+      <p class="text-blue-100 text-sm">de los consumidores busca en Google antes<br/>de visitar o llamar a un negocio local</p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/19366047700?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20crear%20una%20p%C3%A1gina%20web%20para%20mi%20negocio"
+         target="_blank" class="wa-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.549 4.116 1.51 5.849L0 24l6.335-1.652C8.048 23.433 9.983 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.933 0-3.736-.528-5.274-1.443l-.378-.225-3.928 1.025 1.054-3.83-.247-.394A9.777 9.777 0 012.182 12c0-5.413 4.405-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.413-4.405 9.818-9.818 9.818z"/></svg>
+        Hablar por WhatsApp
+      </a>
+      <a href="#industrias" class="border-2 border-white text-white px-6 py-4 rounded-full font-semibold hover:bg-white hover:text-brand transition-colors">
+        Ver mi industria ↓
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-white border-b border-gray-100 py-10 px-4">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div><p class="text-3xl font-black text-brand">+40%</p><p class="text-sm text-gray-500 mt-1">más ingresos con web vs. sin ella</p></div>
+    <div><p class="text-3xl font-black text-brand">24/7</p><p class="text-sm text-gray-500 mt-1">visible aunque estés cerrado</p></div>
+    <div><p class="text-3xl font-black text-brand">3.5×</p><p class="text-sm text-gray-500 mt-1">más confianza del cliente nuevo</p></div>
+    <div><p class="text-3xl font-black text-brand">$600</p><p class="text-sm text-gray-500 mt-1">única vez — sin mensualidades</p></div>
+  </div>
+</section>
+
+<!-- CON VS SIN -->
+<section class="py-16 px-4 bg-gray-50">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-black text-center mb-2">Con web vs. Sin web</h2>
+    <p class="text-gray-500 text-center mb-10">La diferencia en números reales</p>
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <table class="vs-table w-full">
+        <thead>
+          <tr>
+            <th class="text-left pl-6">Situación</th>
+            <th class="text-green-600">✅ Con página web</th>
+            <th class="text-red-500">❌ Sin página web</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="pl-6 font-medium">Google te encuentra</td><td class="check">Apareces en búsquedas locales</td><td class="cross">Invisible en Google</td></tr>
+          <tr><td class="pl-6 font-medium">Clientes fuera de horario</td><td class="check">Tu web trabaja mientras duermes</td><td class="cross">Llaman, nadie contesta, buscan otro</td></tr>
+          <tr><td class="pl-6 font-medium">Primera impresión</td><td class="check">Profesional y confiable</td><td class="cross">"¿Será serio este negocio?"</td></tr>
+          <tr><td class="pl-6 font-medium">Alcance</td><td class="check">Toda la ciudad o más</td><td class="cross">Solo quien ya te conoce</td></tr>
+          <tr><td class="pl-6 font-medium">Cotizaciones</td><td class="check">Formulario automático 24/7</td><td class="cross">Pierdes a quien no quiere llamar</td></tr>
+          <tr><td class="pl-6 font-medium">Credibilidad</td><td class="check">Testimonios visibles online</td><td class="cross">Solo el boca a boca</td></tr>
+          <tr><td class="pl-6 font-medium">Competencia</td><td class="check">Compites de igual a igual</td><td class="cross">Los grandes siempre ganan</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIAS -->
+<section id="industrias" class="py-16 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-black text-center mb-2">Según tu industria</h2>
+    <p class="text-gray-500 text-center mb-12">¿Por qué <em>tu tipo de negocio</em> necesita una página web?</p>
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Restaurantes -->
+      <div class="card-hover bg-orange-50 border border-orange-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🍽️</div>
+        <h3 class="text-xl font-black text-orange-700 mb-2">Restaurantes y Fondas</h3>
+        <p class="text-gray-600 mb-4 text-sm">El 90% de los clientes revisa el menú en línea <em>antes</em> de salir de casa. Sin web, van donde sí tienen menú publicado.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Menú online — actualizable en minutos</li>
+          <li><span class="text-green-600 font-bold">✓</span> Reservaciones automáticas 24/7</li>
+          <li><span class="text-green-600 font-bold">✓</span> Horarios y mapa siempre visibles en Google</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: el cliente elige a quien sí tiene menú online</li>
+        </ul>
+      </div>
+
+      <!-- Grúas -->
+      <div class="card-hover bg-blue-50 border border-blue-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🚛</div>
+        <h3 class="text-xl font-black text-blue-700 mb-2">Grúas y Remolque de Emergencia</h3>
+        <p class="text-gray-600 mb-4 text-sm">Cuando alguien necesita grúa, necesita ayuda <em>ahora mismo</em>. Busca en el celular — el que aparece primero gana el trabajo.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Cliente comparte GPS — sin explicar dónde está</li>
+          <li><span class="text-green-600 font-bold">✓</span> Solicitud de emergencia online, sin llamadas perdidas</li>
+          <li><span class="text-green-600 font-bold">✓</span> Apareces en Google Maps cuando más te necesitan</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: el cliente llama al primero que aparece en Google</li>
+        </ul>
+      </div>
+
+      <!-- Belleza -->
+      <div class="card-hover bg-pink-50 border border-pink-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">💅</div>
+        <h3 class="text-xl font-black text-pink-700 mb-2">Salones de Belleza y Uñas</h3>
+        <p class="text-gray-600 mb-4 text-sm">Las clientas buscan fotos del trabajo antes de reservar. Sin galería online, van donde sí pueden ver resultados.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Galería de trabajos que convence sola</li>
+          <li><span class="text-green-600 font-bold">✓</span> Reservas online — sin perder tiempo al teléfono</li>
+          <li><span class="text-green-600 font-bold">✓</span> Precios visibles — menos preguntas repetidas</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: el Instagram solo llega a quien ya te sigue</li>
+        </ul>
+      </div>
+
+      <!-- Mecánica -->
+      <div class="card-hover bg-gray-100 border border-gray-200 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🔧</div>
+        <h3 class="text-xl font-black text-gray-700 mb-2">Mecánicas y Talleres Automotrices</h3>
+        <p class="text-gray-600 mb-4 text-sm">El cliente con el carro averiado busca "taller cerca" en el celular. Si no apareces, no existes para él.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Cotizaciones online — sin llamadas de ida y vuelta</li>
+          <li><span class="text-green-600 font-bold">✓</span> Lista de servicios con precios aproximados (genera confianza)</li>
+          <li><span class="text-green-600 font-bold">✓</span> Testimonios reales que convierten visitas en clientes</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: pierdes a todos los que buscan desde el celular</li>
+        </ul>
+      </div>
+
+      <!-- Peluquería -->
+      <div class="card-hover bg-indigo-50 border border-indigo-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">✂️</div>
+        <h3 class="text-xl font-black text-indigo-700 mb-2">Peluquerías y Barberías</h3>
+        <p class="text-gray-600 mb-4 text-sm">Los clientes nuevos eligen barbería por fotos y reseñas. Sin web, solo creces con el boca a boca — muy lento.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Fotos de cortes — el cliente llega sabiendo qué quiere</li>
+          <li><span class="text-green-600 font-bold">✓</span> Agenda online — más tiempo cortando, menos al teléfono</li>
+          <li><span class="text-green-600 font-bold">✓</span> Reseñas de Google integradas dan confianza al instante</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: los clientes nuevos no saben que existes</li>
+        </ul>
+      </div>
+
+      <!-- Limpieza -->
+      <div class="card-hover bg-teal-50 border border-teal-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🧹</div>
+        <h3 class="text-xl font-black text-teal-700 mb-2">Servicios de Limpieza</h3>
+        <p class="text-gray-600 mb-4 text-sm">Sin web, dependes del boca a boca. Con web, el cliente describe su caso, sube fotos del espacio y tú cotizas al instante — sin visita previa.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Cliente sube fotos del espacio → tú ves y cotizas de inmediato</li>
+          <li><span class="text-green-600 font-bold">✓</span> Sin visita previa — ahorras tiempo antes de confirmar el trabajo</li>
+          <li><span class="text-green-600 font-bold">✓</span> Formulario recoge tamaño, tipo y frecuencia — nada de llamadas de ida y vuelta</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: tienes que ir a ver antes de poder dar precio</li>
+        </ul>
+      </div>
+
+      <!-- Comida para llevar -->
+      <div class="card-hover bg-yellow-50 border border-yellow-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🥡</div>
+        <h3 class="text-xl font-black text-yellow-700 mb-2">Comida para Llevar y Catering</h3>
+        <p class="text-gray-600 mb-4 text-sm">Rappi y UberEats se quedan con el 25–30% de cada pedido. Con tu propia web, el pedido va directo a ti — sin comisión.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Pedidos directos por WhatsApp desde la web</li>
+          <li><span class="text-green-600 font-bold">✓</span> Menú con fotos que da hambre solo de verlo</li>
+          <li><span class="text-green-600 font-bold">✓</span> Cotizaciones para catering y eventos en línea</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: pagas comisión a las apps o solo vendes a conocidos</li>
+        </ul>
+      </div>
+
+      <!-- Academia -->
+      <div class="card-hover bg-purple-50 border border-purple-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">📚</div>
+        <h3 class="text-xl font-black text-purple-700 mb-2">Academias, Clases y Tutorías</h3>
+        <p class="text-gray-600 mb-4 text-sm">Los padres buscan clases de inglés, matemáticas o música en Google. Sin web, pierdes todos esos alumnos potenciales.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Horarios y precios visibles 24/7 — menos llamadas repetidas</li>
+          <li><span class="text-green-600 font-bold">✓</span> Inscripción online — conviertes interesados en alumnos</li>
+          <li><span class="text-green-600 font-bold">✓</span> Credenciales del instructor que generan confianza</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: solo llegan quienes ya te conocen</li>
+        </ul>
+      </div>
+
+      <!-- Salud -->
+      <div class="card-hover bg-green-50 border border-green-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🦷</div>
+        <h3 class="text-xl font-black text-green-700 mb-2">Consultorios Médicos y Dentales</h3>
+        <p class="text-gray-600 mb-4 text-sm">Al buscar dentista por primera vez, el paciente elige quien tiene web con fotos, precios y reseñas. Sin web, va a tu competencia.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Citas online — llenas la agenda sin secretaria extra</li>
+          <li><span class="text-green-600 font-bold">✓</span> Fotos del consultorio que tranquilizan al paciente nervioso</li>
+          <li><span class="text-green-600 font-bold">✓</span> Precios y planes de pago visibles — menos preguntas</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: los pacientes nuevos no saben que existes</li>
+        </ul>
+      </div>
+
+      <!-- Plomero / electricista -->
+      <div class="card-hover bg-amber-50 border border-amber-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🏠</div>
+        <h3 class="text-xl font-black text-amber-700 mb-2">Plomeros, Electricistas y Servicios del Hogar</h3>
+        <p class="text-gray-600 mb-4 text-sm">El cliente sube una foto de la tubería rota o el cableado — tú la ves, evalúas con tu propio criterio y cotizas sin ir a revisar primero.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Cliente sube foto del problema → tú la ves y das precio directo</li>
+          <li><span class="text-green-600 font-bold">✓</span> Sin visita de diagnóstico — cotizas más rápido que la competencia</li>
+          <li><span class="text-green-600 font-bold">✓</span> Urgencias por formulario — no más llamadas perdidas de noche</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: tienes que ir antes de saber si el trabajo te conviene</li>
+        </ul>
+      </div>
+
+      <!-- Tienda -->
+      <div class="card-hover bg-red-50 border border-red-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🛒</div>
+        <h3 class="text-xl font-black text-red-700 mb-2">Tiendas, Minimarkets y Abarrotes</h3>
+        <p class="text-gray-600 mb-4 text-sm">Una web te permite ofrecer pedidos por WhatsApp, catálogo en línea y delivery — sin depender solo del tráfico físico.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Catálogo online — clientes ven lo que tienes antes de ir</li>
+          <li><span class="text-green-600 font-bold">✓</span> Pedidos por WhatsApp directo desde tu web</li>
+          <li><span class="text-green-600 font-bold">✓</span> Promociones que llegan a muchas más personas</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: vendes solo a quien pasa por enfrente</li>
+        </ul>
+      </div>
+
+      <!-- Mascotas -->
+      <div class="card-hover bg-cyan-50 border border-cyan-100 rounded-2xl p-6">
+        <div class="text-4xl mb-3">🐾</div>
+        <h3 class="text-xl font-black text-cyan-700 mb-2">Estéticas y Guarderías para Mascotas</h3>
+        <p class="text-gray-600 mb-4 text-sm">Los dueños de mascotas quieren ver el lugar, leer reseñas y reservar online antes de confiar a su mascota con alguien nuevo.</p>
+        <ul class="space-y-1 text-sm text-gray-700">
+          <li><span class="text-green-600 font-bold">✓</span> Fotos del local que tranquilizan a los dueños</li>
+          <li><span class="text-green-600 font-bold">✓</span> Reservas con horario visible — sin llamadas de ida y vuelta</li>
+          <li><span class="text-green-600 font-bold">✓</span> Galería de mascotas atendidas — el mejor marketing</li>
+          <li class="mt-2 text-red-500 font-medium">✗ Sin web: los dueños exigentes eligen a quien transmite confianza online</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- CTA medio de página -->
+    <div class="mt-12 text-center">
+      <p class="text-gray-500 mb-4">¿No encontraste tu industria? Aplica para cualquier negocio local.</p>
+      <a href="https://wa.me/19366047700?text=Hola%2C%20tengo%20un%20negocio%20y%20quiero%20saber%20si%20necesito%20p%C3%A1gina%20web"
+         target="_blank" class="wa-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.549 4.116 1.51 5.849L0 24l6.335-1.652C8.048 23.433 9.983 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.933 0-3.736-.528-5.274-1.443l-.378-.225-3.928 1.025 1.054-3.83-.247-.394A9.777 9.777 0 012.182 12c0-5.413 4.405-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.413-4.405 9.818-9.818 9.818z"/></svg>
+        Consulta gratuita por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-16 px-4 bg-gray-50">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-black mb-2">Así de fácil funciona</h2>
+    <p class="text-gray-500 mb-12">Sin complicaciones. Tú nos dices qué hace tu negocio, nosotros hacemos el resto.</p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-black mx-auto mb-4">1</div>
+        <h3 class="font-bold text-lg mb-2">Cuéntanos tu negocio</h3>
+        <p class="text-gray-500 text-sm">Por WhatsApp. Nombre, servicios, fotos, horarios — lo que tengas, así empezamos.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-black mx-auto mb-4">2</div>
+        <h3 class="font-bold text-lg mb-2">Diseñamos tu web</h3>
+        <p class="text-gray-500 text-sm">En 3–5 días tienes tu web lista. Moderna, rápida, optimizada para Google y celular.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-black mx-auto mb-4">3</div>
+        <h3 class="font-bold text-lg mb-2">Empiezas a aparecer</h3>
+        <p class="text-gray-500 text-sm">Tus clientes te encuentran. Mensajes y cotizaciones llegan en piloto automático.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="py-16 px-4 bg-brand">
+  <div class="max-w-2xl mx-auto text-center text-white">
+    <h2 class="text-3xl font-black mb-2">Precio claro, sin sorpresas</h2>
+    <p class="text-blue-200 mb-10">Sin mensualidades escondidas. Sin contratos trampa.</p>
+    <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-xl">
+      <p class="text-5xl font-black text-brand mb-1">$600</p>
+      <p class="text-gray-400 text-sm mb-6">pago único — tu web queda para siempre</p>
+      <ul class="text-left space-y-3 mb-8 text-sm">
+        <li class="flex gap-3"><span class="text-green-500 text-lg">✓</span> Diseño personalizado según tu negocio</li>
+        <li class="flex gap-3"><span class="text-green-500 text-lg">✓</span> Versión móvil incluida (90% navega desde celular)</li>
+        <li class="flex gap-3"><span class="text-green-500 text-lg">✓</span> Formulario de contacto / cotización automático</li>
+        <li class="flex gap-3"><span class="text-green-500 text-lg">✓</span> Optimización para Google (SEO básico)</li>
+        <li class="flex gap-3"><span class="text-green-500 text-lg">✓</span> Google Maps integrado</li>
+        <li class="flex gap-3"><span class="text-green-500 text-lg">✓</span> Botón de WhatsApp directo</li>
+        <li class="flex gap-3"><span class="text-green-500 text-lg">✓</span> Web en español, inglés o bilingüe</li>
+      </ul>
+      <p class="text-xs text-gray-400 mb-6">Opcional: chatbot de IA 24/7 que responde clientes automáticamente — desde $20/mes</p>
+      <a href="https://wa.me/19366047700?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio"
+         target="_blank" class="wa-btn justify-center w-full">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.549 4.116 1.51 5.849L0 24l6.335-1.652C8.048 23.433 9.983 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.933 0-3.736-.528-5.274-1.443l-.378-.225-3.928 1.025 1.054-3.83-.247-.394A9.777 9.777 0 012.182 12c0-5.413 4.405-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.413-4.405 9.818-9.818 9.818z"/></svg>
+        Quiero mi página web ahora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-3xl font-black text-center mb-10">Preguntas frecuentes</h2>
+    <div class="space-y-3">
+      <details class="border border-gray-200 rounded-xl p-5">
+        <summary class="font-semibold text-gray-800">¿Necesito saber de tecnología?</summary>
+        <p class="mt-3 text-gray-500 text-sm">Para nada. Solo nos cuentas qué hace tu negocio. Nosotros diseñamos, programamos y publicamos todo.</p>
+      </details>
+      <details class="border border-gray-200 rounded-xl p-5">
+        <summary class="font-semibold text-gray-800">¿En cuánto tiempo está lista mi web?</summary>
+        <p class="mt-3 text-gray-500 text-sm">En 3 a 5 días hábiles desde que nos das la información de tu negocio.</p>
+      </details>
+      <details class="border border-gray-200 rounded-xl p-5">
+        <summary class="font-semibold text-gray-800">¿Puedo pedir cambios después?</summary>
+        <p class="mt-3 text-gray-500 text-sm">Sí. Incluimos ajustes durante el primer mes. Después, actualizaciones desde $150.</p>
+      </details>
+      <details class="border border-gray-200 rounded-xl p-5">
+        <summary class="font-semibold text-gray-800">¿Hay pagos mensuales obligatorios?</summary>
+        <p class="mt-3 text-gray-500 text-sm">La web es pago único de $600. El chatbot de IA es completamente opcional ($20–35/mes). Sin sorpresas.</p>
+      </details>
+      <details class="border border-gray-200 rounded-xl p-5">
+        <summary class="font-semibold text-gray-800">¿Pueden hacer la web en español?</summary>
+        <p class="mt-3 text-gray-500 text-sm">Por supuesto. Hacemos webs en español, inglés, o bilingüe — según tu mercado.</p>
+      </details>
+      <details class="border border-gray-200 rounded-xl p-5">
+        <summary class="font-semibold text-gray-800">¿Trabajan con negocios en Latinoamérica?</summary>
+        <p class="mt-3 text-gray-500 text-sm">Sí. Atendemos negocios en toda Latinoamérica, México, Canadá y Estados Unidos. Todo el proceso es 100% remoto por WhatsApp.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-20 px-4 gradient-hero text-center text-white">
+  <div class="max-w-2xl mx-auto">
+    <div class="text-5xl mb-4">🚀</div>
+    <h2 class="text-3xl md:text-4xl font-black mb-4">Tu competencia ya está en Google.<br/>¿Y tú?</h2>
+    <p class="text-blue-200 mb-8 text-lg">Por $600 — una sola vez — tu negocio empieza a aparecer en internet.<br/>Consulta gratis, sin compromiso.</p>
+    <a href="https://wa.me/19366047700?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20crear%20una%20web%20para%20mi%20negocio"
+       target="_blank" class="wa-btn mx-auto">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.549 4.116 1.51 5.849L0 24l6.335-1.652C8.048 23.433 9.983 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.933 0-3.736-.528-5.274-1.443l-.378-.225-3.928 1.025 1.054-3.83-.247-.394A9.777 9.777 0 012.182 12c0-5.413 4.405-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.413-4.405 9.818-9.818 9.818z"/></svg>
+      Consulta gratis por WhatsApp
+    </a>
+    <p class="text-blue-200 text-xs mt-4">Respondemos en menos de 24 horas · Sin compromiso</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-500 py-8 text-center text-sm px-4">
+  <p class="text-white font-bold text-lg mb-1">EWNexus</p>
+  <p>Tu socio digital para hacer crecer tu negocio.</p>
+  <p class="mt-2">
+    <a href="https://www.ewnexus.com" class="text-blue-400 hover:underline">ewnexus.com</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:info@ewnexus.com" class="text-blue-400 hover:underline">info@ewnexus.com</a>
+  </p>
+</footer>
+
+</body>
+</html>
