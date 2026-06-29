@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
 <meta charset="UTF-8"/>
@@ -74,5 +74,14 @@
 window.EWN_CHATBOT={endpoint:'https://new2-chatbotservice.pkxdtf.easypanel.host/api/chat',clientSlug:'ewnexus',botName:'EWNexus AI',accentColor:'#5af0b3'};
 </script>
 <script src="https://new2-chatbotservice.pkxdtf.easypanel.host/widget.js" defer></script>
+<script>
+  (function(d,t){
+    var BASE_URL="https://chatwoot-chatwoot.pkxdtf.easypanel.host";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";g.defer=true;g.async=true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){window.chatwootSDK.run({websiteToken:"eg4bEyBFk2rzNz4oNtBYRSaR",baseUrl:BASE_URL});}
+  })(document,"script");
+</script>
 </body>
 </html>
