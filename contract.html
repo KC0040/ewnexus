@@ -248,12 +248,28 @@
           <span class="value">$150/year</span>
         </div>
         <div class="summary-row">
-          <span class="label">AI chatbot add-on (optional)</span>
-          <span class="value">+$10/month</span>
+          <span class="label">Included: AI live chat + heatmap + GA4 + GSC</span>
+          <span class="value">✅ Included</span>
         </div>
         <div class="summary-row">
-          <span class="label">5-year total estimate</span>
-          <span class="value accent">$1,100 (~$18.33/mo)</span>
+          <span class="label">Annual Maintenance Standard (Year 2+)</span>
+          <span class="value">$150/year (2 updates)</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Annual Maintenance Plus (GPS sites)</span>
+          <span class="value">$250/year (4 updates)</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Domain proxy add-on (optional)</span>
+          <span class="value">+$50 (domain cost at cost)</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">GPS 3-way tracking add-on (optional)</span>
+          <span class="value">+$400</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">5-year total estimate (standard)</span>
+          <span class="value accent">$1,200 (~$20/mo)</span>
         </div>
       </div>
     </div>
@@ -292,6 +308,9 @@
               <label class="form-label">Industry *</label>
               <select id="c-industry" class="form-input" required>
                 <option value="">Select industry…</option>
+                <option>Towing / Roadside Assistance</option>
+                <option>Mobile Tire Service</option>
+                <option>Car Locksmith</option>
                 <option>Tire Shop / Auto Parts</option>
                 <option>Auto Repair</option>
                 <option>Restaurant / Food</option>
@@ -341,10 +360,27 @@
           </div>
 
           <div class="form-group-full">
-            <label class="form-label">AI Chatbot Add-on</label>
-            <select id="c-ai" class="form-input">
-              <option value="no">No AI chatbot</option>
-              <option value="yes">Yes — add AI chatbot ($10/month)</option>
+            <label class="form-label">Domain Proxy (optional)</label>
+            <select id="c-domain-proxy" class="form-input">
+              <option value="no">No — I will handle my own domain</option>
+              <option value="yes">Yes — EWNexus purchases & sets up domain for me (+$50, domain cost extra)</option>
+            </select>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label">GPS 3-Way Live Tracking (optional — tow trucks, roadside assistance, mobile services)</label>
+            <select id="c-gps" class="form-input">
+              <option value="no">No GPS tracking needed</option>
+              <option value="yes">Yes — add GPS 3-way tracking system (+$400)</option>
+            </select>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label">Annual Maintenance Plan</label>
+            <select id="c-maintenance" class="form-input">
+              <option value="none">No maintenance plan (single update $150 when needed)</option>
+              <option value="standard">Standard — $150/year (2 updates, static sites)</option>
+              <option value="plus">Plus — $250/year (4 updates, recommended for GPS sites)</option>
             </select>
           </div>
 
@@ -358,8 +394,9 @@
             <input type="checkbox" id="c-agree" required onclick="event.stopPropagation()"/>
             <label for="c-agree">
               I have read and agree to the <strong>EWNexus Website Service Agreement</strong> above.
-              I understand the $600 setup fee is due upon signing, and that annual maintenance
-              ($150/year) begins in Year 2. I authorize EWNexus to build my website as described.
+              I understand the $600 setup fee is due upon signing, and that any selected add-ons
+              (domain proxy, GPS tracking) are additional charges. I authorize EWNexus to build
+              my website as described.
             </label>
           </div>
 
@@ -413,7 +450,9 @@ async function submitContract(e) {
     email:        document.getElementById('c-email').value,
     address:      document.getElementById('c-address').value,
     domain:       document.getElementById('c-domain').value,
-    ai_addon:     document.getElementById('c-ai').value,
+    domain_proxy: document.getElementById('c-domain-proxy').value,
+    gps_addon:    document.getElementById('c-gps').value,
+    maintenance:  document.getElementById('c-maintenance').value,
     notes:        document.getElementById('c-notes').value,
     signature:    document.getElementById('c-sig').value,
     signed_at:    new Date().toISOString()
