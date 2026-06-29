@@ -362,5 +362,16 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});
 });
 </script>
+<!-- EWNexus Demo Banner -->
+<div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+  <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+    <span style="color:#c8ddd2;font-size:12px;">✓ Online booking form, no phone tag</span>
+    <span style="color:#c8ddd2;font-size:12px;">✓ AI chat handles scheduling 24/7</span>
+    <span style="color:#c8ddd2;font-size:12px;">✓ Google ranked for "salon near me"</span>
+  </div>
+  <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+  <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+</div>
 </body>
 </html>
