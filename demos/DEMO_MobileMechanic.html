@@ -1,0 +1,1004 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadReady Mobile Mechanic — Grand Prairie TX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "RoadReady Mobile Mechanic",
+    "telephone": "(972) 555-0147",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3218 Pioneer Pkwy",
+      "addressLocality": "Grand Prairie",
+      "addressRegion": "TX",
+      "postalCode": "75050"
+    },
+    "url": "https://www.ewnexus.com",
+    "areaServed": ["Grand Prairie", "Arlington", "Irving", "Mansfield", "Cedar Hill"]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grand Prairie, Arlington, Irving, Mansfield, and surrounding DFW metro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can you arrive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most calls, we're on-site within 45–60 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of vehicles do you work on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most makes and models — cars, SUVs, trucks, and light vans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept insurance referrals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we work with most major auto insurance providers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cash, all major credit cards, Venmo, and Zelle."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a1628;
+      --accent: #FF6B35;
+      --accent-light: #ff8a5f;
+      --text: #e8edf5;
+      --text-muted: #8fa3bf;
+      --card-bg: #0f1e38;
+      --border: rgba(255,107,53,0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 100px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,22,40,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+    }
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.03em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--accent-light); }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(255,107,53,0.08) 0%, transparent 70%);
+    }
+    /* Geometric shapes */
+    .geo { position: absolute; pointer-events: none; }
+    .geo-1 {
+      width: 400px; height: 400px;
+      border: 1px solid rgba(255,107,53,0.12);
+      border-radius: 50%;
+      top: -80px; right: 20%;
+    }
+    .geo-2 {
+      width: 200px; height: 200px;
+      border: 1px solid rgba(255,107,53,0.08);
+      transform: rotate(45deg);
+      bottom: 80px; right: 15%;
+    }
+    .geo-3 {
+      width: 600px; height: 600px;
+      border: 1px solid rgba(255,107,53,0.05);
+      border-radius: 50%;
+      top: -200px; right: 5%;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,53,0.12);
+      border: 1px solid rgba(255,107,53,0.3);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .hero-badge::before { content: '●'; font-size: 8px; }
+
+    .hero h1 {
+      font-size: clamp(32px, 4.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-core {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+
+    .hero-checks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .check-item::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all .2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all .2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero-image-box {
+      border: 2px dashed rgba(255,107,53,0.35);
+      border-radius: 16px;
+      width: 100%;
+      aspect-ratio: 8/5;
+      max-height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: rgba(255,107,53,0.04);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(255,107,53,0.03) 20px,
+        rgba(255,107,53,0.03) 40px
+      );
+    }
+    .img-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,107,53,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      z-index: 1;
+    }
+    .img-sublabel {
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      z-index: 1;
+    }
+    .img-icon { font-size: 48px; z-index: 1; opacity: 0.4; }
+
+    /* SECTIONS */
+    section { padding: 80px 40px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
+    .section-h2 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    /* SERVICES */
+    .services-section { background: #080e1a; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition: all .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform .25s;
+    }
+    .service-card:hover { border-color: rgba(255,107,53,0.4); transform: translateY(-3px); }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      font-size: 32px;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ABOUT */
+    .about-section { background: var(--bg); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .trust-badge {
+      background: rgba(255,107,53,0.1);
+      border: 1px solid rgba(255,107,53,0.25);
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .stat-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .owner-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .owner-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,107,53,0.15);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .owner-name { font-size: 16px; font-weight: 800; color: #fff; }
+    .owner-title { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .owner-certs { font-size: 12px; color: var(--accent); margin-top: 4px; }
+
+    /* FAQ */
+    .faq-section { background: #080e1a; }
+    .faq-list { display: flex; flex-direction: column; gap: 14px; max-width: 800px; }
+    details.faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    details.faq-item[open] { border-color: rgba(255,107,53,0.5); }
+    details.faq-item summary {
+      padding: 20px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      user-select: none;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--accent);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    details.faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-answer {
+      padding: 0 24px 20px;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* CONTACT */
+    .contact-section { background: var(--bg); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .big-phone {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      transition: color .2s;
+    }
+    .big-phone:hover { color: var(--accent-light); }
+    .contact-tagline {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+    .contact-info-row {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .contact-info-item .icon { font-size: 18px; margin-top: 1px; flex-shrink: 0; }
+    .contact-info-item strong { color: var(--text); }
+    .response-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,53,0.1);
+      border: 1px solid rgba(255,107,53,0.25);
+      padding: 10px 18px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .response-badge::before { content: '⚡'; }
+
+    /* FORM */
+    .contact-form {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .form-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-group select option { background: #0f1e38; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 16px;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .form-submit:hover { background: var(--accent-light); }
+
+    /* FOOTER */
+    footer {
+      background: #060d17;
+      border-top: 1px solid var(--border);
+      padding: 48px 40px 32px;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      font-size: 13px;
+      color: var(--text-muted);
+      padding: 4px 0;
+    }
+    .footer-col p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+    .footer-logo span { color: var(--accent); }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: 12px; color: var(--text-muted); }
+    .footer-lang {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* MOBILE STICKY CTA */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 64px;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-sticky-cta { display: block; }
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      section { padding: 60px 20px; }
+      .hero { padding: 60px 20px; min-height: auto; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-image-box { display: none; }
+      .hero-checks { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .owner-card { grid-column: span 1; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      footer { padding: 40px 20px 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .about-stats { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-secondary { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">RoadReady <span>Mobile</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:9725550147" class="nav-cta">📞 Call Now</a>
+  </nav>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero">
+    <div class="geo geo-1"></div>
+    <div class="geo geo-2"></div>
+    <div class="geo geo-3"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">Grand Prairie TX · Mobile Auto Repair</div>
+        <h1>Your Car Breaks Down.<br><em>We Show Up.</em><br>You Keep Rolling.</h1>
+        <p class="hero-core">Someone near you just Googled "mobile mechanic near me." Without a website, that call goes to your competitor. A professional site puts you first — and makes you look like the company fleet managers want to call.</p>
+        <div class="hero-checks">
+          <div class="check-item">On-site in 45–60 min</div>
+          <div class="check-item">All makes & models</div>
+          <div class="check-item">Insurance accepted</div>
+          <div class="check-item">No shop markup</div>
+        </div>
+        <div class="hero-btns">
+          <a href="tel:9725550147" class="btn-primary">📞 Call (972) 555-0147</a>
+          <a href="#services" class="btn-secondary">View Services</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-image-box">
+          <span class="img-icon">🔧</span>
+          <span class="img-label">AI-Generated Banner Image</span>
+          <span class="img-sublabel">800 × 500 · Mobile mechanic on-site</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-inner">
+      <div class="section-tag">What We Fix</div>
+      <h2 class="section-h2">We Come to You — Fully Equipped</h2>
+      <p class="section-sub">From engine diagnostics to oil changes, our mobile unit carries professional-grade tools and parts.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">🔍</span>
+          <h3>Engine Diagnostics</h3>
+          <p>OBD-II scanning and full engine analysis on the spot. We identify the problem before we touch a wrench.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🔋</span>
+          <h3>Battery Replacement</h3>
+          <p>Test, replace, and install your new battery wherever you are — parking lot, home, or office.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⚡</span>
+          <h3>Alternator Repair</h3>
+          <p>Charging system failure diagnosis and alternator replacement without the tow truck.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🛞</span>
+          <h3>Brake Service</h3>
+          <p>Pad replacement, rotor resurfacing, and brake line inspection. Don't drive on bad brakes — call us.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🔄</span>
+          <h3>Tire Rotation & Balance</h3>
+          <p>Extend tire life and improve ride quality. We rotate and balance at your location.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🛢️</span>
+          <h3>Oil Change On-Site</h3>
+          <p>Conventional or synthetic, we bring everything. No appointment needed at a shop — we are the shop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: ABOUT -->
+  <section class="about-section" id="about">
+    <div class="section-inner">
+      <div class="section-tag">Our Story</div>
+      <h2 class="section-h2">Built in Grand Prairie, Built for DFW</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>RoadReady Mobile Mechanic was founded in 2017 by Marcus Delgado, an ASE-certified technician who spent 12 years in dealership bays and decided the future of auto repair was coming to the customer — not the other way around. Marcus grew up in Grand Prairie and knows every highway, side street, and parking structure from Arlington to Irving.</p>
+          <p>Today, RoadReady serves hundreds of drivers and small fleets across the DFW metro. We're the first call for property managers, delivery companies, and everyday drivers who can't afford downtime. Our van is stocked with diagnostic equipment, common repair parts, and everything needed to get you rolling — fast.</p>
+          <div class="trust-badges">
+            <span class="trust-badge">Licensed</span>
+            <span class="trust-badge">Insured</span>
+            <span class="trust-badge">5-Star Rated</span>
+            <span class="trust-badge">Serving DFW Since 2017</span>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-num">7+</div>
+            <div class="stat-label">Years in Business</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">1,200+</div>
+            <div class="stat-label">Vehicles Serviced</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">4.9★</div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">5</div>
+            <div class="stat-label">Cities Covered</div>
+          </div>
+          <div class="owner-card">
+            <div class="owner-avatar">👨‍🔧</div>
+            <div>
+              <div class="owner-name">Marcus Delgado</div>
+              <div class="owner-title">Founder & Master Technician</div>
+              <div class="owner-certs">ASE Certified · Texas State Inspection License · EPA 609 Certified</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="section-inner">
+      <div class="section-tag">Quick Answers</div>
+      <h2 class="section-h2">Frequently Asked Questions</h2>
+      <p class="section-sub">Everything you need to know before you call.</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What areas do you serve?</summary>
+          <div class="faq-answer">Grand Prairie, Arlington, Irving, Mansfield, and surrounding DFW metro.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How quickly can you arrive?</summary>
+          <div class="faq-answer">Most calls, we're on-site within 45–60 minutes.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What types of vehicles do you work on?</summary>
+          <div class="faq-answer">Most makes and models — cars, SUVs, trucks, and light vans.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you accept insurance referrals?</summary>
+          <div class="faq-answer">Yes, we work with most major auto insurance providers.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What payment methods do you accept?</summary>
+          <div class="faq-answer">Cash, all major credit cards, Venmo, and Zelle.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <div class="section-tag">Get in Touch</div>
+      <h2 class="section-h2">Ready When You Are</h2>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <a href="tel:9725550147" class="big-phone">(972) 555-0147</a>
+          <p class="contact-tagline">Call or text anytime — we answer fast.</p>
+          <div class="contact-info-row">
+            <div class="contact-info-item">
+              <span class="icon">📍</span>
+              <div><strong>Service Area</strong><br>Grand Prairie, TX 75050<br>+ All surrounding DFW cities</div>
+            </div>
+            <div class="contact-info-item">
+              <span class="icon">🕐</span>
+              <div><strong>Hours</strong><br>Mon–Fri: 7am–7pm<br>Sat: 8am–5pm · Sun: Emergency calls</div>
+            </div>
+            <div class="contact-info-item">
+              <span class="icon">💳</span>
+              <div><strong>Payment</strong><br>Cash · Credit Cards · Venmo · Zelle</div>
+            </div>
+          </div>
+          <div class="response-badge">We respond within 30 minutes</div>
+        </div>
+        <div class="contact-right">
+          <div class="contact-form">
+            <div class="form-title">Request a Service Call</div>
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="John Smith">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="(972) 555-0000">
+            </div>
+            <div class="form-group">
+              <label>Vehicle & Service Needed</label>
+              <input type="text" placeholder="2019 Ford F-150 — battery replacement">
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Location, current situation, or any other details..."></textarea>
+            </div>
+            <button class="form-submit">Send Request →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">RoadReady <span>Mobile</span></div>
+        <p>Professional mobile auto repair serving Grand Prairie and the DFW metro since 2017.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Engine Diagnostics</li>
+          <li>Battery Replacement</li>
+          <li>Brake Service</li>
+          <li>Oil Change On-Site</li>
+          <li>Alternator Repair</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li>Grand Prairie, TX</li>
+          <li>Arlington, TX</li>
+          <li>Irving, TX</li>
+          <li>Mansfield, TX</li>
+          <li>Cedar Hill, TX</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>(972) 555-0147</li>
+          <li>3218 Pioneer Pkwy</li>
+          <li>Grand Prairie, TX 75050</li>
+          <li>Mon–Fri 7am–7pm</li>
+          <li>Sat 8am–5pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 RoadReady Mobile Mechanic. All rights reserved. Website by <strong>EWNexus.com</strong>.</p>
+      <span class="footer-lang">Website also available in Spanish · También disponible en Español</span>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <a href="tel:9725550147" class="mobile-sticky-cta">📞 Call Now · (972) 555-0147</a>
+
+  <!-- EWNEXUS DEMO BANNER -->
+  <div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+    <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <span style="color:#c8ddd2;font-size:12px;">✓ Customers find you when car breaks down · Te encuentren cuando el carro falla</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ Stop losing jobs to shops with websites · Deja de perder trabajos</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ mobile mechanic near me · mecánico a domicilio cerca de mí</span>
+    </div>
+    <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+    <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+  </div>
+
+
+<!-- Copy Protection -->
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.key==='F12'||(e.ctrlKey&&['u','s','a'].includes(e.key.toLowerCase()))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault();
+});
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
+<style>body,*{-webkit-user-select:none!important;user-select:none!important;}</style>
+</body>
+</html>
+

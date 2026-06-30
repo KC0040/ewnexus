@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixIt Handyman Co. — Trusted Handyman Services in Grand Prairie TX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "FixIt Handyman Co.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Grand Prairie",
+      "addressLocality": "Grand Prairie",
+      "addressRegion": "TX",
+      "postalCode": "75050"
+    },
+    "telephone": "(972) 555-0247",
+    "areaServed": ["Grand Prairie", "Arlington", "Irving", "Mansfield", "Cedar Hill"]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you charge — by the hour or by the job?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We offer both hourly ($75/hr) and flat-rate project pricing." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the smallest job you'll take?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No job too small — we handle everything from a single repair to full honey-do lists." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you licensed and insured?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, we carry general liability insurance on every job." }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance do I need to book?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We're often available within 1–3 business days." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide materials?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We can source materials or work with what you provide — your choice." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #1A0E00;
+      --accent: #FF8C00;
+      --accent-dim: #d97200;
+      --text: #f5ede0;
+      --muted: #9a7f60;
+      --card: #241500;
+      --card2: #2e1a00;
+      --border: #3a2200;
+      --red: #ff4545;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 100px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(26,14,0,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo { font-size: 1.15rem; font-weight: 900; color: var(--accent); letter-spacing: -.02em; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent); color: #1A0E00;
+      font-weight: 800; font-size: .85rem;
+      padding: 8px 18px; border-radius: 6px; text-decoration: none;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--accent-dim); }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(135deg, #1A0E00 0%, #241500 50%, #1A0E00 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+      padding: 80px 5%;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -120px; right: -80px;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle, rgba(255,140,0,.07) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: 10%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,140,0,.04) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-shape {
+      position: absolute; top: 30%; right: 20%;
+      width: 200px; height: 200px;
+      border: 1px solid rgba(255,140,0,.06);
+      border-radius: 50%;
+      animation: pulse 6s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:.4} 50%{transform:scale(1.1);opacity:.8} }
+    .hero-inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+      max-width: 1200px; width: 100%; margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,140,0,.1); border: 1px solid rgba(255,140,0,.25);
+      color: var(--accent); font-size: .78rem; font-weight: 700;
+      padding: 5px 12px; border-radius: 20px; letter-spacing: .06em;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900; line-height: 1.1;
+      color: var(--text); margin-bottom: 20px;
+      letter-spacing: -.03em;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-body {
+      color: var(--muted); font-size: 1rem; line-height: 1.7;
+      margin-bottom: 28px; max-width: 520px;
+    }
+    .hero-checks { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 10px; }
+    .hero-checks li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: .92rem; color: var(--text);
+    }
+    .hero-checks li::before {
+      content: '✓'; color: var(--accent); font-weight: 900;
+      font-size: 1rem; flex-shrink: 0; margin-top: 1px;
+    }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent); color: #1A0E00;
+      font-weight: 800; font-size: .95rem;
+      padding: 13px 26px; border-radius: 8px; text-decoration: none;
+      transition: background .2s, transform .15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent-dim); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent; color: var(--text);
+      border: 1.5px solid var(--border);
+      font-weight: 700; font-size: .95rem;
+      padding: 13px 26px; border-radius: 8px; text-decoration: none;
+      transition: border-color .2s, color .2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-visual {
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-image-placeholder {
+      width: 100%; max-width: 500px; aspect-ratio: 8/5;
+      border: 2px dashed rgba(255,140,0,.3);
+      border-radius: 12px;
+      background: rgba(255,140,0,.03);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 10px;
+      color: rgba(255,140,0,.4); font-size: .85rem; font-weight: 600;
+      text-align: center; padding: 24px;
+    }
+    .hero-image-placeholder .img-icon { font-size: 2.5rem; opacity: .5; }
+    .hero-image-placeholder .img-dim { font-size: .75rem; opacity: .5; }
+
+    /* SECTIONS */
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      color: var(--accent); font-size: .75rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900; letter-spacing: -.03em; margin-bottom: 14px;
+    }
+    .section-sub { color: var(--muted); font-size: 1rem; max-width: 560px; }
+
+    /* SERVICES */
+    .services { background: var(--card); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 20px; margin-top: 44px;
+    }
+    .svc-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px 24px;
+      transition: border-color .2s, transform .2s;
+    }
+    .svc-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .svc-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: rgba(255,140,0,.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 14px;
+    }
+    .svc-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .svc-card p { color: var(--muted); font-size: .88rem; line-height: 1.55; }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: start; margin-top: 44px;
+    }
+    .about-text p { color: var(--muted); font-size: .97rem; line-height: 1.75; margin-bottom: 18px; }
+    .trust-badges {
+      display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px;
+    }
+    .badge {
+      background: rgba(255,140,0,.08); border: 1px solid rgba(255,140,0,.2);
+      color: var(--accent); font-size: .8rem; font-weight: 700;
+      padding: 6px 14px; border-radius: 20px;
+    }
+    .credentials { margin-top: 32px; }
+    .credentials h4 { font-size: .85rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 14px; }
+    .cred-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .cred-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .9rem; color: var(--text);
+    }
+    .cred-list li::before { content: '🔧'; font-size: .85rem; }
+
+    /* FAQ */
+    .faq { background: var(--card); }
+    .faq-list { margin-top: 44px; display: flex; flex-direction: column; gap: 12px; max-width: 760px; }
+    details {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden;
+    }
+    details[open] { border-color: var(--accent); }
+    summary {
+      padding: 18px 22px;
+      font-weight: 700; font-size: .97rem;
+      cursor: pointer; list-style: none;
+      display: flex; align-items: center; justify-content: space-between;
+      color: var(--text);
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+'; color: var(--accent); font-size: 1.4rem;
+      font-weight: 300; flex-shrink: 0; margin-left: 16px;
+      transition: transform .2s;
+    }
+    details[open] summary::after { content: '−'; }
+    .faq-answer { padding: 0 22px 18px; color: var(--muted); font-size: .93rem; line-height: 1.7; }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; margin-top: 44px;
+    }
+    .contact-info h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 18px; }
+    .contact-detail {
+      display: flex; align-items: flex-start; gap: 12px;
+      margin-bottom: 16px; font-size: .93rem; color: var(--muted);
+    }
+    .contact-detail strong { color: var(--text); display: block; margin-bottom: 2px; }
+    .contact-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--text); font-family: 'Inter', system-ui, sans-serif;
+      font-size: .93rem; padding: 12px 16px; border-radius: 8px;
+      outline: none; transition: border-color .2s; width: 100%;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-color: var(--accent); }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .contact-form button {
+      background: var(--accent); color: #1A0E00;
+      font-weight: 800; font-size: .95rem;
+      border: none; padding: 13px; border-radius: 8px;
+      cursor: pointer; transition: background .2s;
+    }
+    .contact-form button:hover { background: var(--accent-dim); }
+
+    /* FOOTER */
+    footer {
+      background: #0f0800; border-top: 1px solid var(--border);
+      padding: 32px 5%; text-align: center;
+    }
+    .footer-logo { font-size: 1.2rem; font-weight: 900; color: var(--accent); margin-bottom: 10px; }
+    .footer-text { color: var(--muted); font-size: .85rem; line-height: 1.7; }
+    .footer-bilingual {
+      margin-top: 14px; padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted); font-size: .82rem; letter-spacing: .01em;
+    }
+
+    /* MOBILE STICKY CTA */
+    .mobile-cta {
+      display: none;
+      position: fixed; bottom: 70px; left: 0; right: 0; z-index: 200;
+      background: var(--accent); color: #1A0E00;
+      text-align: center; padding: 14px;
+      font-weight: 800; font-size: 1rem;
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { order: -1; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .mobile-cta { display: block; }
+      nav .nav-cta { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">🔧 FixIt Handyman Co.</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get a Free Quote</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-shape"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">📍 Grand Prairie TX</div>
+        <h1>Every Home Has a Honey-Do List.<br><span>We Cross It Off.</span></h1>
+        <p class="hero-body">HomeAdvisor charges $47 every time a homeowner clicks your name. Your own website means they search, they find you, and they call you directly — no middleman, no fees, full margin.</p>
+        <ul class="hero-checks">
+          <li>Show up for 'handyman near me' in Grand Prairie for free</li>
+          <li>List every service — customers self-select and call ready to book</li>
+          <li>Build a neighborhood reputation with Google reviews on your own site</li>
+          <li>Property managers and landlords need reliable handymen with a real web presence</li>
+        </ul>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Book a Job</a>
+          <a href="tel:9725550247" class="btn-secondary">📞 (972) 555-0247</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-placeholder">
+          <div class="img-icon">🖼️</div>
+          <div>AI-Generated Banner Image</div>
+          <div class="img-dim">800 × 500</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Handyman Services</h2>
+      <p class="section-sub">No job too small. No honey-do list too long. Insured and ready across Grand Prairie and DFW.</p>
+      <div class="services-grid">
+        <div class="svc-card">
+          <div class="svc-icon">🪑</div>
+          <h3>Furniture Assembly</h3>
+          <p>IKEA, Wayfair, Amazon — we assemble it right the first time so you don't spend your weekend fighting instructions.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">🚪</div>
+          <h3>Door & Window Repair</h3>
+          <p>Sticky doors, broken latches, drafty windows, cracked frames — we fix it all and make sure it seals properly.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">🏗️</div>
+          <h3>Drywall Patching</h3>
+          <p>Holes, cracks, and dings patched and finished smooth. We match texture so the repair disappears.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">🚿</div>
+          <h3>Bathroom Fixture Install</h3>
+          <p>Faucets, showerheads, towel bars, toilet seats, mirrors — upgraded and installed without the plumber markup.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">🪵</div>
+          <h3>Deck & Fence Repair</h3>
+          <p>Loose boards, broken rails, sagging gates — repaired and reinforced so your outdoor space is safe again.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">💧</div>
+          <h3>Pressure Washing</h3>
+          <p>Driveways, sidewalks, fences, and exterior walls blasted clean. Great for pre-sale prep or seasonal refresh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <span class="section-label">About Us</span>
+      <h2 class="section-title">Your Neighborhood Fix-It Crew</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>FixIt Handyman Co. has been taking care of Grand Prairie homes for over 8 years. We're not a franchise or a gig app — we're your neighbor with a truck full of tools and a reputation to protect. Every job gets the same attention whether it's a single hinge or a full honey-do list.</p>
+          <p>Landlords, property managers, and homeowners across Arlington, Irving, and Cedar Hill keep our number because we show up on time, communicate clearly, and never leave a job half done. Hourly or flat-rate — you choose what works for your project.</p>
+          <div class="trust-badges">
+            <span class="badge">Insured</span>
+            <span class="badge">8+ Years Local</span>
+            <span class="badge">5-Star Rated</span>
+            <span class="badge">No Job Too Small</span>
+            <span class="badge">Property Manager Trusted</span>
+          </div>
+        </div>
+        <div class="credentials">
+          <h4>Why Homeowners Trust Us</h4>
+          <ul class="cred-list">
+            <li>General Liability Insurance on Every Job</li>
+            <li>Transparent Pricing — Hourly or Flat Rate</li>
+            <li>Available Within 1–3 Business Days</li>
+            <li>We Source Materials or Use Yours</li>
+            <li>Satisfaction Guaranteed — We Come Back</li>
+            <li>Preferred by Grand Prairie Property Managers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-inner">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <details>
+          <summary>How do you charge — by the hour or by the job?</summary>
+          <div class="faq-answer">We offer both hourly ($75/hr) and flat-rate project pricing.</div>
+        </details>
+        <details>
+          <summary>What's the smallest job you'll take?</summary>
+          <div class="faq-answer">No job too small — we handle everything from a single repair to full honey-do lists.</div>
+        </details>
+        <details>
+          <summary>Are you licensed and insured?</summary>
+          <div class="faq-answer">Yes, we carry general liability insurance on every job.</div>
+        </details>
+        <details>
+          <summary>How far in advance do I need to book?</summary>
+          <div class="faq-answer">We're often available within 1–3 business days.</div>
+        </details>
+        <details>
+          <summary>Do you provide materials?</summary>
+          <div class="faq-answer">We can source materials or work with what you provide — your choice.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Book a Job or Get a Quote</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>FixIt Handyman Co.</h3>
+          <div class="contact-detail">
+            <span class="contact-icon">📞</span>
+            <div><strong>Phone</strong>(972) 555-0247</div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">📍</span>
+            <div><strong>Location</strong>Grand Prairie, TX 75050<br>Serving DFW Metro</div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">🕐</span>
+            <div><strong>Hours</strong>Mon–Fri: 8am–6pm<br>Sat: 9am–3pm<br>Sun: By appointment</div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="return false;">
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <input type="email" placeholder="Email Address">
+          <select>
+            <option value="">Select a Service</option>
+            <option>Furniture Assembly</option>
+            <option>Door &amp; Window Repair</option>
+            <option>Drywall Patching</option>
+            <option>Bathroom Fixture Install</option>
+            <option>Deck &amp; Fence Repair</option>
+            <option>Pressure Washing</option>
+            <option>Multiple / Honey-Do List</option>
+            <option>Other</option>
+          </select>
+          <textarea placeholder="What needs fixing? Give us the details..."></textarea>
+          <button type="submit">Send Request — It's Free</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">🔧 FixIt Handyman Co.</div>
+    <p class="footer-text">Handyman Services · Grand Prairie, TX 75050 · (972) 555-0247<br>
+    Serving Grand Prairie, Arlington, Irving, Mansfield, Cedar Hill &amp; DFW Metro</p>
+    <p class="footer-bilingual">Website also available in Spanish · También disponible en Español</p>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <a href="tel:9725550247" class="mobile-cta">📞 Call Now · (972) 555-0247</a>
+
+  <!-- EWNEXUS DEMO BANNER -->
+  <div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+    <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <span style="color:#c8ddd2;font-size:12px;">✓ No more $47 lead fees · Sin tarifas de $47 por cliente</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ Clients call you directly · Los clientes te llaman a ti</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ handyman near me · servicios generales cerca de mí</span>
+    </div>
+    <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+    <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+  </div>
+
+
+<!-- Copy Protection -->
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.key==='F12'||(e.ctrlKey&&['u','s','a'].includes(e.key.toLowerCase()))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault();
+});
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
+<style>body,*{-webkit-user-select:none!important;user-select:none!important;}</style>
+</body>
+</html>
+

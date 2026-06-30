@@ -1,0 +1,824 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DFW Consign &amp; Sell — eBay Consignment in Grand Prairie, TX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "DFW Consign & Sell",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Grand Prairie",
+      "addressLocality": "Grand Prairie",
+      "addressRegion": "TX",
+      "postalCode": "75050"
+    },
+    "telephone": "(972) 555-0501",
+    "url": "https://www.dfwconsignandsell.com"
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you charge for consignment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We charge 30% of the final sale price — no upfront listing fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What items do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Electronics, collectibles, clothing, antiques, tools, and most household goods in good condition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to sell my items?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most items sell within 7–21 days on eBay."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who pays the eBay fees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "eBay charges ~12.9–15% in selling fees, which are deducted before we calculate your share."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my item doesn't sell?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We relist once at no extra charge, then return the item or donate per your preference."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0D1B2A;
+      --accent: #FF6B35;
+      --accent-dim: #e0561f;
+      --text: #eef2f7;
+      --muted: #607a96;
+      --card: #132135;
+      --card2: #0f1e30;
+      --border: #1e3248;
+      --red: #ff4545;
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.6; padding-bottom: 100px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      background: rgba(13,27,42,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 64px;
+    }
+    .nav-logo { font-size: 18px; font-weight: 900; color: var(--accent); letter-spacing: -.02em; white-space: nowrap; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .btn-call { background: var(--accent); color: #0d1b2a; font-weight: 800; font-size: 14px; padding: 9px 18px; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: background .2s; }
+    .btn-call:hover { background: var(--accent-dim); }
+    .nav-phone { color: var(--muted); font-size: 13px; font-weight: 600; }
+    @media(max-width:768px) {
+      .nav-links { display: none; }
+      .nav-phone { display: none; }
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh; padding: 100px 24px 60px;
+      background: linear-gradient(135deg, #0D1B2A 0%, #0e1f30 50%, #0a1522 100%);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -100px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: -100px; left: -120px;
+      width: 420px; height: 420px;
+      border: 1px solid rgba(255,107,53,0.07);
+      border-radius: 50%; pointer-events: none;
+    }
+    .hero-geo { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .hero-geo span {
+      position: absolute; display: block;
+      background: linear-gradient(90deg, transparent, rgba(255,107,53,0.1), transparent);
+      height: 2px; border-radius: 2px;
+    }
+    .hero-geo span:nth-child(1) { width: 40%; top: 20%; left: 25%; transform: rotate(-3deg); }
+    .hero-geo span:nth-child(2) { width: 25%; top: 70%; right: 8%; transform: rotate(5deg); }
+    .hero-geo span:nth-child(3) { width: 18%; top: 48%; left: 4%; transform: rotate(-10deg); }
+
+    .hero-inner { max-width: 1200px; width: 100%; display: flex; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero-content { flex: 1; min-width: 0; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3);
+      color: var(--accent); font-size: 12px; font-weight: 700;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 24px; letter-spacing: .04em;
+    }
+    h1 { font-size: clamp(30px, 4.5vw, 52px); font-weight: 900; line-height: 1.1; letter-spacing: -.03em; margin-bottom: 20px; }
+    h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: 16px; color: #8eb4d0; line-height: 1.7; margin-bottom: 28px;
+      border-left: 3px solid var(--accent); padding-left: 16px;
+    }
+    .checklist { list-style: none; margin-bottom: 36px; display: flex; flex-direction: column; gap: 10px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #c0d4e4; }
+    .checklist li::before { content: '✓'; color: var(--accent); font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: #0d1b2a; font-weight: 800; font-size: 16px; padding: 14px 28px; border-radius: 10px; text-decoration: none; transition: transform .2s, background .2s; }
+    .btn-primary:hover { background: var(--accent-dim); transform: translateY(-1px); }
+    .btn-outline { border: 2px solid var(--accent); color: var(--accent); font-weight: 700; font-size: 16px; padding: 13px 28px; border-radius: 10px; text-decoration: none; transition: background .2s; }
+    .btn-outline:hover { background: rgba(255,107,53,0.08); }
+
+    /* HERO MATH BOX */
+    .hero-image {
+      flex: 0 0 400px; width: 400px;
+      border: 2px dashed rgba(255,107,53,0.4); border-radius: 16px;
+      background: rgba(255,107,53,0.03);
+      display: flex; flex-direction: column; gap: 0; overflow: hidden;
+    }
+    .math-header {
+      background: rgba(255,107,53,0.12); border-bottom: 1px dashed rgba(255,107,53,0.3);
+      padding: 14px 20px; font-size: 12px; font-weight: 800;
+      color: var(--accent); letter-spacing: .08em; text-transform: uppercase; text-align: center;
+    }
+    .math-body { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+    .math-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 14px; background: rgba(13,27,42,0.7); border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .math-row .label { font-size: 13px; color: var(--muted); }
+    .math-row .val { font-size: 15px; font-weight: 800; }
+    .math-row .val.pos { color: var(--green); }
+    .math-row .val.neg { color: var(--red); }
+    .math-row .val.neutral { color: var(--accent); }
+    .math-divider { height: 1px; background: var(--border); margin: 4px 0; }
+    .math-total {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px; background: rgba(255,107,53,0.1); border-radius: 8px;
+      border: 1px solid rgba(255,107,53,0.3);
+    }
+    .math-total .label { font-size: 13px; font-weight: 700; color: var(--text); }
+    .math-total .val { font-size: 20px; font-weight: 900; color: var(--accent); }
+    .math-footer { padding: 12px 16px; text-align: center; font-size: 11px; color: rgba(255,107,53,0.4); font-weight: 600; }
+    @media(max-width:900px) {
+      .hero-inner { flex-direction: column; }
+      .hero-image { width: 100%; flex: none; }
+    }
+
+    /* SECTIONS */
+    section { padding: 80px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-title { font-size: clamp(26px,4vw,40px); font-weight: 900; letter-spacing: -.02em; margin-bottom: 16px; }
+    .section-sub { font-size: 16px; color: var(--muted); max-width: 580px; margin-bottom: 48px; }
+
+    /* PAIN POINT */
+    .pain { background: var(--card); }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .compare-card { background: var(--bg); border-radius: 16px; padding: 32px; border: 1px solid var(--border); }
+    .compare-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 20px; }
+    .compare-card.bad h3 { color: var(--red); }
+    .compare-card.good h3 { color: var(--accent); }
+    .compare-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .compare-list li { font-size: 14px; color: #8eb4d0; display: flex; gap: 10px; align-items: flex-start; }
+    .compare-list.bad-list li::before { content: '✗'; color: var(--red); font-weight: 900; flex-shrink: 0; }
+    .compare-list.good-list li::before { content: '✓'; color: var(--accent); font-weight: 900; flex-shrink: 0; }
+    @media(max-width:640px) { .compare-grid { grid-template-columns: 1fr; } }
+
+    /* HOW IT WORKS */
+    .how-it-works { background: var(--card2); }
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .step-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 28px 20px; text-align: center; position: relative;
+    }
+    .step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent); color: #0d1b2a;
+      font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step-card h3 { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
+    .step-card p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    @media(max-width:768px) { .steps-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:480px) { .steps-grid { grid-template-columns: 1fr; } }
+
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 28px; transition: border-color .2s, transform .2s;
+    }
+    .service-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .service-icon { font-size: 28px; margin-bottom: 14px; }
+    .service-card h3 { font-size: 16px; font-weight: 800; margin-bottom: 8px; }
+    .service-card p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    @media(max-width:768px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:480px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* STATS */
+    .stats { background: var(--card); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .stat-card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 28px 20px; text-align: center; }
+    .stat-num { font-size: 38px; font-weight: 900; color: var(--accent); letter-spacing: -.03em; line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-size: 13px; color: var(--muted); line-height: 1.4; }
+    @media(max-width:900px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:480px) { .stats-grid { grid-template-columns: 1fr; } }
+
+    /* ABOUT */
+    .about { background: var(--card2); }
+    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .about-text p { color: #8eb4d0; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
+    .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .trust-badge { background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent); font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 8px; }
+    .about-panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+    .about-panel h3 { font-size: 18px; font-weight: 900; color: var(--accent); margin-bottom: 20px; }
+    .fee-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .fee-row:last-child { border-bottom: none; }
+    .fee-row .fl { font-size: 14px; color: var(--muted); }
+    .fee-row .fv { font-size: 15px; font-weight: 800; color: var(--text); }
+    .fee-note { font-size: 12px; color: var(--muted); margin-top: 16px; line-height: 1.6; }
+    @media(max-width:768px) { .about-inner { grid-template-columns: 1fr; } }
+
+    /* FAQ */
+    .faq-section { background: var(--card); }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 780px; }
+    details {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+    }
+    details[open] { border-color: var(--accent); }
+    summary {
+      padding: 18px 24px; font-size: 15px; font-weight: 700; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      list-style: none; color: var(--text);
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; color: var(--accent); font-size: 20px; font-weight: 300; flex-shrink: 0; }
+    details[open] summary::after { content: '−'; }
+    .faq-answer { padding: 0 24px 18px; font-size: 14px; color: #8eb4d0; line-height: 1.7; }
+
+    /* REVIEWS */
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 28px; }
+    .stars { color: var(--accent); font-size: 16px; margin-bottom: 14px; }
+    .review-text { font-size: 15px; color: #c0d4e4; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .reviewer { display: flex; align-items: center; gap: 12px; }
+    .reviewer-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #0d1b2a; font-weight: 900; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .reviewer-name { font-weight: 700; font-size: 14px; }
+    .reviewer-meta { font-size: 12px; color: var(--muted); }
+    @media(max-width:768px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+    /* CONTACT */
+    .contact { background: var(--card); }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .contact-info .phone-big { font-size: clamp(28px,5vw,42px); font-weight: 900; color: var(--accent); margin: 16px 0; letter-spacing: -.02em; }
+    .contact-info p { color: var(--muted); font-size: 15px; margin-bottom: 8px; }
+    .response-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent); font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 100px; margin-top: 16px; }
+    form { display: flex; flex-direction: column; gap: 14px; }
+    form label { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 4px; display: block; }
+    form input, form select, form textarea {
+      width: 100%; background: var(--bg); border: 1px solid var(--border);
+      color: var(--text); font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px; padding: 12px 16px; border-radius: 10px;
+      outline: none; transition: border-color .2s;
+    }
+    form input:focus, form select:focus, form textarea:focus { border-color: var(--accent); }
+    form textarea { resize: vertical; min-height: 90px; }
+    form select option { background: var(--card); }
+    form button { background: var(--accent); color: #0d1b2a; font-weight: 800; font-size: 16px; padding: 14px; border: none; border-radius: 10px; cursor: pointer; transition: background .2s; }
+    form button:hover { background: var(--accent-dim); }
+    @media(max-width:768px) { .contact-inner { grid-template-columns: 1fr; } }
+
+    /* FOOTER */
+    footer { background: #08111d; border-top: 1px solid var(--border); padding: 60px 24px 40px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; }
+    .footer-col h4 { font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
+    .footer-col ul a:hover { color: var(--accent); }
+    .footer-col p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .footer-logo { font-size: 20px; font-weight: 900; color: var(--accent); margin-bottom: 10px; }
+    .footer-bottom { max-width: 1200px; margin: 40px auto 0; border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom-left p { color: var(--muted); font-size: 13px; margin-bottom: 4px; }
+    .footer-bottom-right p { color: var(--muted); font-size: 13px; }
+    .disclaimer-text { font-size: 11px; color: #3a5470; margin-top: 8px; line-height: 1.6; }
+    .bilingual-note { font-size: 12px; color: var(--muted); margin-top: 8px; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    /* MOBILE CALL BUTTON */
+    .mobile-call {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 800;
+      background: var(--accent); color: #0d1b2a; font-weight: 800; font-size: 16px;
+      text-align: center; padding: 16px 20px 76px; text-decoration: none;
+      box-shadow: 0 -4px 20px rgba(255,107,53,0.25);
+    }
+    @media(max-width:768px) { .mobile-call { display: block; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">DFW Consign &amp; Sell</div>
+  <ul class="nav-links">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#services">What We Accept</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Submit Items</a></li>
+  </ul>
+  <div class="nav-cta">
+    <span class="nav-phone">(972) 555-0501</span>
+    <a href="tel:9725550501" class="btn-call">Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-geo">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="badge">Grand Prairie TX · Electronics · Collectibles · Antiques · Clothing</div>
+      <h1>Got Stuff to Sell? <span>We Handle Everything on eBay.</span></h1>
+      <p class="hero-sub">
+        eBay charges 12.9–20% in selling fees — and that's before you deal with listings, photos, shipping, and returns. We handle all of it. Your stuff sells. You get paid. Simple.
+      </p>
+      <ul class="checklist">
+        <li>Drop off your items — we handle photos, listings, pricing, and shipping</li>
+        <li>Transparent fee structure: 30% of sale, zero upfront cost</li>
+        <li>Reach 135 million active eBay buyers you'd never reach on your own</li>
+        <li>Weekly payouts — track your sales on your personal dashboard</li>
+      </ul>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Submit Your Items</a>
+        <a href="#how" class="btn-outline">How It Works</a>
+      </div>
+    </div>
+
+    <!-- Transparent Fee Breakdown Box -->
+    <div class="hero-image">
+      <div class="math-header">What You Actually Earn — Example</div>
+      <div class="math-body">
+        <div class="math-row">
+          <span class="label">Your item sells for</span>
+          <span class="val pos">$200</span>
+        </div>
+        <div class="math-row">
+          <span class="label">eBay selling fees (~13%)</span>
+          <span class="val neg">− $26</span>
+        </div>
+        <div class="math-row">
+          <span class="label">Net after eBay fees</span>
+          <span class="val neutral">$174</span>
+        </div>
+        <div class="math-divider"></div>
+        <div class="math-row">
+          <span class="label">Our consignment fee (30%)</span>
+          <span class="val neg">− $52</span>
+        </div>
+        <div class="math-total">
+          <span class="label">You receive</span>
+          <span class="val">$122</span>
+        </div>
+        <p style="font-size:12px;color:var(--muted);text-align:center;line-height:1.5;">vs. $0 doing nothing with it.<br>No listing, no photos, no packing, no returns.</p>
+      </div>
+      <div class="math-footer">We show you exact numbers before you drop anything off.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINT -->
+<section class="pain" id="why">
+  <div class="container">
+    <div class="section-label">The DIY Problem</div>
+    <h2 class="section-title">Selling on eBay Yourself Is More Work Than It Looks</h2>
+    <p class="section-sub">eBay is the world's best marketplace — but running it yourself is a part-time job. Most people list one or two items, get frustrated, and quit.</p>
+    <div class="compare-grid">
+      <div class="compare-card bad">
+        <h3>✗ Doing It Yourself on eBay</h3>
+        <ul class="compare-list bad-list">
+          <li>Research pricing, write listings, take professional photos for every item</li>
+          <li>Pack and ship each sale — buy boxes, tape, labels every week</li>
+          <li>Handle buyer questions, returns, and disputes yourself</li>
+          <li>eBay feedback score takes months to build — low ratings hurt sales</li>
+          <li>Items sit unsold for months while you miss better-priced auctions</li>
+        </ul>
+      </div>
+      <div class="compare-card good">
+        <h3>✓ Consign with DFW Consign &amp; Sell</h3>
+        <ul class="compare-list good-list">
+          <li>Drop off and walk away — we photograph, list, price, and ship everything</li>
+          <li>We're already Top Rated Sellers — your items get maximum visibility</li>
+          <li>We handle all buyer communication, returns, and eBay disputes</li>
+          <li>No upfront cost — we only get paid when your item sells</li>
+          <li>Weekly payouts with full transparency on what sold and for how much</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="how">
+  <div class="container">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">4 Steps. Zero Hassle.</h2>
+    <p class="section-sub">From your garage to a buyer's doorstep — we handle every step in between so you don't have to.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Drop Off</h3>
+        <p>Bring your items to our Grand Prairie location or schedule a pickup. We'll review everything and give you an estimated sale range on the spot.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>We List</h3>
+        <p>Our team photographs, researches pricing, writes optimized listings, and launches your items on eBay — usually within 48 hours.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Items Sell</h3>
+        <p>Most items sell within 7–21 days. We handle all buyer questions, pack every order, and manage shipping and returns completely.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>You Get Paid</h3>
+        <p>Weekly payouts by check or direct deposit. You'll receive a full breakdown of what sold and exactly what you earned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">What We Accept</div>
+    <h2 class="section-title">We Sell Almost Anything in Good Condition</h2>
+    <p class="section-sub">If it can ship, we can sell it. Here are the categories we see sell fastest on eBay.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Electronics &amp; Tech</h3>
+        <p>Laptops, phones, tablets, cameras, gaming consoles, audio gear — electronics are among the fastest-selling categories on eBay.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏺</div>
+        <h3>Collectibles &amp; Antiques</h3>
+        <p>Coins, sports cards, vintage toys, art, pottery, and décor. We know how to find the right buyers and set the right prices.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👗</div>
+        <h3>Clothing &amp; Accessories</h3>
+        <p>Designer brands, vintage clothing, watches, handbags, and jewelry. Pre-owned fashion is one of eBay's hottest markets.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔨</div>
+        <h3>Tools &amp; Equipment</h3>
+        <p>Power tools, hand tools, auto parts, garden equipment, and shop gear. Tradespeople love eBay — and your tools deserve top dollar.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏡</div>
+        <h3>Home &amp; Garden</h3>
+        <p>Kitchen appliances, furniture pieces, lighting, outdoor equipment, and home décor that can be safely shipped.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Bulk Estate Sales</h3>
+        <p>Entire estates or storage units — we'll assess everything, price it strategically, and get it sold without you lifting a box.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="section-label">By The Numbers</div>
+    <h2 class="section-title">Why Consignment Beats Going It Alone</h2>
+    <p class="section-sub">The numbers don't lie — consigning with an experienced seller consistently outperforms DIY listings.</p>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">135M</div>
+        <div class="stat-label">active eBay buyers — a market you can't access alone</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">7–21</div>
+        <div class="stat-label">days average sell time for most items we list</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">30%</div>
+        <div class="stat-label">of final sale price — only paid when your item actually sells</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">upfront cost — no listing fees, no photography fees, nothing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-text">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">We Do the Work You Hate. You Keep the Money You Earn.</h2>
+        <p>DFW Consign &amp; Sell was built for one reason: most people have valuable things sitting in closets, garages, and storage units — but selling on eBay is a genuine hassle. Photos, listings, pricing research, packing, shipping, returns, buyer disputes. It's a part-time job most people don't have time for.</p>
+        <p>We're eBay Top Rated Sellers with hundreds of successful transactions and a deep knowledge of what sells and what doesn't, what something is actually worth, and how to write listings that get clicks. When you consign with us, you're not just getting someone to list your stuff — you're getting years of marketplace experience working for you.</p>
+        <p>We believe in radical transparency: you see exactly what your item sold for, what eBay took, and what you get. No hidden fees. No surprises. Just a check every week.</p>
+        <div class="trust-badges">
+          <span class="trust-badge">eBay Top Rated Seller</span>
+          <span class="trust-badge">30% Only When It Sells</span>
+          <span class="trust-badge">Weekly Payouts</span>
+          <span class="trust-badge">Full Sale Transparency</span>
+        </div>
+      </div>
+      <div class="about-panel">
+        <h3>Complete Fee Breakdown</h3>
+        <div class="fee-row">
+          <span class="fl">Upfront listing fee</span>
+          <span class="fv" style="color:var(--green);">$0</span>
+        </div>
+        <div class="fee-row">
+          <span class="fl">Photography fee</span>
+          <span class="fv" style="color:var(--green);">$0</span>
+        </div>
+        <div class="fee-row">
+          <span class="fl">Packing &amp; materials fee</span>
+          <span class="fv" style="color:var(--green);">$0</span>
+        </div>
+        <div class="fee-row">
+          <span class="fl">eBay selling fees (~12.9–15%)</span>
+          <span class="fv" style="color:var(--muted);">Deducted from sale first</span>
+        </div>
+        <div class="fee-row">
+          <span class="fl">Our consignment fee</span>
+          <span class="fv" style="color:var(--accent);">30% of net</span>
+        </div>
+        <div class="fee-row">
+          <span class="fl">You receive</span>
+          <span class="fv" style="color:var(--green);">70% of net</span>
+        </div>
+        <div class="fee-row" style="border-bottom:none;">
+          <span class="fl">Relist if unsold once</span>
+          <span class="fv" style="color:var(--green);">Included</span>
+        </div>
+        <p class="fee-note">eBay® fees are set by eBay Inc. and are deducted before we calculate our commission. We are not affiliated with eBay Inc. All fees are disclosed in your consignment agreement before you drop off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-label">Common Questions</div>
+    <h2 class="section-title">Consignment FAQ</h2>
+    <p class="section-sub">Transparent answers before you drop off a single item. No surprises — ever.</p>
+    <div class="faq-list">
+      <details>
+        <summary>How do you charge for consignment?</summary>
+        <div class="faq-answer">We charge 30% of the final sale price — no upfront listing fees. This is calculated from the net amount after eBay's platform fees are deducted. You'll see the full breakdown in your consignment agreement and in your weekly payout statement.</div>
+      </details>
+      <details>
+        <summary>What items do you accept?</summary>
+        <div class="faq-answer">Electronics, collectibles, clothing, antiques, tools, and most household goods in good condition. Items should be clean, functional, and accurately described. We do not accept items that are broken, heavily damaged, recalled, or prohibited from sale on eBay. If you're unsure, bring it in — we'll tell you on the spot.</div>
+      </details>
+      <details>
+        <summary>How long does it take to sell my items?</summary>
+        <div class="faq-answer">Most items sell within 7–21 days on eBay. High-demand electronics and collectibles often sell within the first few days. Specialty items or higher-priced goods may take a few weeks. We'll give you a realistic timeline estimate when you drop off, based on current market activity.</div>
+      </details>
+      <details>
+        <summary>Who pays the eBay fees?</summary>
+        <div class="faq-answer">eBay charges ~12.9–15% in selling fees, which are deducted before we calculate your share. These are standard eBay marketplace fees — set by eBay Inc., not by us. The exact percentage varies by category. We show you the exact deduction on every payout statement.</div>
+      </details>
+      <details>
+        <summary>What if my item doesn't sell?</summary>
+        <div class="faq-answer">We relist once at no extra charge, then return the item or donate per your preference. If an item repeatedly doesn't sell, we'll discuss whether a price adjustment or different listing strategy makes sense. You are never charged for an item that doesn't sell.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">What DFW Sellers Say</h2>
+    <p class="section-sub">Real sellers who were done dealing with the hassle of online marketplaces — and discovered there's a better way.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I had two boxes of old electronics from my dad's estate — laptops, cameras, old iPods. I had no idea what any of it was worth and zero desire to figure out eBay. DFW Consign sold everything in three weeks and I got a check for $840. I genuinely couldn't believe it. Couldn't have done that on my own."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">T</div>
+          <div>
+            <div class="reviewer-name">Theresa B.</div>
+            <div class="reviewer-meta">Estate Electronics · Grand Prairie, TX · Verified</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I tried to sell my vintage watch collection myself on eBay and got nowhere for two months. Consigned with these guys and every single piece sold within the first week — at prices I couldn't have gotten on my own. The weekly payment emails are super detailed. I know exactly what sold and what I earned."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">R</div>
+          <div>
+            <div class="reviewer-name">Robert M.</div>
+            <div class="reviewer-meta">Watch Collector · Irving, TX · Verified</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Cleared out an entire storage unit — took three trips. They priced everything fairly and were honest about what would and wouldn't sell well. No hidden surprises. Three weeks later I had over $2,100 in my account for stuff I was about to donate. This service pays for itself many times over."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">L</div>
+          <div>
+            <div class="reviewer-name">Linda &amp; Frank V.</div>
+            <div class="reviewer-meta">Storage Unit Cleanout · Arlington, TX · Verified</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="section-label">Ready to Sell?</div>
+        <h2 class="section-title">Submit Your Items</h2>
+        <p>Fill out the form and we'll reach out to confirm item eligibility and schedule a drop-off or pickup. No commitment required until you sign your consignment agreement.</p>
+        <div class="phone-big">(972) 555-0501</div>
+        <p>📍 Grand Prairie, TX 75050</p>
+        <p>🕐 Mon–Sat 9am–6pm</p>
+        <p>🚗 Pickup available for large lots</p>
+        <div class="response-badge">We respond within 24 hours</div>
+      </div>
+      <form>
+        <div>
+          <label for="item-desc">Item Description</label>
+          <textarea id="item-desc" placeholder="Describe what you'd like to sell — brand, model, condition, quantity. The more detail, the better estimate we can give you."></textarea>
+        </div>
+        <div>
+          <label for="est-value">Estimated Value (Your Best Guess)</label>
+          <select id="est-value">
+            <option value="">Select estimated value range...</option>
+            <option>Under $25 (single item)</option>
+            <option>$25 – $100</option>
+            <option>$100 – $500</option>
+            <option>$500 – $2,000</option>
+            <option>$2,000 – $10,000</option>
+            <option>$10,000+ (estate / large lot)</option>
+            <option>I have no idea — you tell me</option>
+          </select>
+        </div>
+        <div>
+          <label for="photos">Do You Have Photos Available?</label>
+          <select id="photos">
+            <option value="">Select...</option>
+            <option>Yes — I can send photos in advance</option>
+            <option>No — I'll bring the item in directly</option>
+          </select>
+        </div>
+        <div>
+          <label for="seller-name">Your Name</label>
+          <input type="text" id="seller-name" placeholder="Full name" required>
+        </div>
+        <div>
+          <label for="seller-phone">Phone Number</label>
+          <input type="tel" id="seller-phone" placeholder="(972) 555-0000" required>
+        </div>
+        <div>
+          <label for="fulfillment">Preferred Pickup or Drop-Off?</label>
+          <select id="fulfillment">
+            <option value="">Select...</option>
+            <option>I'll drop off at your Grand Prairie location</option>
+            <option>I'd like a pickup (large lots only)</option>
+            <option>Not sure yet — let's discuss</option>
+          </select>
+        </div>
+        <button type="submit">Submit Items for Review</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo">DFW Consign &amp; Sell</div>
+      <p>Grand Prairie TX's trusted eBay consignment service. We photograph, list, sell, and ship. You get paid weekly. Zero hassle.</p>
+      <p class="bilingual-note">Website also available in Spanish · También disponible en Español</p>
+    </div>
+    <div class="footer-col">
+      <h4>What We Accept</h4>
+      <ul>
+        <li><a href="#services">Electronics &amp; Tech</a></li>
+        <li><a href="#services">Collectibles &amp; Antiques</a></li>
+        <li><a href="#services">Clothing &amp; Accessories</a></li>
+        <li><a href="#services">Tools &amp; Equipment</a></li>
+        <li><a href="#services">Bulk Estate Sales</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#faq">Consignment FAQ</a></li>
+        <li><a href="#about">Fee Breakdown</a></li>
+        <li><a href="#reviews">Customer Reviews</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:9725550501">(972) 555-0501</a></li>
+        <li><a href="mailto:info@dfwconsignandsell.com">info@dfwconsignandsell.com</a></li>
+        <li><a href="#contact">Submit Your Items</a></li>
+        <li><a href="#contact">Schedule Pickup</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <p>© 2024 DFW Consign &amp; Sell · Grand Prairie, TX 75050 · (972) 555-0501</p>
+      <p class="disclaimer-text">Not affiliated with eBay Inc. eBay® is a registered trademark of eBay Inc. All other trademarks are property of their respective owners.</p>
+    </div>
+    <div class="footer-bottom-right">
+      <p>Website by <a href="https://www.ewnexus.com" style="color:var(--accent);text-decoration:none;">EWNexus</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE CALL BUTTON -->
+<a href="tel:9725550501" class="mobile-call">📞 Call Now · (972) 555-0501</a>
+
+<!-- EWNexus Demo Banner -->
+<div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+  <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+    <span style="color:#c8ddd2;font-size:12px;">✓ Sellers find you when they need to sell · Vendedores te encuentran</span>
+    <span style="color:#c8ddd2;font-size:12px;">✓ Earn more than going it alone on eBay · Gana más que con eBay solo</span>
+    <span style="color:#c8ddd2;font-size:12px;">✓ eBay reseller near me · revendedor eBay cerca de mí</span>
+  </div>
+  <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+  <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+</div>
+
+
+<!-- Copy Protection -->
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.key==='F12'||(e.ctrlKey&&['u','s','a'].includes(e.key.toLowerCase()))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault();
+});
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
+<style>body,*{-webkit-user-select:none!important;user-select:none!important;}</style>
+</body>
+</html>
+

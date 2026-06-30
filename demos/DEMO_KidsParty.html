@@ -1,0 +1,727 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Pals Kids Events — Grand Prairie TX Kids Party Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventPlanner",
+    "name": "Party Pals Kids Events",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Grand Prairie",
+      "addressRegion": "TX",
+      "postalCode": "75050",
+      "addressCountry": "US"
+    },
+    "telephone": "(972) 555-0601",
+    "url": "https://www.partypalsevents.com",
+    "description": "Kids party planning in Grand Prairie TX — princess, superhero, dino, and science themes for ages 1–12.",
+    "areaServed": "Grand Prairie TX and DFW Metro"
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What age groups do you specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We specialize in parties for children ages 1–12, with themes tailored to each age group."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend booking 3–4 weeks ahead for weekend dates, especially during summer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the minimum guest count?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our packages start at 10 guests; we can accommodate up to 150 children."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide the cake?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cake coordination is included in our Gold and Platinum packages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you set up at my home or a rented venue?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We bring the party to any location in Grand Prairie and the DFW metro."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink:   #FF6B9D;
+      --yellow: #FFD600;
+      --cyan:   #00C8DC;
+      --green:  #7DC77A;
+      --bg:     #1A0A20;
+      --card-bg:#22103A;
+      --text:   #FFFFFF;
+      --muted:  rgba(255,255,255,0.65);
+      --radius: 20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-bottom: 100px;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(26,10,32,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,107,157,0.2);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 40px;
+    }
+    .nav-logo {
+      font-size: 22px; font-weight: 900;
+      background: linear-gradient(135deg, var(--pink), var(--yellow), var(--cyan), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-weight: 600; font-size: 14px; transition: color .2s; }
+    .nav-links a:hover { color: var(--pink); }
+    .nav-cta {
+      background: var(--pink); color: #fff; font-weight: 800; font-size: 14px;
+      padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: transform .15s;
+    }
+    .nav-cta:hover { transform: scale(1.05); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 90vh;
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+      padding: 60px 40px;
+    }
+
+    /* Blob decorations */
+    .hero::before {
+      content: '';
+      position: absolute; top: -120px; left: -120px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,107,157,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -100px; right: -100px;
+      width: 450px; height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,200,220,0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .blob-yellow {
+      position: absolute; top: 30%; left: 55%;
+      width: 350px; height: 350px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,214,0,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .blob-green {
+      position: absolute; bottom: 10%; left: 15%;
+      width: 280px; height: 280px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(125,199,122,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Floating emoji decorations */
+    .float-emoji {
+      position: absolute; font-size: 48px; opacity: 0.18; user-select: none;
+      animation: floatBob 5s ease-in-out infinite;
+    }
+    .float-emoji:nth-child(1) { top: 8%;  right: 42%; animation-delay: 0s; }
+    .float-emoji:nth-child(2) { top: 20%; right: 10%; animation-delay: 1.2s; font-size: 56px; }
+    .float-emoji:nth-child(3) { bottom: 20%; right: 5%; animation-delay: 0.6s; }
+    .float-emoji:nth-child(4) { top: 60%; left: 2%;  animation-delay: 1.8s; font-size: 40px; }
+    .float-emoji:nth-child(5) { top: 5%;  left: 5%;  animation-delay: 2.4s; font-size: 44px; }
+
+    @keyframes floatBob {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-18px); }
+    }
+
+    .hero-inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+      max-width: 1200px; margin: 0 auto; width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, rgba(255,107,157,0.2), rgba(0,200,220,0.2));
+      border: 1.5px solid rgba(255,107,157,0.5);
+      color: var(--pink); font-size: 12px; font-weight: 700; letter-spacing: .05em;
+      padding: 7px 18px; border-radius: 50px; margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(34px, 4.5vw, 56px); font-weight: 900; line-height: 1.1;
+      margin-bottom: 18px; color: #fff;
+    }
+    .hero h1 span { color: var(--pink); }
+    .hero-sub {
+      font-size: 16px; line-height: 1.7; color: var(--muted); margin-bottom: 22px;
+    }
+    .hero-core {
+      background: rgba(255,214,0,0.07);
+      border-left: 4px solid var(--yellow);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px; margin-bottom: 24px;
+      font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.75);
+    }
+    .checklist { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 10px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.9); }
+    .check-icon { font-style: normal; font-weight: 900; font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+    .check-pink   { color: var(--pink); }
+    .check-yellow { color: var(--yellow); }
+    .check-cyan   { color: var(--cyan); }
+    .check-green  { color: var(--green); }
+
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-pink {
+      background: var(--pink); color: #fff; font-weight: 800; font-size: 15px;
+      padding: 14px 30px; border-radius: 50px; text-decoration: none; transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 20px rgba(255,107,157,0.4);
+    }
+    .btn-pink:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,157,0.5); }
+    .btn-yellow {
+      background: var(--yellow); color: #1A0A20; font-weight: 800; font-size: 15px;
+      padding: 14px 30px; border-radius: 50px; text-decoration: none; transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 20px rgba(255,214,0,0.35);
+    }
+    .btn-yellow:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,214,0,0.5); }
+
+    .hero-image-box {
+      border: 2.5px dashed rgba(255,107,157,0.45);
+      border-radius: var(--radius);
+      min-height: 380px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 10px;
+      background: rgba(255,107,157,0.06);
+      color: rgba(255,255,255,0.35); font-size: 14px; font-weight: 600;
+    }
+    .hero-image-box .img-icon { font-size: 48px; opacity: 0.5; }
+
+    /* ── THEME PACKAGES ── */
+    .theme-section {
+      padding: 70px 40px;
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .section-label {
+      text-align: center; color: var(--cyan); font-size: 12px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .section-title {
+      text-align: center; font-size: clamp(26px, 3.5vw, 40px); font-weight: 900;
+      margin-bottom: 10px; color: #fff;
+    }
+    .section-sub {
+      text-align: center; color: var(--muted); font-size: 15px; max-width: 540px;
+      margin: 0 auto 50px;
+    }
+    .theme-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+      max-width: 860px; margin: 0 auto;
+    }
+    .theme-card {
+      border-radius: var(--radius); padding: 34px 28px;
+      display: flex; flex-direction: column; gap: 8px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .theme-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+    .theme-card.pink   { background: var(--pink); color: #fff; }
+    .theme-card.cyan   { background: var(--cyan); color: #001F24; }
+    .theme-card.green  { background: var(--green); color: #0E2B0E; }
+    .theme-card.yellow { background: var(--yellow); color: #1A0A20; }
+    .theme-emoji { font-size: 42px; margin-bottom: 6px; }
+    .theme-name { font-size: 22px; font-weight: 900; }
+    .theme-tagline { font-size: 14px; font-weight: 500; opacity: 0.85; }
+    .theme-link {
+      margin-top: 10px; font-size: 13px; font-weight: 700;
+      text-decoration: none; opacity: 0.9;
+    }
+    .theme-card.pink .theme-link   { color: rgba(255,255,255,0.9); }
+    .theme-card.cyan .theme-link   { color: #001F24; }
+    .theme-card.green .theme-link  { color: #0E2B0E; }
+    .theme-card.yellow .theme-link { color: #1A0A20; }
+
+    /* ── SERVICES ── */
+    .services-section { padding: 80px 40px; }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      border: 2px solid transparent;
+      transition: border-color .2s, transform .2s;
+    }
+    .service-card:nth-child(1) { border-color: rgba(255,107,157,0.4); }
+    .service-card:nth-child(2) { border-color: rgba(255,214,0,0.4); }
+    .service-card:nth-child(3) { border-color: rgba(0,200,220,0.4); }
+    .service-card:nth-child(4) { border-color: rgba(125,199,122,0.4); }
+    .service-card:nth-child(5) { border-color: rgba(255,107,157,0.4); }
+    .service-card:nth-child(6) { border-color: rgba(255,214,0,0.4); }
+    .service-card:hover { transform: translateY(-3px); }
+    .service-icon { font-size: 32px; margin-bottom: 14px; }
+    .service-name { font-size: 17px; font-weight: 800; margin-bottom: 8px; color: #fff; }
+    .service-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ── ABOUT ── */
+    .about-section {
+      padding: 80px 40px;
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .about-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+    .about-inner .section-title { margin-bottom: 24px; }
+    .about-inner p { font-size: 16px; line-height: 1.8; color: var(--muted); margin-bottom: 18px; }
+    .about-stats {
+      display: flex; justify-content: center; gap: 40px;
+      margin-top: 36px; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 40px; font-weight: 900; }
+    .stat-num.pink   { color: var(--pink); }
+    .stat-num.yellow { color: var(--yellow); }
+    .stat-num.cyan   { color: var(--cyan); }
+    .stat-label { font-size: 13px; color: var(--muted); font-weight: 600; margin-top: 4px; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 40px; }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    details {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1.5px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    details:hover { border-color: rgba(255,107,157,0.4); }
+    details[open] { border-color: var(--pink); }
+    summary {
+      padding: 20px 24px; cursor: pointer;
+      font-size: 15px; font-weight: 700; color: #fff;
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+'; font-size: 22px; font-weight: 400;
+      color: var(--pink); transition: transform .2s;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    details[open] summary { color: var(--pink); }
+    .faq-answer { padding: 0 24px 20px; font-size: 14px; line-height: 1.75; color: var(--muted); }
+
+    /* ── CONTACT ── */
+    .contact-section { padding: 80px 40px; }
+    .contact-inner { max-width: 720px; margin: 0 auto; }
+    .contact-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 44px 40px;
+      border: 2px solid rgba(255,107,157,0.3);
+    }
+    .contact-card .section-title { text-align: left; margin-bottom: 28px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; }
+    .form-group.full { grid-column: 1 / -1; }
+    label { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.8); letter-spacing: .02em; }
+    input, select, textarea {
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      color: #fff; font-family: 'Inter', sans-serif; font-size: 14px;
+      padding: 12px 16px; outline: none;
+      transition: border-color .2s;
+    }
+    input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.3); }
+    input:focus, select:focus, textarea:focus { border-color: var(--pink); }
+    select option { background: #1A0A20; }
+    textarea { resize: vertical; min-height: 90px; }
+    .form-submit {
+      width: 100%; margin-top: 20px;
+      background: linear-gradient(135deg, var(--pink), #ff4f8b);
+      color: #fff; font-weight: 800; font-size: 16px;
+      padding: 16px; border: none; border-radius: 50px;
+      cursor: pointer; transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 20px rgba(255,107,157,0.4);
+    }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,157,0.5); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: rgba(0,0,0,0.5);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 40px 40px 30px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 26px; font-weight: 900; margin-bottom: 10px;
+      background: linear-gradient(135deg, var(--pink), var(--yellow), var(--cyan));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .footer-contact { color: var(--muted); font-size: 14px; margin-bottom: 6px; }
+    .footer-contact a { color: var(--pink); text-decoration: none; }
+    .footer-bilingual {
+      margin-top: 16px; padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      font-size: 13px; color: rgba(255,255,255,0.4);
+    }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 12px; }
+
+    /* ── MOBILE STICKY CTA ── */
+    .mobile-sticky {
+      display: none;
+      position: fixed; bottom: 68px; left: 0; right: 0; z-index: 200;
+      background: linear-gradient(135deg, var(--pink), #ff4f8b);
+      color: #fff; text-align: center; font-weight: 800; font-size: 15px;
+      padding: 16px 20px; text-decoration: none;
+      box-shadow: 0 -4px 20px rgba(255,107,157,0.5);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 12px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 50px 20px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-image-box { min-height: 240px; }
+      .theme-section, .services-section, .about-section, .faq-section, .contact-section { padding: 60px 20px; }
+      .theme-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .contact-card { padding: 30px 22px; }
+      footer { padding: 30px 20px; }
+      .mobile-sticky { display: block; }
+    }
+    @media (max-width: 540px) {
+      .theme-grid { grid-template-columns: 1fr; }
+      .about-stats { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">🎉 Party Pals Kids Events</div>
+    <ul class="nav-links">
+      <li><a href="#themes">Themes</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book a Party</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="blob-yellow"></div>
+    <div class="blob-green"></div>
+    <span class="float-emoji">🎈</span>
+    <span class="float-emoji">🎉</span>
+    <span class="float-emoji">🎊</span>
+    <span class="float-emoji">🎈</span>
+    <span class="float-emoji">⭐</span>
+
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Grand Prairie TX &nbsp;·&nbsp; Ages 1–12 &nbsp;·&nbsp; 10–150 Guests</div>
+        <h1>The Party They'll Never <span>Stop Talking About.</span></h1>
+        <p class="hero-sub">
+          Princess castles. Superhero showdowns. Dino digs. Mad science labs.
+          Whatever their dream — we make it real, decorated, and stress-free.
+        </p>
+        <div class="hero-core">
+          Most parents search "kids party planner near me" on their phone after their child starts begging.
+          Without a website, you miss every one of those searches. A professional site with your theme
+          packages and photos makes parents call YOU first.
+        </div>
+        <ul class="checklist">
+          <li><i class="check-icon check-pink">✓</i> Theme gallery shows exactly what parents are dreaming about</li>
+          <li><i class="check-icon check-yellow">✓</i> Package pricing upfront — no awkward "how much is this?" calls</li>
+          <li><i class="check-icon check-cyan">✓</i> FAQ answers every question before they pick up the phone</li>
+          <li><i class="check-icon check-green">✓</i> Google ranks you for "kids birthday party planner Grand Prairie"</li>
+        </ul>
+        <div class="hero-buttons">
+          <a href="#themes" class="btn-pink">View Packages</a>
+          <a href="#contact" class="btn-yellow">Book a Party</a>
+        </div>
+      </div>
+      <div class="hero-image-box">
+        <span class="img-icon">📸</span>
+        <span>AI-Generated Banner Image — Party Photos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEME PACKAGES -->
+  <section class="theme-section" id="themes">
+    <div class="section-label">Choose Their Adventure</div>
+    <h2 class="section-title">Party Themes They'll Love</h2>
+    <p class="section-sub">Every theme comes fully decorated, activities included — just bring the birthday kid.</p>
+    <div class="theme-grid">
+      <div class="theme-card pink">
+        <div class="theme-emoji">👸</div>
+        <div class="theme-name">Princess &amp; Fairytale</div>
+        <div class="theme-tagline">Castles, tiaras, and fairy dust</div>
+        <a href="#contact" class="theme-link">Ask about this theme →</a>
+      </div>
+      <div class="theme-card cyan">
+        <div class="theme-emoji">🦸</div>
+        <div class="theme-name">Superhero Squad</div>
+        <div class="theme-tagline">Capes, masks, and missions</div>
+        <a href="#contact" class="theme-link">Ask about this theme →</a>
+      </div>
+      <div class="theme-card green">
+        <div class="theme-emoji">🦕</div>
+        <div class="theme-name">Dino Explorer</div>
+        <div class="theme-tagline">Fossils, digs, and roaring fun</div>
+        <a href="#contact" class="theme-link">Ask about this theme →</a>
+      </div>
+      <div class="theme-card yellow">
+        <div class="theme-emoji">🔬</div>
+        <div class="theme-name">Mad Science Lab</div>
+        <div class="theme-tagline">Experiments, slime, and explosions</div>
+        <a href="#contact" class="theme-link">Ask about this theme →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-label">What We Handle</div>
+    <h2 class="section-title">Everything. We Handle Everything.</h2>
+    <p class="section-sub">From first phone call to last balloon — we've got it.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎪</div>
+        <div class="service-name">Full Party Planning</div>
+        <p class="service-desc">End-to-end coordination — timeline, vendors, logistics — so you enjoy the party instead of running it.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <div class="service-name">Theme Décor &amp; Setup</div>
+        <p class="service-desc">Full themed decorations installed before guests arrive. Backdrop, tableware, centerpieces, signage — done.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👑</div>
+        <div class="service-name">Character Appearances</div>
+        <p class="service-desc">Professional character performers — princesses, superheroes, dinosaurs — who kids will remember forever.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎮</div>
+        <div class="service-name">Games &amp; Activities</div>
+        <p class="service-desc">Age-appropriate games, crafts, and activities that keep kids engaged from arrival to cake time.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🍕</div>
+        <div class="service-name">Catering Coordination</div>
+        <p class="service-desc">We coordinate kid-friendly catering options — pizza, snack stations, cake, and dietary accommodations.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧹</div>
+        <div class="service-name">Cleanup &amp; Takedown</div>
+        <p class="service-desc">We pack up, break down, and leave the space spotless. You leave with happy kids, not a mess.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">Born From a Parent Who Figured It Out the Hard Way</h2>
+      <p>
+        Party Pals Kids Events was founded by a mom who threw her daughter a party with zero help —
+        and decided other parents in Grand Prairie shouldn't have to stress through that alone.
+        What started as weekend parties for neighbors grew into the DFW area's go-to kids party crew.
+      </p>
+      <p>
+        We're proud to serve families across Grand Prairie, Arlington, Irving, and all of DFW.
+        Every party is planned with the same love and attention we'd give our own kids' celebrations —
+        because your child's birthday only comes once a year, and it deserves to be unforgettable.
+      </p>
+      <div class="about-stats">
+        <div class="stat"><div class="stat-num pink">500+</div><div class="stat-label">Parties Thrown</div></div>
+        <div class="stat"><div class="stat-num yellow">12</div><div class="stat-label">Theme Options</div></div>
+        <div class="stat"><div class="stat-num cyan">6</div><div class="stat-label">Years in Grand Prairie</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="section-label">Got Questions?</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub" style="margin-bottom:36px;">Everything parents want to know before booking.</p>
+    <div class="faq-list">
+      <details>
+        <summary>What age groups do you specialize in?</summary>
+        <div class="faq-answer">We specialize in parties for children ages 1–12, with themes tailored to each age group.</div>
+      </details>
+      <details>
+        <summary>How far in advance should I book?</summary>
+        <div class="faq-answer">We recommend booking 3–4 weeks ahead for weekend dates, especially during summer.</div>
+      </details>
+      <details>
+        <summary>What's the minimum guest count?</summary>
+        <div class="faq-answer">Our packages start at 10 guests; we can accommodate up to 150 children.</div>
+      </details>
+      <details>
+        <summary>Do you provide the cake?</summary>
+        <div class="faq-answer">Cake coordination is included in our Gold and Platinum packages.</div>
+      </details>
+      <details>
+        <summary>Can you set up at my home or a rented venue?</summary>
+        <div class="faq-answer">Yes! We bring the party to any location in Grand Prairie and the DFW metro.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div class="section-label">Ready to Party?</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:32px;">Book Your Party</h2>
+      <div class="contact-card">
+        <div class="section-title" style="font-size:22px;margin-bottom:24px;">Tell Us About the Party 🎉</div>
+        <form>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Child's Name &amp; Age</label>
+              <input type="text" placeholder="Emma, turning 6">
+            </div>
+            <div class="form-group">
+              <label>Party Theme</label>
+              <select>
+                <option value="">Select a theme…</option>
+                <option>Princess &amp; Fairytale</option>
+                <option>Superhero Squad</option>
+                <option>Dino Explorer</option>
+                <option>Mad Science Lab</option>
+                <option>Other / Custom</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Party Date</label>
+              <input type="date">
+            </div>
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <input type="number" placeholder="e.g. 25" min="10" max="150">
+            </div>
+            <div class="form-group">
+              <label>Location</label>
+              <select>
+                <option value="">Home or venue?</option>
+                <option>My Home</option>
+                <option>Rented Venue</option>
+                <option>I need venue recommendations</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Parent Name</label>
+              <input type="text" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="(972) 555-____">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="you@email.com">
+            </div>
+            <div class="form-group full">
+              <label>Notes / Special Requests</label>
+              <textarea placeholder="Allergies, special accommodations, surprise party details…"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="form-submit">Send My Party Request 🎈</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">🎉 Party Pals Kids Events</div>
+    <p class="footer-contact">Grand Prairie, TX 75050 &nbsp;|&nbsp; <a href="tel:9725550601">(972) 555-0601</a></p>
+    <p class="footer-contact">Serving Grand Prairie, Arlington, Irving &amp; all of DFW</p>
+    <div class="footer-bilingual">Website also available in Spanish &nbsp;·&nbsp; También disponible en Español</div>
+    <div class="footer-copy">&copy; 2025 Party Pals Kids Events. Demo site by EWNexus.com</div>
+  </footer>
+
+  <!-- MOBILE STICKY -->
+  <a href="tel:9725550601" class="mobile-sticky">🎈 Book a Party &nbsp;·&nbsp; (972) 555-0601</a>
+
+  <!-- EWNEXUS DEMO BANNER -->
+  <div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+    <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <span style="color:#c8ddd2;font-size:12px;">✓ Parents find fun packages before calling · Padres ven paquetes antes de llamar</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ Book the party they'll never forget · Reserva la fiesta que nunca olvidarán</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ kids party planner near me · organizador de fiestas infantiles cerca de mí</span>
+    </div>
+    <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+    <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+  </div>
+
+
+<!-- Copy Protection -->
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.key==='F12'||(e.ctrlKey&&['u','s','a'].includes(e.key.toLowerCase()))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault();
+});
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
+<style>body,*{-webkit-user-select:none!important;user-select:none!important;}</style>
+</body>
+</html>
+
