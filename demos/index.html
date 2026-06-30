@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Website Demo Gallery — EWNexus | Grand Prairie, TX</title>
+  <meta name="description" content="Browse 24 live website demos by industry. EWNexus builds professional websites in 3 days for $600 — serving Grand Prairie, Arlington, Dallas, and DFW, TX."/>
+  <meta name="robots" content="noindex"/>
+  <link rel="canonical" href="https://www.ewnexus.com/demos/"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a1209; color: #d4eadb; font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; }
+
+    /* Header */
+    .header { background: #0e1a12; border-bottom: 1px solid #1e3326; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .logo { font-size: 22px; font-weight: 900; color: #5af0b3; letter-spacing: -0.03em; text-decoration: none; }
+    .header-cta { background: #5af0b3; color: #001a0e; font-weight: 800; font-size: 13px; padding: 9px 20px; border-radius: 6px; text-decoration: none; white-space: nowrap; }
+
+    /* Hero */
+    .hero { text-align: center; padding: 60px 24px 40px; }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; color: #fff; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; }
+    .hero h1 span { color: #5af0b3; }
+    .hero p { color: #8ab89a; font-size: 16px; max-width: 560px; margin: 0 auto 28px; line-height: 1.6; }
+    .hero-badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .badge { background: #0e1a12; border: 1px solid #1e3326; color: #5af0b3; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 100px; letter-spacing: 0.05em; }
+
+    /* Filter */
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; padding: 0 24px 32px; }
+    .filter-btn { background: #0e1a12; border: 1px solid #1e3326; color: #8ab89a; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .filter-btn:hover, .filter-btn.active { background: #5af0b3; color: #001a0e; border-color: #5af0b3; }
+
+    /* Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 0 24px 60px; max-width: 1400px; margin: 0 auto; }
+
+    .card { background: #0e1a12; border: 1px solid #1e3326; border-radius: 12px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-4px); border-color: #5af0b3; }
+
+    .card-preview { position: relative; overflow: hidden; height: 200px; background: #0a1209; }
+    .card-preview iframe { width: 200%; height: 200%; transform: scale(0.5); transform-origin: top left; border: none; pointer-events: none; }
+    .card-preview-overlay { position: absolute; inset: 0; }
+
+    .card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .card-industry { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5af0b3; }
+    .card-title { font-size: 16px; font-weight: 800; color: #fff; }
+    .card-desc { font-size: 13px; color: #8ab89a; line-height: 1.5; flex: 1; }
+    .card-actions { display: flex; gap: 8px; margin-top: 8px; }
+    .btn-preview { flex: 1; background: #5af0b3; color: #001a0e; font-weight: 700; font-size: 13px; padding: 9px; border-radius: 7px; text-align: center; text-decoration: none; }
+    .btn-order { flex: 1; background: transparent; border: 1px solid #1e3326; color: #8ab89a; font-size: 13px; padding: 9px; border-radius: 7px; text-align: center; text-decoration: none; }
+    .btn-order:hover { border-color: #5af0b3; color: #5af0b3; }
+
+    /* Footer CTA */
+    .footer-cta { text-align: center; padding: 48px 24px; border-top: 1px solid #1e3326; }
+    .footer-cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #fff; margin-bottom: 12px; }
+    .footer-cta p { color: #8ab89a; margin-bottom: 24px; }
+    .footer-cta a { background: #5af0b3; color: #001a0e; font-weight: 800; font-size: 16px; padding: 14px 36px; border-radius: 8px; text-decoration: none; display: inline-block; }
+
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; padding: 0 16px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="https://www.ewnexus.com">EWNexus</a>
+  <a class="header-cta" href="https://www.ewnexus.com/contact.html">Get Your Website — $50 to Start</a>
+</header>
+
+<section class="hero">
+  <h1>Browse Our <span>Live Demo</span> Gallery</h1>
+  <p>Click any industry below to see a real working website. We build yours in 3 days — $600 flat, no monthly fees.</p>
+  <div class="hero-badges">
+    <span class="badge">✓ 24 Industries</span>
+    <span class="badge">✓ Mobile-Ready</span>
+    <span class="badge">✓ SEO + AI Chat</span>
+    <span class="badge">✓ Grand Prairie TX</span>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All (24)</button>
+  <button class="filter-btn" data-filter="food">Food & Drink</button>
+  <button class="filter-btn" data-filter="beauty">Beauty & Wellness</button>
+  <button class="filter-btn" data-filter="auto">Auto & Tire</button>
+  <button class="filter-btn" data-filter="home">Home Services</button>
+  <button class="filter-btn" data-filter="pet">Pet & Moving</button>
+  <button class="filter-btn" data-filter="pro">Professional</button>
+</div>
+
+<main class="grid" id="demoGrid">
+
+  <!-- ===== FOOD & DRINK ===== -->
+  <div class="card" data-cat="food">
+    <div class="card-preview">
+      <iframe src="DEMO_Cafe.html" loading="lazy" title="Café Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Breakfast Café</div>
+      <div class="card-title">Morning Post Café</div>
+      <div class="card-desc">Warm amber theme, online ordering, menu showcase, and local SEO for café & brunch spots.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Cafe.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="food">
+    <div class="card-preview">
+      <iframe src="DEMO_BubbleTea.html" loading="lazy" title="Bubble Tea Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Bubble Tea Shop</div>
+      <div class="card-title">Boba Bliss</div>
+      <div class="card-desc">Pink & playful theme, menu, loyalty program teaser, and walk-in traffic conversion.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_BubbleTea.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="food">
+    <div class="card-preview">
+      <iframe src="DEMO_Restaurant.html" loading="lazy" title="Restaurant Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Restaurant</div>
+      <div class="card-title">Mesa Verde Kitchen</div>
+      <div class="card-desc">Bold orange/red theme, full menu, reservation form, and Google Maps SEO for restaurants.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Restaurant.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="food">
+    <div class="card-preview">
+      <iframe src="DEMO_Catering.html" loading="lazy" title="Catering Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Event Catering</div>
+      <div class="card-title">Prestige Event Catering</div>
+      <div class="card-desc">Terracotta professional theme, corporate event packages, RFQ form, and social proof.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Catering.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="food">
+    <div class="card-preview">
+      <iframe src="restaurant.html" loading="lazy" title="Restaurant Demo 2"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Restaurant (Style 2)</div>
+      <div class="card-title">Classic Restaurant</div>
+      <div class="card-desc">Dark elegant theme with full menu, photo gallery, and online reservation system.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="restaurant.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="food">
+    <div class="card-preview">
+      <iframe src="DEMO_Bakery.html" loading="lazy" title="Bakery Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Bakery</div>
+      <div class="card-title">Artisan Bakery</div>
+      <div class="card-desc">Warm gold theme with product showcase, daily specials, and online order form.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Bakery.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BEAUTY & WELLNESS ===== -->
+  <div class="card" data-cat="beauty">
+    <div class="card-preview">
+      <iframe src="DEMO_NailSalon.html" loading="lazy" title="Nail Salon Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Nail Salon</div>
+      <div class="card-title">Petal Nail Lounge</div>
+      <div class="card-desc">Mauve/purple luxury theme, service menu, online booking, and before/after gallery.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_NailSalon.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="beauty">
+    <div class="card-preview">
+      <iframe src="DEMO_HairSalon.html" loading="lazy" title="Hair Salon Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Hair Salon</div>
+      <div class="card-title">Luxe Hair Studio</div>
+      <div class="card-desc">Gold/dark luxury theme, color & extension services, stylist profiles, and booking form.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_HairSalon.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="beauty">
+    <div class="card-preview">
+      <iframe src="DEMO_Massage.html" loading="lazy" title="Massage Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Massage & Wellness</div>
+      <div class="card-title">Zen Flow Wellness</div>
+      <div class="card-desc">Green tranquil theme, service packages, therapist intro, and appointment booking.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Massage.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="beauty">
+    <div class="card-preview">
+      <iframe src="salon.html" loading="lazy" title="Salon Demo 2"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Salon (Style 2)</div>
+      <div class="card-title">Modern Salon</div>
+      <div class="card-desc">Sleek modern theme with service menu, team profiles, and Google review integration.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="salon.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="beauty">
+    <div class="card-preview">
+      <iframe src="DEMO_Dental.html" loading="lazy" title="Dental Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Dental</div>
+      <div class="card-title">Bright Smiles Dental</div>
+      <div class="card-desc">Clean blue theme, service list, patient FAQ, insurance info, and appointment form.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Dental.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== AUTO & TIRE ===== -->
+  <div class="card" data-cat="auto">
+    <div class="card-preview">
+      <iframe src="DEMO_TireShop.html" loading="lazy" title="Tire Shop Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Tire Shop</div>
+      <div class="card-title">Pro Tire & Wheel</div>
+      <div class="card-desc">Dark gray/orange theme, inventory display, brand logos, and appointment scheduler.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_TireShop.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="auto">
+    <div class="card-preview">
+      <iframe src="DEMO_AutoRepair.html" loading="lazy" title="Auto Repair Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Auto Repair</div>
+      <div class="card-title">Quick Fix Auto</div>
+      <div class="card-desc">Bold red/dark theme, service checklist, online quote, and trust badges.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_AutoRepair.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="auto">
+    <div class="card-preview">
+      <iframe src="DEMO_TowTruck.html" loading="lazy" title="Tow Truck Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Tow Truck</div>
+      <div class="card-title">FastTow DFW</div>
+      <div class="card-desc">Orange/black emergency theme, 24/7 call button, service area map, GPS tracking.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_TowTruck.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOME SERVICES ===== -->
+  <div class="card" data-cat="home">
+    <div class="card-preview">
+      <iframe src="DEMO_HVAC.html" loading="lazy" title="HVAC Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">HVAC</div>
+      <div class="card-title">Cool Breeze HVAC</div>
+      <div class="card-desc">Blue/teal theme, AC repair & install services, seasonal specials, and emergency call.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_HVAC.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="home">
+    <div class="card-preview">
+      <iframe src="DEMO_ACRepair.html" loading="lazy" title="AC Repair Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">HVAC / AC Repair</div>
+      <div class="card-title">Arctic Pro HVAC</div>
+      <div class="card-desc">Cyan/dark theme, emergency AC service, installation packages, and financing options.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_ACRepair.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="home">
+    <div class="card-preview">
+      <iframe src="DEMO_Plumbing.html" loading="lazy" title="Plumbing Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Plumbing</div>
+      <div class="card-title">PipeRight Plumbing</div>
+      <div class="card-desc">Blue professional theme, emergency 24/7, licensed & insured badges, quote form.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Plumbing.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="home">
+    <div class="card-preview">
+      <iframe src="plumber.html" loading="lazy" title="Plumber Demo 2"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Plumbing (Style 2)</div>
+      <div class="card-title">Reliable Plumbing</div>
+      <div class="card-desc">Dark blue/teal theme, drain & pipe services, customer reviews, and instant quote.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="plumber.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="home">
+    <div class="card-preview">
+      <iframe src="DEMO_ApplianceRepair.html" loading="lazy" title="Appliance Repair Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Appliance Repair</div>
+      <div class="card-title">FixTech Appliance Repair</div>
+      <div class="card-desc">Red/dark theme, brand-specific repairs, same-day service, and service guarantee.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_ApplianceRepair.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="home">
+    <div class="card-preview">
+      <iframe src="DEMO_Cleaning.html" loading="lazy" title="Cleaning Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Cleaning Service</div>
+      <div class="card-title">SparkClean Pro</div>
+      <div class="card-desc">Fresh green theme, residential & commercial packages, instant online quote, reviews.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Cleaning.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="home">
+    <div class="card-preview">
+      <iframe src="DEMO_LawnCare.html" loading="lazy" title="Lawn Care Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Lawn & Landscaping</div>
+      <div class="card-title">GreenEdge Lawn Care</div>
+      <div class="card-desc">Deep green theme, service packages, seasonal programs, and free estimate form.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_LawnCare.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PET & MOVING ===== -->
+  <div class="card" data-cat="pet">
+    <div class="card-preview">
+      <iframe src="DEMO_PetGrooming.html" loading="lazy" title="Pet Grooming Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Pet Grooming</div>
+      <div class="card-title">Pawfect Grooming Co.</div>
+      <div class="card-desc">Blue/teal playful theme, grooming packages, pet gallery, and online booking.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_PetGrooming.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-cat="pet">
+    <div class="card-preview">
+      <iframe src="DEMO_Moving.html" loading="lazy" title="Moving Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Moving Service</div>
+      <div class="card-title">Atlas Moving Group</div>
+      <div class="card-desc">Orange/dark theme, local & long-distance moves, instant quote calculator, insurance.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Moving.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROFESSIONAL ===== -->
+  <div class="card" data-cat="pro">
+    <div class="card-preview">
+      <iframe src="DEMO_Photography.html" loading="lazy" title="Photography Demo"></iframe>
+      <div class="card-preview-overlay"></div>
+    </div>
+    <div class="card-body">
+      <div class="card-industry">Photography</div>
+      <div class="card-title">Luminary Image Productions</div>
+      <div class="card-desc">Gold/dark cinematic theme, portfolio gallery, event packages, and booking form.</div>
+      <div class="card-actions">
+        <a class="btn-preview" href="DEMO_Photography.html" target="_blank">Live Preview</a>
+        <a class="btn-order" href="https://www.ewnexus.com/contact.html">Order This Style</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<section class="footer-cta">
+  <h2>Like What You See?</h2>
+  <p>We build your website in 3 days — $600 flat, no monthly fees, no surprises.</p>
+  <a href="https://www.ewnexus.com/contact.html">Start for $50 Deposit →</a>
+</section>
+
+<script>
+// Filter
+const btns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.card');
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    cards.forEach(c => {
+      c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
+    });
+  });
+});
+
+// Copy protection
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (e.key === 'F12' || (e.ctrlKey && ['u','s','a'].includes(e.key.toLowerCase())) || (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase()))) e.preventDefault();
+});
+</script>
+
+</body>
+</html>

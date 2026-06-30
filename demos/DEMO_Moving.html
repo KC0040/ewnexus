@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Moving Group — Professional Moving Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #1A1000;
+      --accent: #FF9800;
+      --accent-light: #FFB74D;
+      --accent-dark: #E65100;
+      --text: #FFF8E1;
+      --text-muted: #FFCC80;
+      --card-bg: #261800;
+      --card-border: #3D2800;
+      --white: #FFFFFF;
+      --nav-h: 68px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 100px;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(26,16,0,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; z-index: 1000;
+    }
+    .nav-logo { font-weight: 900; font-size: 1.25rem; color: var(--accent); letter-spacing: -.02em; }
+    .nav-logo span { color: var(--white); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: #1a0a00; font-weight: 700; font-size: .875rem; padding: 9px 20px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: background .2s; }
+    .nav-cta:hover { background: var(--accent-light); }
+    .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+    .hero {
+      min-height: 90vh; display: flex; align-items: center;
+      padding: calc(var(--nav-h) + 40px) 5% 60px;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #1A1000 0%, #221500 60%, #140c00 100%);
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -120px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(255,152,0,.16) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: -80px; left: 20%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,152,0,.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-badge { display: inline-block; background: rgba(255,152,0,.15); border: 1px solid rgba(255,152,0,.4); color: var(--accent); font-size: .8rem; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: .06em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; color: var(--white); margin-bottom: 20px; letter-spacing: -.03em; }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 28px; max-width: 480px; }
+    .hero-checks { list-style: none; margin-bottom: 36px; display: flex; flex-direction: column; gap: 10px; }
+    .hero-checks li { display: flex; align-items: flex-start; gap: 10px; font-size: .92rem; color: var(--text-muted); }
+    .hero-checks li::before { content: '✓'; color: var(--accent); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: #1a0a00; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: background .2s, transform .15s; }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+    .btn-ghost { border: 2px solid var(--card-border); color: var(--text-muted); font-weight: 600; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: border-color .2s, color .2s; }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-visual { display: flex; align-items: center; justify-content: center; }
+    .banner-placeholder { width: 100%; max-width: 500px; height: 340px; border: 2.5px dashed rgba(255,152,0,.5); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: rgba(255,152,0,.6); font-size: .85rem; font-weight: 600; background: rgba(255,152,0,.04); letter-spacing: .04em; text-align: center; padding: 20px; }
+    .banner-placeholder .bp-icon { font-size: 2.5rem; opacity: .5; }
+    .banner-placeholder small { font-size: .75rem; opacity: .6; font-weight: 400; }
+
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing: -.03em; }
+    .section-sub { font-size: 1rem; color: var(--text-muted); max-width: 580px; margin-bottom: 48px; }
+
+    .problem { background: #120c00; }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .problem-copy h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing:-.03em; }
+    .problem-copy p { color: var(--text-muted); margin-bottom: 16px; font-size:.97rem; }
+    .platform-fees { display: flex; flex-direction: column; gap: 14px; }
+    .fee-item { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .fee-item .platform { font-weight: 700; color: var(--white); font-size:.95rem; }
+    .fee-item .fee-pct { font-weight: 800; color: #f87171; font-size: 1.1rem; }
+    .vs-arrow { text-align: center; padding: 24px 0; }
+    .vs-arrow .vs-line { width: 2px; height: 40px; background: var(--card-border); margin: 0 auto 8px; }
+    .vs-arrow .vs-text { color: var(--accent); font-weight: 800; font-size:.85rem; }
+    .your-site { background: linear-gradient(135deg, rgba(255,152,0,.12), rgba(255,152,0,.05)); border: 1.5px solid var(--accent); border-radius: 12px; padding: 24px; }
+    .your-site h3 { color: var(--accent); font-weight: 800; margin-bottom: 8px; }
+    .your-site p { color: var(--text-muted); font-size:.9rem; }
+    .your-site .keep { font-size: 2rem; font-weight: 900; color: var(--white); display: block; margin: 8px 0 4px; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px 24px; transition: border-color .25s, transform .2s; }
+    .service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .service-icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .service-card p { font-size: .88rem; color: var(--text-muted); }
+
+    .stats { background: #120c00; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 32px 20px; text-align: center; }
+    .stat-num { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: -.04em; }
+    .stat-label { font-size: .85rem; color: var(--text-muted); line-height: 1.4; }
+
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px 24px; }
+    .testi-stars { color: #FFC107; font-size: 1rem; margin-bottom: 14px; }
+    .testi-text { font-size: .92rem; color: var(--text-muted); margin-bottom: 20px; font-style: italic; line-height: 1.6; }
+    .testi-author { font-weight: 700; color: var(--white); font-size: .9rem; }
+    .testi-role { font-size: .8rem; color: var(--accent); margin-top: 2px; }
+
+    .contact { background: #120c00; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .contact-info h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing:-.03em; }
+    .contact-info p { color: var(--text-muted); margin-bottom: 28px; }
+    .contact-items { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item { display: flex; align-items: center; gap: 14px; color: var(--text-muted); font-size: .95rem; }
+    .contact-item .ci-icon { font-size: 1.25rem; flex-shrink: 0; }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact-form input, .contact-form select, .contact-form textarea { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 13px 16px; color: var(--text); font-family: inherit; font-size: .95rem; transition: border-color .2s; outline: none; width: 100%; }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--accent); }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .contact-form button { background: var(--accent); color: #1a0a00; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: background .2s; }
+    .contact-form button:hover { background: var(--accent-light); }
+
+    footer { background: #0d0900; border-top: 1px solid var(--card-border); padding: 40px 5%; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
+    .footer-brand .fb-name { font-weight: 900; font-size: 1.1rem; color: var(--accent); }
+    .footer-brand p { color: var(--text-muted); font-size: .85rem; margin-top: 6px; max-width: 280px; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom { border-top: 1px solid var(--card-border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: .8rem; color: var(--text-muted); }
+    .bilingual-note { font-size: .8rem; color: var(--accent); font-weight: 600; }
+
+    .mobile-sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--accent); color: #1a0a00; font-weight: 800; font-size: 1rem; padding: 16px; text-align: center; text-decoration: none; z-index: 900; border-top: 3px solid var(--accent-dark); }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-visual { order: -1; }
+      .banner-placeholder { max-width: 100%; height: 220px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .mobile-sticky-cta { display: block; }
+    }
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Atlas <span>Moving Group</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get a Free Quote</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">Licensed &amp; Insured Moving Company</div>
+        <h1>The Customer Who Finds You <em>First</em> Hires You.</h1>
+        <p>Moving decisions happen fast. Families search, compare 2–3 companies, and call the one that looks most professional. A website with your licensing, equipment, and reviews makes you that company — without paying HireAHelper for the lead.</p>
+        <ul class="hero-checks">
+          <li>Rank for "moving company near me" — free lead, full margin</li>
+          <li>Display licensing, insurance, truck fleet — earn instant trust</li>
+          <li>Online quote calculator brings qualified leads</li>
+          <li>Corporate relocations require a real website</li>
+        </ul>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Get a Free Moving Quote</a>
+          <a href="#services" class="btn-ghost">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="banner-placeholder">
+          <div class="bp-icon">🖼</div>
+          <strong>AI-Generated Banner Image</strong>
+          <small>800 × 500 · Professional moving crew with trucks</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem" id="why-us">
+    <div class="section-inner">
+      <div class="section-label">The Lead Broker Problem</div>
+      <div class="problem-grid">
+        <div class="problem-copy">
+          <h2>HireAHelper Sells Your Leads — Then Charges You For Them</h2>
+          <p>Lead aggregators collect the customer's contact info, then sell that same lead to 3–5 movers simultaneously. You're competing on price before you've had a single conversation.</p>
+          <p>When you rank on Google directly, you're the only mover that customer sees. They call you, you quote them, and you keep 100% of the job value.</p>
+          <div class="platform-fees">
+            <div class="fee-item">
+              <span class="platform">HireAHelper</span>
+              <span class="fee-pct">10–15% per booking</span>
+            </div>
+            <div class="fee-item">
+              <span class="platform">Moving.com Leads</span>
+              <span class="fee-pct">$25–75 per shared lead</span>
+            </div>
+            <div class="fee-item">
+              <span class="platform">uShip</span>
+              <span class="fee-pct">15–17.5% per job</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="vs-arrow">
+            <div class="vs-line"></div>
+            <div class="vs-text">VS YOUR OWN SITE</div>
+            <div class="vs-line"></div>
+          </div>
+          <div class="your-site">
+            <h3>Atlas Moving Group Website</h3>
+            <span class="keep">You keep 100%</span>
+            <p>Customers find you first on Google. They see your trucks, credentials, and reviews. They call you — not three other movers. Every dollar is yours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Full-Service Moving Solutions</h2>
+      <p class="section-sub">From apartment moves to cross-country relocations and corporate transfers, Atlas Moving Group handles every detail.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏘</div>
+          <h3>Local Moving</h3>
+          <p>Efficient, careful moving within the metro area. Hourly or flat-rate pricing, fully insured crew, and no hidden charges on delivery day.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🗺</div>
+          <h3>Long-Distance Moving</h3>
+          <p>State-to-state and cross-country relocations with GPS-tracked trucks, dedicated coordinators, and guaranteed delivery windows.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Packing &amp; Unpacking</h3>
+          <p>Full packing service using professional-grade materials. We wrap, box, label, and reassemble — you just walk in and live.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎹</div>
+          <h3>Piano &amp; Specialty Items</h3>
+          <p>Upright and grand pianos, safes, antiques, and oversized art — handled by trained specialists with the right equipment every time.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏬</div>
+          <h3>Storage Solutions</h3>
+          <p>Climate-controlled, secure storage for short or long-term needs. Flexible month-to-month plans during transitions between homes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Corporate Relocation</h3>
+          <p>Coordinated office moves and employee relocations for businesses. We work within tight schedules to minimize downtime and disruption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="section-inner">
+      <div class="section-label">The Numbers That Matter</div>
+      <h2 class="section-title">Why a Website Wins More Jobs</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num">74%</span>
+          <div class="stat-label">of people research a moving company online before making a single phone call</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">$120–180</span>
+          <div class="stat-label">in platform fees on a $1,200 average move — money back in your pocket with a direct website</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">60%</span>
+          <div class="stat-label">more long-distance jobs won by companies with a professional website vs. aggregator profiles</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">100%</span>
+          <div class="stat-label">of corporate relocation managers require a company website before approving a mover vendor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="section-inner">
+      <div class="section-label">Client Reviews</div>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"We moved from Austin to Denver with a toddler and two dogs. Atlas Moving Group handled everything — packing, loading, tracking, and delivery in four days. No damage, no drama. Worth every penny."</p>
+          <div class="testi-author">Marcus T.</div>
+          <div class="testi-role">Residential Move, Austin → Denver</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"We relocated our 45-person office over a long weekend. Atlas coordinated every phase and we were fully operational by Monday morning. Their website showed their fleet and licensing — that's why I called them first."</p>
+          <div class="testi-author">Priya S.</div>
+          <div class="testi-role">Operations Director, Houston TX</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"They moved my baby grand piano without a scratch. The crew had specialized equipment and clearly knew what they were doing. I've already recommended Atlas to three neighbors."</p>
+          <div class="testi-author">Claudia R.</div>
+          <div class="testi-role">Homeowner, San Antonio TX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Get Your Quote</div>
+          <h2>Free Moving Estimate in 24 Hours</h2>
+          <p>Tell us your move details and we'll send a transparent, itemized estimate. No surprise fees, no hidden charges — just an honest price for professional service.</p>
+          <div class="contact-items">
+            <div class="contact-item"><span class="ci-icon">📞</span> (713) 555-0247</div>
+            <div class="contact-item"><span class="ci-icon">✉️</span> quotes@atlasmovinggroup.com</div>
+            <div class="contact-item"><span class="ci-icon">📍</span> Serving Texas &amp; Nationwide</div>
+            <div class="contact-item"><span class="ci-icon">🕐</span> Mon–Sat: 7am – 8pm</div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+          </div>
+          <input type="email" placeholder="Email Address" required>
+          <input type="tel" placeholder="Phone Number">
+          <div class="form-row">
+            <input type="text" placeholder="Moving From (City, State)">
+            <input type="text" placeholder="Moving To (City, State)">
+          </div>
+          <select>
+            <option value="" disabled selected>Select a Service</option>
+            <option>Local Moving</option>
+            <option>Long-Distance Moving</option>
+            <option>Packing &amp; Unpacking</option>
+            <option>Piano &amp; Specialty Items</option>
+            <option>Storage Solutions</option>
+            <option>Corporate Relocation</option>
+          </select>
+          <textarea placeholder="Additional details (home size, move date, special items)..."></textarea>
+          <button type="submit">Request My Free Quote →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fb-name">Atlas Moving Group</div>
+          <p>Licensed, insured, and trusted movers serving Texas and beyond. USDOT registered. Full-service local and long-distance moves.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Atlas Moving Group. All rights reserved.</p>
+        <div class="bilingual-note">Website also available in Spanish · También disponible en Español</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#contact" class="mobile-sticky-cta">Get a Free Moving Quote →</a>
+
+  <div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+    <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <span style="color:#c8ddd2;font-size:12px;">✓ Capture high-value moves first · Captura mudanzas de alto valor primero</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ Clients find your credentials · Encuentran tus credenciales primero</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ "moving company near me" · "empresa de mudanzas cerca de mí"</span>
+    </div>
+    <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+    <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+  </div>
+
+<!-- Copy Protection -->
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.key==='F12'||(e.ctrlKey&&['u','s','a'].includes(e.key.toLowerCase()))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault();
+});
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
+<style>body,*{-webkit-user-select:none!important;user-select:none!important;}</style>
+</body>
+</html>
+

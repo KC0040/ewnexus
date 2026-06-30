@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Smiles Dental — Modern Dental Care</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #061624;
+      --accent: #4FC3F7;
+      --accent-light: #81D4FA;
+      --accent-dark: #0288D1;
+      --text: #E1F5FE;
+      --text-muted: #81D4FA;
+      --card-bg: #0A2236;
+      --card-border: #133350;
+      --white: #FFFFFF;
+      --nav-h: 68px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 100px;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(6,22,36,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; z-index: 1000;
+    }
+    .nav-logo { font-weight: 900; font-size: 1.25rem; color: var(--accent); letter-spacing: -.02em; }
+    .nav-logo span { color: var(--white); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: #001f36; font-weight: 700; font-size: .875rem; padding: 9px 20px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: background .2s; }
+    .nav-cta:hover { background: var(--accent-light); }
+    .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+    .hero {
+      min-height: 90vh; display: flex; align-items: center;
+      padding: calc(var(--nav-h) + 40px) 5% 60px;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #061624 0%, #081e30 60%, #040e1a 100%);
+    }
+    .hero::before { content: ''; position: absolute; top: -120px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(79,195,247,.14) 0%, transparent 70%); border-radius: 50%; }
+    .hero::after { content: ''; position: absolute; bottom: -80px; left: 20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(79,195,247,.07) 0%, transparent 70%); border-radius: 50%; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero-badge { display: inline-block; background: rgba(79,195,247,.15); border: 1px solid rgba(79,195,247,.4); color: var(--accent); font-size: .8rem; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: .06em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; color: var(--white); margin-bottom: 20px; letter-spacing: -.03em; }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 28px; max-width: 480px; }
+    .hero-checks { list-style: none; margin-bottom: 36px; display: flex; flex-direction: column; gap: 10px; }
+    .hero-checks li { display: flex; align-items: flex-start; gap: 10px; font-size: .92rem; color: var(--text-muted); }
+    .hero-checks li::before { content: '✓'; color: var(--accent); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: #001f36; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: background .2s, transform .15s; }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+    .btn-ghost { border: 2px solid var(--card-border); color: var(--text-muted); font-weight: 600; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: border-color .2s, color .2s; }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-visual { display: flex; align-items: center; justify-content: center; }
+    .banner-placeholder { width: 100%; max-width: 500px; height: 340px; border: 2.5px dashed rgba(79,195,247,.5); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: rgba(79,195,247,.6); font-size: .85rem; font-weight: 600; background: rgba(79,195,247,.04); letter-spacing: .04em; text-align: center; padding: 20px; }
+    .banner-placeholder .bp-icon { font-size: 2.5rem; opacity: .5; }
+    .banner-placeholder small { font-size: .75rem; opacity: .6; font-weight: 400; }
+
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing: -.03em; }
+    .section-sub { font-size: 1rem; color: var(--text-muted); max-width: 580px; margin-bottom: 48px; }
+
+    .discovery { background: #040e18; }
+    .discovery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .discovery-copy h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing:-.03em; }
+    .discovery-copy p { color: var(--text-muted); margin-bottom: 16px; font-size:.97rem; }
+    .patient-journey { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .patient-journey::before { content: ''; position: absolute; left: 20px; top: 28px; bottom: 28px; width: 2px; background: var(--card-border); }
+    .journey-step { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; position: relative; }
+    .journey-num { width: 40px; height: 40px; background: var(--card-bg); border: 2px solid var(--card-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--accent); font-size: .9rem; flex-shrink: 0; position: relative; z-index: 1; }
+    .journey-step.active .journey-num { background: var(--accent); color: #001f36; border-color: var(--accent); }
+    .journey-content h4 { font-weight: 700; color: var(--white); font-size:.95rem; margin-bottom: 4px; }
+    .journey-content p { font-size: .84rem; color: var(--text-muted); margin: 0; }
+    .value-box { background: linear-gradient(135deg, rgba(79,195,247,.12), rgba(79,195,247,.05)); border: 1.5px solid var(--accent); border-radius: 12px; padding: 28px; }
+    .value-box h3 { color: var(--accent); font-weight: 800; margin-bottom: 16px; font-size: 1.1rem; }
+    .value-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .value-item:last-child { margin-bottom: 0; }
+    .vi-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .value-item h4 { font-weight: 700; color: var(--white); font-size:.9rem; margin-bottom: 3px; }
+    .value-item p { font-size: .82rem; color: var(--text-muted); margin: 0; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px 24px; transition: border-color .25s, transform .2s; }
+    .service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .service-icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .service-card p { font-size: .88rem; color: var(--text-muted); }
+    .service-card .sc-tag { display: inline-block; background: rgba(79,195,247,.1); border: 1px solid rgba(79,195,247,.3); color: var(--accent); font-size: .72rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; margin-top: 10px; letter-spacing: .04em; }
+
+    .stats { background: #040e18; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 32px 20px; text-align: center; }
+    .stat-num { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: -.04em; }
+    .stat-label { font-size: .85rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* GALLERY */
+    .gallery { background: #040e18; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .gallery-item { border-radius: 12px; overflow: hidden; position: relative; }
+    .gallery-before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 12px; overflow: hidden; }
+    .ga-side { aspect-ratio: 1; position: relative; display: flex; align-items: flex-end; }
+    .ga-side:nth-child(1) { background: linear-gradient(135deg, #1a2a3a, #2a3a4a); }
+    .ga-side:nth-child(2) { background: linear-gradient(135deg, #0a2a1a, #1a4a2a); }
+    .ga-label { background: rgba(0,0,0,.7); padding: 8px 10px; font-size: .75rem; font-weight: 700; color: var(--text-muted); width: 100%; }
+
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px 24px; }
+    .testi-stars { color: #FFC107; font-size: 1rem; margin-bottom: 14px; }
+    .testi-text { font-size: .92rem; color: var(--text-muted); margin-bottom: 20px; font-style: italic; line-height: 1.6; }
+    .testi-author { font-weight: 700; color: var(--white); font-size: .9rem; }
+    .testi-role { font-size: .8rem; color: var(--accent); margin-top: 2px; }
+
+    .contact { background: #040e18; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .contact-info h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing:-.03em; }
+    .contact-info p { color: var(--text-muted); margin-bottom: 28px; }
+    .contact-items { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item { display: flex; align-items: center; gap: 14px; color: var(--text-muted); font-size: .95rem; }
+    .contact-item .ci-icon { font-size: 1.25rem; flex-shrink: 0; }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact-form input, .contact-form select, .contact-form textarea { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 13px 16px; color: var(--text); font-family: inherit; font-size: .95rem; transition: border-color .2s; outline: none; width: 100%; }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--accent); }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .contact-form button { background: var(--accent); color: #001f36; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: background .2s; }
+    .contact-form button:hover { background: var(--accent-light); }
+    .ins-note { font-size: .82rem; color: var(--text-muted); padding: 12px 16px; background: var(--card-bg); border-radius: 8px; border: 1px solid var(--card-border); }
+
+    footer { background: #030a10; border-top: 1px solid var(--card-border); padding: 40px 5%; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
+    .footer-brand .fb-name { font-weight: 900; font-size: 1.1rem; color: var(--accent); }
+    .footer-brand p { color: var(--text-muted); font-size: .85rem; margin-top: 6px; max-width: 280px; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom { border-top: 1px solid var(--card-border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: .8rem; color: var(--text-muted); }
+    .bilingual-note { font-size: .8rem; color: var(--accent); font-weight: 600; }
+
+    .mobile-sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--accent); color: #001f36; font-weight: 800; font-size: 1rem; padding: 16px; text-align: center; text-decoration: none; z-index: 900; border-top: 3px solid var(--accent-dark); }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-visual { order: -1; }
+      .banner-placeholder { max-width: 100%; height: 220px; }
+      .discovery-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .mobile-sticky-cta { display: block; }
+    }
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Bright Smiles <span>Dental</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">New Patients</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book a Consultation</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">Modern Family &amp; Cosmetic Dentistry</div>
+        <h1>Patients Google Before They Call. <em>Be the Practice They Trust.</em></h1>
+        <p>Your new patients — especially cosmetic and implant cases — start their search online. Without a website showcasing your expertise, those high-value cases go to competitors.</p>
+        <ul class="hero-checks">
+          <li>Cosmetic patients research extensively — your website is your credential</li>
+          <li>New patient intake forms online reduce front-desk workload</li>
+          <li>Showcase implants, Invisalign, and veneers with real case photos</li>
+          <li>Insurance and financing shown upfront — no phone tag required</li>
+        </ul>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Request a Consultation</a>
+          <a href="#services" class="btn-ghost">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="banner-placeholder">
+          <div class="bp-icon">🖼</div>
+          <strong>AI-Generated Banner Image</strong>
+          <small>800 × 500 · Modern dental office, confident patient smiling</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="discovery" id="why-us">
+    <div class="section-inner">
+      <div class="section-label">Why Clients Start With Google</div>
+      <div class="discovery-grid">
+        <div class="discovery-copy">
+          <h2>New Patients Choose Before They Ever Dial</h2>
+          <p>The modern patient journey starts with a search engine, not a phone book. Before a new patient books an appointment — especially for cosmetic or restorative work — they've already evaluated 2–4 dental practices online.</p>
+          <p>Without a professional website, you're not in that consideration set. With one, you're the practice they trust before they've met you.</p>
+          <div class="patient-journey">
+            <div class="journey-step">
+              <div class="journey-num">1</div>
+              <div class="journey-content">
+                <h4>Search</h4>
+                <p>"Dentist near me" or "Invisalign dentist [city]" — Google shows the first page</p>
+              </div>
+            </div>
+            <div class="journey-step active">
+              <div class="journey-num">2</div>
+              <div class="journey-content">
+                <h4>Research</h4>
+                <p>They visit 2–3 dental websites, read about the team, look at before/after photos</p>
+              </div>
+            </div>
+            <div class="journey-step">
+              <div class="journey-num">3</div>
+              <div class="journey-content">
+                <h4>Choose</h4>
+                <p>The practice with the most professional, informative website gets the call</p>
+              </div>
+            </div>
+            <div class="journey-step">
+              <div class="journey-num">4</div>
+              <div class="journey-content">
+                <h4>Book</h4>
+                <p>Online intake form submitted — patient data collected before the first visit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="value-box">
+            <h3>What Your Website Does For You</h3>
+            <div class="value-item">
+              <div class="vi-icon">🦷</div>
+              <div>
+                <h4>Attract High-Value Cases</h4>
+                <p>Cosmetic patients spend 4× more on average. Education pages on implants and veneers pre-qualify them before they call.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="vi-icon">📋</div>
+              <div>
+                <h4>Online Intake Forms</h4>
+                <p>New patient forms submitted online save 25 minutes per appointment and reduce front-desk phone volume by 30%+.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="vi-icon">💳</div>
+              <div>
+                <h4>Financing Made Clear</h4>
+                <p>Show insurance accepted and financing options upfront — eliminates the single biggest objection before it starts.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="vi-icon">⭐</div>
+              <div>
+                <h4>Reviews &amp; Social Proof</h4>
+                <p>Patient testimonials and before/after galleries on your site convert 3× better than a Yelp listing alone.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Comprehensive Dental Care</h2>
+      <p class="section-sub">From routine cleanings to full-smile transformations, Bright Smiles Dental delivers modern dentistry in a comfortable, state-of-the-art environment.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔬</div>
+          <h3>Preventive Cleaning</h3>
+          <p>Professional cleanings, oral exams, and digital X-rays to keep your smile healthy and catch problems early — when they're easiest to treat.</p>
+          <span class="sc-tag">Most Popular</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Teeth Whitening</h3>
+          <p>In-office Zoom whitening delivers results up to 8 shades brighter in a single visit. Take-home trays also available for gradual brightening.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📐</div>
+          <h3>Invisalign</h3>
+          <p>Clear aligner therapy for straighter teeth without metal wires. 3D digital scanning, custom treatment plans, and discreet correction that fits your lifestyle.</p>
+          <span class="sc-tag">High Value</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🦷</div>
+          <h3>Dental Implants</h3>
+          <p>Permanent tooth replacement that looks, feels, and functions like a natural tooth. Titanium implant with porcelain crown — built to last a lifetime.</p>
+          <span class="sc-tag">Premium</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💎</div>
+          <h3>Porcelain Veneers</h3>
+          <p>Wafer-thin porcelain shells bonded to the front of teeth to correct color, shape, and spacing. The Hollywood smile — done with precision artistry.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚨</div>
+          <h3>Emergency Dentistry</h3>
+          <p>Same-day appointments for broken teeth, severe toothaches, lost fillings, and dental trauma. We're here when you need us most.</p>
+          <span class="sc-tag">Same Day</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="section-inner">
+      <div class="section-label">Why Dental Websites Win Patients</div>
+      <h2 class="section-title">The Data Behind Your Digital Presence</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num">88%</span>
+          <div class="stat-label">of patients check a dental practice's website before scheduling — especially new patients</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">4×</span>
+          <div class="stat-label">higher average spend from cosmetic patients who find you through your website education pages</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">+40%</span>
+          <div class="stat-label">increase in implant consultations at practices with detailed implant education pages on their site</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">25 min</span>
+          <div class="stat-label">saved per new patient when intake forms are completed online before the first appointment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <div class="section-label">Patient Transformations</div>
+      <h2 class="section-title">Before &amp; After Gallery</h2>
+      <p class="section-sub">Real results that build confidence — and convert consultations into committed patients.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-before-after">
+            <div class="ga-side"><div class="ga-label">Before · Whitening</div></div>
+            <div class="ga-side"><div class="ga-label">After · Whitening</div></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-before-after">
+            <div class="ga-side"><div class="ga-label">Before · Veneers</div></div>
+            <div class="ga-side"><div class="ga-label">After · Veneers</div></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-before-after">
+            <div class="ga-side"><div class="ga-label">Before · Implant</div></div>
+            <div class="ga-side"><div class="ga-label">After · Implant</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="section-inner">
+      <div class="section-label">Patient Reviews</div>
+      <h2 class="section-title">What Our Patients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I'd avoided the dentist for years because of anxiety. Dr. Ramirez and the team at Bright Smiles made me feel completely at ease from the first visit. I've had a full cleaning, whitening, and I'm now six months into Invisalign. Life-changing."</p>
+          <div class="testi-author">Jessica L.</div>
+          <div class="testi-role">Patient, Miami FL</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I found Bright Smiles by Googling implant dentists in my area. Their website had a full explanation of the implant process, pricing, and financing options. That transparency is why I chose them — and the results exceeded my expectations."</p>
+          <div class="testi-author">Thomas B.</div>
+          <div class="testi-role">Implant Patient, Fort Lauderdale FL</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"As a family, we have four kids. Being able to book appointments online and fill out intake forms in advance saves us so much time. The staff is incredible with children — our 7-year-old actually looks forward to her cleanings now."</p>
+          <div class="testi-author">Nicole &amp; Carlos M.</div>
+          <div class="testi-role">Family Patients, Coral Gables FL</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">New Patients Welcome</div>
+          <h2>Book Your First Appointment</h2>
+          <p>New patients receive a comprehensive exam, full set of digital X-rays, and a personalized treatment plan — all in one comfortable visit.</p>
+          <div class="contact-items">
+            <div class="contact-item"><span class="ci-icon">📞</span> (305) 555-0214</div>
+            <div class="contact-item"><span class="ci-icon">✉️</span> hello@brightsmilesdental.com</div>
+            <div class="contact-item"><span class="ci-icon">📍</span> Miami, FL — Free Parking Available</div>
+            <div class="contact-item"><span class="ci-icon">🕐</span> Mon–Fri: 8am – 6pm · Sat: 9am – 2pm</div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+          </div>
+          <div class="form-row">
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number">
+          </div>
+          <select>
+            <option value="" disabled selected>Select a Service</option>
+            <option>Preventive Cleaning &amp; Exam</option>
+            <option>Teeth Whitening</option>
+            <option>Invisalign Consultation</option>
+            <option>Dental Implants</option>
+            <option>Porcelain Veneers</option>
+            <option>Emergency Appointment</option>
+          </select>
+          <select>
+            <option value="" disabled selected>Insurance (optional)</option>
+            <option>Delta Dental</option>
+            <option>Cigna</option>
+            <option>Aetna</option>
+            <option>MetLife</option>
+            <option>BlueCross BlueShield</option>
+            <option>No Insurance / Self-Pay</option>
+            <option>Other</option>
+          </select>
+          <textarea placeholder="Anything we should know before your appointment?"></textarea>
+          <div class="ins-note">We accept most major insurance plans and offer CareCredit financing with 0% interest periods. Call us if you have questions about coverage.</div>
+          <button type="submit">Request My Appointment →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fb-name">Bright Smiles Dental</div>
+          <p>Modern family and cosmetic dentistry. Accepting new patients, most insurance plans, and CareCredit financing.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Bright Smiles Dental. All rights reserved.</p>
+        <div class="bilingual-note">Website also available in Spanish · También disponible en Español</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#contact" class="mobile-sticky-cta">Book a Consultation Today →</a>
+
+  <div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+    <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <span style="color:#c8ddd2;font-size:12px;">✓ Self-pay patients find you online · Pacientes privados te encuentran</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ Build trust before the visit · Genera confianza antes de la visita</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ "dentist near me" · "dentista cerca de mí"</span>
+    </div>
+    <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+    <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+  </div>
+
+<!-- Copy Protection -->
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.key==='F12'||(e.ctrlKey&&['u','s','a'].includes(e.key.toLowerCase()))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault();
+});
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
+<style>body,*{-webkit-user-select:none!important;user-select:none!important;}</style>
+</body>
+</html>
+

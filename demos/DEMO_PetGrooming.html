@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawfect Grooming Co. — Professional Pet Grooming &amp; Boarding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0A1520;
+      --accent: #66BB6A;
+      --accent-light: #A5D6A7;
+      --accent-dark: #388E3C;
+      --text: #E3F2FD;
+      --text-muted: #90CAF9;
+      --card-bg: #0F1E2E;
+      --card-border: #1A3448;
+      --white: #FFFFFF;
+      --nav-h: 68px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 100px;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(10,21,32,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; z-index: 1000;
+    }
+    .nav-logo { font-weight: 900; font-size: 1.25rem; color: var(--accent); letter-spacing: -.02em; }
+    .nav-logo span { color: var(--white); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: #001a06; font-weight: 700; font-size: .875rem; padding: 9px 20px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: background .2s; }
+    .nav-cta:hover { background: var(--accent-light); }
+    .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+    .hero {
+      min-height: 90vh; display: flex; align-items: center;
+      padding: calc(var(--nav-h) + 40px) 5% 60px;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #0A1520 0%, #0d1c2e 60%, #070f1a 100%);
+    }
+    .hero::before { content: ''; position: absolute; top: -120px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(102,187,106,.15) 0%, transparent 70%); border-radius: 50%; }
+    .hero::after { content: ''; position: absolute; bottom: -80px; left: 20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(102,187,106,.08) 0%, transparent 70%); border-radius: 50%; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero-badge { display: inline-block; background: rgba(102,187,106,.15); border: 1px solid rgba(102,187,106,.4); color: var(--accent); font-size: .8rem; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: .06em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; color: var(--white); margin-bottom: 20px; letter-spacing: -.03em; }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 28px; max-width: 480px; }
+    .hero-checks { list-style: none; margin-bottom: 36px; display: flex; flex-direction: column; gap: 10px; }
+    .hero-checks li { display: flex; align-items: flex-start; gap: 10px; font-size: .92rem; color: var(--text-muted); }
+    .hero-checks li::before { content: '✓'; color: var(--accent); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: #001a06; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: background .2s, transform .15s; }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+    .btn-ghost { border: 2px solid var(--card-border); color: var(--text-muted); font-weight: 600; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: border-color .2s, color .2s; }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-visual { display: flex; align-items: center; justify-content: center; }
+    .banner-placeholder { width: 100%; max-width: 500px; height: 340px; border: 2.5px dashed rgba(102,187,106,.5); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: rgba(102,187,106,.6); font-size: .85rem; font-weight: 600; background: rgba(102,187,106,.04); letter-spacing: .04em; text-align: center; padding: 20px; }
+    .banner-placeholder .bp-icon { font-size: 2.5rem; opacity: .5; }
+    .banner-placeholder small { font-size: .75rem; opacity: .6; font-weight: 400; }
+
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing: -.03em; }
+    .section-sub { font-size: 1rem; color: var(--text-muted); max-width: 580px; margin-bottom: 48px; }
+
+    .discovery { background: #060f18; }
+    .discovery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .discovery-copy h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing:-.03em; }
+    .discovery-copy p { color: var(--text-muted); margin-bottom: 16px; font-size:.97rem; }
+    .trust-pillars { display: flex; flex-direction: column; gap: 14px; }
+    .trust-item { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px; }
+    .trust-item .ti-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .trust-item h4 { font-weight: 700; color: var(--white); font-size:.95rem; margin-bottom: 4px; }
+    .trust-item p { font-size: .84rem; color: var(--text-muted); margin: 0; }
+    .google-box { background: linear-gradient(135deg, rgba(102,187,106,.12), rgba(102,187,106,.05)); border: 1.5px solid var(--accent); border-radius: 12px; padding: 28px; }
+    .google-box h3 { color: var(--accent); font-weight: 800; margin-bottom: 12px; font-size: 1.1rem; }
+    .google-box p { color: var(--text-muted); font-size: .92rem; margin-bottom: 16px; }
+    .google-box .search-bar { background: rgba(255,255,255,.06); border: 1px solid var(--card-border); border-radius: 8px; padding: 12px 16px; font-size: .9rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+    .google-box .search-result { background: var(--card-bg); border-radius: 8px; padding: 14px 16px; margin-top: 10px; border-left: 3px solid var(--accent); }
+    .google-box .sr-title { color: #4fc3f7; font-size: .9rem; font-weight: 600; margin-bottom: 3px; }
+    .google-box .sr-url { color: var(--accent); font-size: .78rem; margin-bottom: 4px; }
+    .google-box .sr-desc { color: var(--text-muted); font-size: .8rem; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px 24px; transition: border-color .25s, transform .2s; }
+    .service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .service-icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .service-card p { font-size: .88rem; color: var(--text-muted); }
+
+    .stats { background: #060f18; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 32px 20px; text-align: center; }
+    .stat-num { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: -.04em; }
+    .stat-label { font-size: .85rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* GALLERY */
+    .gallery { background: #060f18; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .gallery-item { border-radius: 10px; aspect-ratio: 1; overflow: hidden; position: relative; cursor: pointer; }
+    .gallery-item:nth-child(1) { background: linear-gradient(135deg, #1a3a2a, #2d5e3c); }
+    .gallery-item:nth-child(2) { background: linear-gradient(135deg, #0d2e3f, #1a5065); }
+    .gallery-item:nth-child(3) { background: linear-gradient(135deg, #2a1a3a, #4a2d6a); }
+    .gallery-item:nth-child(4) { background: linear-gradient(135deg, #3a2a0d, #6a4a1a); }
+    .gallery-item:nth-child(5) { background: linear-gradient(135deg, #0d3a2a, #1a654a); }
+    .gallery-item:nth-child(6) { background: linear-gradient(135deg, #1a0d2a, #3a1a55); }
+    .gallery-item:nth-child(7) { background: linear-gradient(135deg, #2a2a0d, #55551a); }
+    .gallery-item:nth-child(8) { background: linear-gradient(135deg, #0d1a3a, #1a3265); }
+    .gallery-label { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.65); padding: 10px 12px; font-size: .78rem; font-weight: 600; color: var(--text-muted); }
+
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px 24px; }
+    .testi-stars { color: #FFC107; font-size: 1rem; margin-bottom: 14px; }
+    .testi-text { font-size: .92rem; color: var(--text-muted); margin-bottom: 20px; font-style: italic; line-height: 1.6; }
+    .testi-author { font-weight: 700; color: var(--white); font-size: .9rem; }
+    .testi-role { font-size: .8rem; color: var(--accent); margin-top: 2px; }
+
+    .contact { background: #060f18; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .contact-info h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing:-.03em; }
+    .contact-info p { color: var(--text-muted); margin-bottom: 28px; }
+    .contact-items { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item { display: flex; align-items: center; gap: 14px; color: var(--text-muted); font-size: .95rem; }
+    .contact-item .ci-icon { font-size: 1.25rem; flex-shrink: 0; }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact-form input, .contact-form select, .contact-form textarea { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 13px 16px; color: var(--text); font-family: inherit; font-size: .95rem; transition: border-color .2s; outline: none; width: 100%; }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--accent); }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .contact-form button { background: var(--accent); color: #001a06; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: background .2s; }
+    .contact-form button:hover { background: var(--accent-light); }
+
+    footer { background: #040b11; border-top: 1px solid var(--card-border); padding: 40px 5%; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
+    .footer-brand .fb-name { font-weight: 900; font-size: 1.1rem; color: var(--accent); }
+    .footer-brand p { color: var(--text-muted); font-size: .85rem; margin-top: 6px; max-width: 280px; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom { border-top: 1px solid var(--card-border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: .8rem; color: var(--text-muted); }
+    .bilingual-note { font-size: .8rem; color: var(--accent); font-weight: 600; }
+
+    .mobile-sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--accent); color: #001a06; font-weight: 800; font-size: 1rem; padding: 16px; text-align: center; text-decoration: none; z-index: 900; border-top: 3px solid var(--accent-dark); }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-visual { order: -1; }
+      .banner-placeholder { max-width: 100%; height: 220px; }
+      .discovery-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .mobile-sticky-cta { display: block; }
+    }
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Pawfect <span>Grooming Co.</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Book Now</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book an Appointment</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">Certified Pet Grooming &amp; Boarding</div>
+        <h1>Pet Parents Do Their Research. <em>Be What They Find.</em></h1>
+        <p>Pet owners are protective — they research before they trust anyone with their dog or cat. A website with your portfolio, certifications, and reviews builds that trust before they ever call.</p>
+        <ul class="hero-checks">
+          <li>Grooming portfolio — before/after photos drive booking decisions</li>
+          <li>Online appointment scheduling, available 24/7</li>
+          <li>Monthly grooming packages, birthday specials, referral programs</li>
+          <li>Boarding availability — pet parents plan weeks ahead</li>
+        </ul>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Book an Appointment</a>
+          <a href="#services" class="btn-ghost">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="banner-placeholder">
+          <div class="bp-icon">🖼</div>
+          <strong>AI-Generated Banner Image</strong>
+          <small>800 × 500 · Happy dog after a professional grooming session</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="discovery" id="why-us">
+    <div class="section-inner">
+      <div class="section-label">Why Clients Start With Google</div>
+      <div class="discovery-grid">
+        <div class="discovery-copy">
+          <h2>Pet Owners Research Before They Trust Anyone</h2>
+          <p>Unlike most services, pet owners treat their animals like family. Before booking a groomer or boarding facility, they spend real time online — reading reviews, checking photos, and looking for signs of professionalism.</p>
+          <p>Without a website, you're invisible in that research phase. With one, you're the groomer who shows up, looks professional, and has the before/after photos that seal the deal.</p>
+          <div class="trust-pillars">
+            <div class="trust-item">
+              <div class="ti-icon">📸</div>
+              <div>
+                <h4>Portfolio Photos</h4>
+                <p>Before/after grooming photos are the single biggest driver of new bookings. Pet parents want to see your work before they call.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="ti-icon">🎓</div>
+              <div>
+                <h4>Certifications &amp; Safety</h4>
+                <p>Display your grooming certifications and pet first-aid training. It signals professionalism that casual groomers can't match.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="ti-icon">📅</div>
+              <div>
+                <h4>Online Scheduling</h4>
+                <p>Clients book after hours. An online calendar fills your schedule even while you're asleep or mid-groom.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="google-box">
+            <h3>What Pet Parents Google</h3>
+            <p>When someone moves to a new neighborhood with a dog, the first thing they search is:</p>
+            <div class="search-bar">🔍 &nbsp;pet groomer near me</div>
+            <div class="search-result">
+              <div class="sr-title">Pawfect Grooming Co. — Certified Pet Grooming</div>
+              <div class="sr-url">www.pawfectgroomingco.com</div>
+              <div class="sr-desc">Full-service grooming, boarding &amp; daycare. View our portfolio. Book online — same-week appointments available.</div>
+            </div>
+            <p style="margin-top:16px;font-size:.85rem;color:var(--text-muted);">That listing is why the phone rings before you've said a word. Your website makes this happen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Professional Pet Care Services</h2>
+      <p class="section-sub">From full grooming sessions to relaxing boarding stays, Pawfect Grooming Co. treats every pet like our own.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">✂️</div>
+          <h3>Full Groom</h3>
+          <p>Breed-specific haircut, bath, blow-dry, nail trim, ear cleaning, and finishing touches. Your pup leaves looking — and smelling — incredible.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛁</div>
+          <h3>Bath &amp; Brush</h3>
+          <p>Thorough shampoo and conditioning with a professional blow-out and full brush. Perfect for dogs that just need a refresh between full grooms.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💅</div>
+          <h3>Nail Trim</h3>
+          <p>Quick, stress-free nail trimming and optional grinding for smooth edges. Available as a standalone add-on or included with any service.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👂</div>
+          <h3>Ear Cleaning</h3>
+          <p>Gentle ear inspection and cleaning to prevent infections. Essential for breeds prone to moisture buildup — floppy ears especially.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🦷</div>
+          <h3>Teeth Brushing</h3>
+          <p>Pet-safe enzymatic toothpaste and gentle brushing to support oral health. A small habit that adds years to your pet's life.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Boarding &amp; Daycare</h3>
+          <p>Safe, supervised boarding in a calm, home-like environment. Daily updates and photos sent to pet parents. Dogs and cats welcome.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="section-inner">
+      <div class="section-label">Industry Insights</div>
+      <h2 class="section-title">Why Pet Groomers Need a Website</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num">82%</span>
+          <div class="stat-label">of pet owners research groomers online before booking their first appointment</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">$1,200+</span>
+          <div class="stat-label">annual value of a single monthly grooming client — your website builds a book of them</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">3×</span>
+          <div class="stat-label">higher conversion rate for groomers who display portfolio photos vs. social-only presence</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">5×</span>
+          <div class="stat-label">spike in boarding searches during school breaks — your website captures parents planning ahead</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Grooming Portfolio</h2>
+      <p class="section-sub">Before and after — the photos that turn browsers into bookings.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item"><div class="gallery-label">Golden Retriever — Full Groom</div></div>
+        <div class="gallery-item"><div class="gallery-label">Poodle — Breed Cut</div></div>
+        <div class="gallery-item"><div class="gallery-label">Shih Tzu — Bath &amp; Style</div></div>
+        <div class="gallery-item"><div class="gallery-label">Border Collie — Full Groom</div></div>
+        <div class="gallery-item"><div class="gallery-label">Dachshund — Bath &amp; Trim</div></div>
+        <div class="gallery-item"><div class="gallery-label">French Bulldog — Spa Day</div></div>
+        <div class="gallery-item"><div class="gallery-label">Cat — Deshedding Treatment</div></div>
+        <div class="gallery-item"><div class="gallery-label">Labrador — Summer Cut</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="section-inner">
+      <div class="section-label">Client Reviews</div>
+      <h2 class="section-title">What Pet Parents Say</h2>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I was nervous leaving my rescue dog with anyone. But the Pawfect team's website showed their certifications and so many happy dogs — I knew they were the right choice. Bailey comes home looking amazing every single time."</p>
+          <div class="testi-author">Ashley M.</div>
+          <div class="testi-role">Dog Mom, Miami FL</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"We use Pawfect for boarding every time we travel. They send photo updates, which is exactly what anxious pet parents need. Our golden retriever actually gets excited when he sees the carrier — he knows where he's going."</p>
+          <div class="testi-author">Daniel &amp; Keiko W.</div>
+          <div class="testi-role">Pet Parents, Houston TX</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"My cat despises being handled, but the team here is incredibly patient and skilled. The before/after photos on their website were what convinced me — and the results are just as good in person. Won't go anywhere else."</p>
+          <div class="testi-author">Rachel P.</div>
+          <div class="testi-role">Cat Owner, San Antonio TX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Book Your Appointment</div>
+          <h2>Schedule Today — Same-Week Slots Available</h2>
+          <p>Fill out the form and we'll confirm your appointment within a few hours. New clients get a complimentary nail trim on their first visit.</p>
+          <div class="contact-items">
+            <div class="contact-item"><span class="ci-icon">📞</span> (305) 555-0138</div>
+            <div class="contact-item"><span class="ci-icon">✉️</span> book@pawfectgrooming.com</div>
+            <div class="contact-item"><span class="ci-icon">📍</span> Miami, FL — Mobile grooming available</div>
+            <div class="contact-item"><span class="ci-icon">🕐</span> Mon–Sat: 8am – 6pm</div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Phone Number">
+          </div>
+          <input type="email" placeholder="Email Address" required>
+          <div class="form-row">
+            <input type="text" placeholder="Pet's Name">
+            <input type="text" placeholder="Breed">
+          </div>
+          <select>
+            <option value="" disabled selected>Select a Service</option>
+            <option>Full Groom</option>
+            <option>Bath &amp; Brush</option>
+            <option>Nail Trim</option>
+            <option>Ear Cleaning</option>
+            <option>Teeth Brushing</option>
+            <option>Boarding &amp; Daycare</option>
+          </select>
+          <textarea placeholder="Anything we should know about your pet? (temperament, allergies, preferred dates)"></textarea>
+          <button type="submit">Book My Appointment →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fb-name">Pawfect Grooming Co.</div>
+          <p>Certified pet grooming, boarding, and daycare. Treating every animal with patience, skill, and love since 2018.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Book Now</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Pawfect Grooming Co. All rights reserved.</p>
+        <div class="bilingual-note">Website also available in Spanish · También disponible en Español</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#contact" class="mobile-sticky-cta">Book an Appointment Today →</a>
+
+  <div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+    <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <span style="color:#c8ddd2;font-size:12px;">✓ Pet parents find your work first · Los dueños ven tu trabajo primero</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ Turn clients into loyal regulars · Convierte clientes en habituales</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ "pet groomer near me" · "estilista de mascotas cerca de mí"</span>
+    </div>
+    <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+    <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+  </div>
+
+<!-- Copy Protection -->
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.key==='F12'||(e.ctrlKey&&['u','s','a'].includes(e.key.toLowerCase()))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault();
+});
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
+<style>body,*{-webkit-user-select:none!important;user-select:none!important;}</style>
+</body>
+</html>
+

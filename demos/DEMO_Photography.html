@@ -1,0 +1,624 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luminary Image Productions LLC — Professional Photography Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0D0D0D;
+      --accent: #D4AF37;
+      --accent-light: #E8C96A;
+      --accent-dark: #B8960C;
+      --text: #F5F0E0;
+      --text-muted: #C4B880;
+      --card-bg: #181818;
+      --card-border: #2C2A20;
+      --white: #FFFFFF;
+      --nav-h: 68px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 100px;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(13,13,13,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; z-index: 1000;
+    }
+    .nav-logo { font-weight: 900; font-size: 1.1rem; color: var(--accent); letter-spacing: -.01em; line-height: 1.2; }
+    .nav-logo .logo-sub { font-size: .65rem; color: var(--text-muted); font-weight: 500; letter-spacing: .08em; text-transform: uppercase; display: block; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: #0d0d0d; font-weight: 700; font-size: .875rem; padding: 9px 20px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: background .2s; }
+    .nav-cta:hover { background: var(--accent-light); }
+    .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+    .hero {
+      min-height: 90vh; display: flex; align-items: center;
+      padding: calc(var(--nav-h) + 40px) 5% 60px;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #0D0D0D 0%, #141206 50%, #080808 100%);
+    }
+    .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(212,175,55,.12) 0%, transparent 70%); border-radius: 50%; }
+    .hero::after { content: ''; position: absolute; bottom: -100px; left: 10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(212,175,55,.07) 0%, transparent 70%); border-radius: 50%; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero-badge { display: inline-block; background: rgba(212,175,55,.12); border: 1px solid rgba(212,175,55,.4); color: var(--accent); font-size: .8rem; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: .06em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; color: var(--white); margin-bottom: 20px; letter-spacing: -.03em; }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 28px; max-width: 480px; }
+    .hero-checks { list-style: none; margin-bottom: 36px; display: flex; flex-direction: column; gap: 10px; }
+    .hero-checks li { display: flex; align-items: flex-start; gap: 10px; font-size: .92rem; color: var(--text-muted); }
+    .hero-checks li::before { content: '✓'; color: var(--accent); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: #0d0d0d; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: background .2s, transform .15s; }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+    .btn-ghost { border: 2px solid var(--card-border); color: var(--text-muted); font-weight: 600; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: border-color .2s, color .2s; }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-visual { display: flex; align-items: center; justify-content: center; }
+    .banner-placeholder { width: 100%; max-width: 500px; height: 340px; border: 2.5px dashed rgba(212,175,55,.4); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: rgba(212,175,55,.55); font-size: .85rem; font-weight: 600; background: rgba(212,175,55,.04); letter-spacing: .04em; text-align: center; padding: 20px; }
+    .banner-placeholder .bp-icon { font-size: 2.5rem; opacity: .5; }
+    .banner-placeholder small { font-size: .75rem; opacity: .6; font-weight: 400; }
+
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing: -.03em; }
+    .section-sub { font-size: 1rem; color: var(--text-muted); max-width: 580px; margin-bottom: 48px; }
+
+    /* WHY SECTION */
+    .why { background: #0a0a08; }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .why-copy h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing:-.03em; }
+    .why-copy p { color: var(--text-muted); margin-bottom: 16px; font-size:.97rem; }
+    .client-types { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+    .client-type { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start; }
+    .ct-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .client-type h4 { font-weight: 700; color: var(--white); font-size:.95rem; margin-bottom: 4px; }
+    .client-type p { font-size: .84rem; color: var(--text-muted); margin: 0; }
+    .why-right { display: flex; flex-direction: column; gap: 20px; }
+    .insight-box { background: linear-gradient(135deg, rgba(212,175,55,.1), rgba(212,175,55,.04)); border: 1.5px solid var(--accent); border-radius: 12px; padding: 24px; }
+    .insight-box h3 { color: var(--accent); font-weight: 800; margin-bottom: 12px; font-size: 1rem; }
+    .insight-stat { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; }
+    .insight-stat:last-child { margin-bottom: 0; }
+    .is-num { font-size: 1.6rem; font-weight: 900; color: var(--white); flex-shrink: 0; width: 60px; }
+    .is-text { font-size: .85rem; color: var(--text-muted); }
+
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px 24px; transition: border-color .25s, transform .2s; }
+    .service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .service-icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .service-card p { font-size: .88rem; color: var(--text-muted); }
+
+    /* STATS */
+    .stats { background: #0a0a08; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 32px 20px; text-align: center; }
+    .stat-num { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: -.04em; }
+    .stat-label { font-size: .85rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* TEAM */
+    .team { background: #0a0a08; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .team-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; overflow: hidden; transition: border-color .25s, transform .2s; }
+    .team-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .team-photo { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .team-card:nth-child(1) .team-photo { background: linear-gradient(135deg, #1a1500, #2a2205); }
+    .team-card:nth-child(2) .team-photo { background: linear-gradient(135deg, #0a1520, #162235); }
+    .team-card:nth-child(3) .team-photo { background: linear-gradient(135deg, #150a20, #251535); }
+    .team-info { padding: 24px; }
+    .team-name { font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 4px; }
+    .team-role { font-size: .82rem; color: var(--accent); font-weight: 600; margin-bottom: 10px; letter-spacing: .03em; text-transform: uppercase; }
+    .team-bio { font-size: .87rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* PRICING */
+    .pricing { }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .price-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 32px 28px; position: relative; transition: border-color .25s, transform .2s; }
+    .price-card.featured { border-color: var(--accent); background: linear-gradient(135deg, #181500, #1a1800); }
+    .price-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .price-badge { display: inline-block; background: var(--accent); color: #0d0d0d; font-size: .72rem; font-weight: 800; padding: 4px 12px; border-radius: 12px; margin-bottom: 16px; letter-spacing: .06em; text-transform: uppercase; }
+    .price-name { font-size: 1.2rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .price-amount { font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 900; color: var(--accent); letter-spacing: -.04em; line-height: 1; margin-bottom: 4px; }
+    .price-note { font-size: .8rem; color: var(--text-muted); margin-bottom: 24px; }
+    .price-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .price-features li { font-size: .88rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 10px; }
+    .price-features li::before { content: '✓'; color: var(--accent); font-weight: 800; flex-shrink: 0; }
+    .price-cta { display: block; text-align: center; background: var(--accent); color: #0d0d0d; font-weight: 800; font-size: .95rem; padding: 13px 20px; border-radius: 8px; text-decoration: none; transition: background .2s; }
+    .price-card:not(.featured) .price-cta { background: none; border: 2px solid var(--card-border); color: var(--text-muted); }
+    .price-card:not(.featured) .price-cta:hover { border-color: var(--accent); color: var(--accent); }
+    .price-cta:hover { background: var(--accent-light); }
+
+    /* GALLERY */
+    .gallery { background: #0a0a08; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .gallery-item { border-radius: 10px; aspect-ratio: 3/4; overflow: hidden; position: relative; cursor: pointer; transition: transform .2s; }
+    .gallery-item:hover { transform: scale(1.02); }
+    .gallery-item:nth-child(1) { background: linear-gradient(160deg, #1a1500, #2d2508); }
+    .gallery-item:nth-child(2) { background: linear-gradient(160deg, #0a0a18, #181830); }
+    .gallery-item:nth-child(3) { background: linear-gradient(160deg, #150a05, #30180a); }
+    .gallery-item:nth-child(4) { background: linear-gradient(160deg, #0a1205, #182210); }
+    .gallery-item:nth-child(5) { background: linear-gradient(160deg, #181000, #2a1c00); }
+    .gallery-item:nth-child(6) { background: linear-gradient(160deg, #0d0a20, #1a1540); }
+    .gallery-item:nth-child(7) { background: linear-gradient(160deg, #100005, #200010); }
+    .gallery-item:nth-child(8) { background: linear-gradient(160deg, #050a15, #0a1428); }
+    .gallery-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,.85)); padding: 24px 14px 12px; font-size: .75rem; font-weight: 600; color: var(--text-muted); }
+
+    /* TESTIMONIALS */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px 24px; }
+    .testi-stars { color: #FFC107; font-size: 1rem; margin-bottom: 14px; }
+    .testi-text { font-size: .92rem; color: var(--text-muted); margin-bottom: 20px; font-style: italic; line-height: 1.6; }
+    .testi-author { font-weight: 700; color: var(--white); font-size: .9rem; }
+    .testi-role { font-size: .8rem; color: var(--accent); margin-top: 2px; }
+
+    /* CONTACT */
+    .contact { background: #0a0a08; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .contact-info h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; letter-spacing:-.03em; }
+    .contact-info p { color: var(--text-muted); margin-bottom: 28px; }
+    .contact-items { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item { display: flex; align-items: center; gap: 14px; color: var(--text-muted); font-size: .95rem; }
+    .contact-item .ci-icon { font-size: 1.25rem; flex-shrink: 0; }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact-form input, .contact-form select, .contact-form textarea { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 13px 16px; color: var(--text); font-family: inherit; font-size: .95rem; transition: border-color .2s; outline: none; width: 100%; }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--accent); }
+    .contact-form textarea { resize: vertical; min-height: 120px; }
+    .contact-form button { background: var(--accent); color: #0d0d0d; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: background .2s; }
+    .contact-form button:hover { background: var(--accent-light); }
+
+    /* FOOTER */
+    footer { background: #080808; border-top: 1px solid var(--card-border); padding: 40px 5%; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
+    .footer-brand .fb-name { font-weight: 900; font-size: 1.05rem; color: var(--accent); }
+    .footer-brand .fb-llc { font-size: .7rem; color: var(--text-muted); letter-spacing: .06em; text-transform: uppercase; margin-top: 2px; }
+    .footer-brand p { color: var(--text-muted); font-size: .85rem; margin-top: 8px; max-width: 280px; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom { border-top: 1px solid var(--card-border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: .8rem; color: var(--text-muted); }
+    .bilingual-note { font-size: .8rem; color: var(--accent); font-weight: 600; }
+
+    .mobile-sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--accent); color: #0d0d0d; font-weight: 800; font-size: 1rem; padding: 16px; text-align: center; text-decoration: none; z-index: 900; border-top: 3px solid var(--accent-dark); }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-visual { order: -1; }
+      .banner-placeholder { max-width: 100%; height: 220px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .mobile-sticky-cta { display: block; }
+    }
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">
+      Luminary Image Productions
+      <span class="logo-sub">LLC · Full-Service Photography Company</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#pricing">Packages</a></li>
+      <li><a href="#gallery">Portfolio</a></li>
+      <li><a href="#contact">Inquire</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Request a Quote</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">Full-Service Photography Company · LLC</div>
+        <h1>Our Work Speaks. Our Website Makes Sure the <em>Right People</em> Hear It.</h1>
+        <p>Couples compare 4–5 photographers before booking. Corporate clients Google "commercial photographer near me" and pick from the first page. Luminary Image Productions LLC is a full-service photography company — and our website proves it to every client before they make contact.</p>
+        <ul class="hero-checks">
+          <li>Our portfolio shows couples and brands the story we tell before they inquire</li>
+          <li>Wedding venues and event companies refer photographers with professional websites</li>
+          <li>Corporate headshots, product photography, events — our website wins the RFQ</li>
+          <li>Package pricing shown upfront attracts clients who match our value</li>
+        </ul>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Inquire With Our Team</a>
+          <a href="#portfolio" class="btn-ghost">View Our Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="banner-placeholder">
+          <div class="bp-icon">🖼</div>
+          <strong>AI-Generated Banner Image</strong>
+          <small>800 × 500 · Professional photography crew at a wedding ceremony</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why-us">
+    <div class="section-inner">
+      <div class="section-label">Why Our Website Is Our Most Powerful Sales Tool</div>
+      <div class="why-grid">
+        <div class="why-copy">
+          <h2>Every Client Researches Before They Reach Out</h2>
+          <p>Before a couple books our team for their wedding, they've spent hours comparing portfolios online. Before a marketing director submits an RFQ for a product shoot, their team has already visited 3–4 photography company websites.</p>
+          <p>At Luminary Image Productions LLC, we understand that our website is our first impression, our credential, and our sales team — working around the clock to bring us the right clients.</p>
+          <div class="client-types">
+            <div class="client-type">
+              <div class="ct-icon">💍</div>
+              <div>
+                <h4>Wedding &amp; Engagement Clients</h4>
+                <p>Couples compare portfolios, read reviews, and check package pricing. Our website gives them everything they need to choose us — before we've spoken.</p>
+              </div>
+            </div>
+            <div class="client-type">
+              <div class="ct-icon">🏢</div>
+              <div>
+                <h4>Corporate &amp; Commercial Clients</h4>
+                <p>Procurement teams and marketing directors require a professional company website before submitting an RFQ. We look like the company we are.</p>
+              </div>
+            </div>
+            <div class="client-type">
+              <div class="ct-icon">🎪</div>
+              <div>
+                <h4>Event Planners &amp; Venues</h4>
+                <p>Venues refer photographers to their clients. They only recommend companies with a professional web presence — which is exactly what we offer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-right">
+          <div class="insight-box">
+            <h3>Industry Insights for Our Business</h3>
+            <div class="insight-stat">
+              <div class="is-num">94%</div>
+              <div class="is-text">of engaged couples look at a photographer's website before making any contact</div>
+            </div>
+            <div class="insight-stat">
+              <div class="is-num">3×</div>
+              <div class="is-text">more venue referrals go to photography companies with professional websites vs. Instagram-only</div>
+            </div>
+            <div class="insight-stat">
+              <div class="is-num">2.2×</div>
+              <div class="is-text">faster booking decisions when our pricing packages are clearly displayed online</div>
+            </div>
+            <div class="insight-stat">
+              <div class="is-num">100%</div>
+              <div class="is-text">of commercial RFQs we've won came from clients who found us online first</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-label">What Our Team Delivers</div>
+      <h2 class="section-title">Our Photography Services</h2>
+      <p class="section-sub">From intimate weddings to national brand campaigns, Luminary Image Productions LLC brings a full creative team to every project.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💍</div>
+          <h3>Wedding Day Coverage</h3>
+          <p>Our team covers every moment — from getting ready to the final dance. Multiple photographers, full-day coverage, and a second shooter as standard.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌅</div>
+          <h3>Engagement Sessions</h3>
+          <p>We capture your story before the big day — golden hour portraits that serve as save-the-date photos and tell the world who you are as a couple.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👔</div>
+          <h3>Corporate Headshots</h3>
+          <p>Team and executive headshots that elevate your company's visual identity. We offer on-location studio setups for teams of any size.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Product Photography</h3>
+          <p>Catalogue, lifestyle, and hero shots for e-commerce, packaging, and brand campaigns. Our team delivers assets optimized for every channel.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎉</div>
+          <h3>Event Coverage</h3>
+          <p>Corporate events, galas, conferences, and brand activations. We move discreetly through your event and capture the moments that matter most.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👶</div>
+          <h3>Newborn &amp; Family</h3>
+          <p>Timeless family portraits and delicate newborn sessions in a warm, patient studio environment. We work at your pace — no rush, no pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="section-inner">
+      <div class="section-label">The Business Case for Our Website</div>
+      <h2 class="section-title">Why Our Online Presence Drives Revenue</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num">94%</span>
+          <div class="stat-label">of couples look at a photographer's website before making any booking inquiry</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">3×</span>
+          <div class="stat-label">more venue referrals go to photography companies with a polished, professional website</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">100%</span>
+          <div class="stat-label">of commercial RFQs and corporate clients require a company website before approving a vendor</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">2.2×</span>
+          <div class="stat-label">faster bookings when package pricing is clearly shown — clients qualify themselves</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team">
+    <div class="section-inner">
+      <div class="section-label">The People Behind the Lens</div>
+      <h2 class="section-title">Meet Our Team</h2>
+      <p class="section-sub">Luminary Image Productions LLC is built on the talent, experience, and creative vision of our dedicated photography team.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo">📷</div>
+          <div class="team-info">
+            <div class="team-name">James Chen</div>
+            <div class="team-role">Lead Wedding Photographer</div>
+            <p class="team-bio">With 8 years of experience and over 300 weddings documented across the US and abroad, James brings a cinematic eye and calm presence to every ceremony. His work has been featured in The Knot and Brides Magazine.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">🖼</div>
+          <div class="team-info">
+            <div class="team-name">Maria Santos</div>
+            <div class="team-role">Commercial &amp; Portrait Specialist</div>
+            <p class="team-bio">Maria leads our commercial division, specializing in brand photography and corporate portraiture. Her clients include Fortune 500 companies and regional brands who trust her to translate their identity into powerful imagery.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">🎬</div>
+          <div class="team-info">
+            <div class="team-name">David Park</div>
+            <div class="team-role">Second Shooter &amp; Videographer</div>
+            <p class="team-bio">David's dual role as second shooter and videographer makes our team uniquely versatile. His cinematic highlight reels have earned our couples thousands of views — and more referrals than any other marketing channel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="section-inner">
+      <div class="section-label">Transparent Pricing</div>
+      <h2 class="section-title">Our Wedding Photography Packages</h2>
+      <p class="section-sub">We believe in clear pricing. Couples who know our rates before they inquire are the right fit — no sticker shock, no wasted consultations.</p>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-badge">Essential</div>
+          <div class="price-name">Essential Package</div>
+          <div class="price-amount">$2,800</div>
+          <div class="price-note">8 hours · 1 photographer · Digital delivery</div>
+          <ul class="price-features">
+            <li>8 hours of wedding day coverage</li>
+            <li>1 lead photographer (James or Maria)</li>
+            <li>450+ edited high-resolution images</li>
+            <li>Online gallery with download rights</li>
+            <li>2-week turnaround</li>
+          </ul>
+          <a href="#contact" class="price-cta">Inquire About Essential</a>
+        </div>
+        <div class="price-card featured">
+          <div class="price-badge">Most Popular</div>
+          <div class="price-name">Signature Package</div>
+          <div class="price-amount">$4,500</div>
+          <div class="price-note">10 hours · 2 photographers · Engagement session</div>
+          <ul class="price-features">
+            <li>10 hours of full wedding coverage</li>
+            <li>Lead photographer + David as second shooter</li>
+            <li>750+ edited high-resolution images</li>
+            <li>Complimentary engagement session</li>
+            <li>Premium album design consultation</li>
+            <li>Online gallery with download rights</li>
+          </ul>
+          <a href="#contact" class="price-cta">Inquire About Signature</a>
+        </div>
+        <div class="price-card">
+          <div class="price-badge">Premium</div>
+          <div class="price-name">Premium Package</div>
+          <div class="price-amount">$7,200</div>
+          <div class="price-note">Full day · Photo + Video · Luxury album</div>
+          <ul class="price-features">
+            <li>Full day coverage — no time limit</li>
+            <li>Full photography team (3 people)</li>
+            <li>Cinematic highlight video by David Park</li>
+            <li>1,000+ edited high-resolution images</li>
+            <li>Engagement session + bridal portraits</li>
+            <li>12×12 luxury lay-flat album (40 pages)</li>
+            <li>Rush delivery option available</li>
+          </ul>
+          <a href="#contact" class="price-cta">Inquire About Premium</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <div class="section-label">Our Portfolio</div>
+      <h2 class="section-title">Recent Work by Our Team</h2>
+      <p class="section-sub">A selection of our recent weddings, corporate sessions, and commercial projects.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item"><div class="gallery-label">Wedding — Ceremony</div></div>
+        <div class="gallery-item"><div class="gallery-label">Corporate Headshots</div></div>
+        <div class="gallery-item"><div class="gallery-label">Product Photography</div></div>
+        <div class="gallery-item"><div class="gallery-label">Engagement Session</div></div>
+        <div class="gallery-item"><div class="gallery-label">Reception Detail</div></div>
+        <div class="gallery-item"><div class="gallery-label">Brand Campaign</div></div>
+        <div class="gallery-item"><div class="gallery-label">Newborn Session</div></div>
+        <div class="gallery-item"><div class="gallery-label">Gala Event Coverage</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="section-inner">
+      <div class="section-label">Client Testimonials</div>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"We found Luminary Image Productions through Google after comparing at least five photography companies. Their portfolio immediately stood out — and working with their team on our wedding day was effortless. We cried looking at the gallery."</p>
+          <div class="testi-author">Emily &amp; Jordan H.</div>
+          <div class="testi-role">Wedding Clients, Austin TX</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"We hired Luminary for our company's annual rebrand shoot — full executive team headshots and lifestyle imagery for our website and campaigns. Maria's professionalism and the quality of the final assets exceeded our expectations completely."</p>
+          <div class="testi-author">Rachel T.</div>
+          <div class="testi-role">Marketing Director, Austin-based Tech Company</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"David's highlight reel from our wedding is the most-viewed thing on our Instagram, ever. We've had three couples reach out saying they found Luminary through us. The team captures emotion in a way that feels completely natural, never posed."</p>
+          <div class="testi-author">Natalie &amp; Ryan C.</div>
+          <div class="testi-role">Wedding Clients, Houston TX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Work With Our Team</div>
+          <h2>Let's Talk About Your Project</h2>
+          <p>Whether you're planning your wedding, a corporate shoot, or a commercial campaign — our team would love to hear about your vision. We respond to all inquiries within 24 hours.</p>
+          <div class="contact-items">
+            <div class="contact-item"><span class="ci-icon">📞</span> (512) 555-0391</div>
+            <div class="contact-item"><span class="ci-icon">✉️</span> hello@luminaryimageproductions.com</div>
+            <div class="contact-item"><span class="ci-icon">📍</span> Austin, TX — Available Nationwide</div>
+            <div class="contact-item"><span class="ci-icon">🏛</span> Luminary Image Productions LLC</div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Phone Number">
+          </div>
+          <input type="email" placeholder="Email Address" required>
+          <select>
+            <option value="" disabled selected>Type of Project</option>
+            <option>Wedding Day Coverage</option>
+            <option>Engagement Session</option>
+            <option>Corporate Headshots</option>
+            <option>Product Photography</option>
+            <option>Event Coverage</option>
+            <option>Newborn &amp; Family</option>
+            <option>Commercial / Brand Campaign</option>
+          </select>
+          <select>
+            <option value="" disabled selected>Estimated Budget</option>
+            <option>Under $2,000</option>
+            <option>$2,000 – $4,000</option>
+            <option>$4,000 – $7,000</option>
+            <option>$7,000+</option>
+            <option>Not sure yet</option>
+          </select>
+          <input type="text" placeholder="Event / Project Date (if known)">
+          <textarea placeholder="Tell us about your vision. What story do you want our team to tell?"></textarea>
+          <button type="submit">Send Our Team a Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fb-name">Luminary Image Productions</div>
+          <div class="fb-llc">LLC · Registered Business · Austin, TX</div>
+          <p>Full-service photography company specializing in weddings, commercial, and editorial. Our team is available nationwide.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#team">Our Team</a>
+          <a href="#pricing">Packages</a>
+          <a href="#gallery">Portfolio</a>
+          <a href="#contact">Contact</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Luminary Image Productions LLC. All rights reserved.</p>
+        <div class="bilingual-note">Website also available in Spanish · También disponible en Español</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#contact" class="mobile-sticky-cta">Inquire With Our Team →</a>
+
+  <div id="ew-demo-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a1f14;border-top:2px solid #5af0b3;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.5);">
+    <div style="flex-shrink:0;"><span style="color:#5af0b3;font-weight:900;font-size:15px;letter-spacing:-.02em;">EWNexus</span></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <span style="color:#c8ddd2;font-size:12px;">✓ Couples book your style before meeting · Parejas eligen tu estilo primero</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ Command premium pricing · Cobra precios premium con confianza</span>
+      <span style="color:#c8ddd2;font-size:12px;">✓ "wedding photographer near me" · "fotógrafo de bodas cerca de mí"</span>
+    </div>
+    <a href="https://www.ewnexus.com/contact.html" style="background:#5af0b3;color:#001a0e;font-weight:800;font-size:13px;padding:8px 18px;text-decoration:none;border-radius:6px;white-space:nowrap;flex-shrink:0;">Get Yours — $50 to Start</a>
+    <button onclick="document.getElementById('ew-demo-bar').style.display='none'" style="background:none;border:none;color:#6b8f7a;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;">×</button>
+  </div>
+
+<!-- Copy Protection -->
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.key==='F12'||(e.ctrlKey&&['u','s','a'].includes(e.key.toLowerCase()))||(e.ctrlKey&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())))e.preventDefault();
+});
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
+<style>body,*{-webkit-user-select:none!important;user-select:none!important;}</style>
+</body>
+</html>
+
